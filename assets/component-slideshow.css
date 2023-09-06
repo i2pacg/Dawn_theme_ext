@@ -136,6 +136,10 @@ slideshow-component .slideshow.banner {
   background: #ffffffab;
 }
 
+.slideshow__controls.slider-counter-fixed .media>img {
+  filter: blur(0.1rem) grayscale(0.5);
+}
+
 @media screen and (max-width: 749px) {
   .slideshow__controls--border-radius-mobile {
     border-bottom-right-radius: var(--text-boxes-radius);
