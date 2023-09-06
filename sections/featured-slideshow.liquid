@@ -151,7 +151,7 @@
         tabindex="-1"
       >
         <div class="slideshow__media banner__media media{% if product.featured_media == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
-          {%- if block.featured_media -%}
+          {%- if product.featured_media -%}
             {%- liquid
               assign height = product.featured_media.width | divided_by: product.featured_media.aspect_ratio | round
               if section.settings.image_behavior == 'ambient'
@@ -163,7 +163,7 @@
               endif
             -%}
             {{
-              block.featured_media
+              product.featured_media
               | image_url: width: 3840
               | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
             }}
@@ -176,8 +176,8 @@
             {%- endif -%}
           {%- endif -%}
         </div>
-        <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
-          <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+        <div class="slideshow__text-wrapper banner__content banner__content--{{ settings.box_align }} page-width{% if settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
+          <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ settings.color_scheme }} gradient slideshow__text--{{ settings.text_alignment }} slideshow__text-mobile--{{ settings.text_alignment_mobile }}">
             {%- if product.title != blank -%}
               <h2 class="banner__heading inline-richtext {{ settings.heading_size }}">
                 {{ product.title }}
@@ -187,6 +187,23 @@
               <div class="banner__text rte" {{ product.shopify_attributes }}>
                 <p>{{ product.subheading }}</p>
               </div>
+            {%- endif -%}
+          </div>
+          <div class="card__badge {{ settings.badge_position }}">
+            {%- if product.available == false -%}
+              <span
+                id="Badge-{{ section_id }}-{{ product.id }}"
+                class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
+              >
+                {{- 'products.product.sold_out' | t -}}
+              </span>
+            {%- elsif product.compare_at_price > product.price and product.available -%}
+              <span
+                id="Badge-{{ section_id }}-{{ product.id }}"
+                class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+              >
+                {{- 'products.product.on_sale' | t -}}
+              </span>
             {%- endif -%}
           </div>
         </div>
