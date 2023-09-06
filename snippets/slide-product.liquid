@@ -244,25 +244,27 @@
                   </div>
                 </button>
               </modal-opener>
-              <quick-add-modal id="QuickAdd-{{ slide_product.id }}" class="quick-add-modal">
-                <div
-                  role="dialog"
-                  aria-label="{{ 'products.product.choose_product_options' | t: product_name: slide_product.title | escape }}"
-                  aria-modal="true"
-                  class="quick-add-modal__content global-settings-popup"
-                  tabindex="-1"
-                >
-                  <button
-                    id="ModalClose-{{ slide_product.id }}"
-                    type="button"
-                    class="quick-add-modal__toggle"
-                    aria-label="{{ 'accessibility.close' | t }}"
+              {% comment %}
+                <quick-add-modal id="QuickAdd-{{ slide_product.id }}" class="quick-add-modal">
+                  <div
+                    role="dialog"
+                    aria-label="{{ 'products.product.choose_product_options' | t: product_name: slide_product.title | escape }}"
+                    aria-modal="true"
+                    class="quick-add-modal__content global-settings-popup"
+                    tabindex="-1"
                   >
-                    {% render 'icon-close' %}
-                  </button>
-                  <div id="QuickAddInfo-{{ slide_product.id }}" class="quick-add-modal__content-info"></div>
-                </div>
-              </quick-add-modal>
+                    <button
+                      id="ModalClose-{{ slide_product.id }}"
+                      type="button"
+                      class="quick-add-modal__toggle"
+                      aria-label="{{ 'accessibility.close' | t }}"
+                    >
+                      {% render 'icon-close' %}
+                    </button>
+                    <div id="QuickAddInfo-{{ slide_product.id }}" class="quick-add-modal__content-info"></div>
+                  </div>
+                </quick-add-modal>
+              {% endcomment %}
             {%- else -%}
               <product-form data-section-id="{{ section.id }}">
                 {%- form 'product',
