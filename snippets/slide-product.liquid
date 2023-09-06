@@ -76,8 +76,6 @@
                 width="{{ slide_product.featured_media.width }}"
                 height="{{ slide_product.featured_media.height }}"
               >
-              {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
-
               {%- if slide_product.media[1] != null and show_secondary_image -%}
                 <img
                   srcset="
