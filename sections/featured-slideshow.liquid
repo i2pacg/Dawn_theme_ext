@@ -188,18 +188,6 @@
               show_quick_add: section.settings.enable_quick_add,
               section_id: section.id
             %}
-            {% comment %}
-              {%- if product.title != blank -%}
-                <h2 class="banner__heading inline-richtext {{ section.settings.heading_size }}">
-                  {{ product.title }}
-                </h2>
-              {%- endif -%}
-              {%- if settings.subheading != blank -%}
-                <div class="banner__text rte" {{ product.shopify_attributes }}>
-                  <p>{{ product.subheading }}</p>
-                </div>
-              {%- endif -%}
-            {% endcomment %}
           </div>
         </div>
       </div>
