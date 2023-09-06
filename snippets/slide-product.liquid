@@ -62,8 +62,8 @@
                 {% unless lazy_load == false %}
                   loading="lazy"
                 {% endunless %}
-                width="{{ slide_product.featured_media.width }}"
-                height="{{ slide_product.featured_media.height }}"
+                width="100%"
+                height="420px"
               >
               {%- if slide_product.media[1] != null and show_secondary_image -%}
                 <img
