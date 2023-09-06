@@ -115,7 +115,7 @@ slideshow-component .slideshow.banner {
   z-index: 1;
 }
 
-.slider-counter-fixed {
+.slideshow__controls.slider-counter-fixed {
   position: fixed;
   z-index: 1;
   bottom: 0;
