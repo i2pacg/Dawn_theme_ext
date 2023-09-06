@@ -63,6 +63,7 @@
                 width="100%"
                 height="320px"
               >
+              {{ card_product.media.length }}
               {%- if card_product.media[1] != null -%}
                 <img
                   src="{{ card_product.media[1] | image_url: width: '100%' }}"
