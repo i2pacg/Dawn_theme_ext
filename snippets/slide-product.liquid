@@ -54,7 +54,7 @@
             <div class="media media--transparent media--hover-effect">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
-                src="{{ slide_product.featured_media | image_url: width: '' }}"
+                src="{{ slide_product.featured_media | image_url: width: '420' }}"
                 alt="{{ slide_product.featured_media.alt | escape }}"
                 class="motion-reduce"
                 {% unless lazy_load == false %}
@@ -65,7 +65,7 @@
               >
               {%- if slide_product.media[1] != null and show_secondary_image -%}
                 <img
-                  src="{{ slide_product.media[1] | image_url: width: '' }}"
+                  src="{{ slide_product.media[1] | image_url: width: '420' }}"
                   alt=""
                   class="motion-reduce"
                   loading="lazy"
