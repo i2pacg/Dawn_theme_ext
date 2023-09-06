@@ -1136,7 +1136,6 @@ summary::-webkit-details-marker {
   display: block;
   max-width: 100%;
   position: absolute;
-  object-fit: cover;
   top: 0;
   left: 0;
   height: 100%;
