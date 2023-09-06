@@ -1,8 +1,6 @@
 slider-component {
-  --desktop-margin-left-first-item: max(
-    5rem,
-    calc((100vw - var(--page-width) + 10rem - var(--grid-desktop-horizontal-spacing)) / 2)
-  );
+  --desktop-margin-left-first-item: max(5rem,
+      calc((100vw - var(--page-width) + 10rem - var(--grid-desktop-horizontal-spacing)) / 2));
   position: relative;
   display: block;
 }
@@ -266,6 +264,10 @@ slider-component.slider-component-full-width {
   min-width: 4.4rem;
 }
 
+.slider-counter-fixed {
+  position: fixed;
+}
+
 @media screen and (min-width: 750px) {
   .slider-counter--dots {
     margin: 0 1.2rem;
@@ -337,19 +339,19 @@ slider-component.slider-component-full-width {
 }
 
 @media screen and (min-width: 990px) {
-  .slider:not(.slider--everywhere):not(.slider--desktop) + .slider-buttons {
+  .slider:not(.slider--everywhere):not(.slider--desktop)+.slider-buttons {
     display: none;
   }
 }
 
 @media screen and (max-width: 989px) {
-  .slider--desktop:not(.slider--tablet) + .slider-buttons {
+  .slider--desktop:not(.slider--tablet)+.slider-buttons {
     display: none;
   }
 }
 
 @media screen and (min-width: 750px) {
-  .slider--mobile + .slider-buttons {
+  .slider--mobile+.slider-buttons {
     display: none;
   }
 }

@@ -222,7 +222,7 @@
       >
         {% render 'icon-caret' %}
       </button>
-      <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
+      <div class="slider-counter {% if section.settings.fixed_slider_visual %}slider-counter-fixed{% endif %} slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
         {%- if section.settings.slider_visual == 'counter' -%}
           <span class="slider-counter--current">1</span>
           <span aria-hidden="true"> / </span>
@@ -256,16 +256,18 @@
         {% render 'icon-caret' %}
       </button>
 
-      {%- if section.settings.auto_rotate -%}
-        <button
-          type="button"
-          class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
-          aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}"
-        >
-          {%- render 'icon-pause' -%}
-          {%- render 'icon-play' -%}
-        </button>
-      {%- endif -%}
+      {% comment %}
+        {%- if section.settings.auto_rotate -%}
+          <button
+            type="button"
+            class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
+            aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}"
+          >
+            {%- render 'icon-pause' -%}
+            {%- render 'icon-play' -%}
+          </button>
+        {%- endif -%}
+      {% endcomment %}
     </div>
     <noscript>
       <div class="slider-buttons">
@@ -384,6 +386,12 @@
     },
     {
       "type": "checkbox",
+      "id": "fixed_slider_visual",
+      "label": "Fixed Slider Visual",
+      "default": false
+    },
+    {
+      "type": "checkbox",
       "id": "auto_rotate",
       "label": "t:sections.slideshow.settings.auto_rotate.label",
       "default": false
@@ -459,13 +467,6 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
-    },
-    {
-      "type": "text",
-      "id": "button_label",
-      "default": "Button label",
-      "label": "t:sections.slideshow.blocks.slide.settings.button_label.label",
-      "info": "t:sections.slideshow.blocks.slide.settings.button_label.info"
     },
     {
       "type": "url",
