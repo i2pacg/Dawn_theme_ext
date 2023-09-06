@@ -193,18 +193,16 @@
         </div>
         <div class="slideshow__text-wrapper banner__content banner__content--{{  section.settings.box_align }} page-width{% if  section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if  section.settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{  section.settings.color_scheme }} gradient slideshow__text--{{  section.settings.text_alignment }} slideshow__text-mobile--{{  section.settings.text_alignment_mobile }}">
-            {% comment %}
-              {% render 'slide-product',
-                slide_product: product,
-                media_aspect_ratio: section.settings.image_ratio,
-                image_shape: section.settings.image_shape,
-                show_secondary_image: section.settings.show_secondary_image,
-                show_vendor: section.settings.show_vendor,
-                show_rating: section.settings.show_rating,
-                show_quick_add: section.settings.enable_quick_add,
-                section_id: section.id
-              %}
-            {% endcomment %}
+            {% render 'slide-product',
+              slide_product: product,
+              media_aspect_ratio: section.settings.image_ratio,
+              image_shape: section.settings.image_shape,
+              show_secondary_image: section.settings.show_secondary_image,
+              show_vendor: section.settings.show_vendor,
+              show_rating: section.settings.show_rating,
+              show_quick_add: section.settings.enable_quick_add,
+              section_id: section.id
+            %}
           </div>
         </div>
       </div>
