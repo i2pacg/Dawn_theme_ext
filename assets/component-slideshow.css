@@ -4,6 +4,18 @@ slideshow-component {
   flex-direction: column;
 }
 
+slideshow-component:before {
+  content: "";
+  position: fixed;
+  z-index: 1;
+  background: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
+}
+
 @media screen and (max-width: 989px) {
   .no-js slideshow-component .slider {
     padding-bottom: 3rem;
@@ -117,7 +129,7 @@ slideshow-component .slideshow.banner {
 
 .slideshow__controls.slider-counter-fixed {
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   bottom: 0;
   right: 0;
   left: 0;
