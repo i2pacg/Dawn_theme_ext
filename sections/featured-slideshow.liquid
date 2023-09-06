@@ -140,9 +140,6 @@
         #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
           opacity: {{ settings.image_overlay_opacity | divided_by: 100.0 }};
         }
-        #Slide-{{ section.id }}-{{ forloop.index }} .banner__media img {
-          filter: blur(5px) grayscale(.5);
-        }
       </style>
       <div
         class="slideshow__slide grid__item grid--1-col slider__slide"
@@ -153,7 +150,7 @@
         aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
         tabindex="-1"
       >
-        <div class="slideshow__media banner__media media{% if product.featured_media == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
+        <div class="slideshow__media banner__media_blur banner__media media{% if product.featured_media == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
           {%- if product.featured_media -%}
             {%- liquid
               assign height = product.featured_media.width | divided_by: product.featured_media.aspect_ratio | round
