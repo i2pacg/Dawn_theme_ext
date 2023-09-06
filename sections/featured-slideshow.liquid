@@ -1,7 +1,11 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
-
+<style>
+  #Slide-{{ section.id }}-{{ forloop.index }} .banner__media img {
+    filter: blur(5px) grayscale(.5);
+  }
+</style>
 {%- if section.settings.slide_height == 'adapt_image'
   and section.settings.collection.products.first.settings.image != blank
 -%}
