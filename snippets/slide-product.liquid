@@ -63,15 +63,14 @@
                 width="100%"
                 height="320px"
               >
-              {{ card_product.media.length }}
-              {%- if card_product.media[1] != null -%}
+              {%- if slide_product.media[1] != null and show_secondary_image -%}
                 <img
-                  src="{{ card_product.media[1] | image_url: width: '100%' }}"
+                  src="{{ slide_product.media[1] | image_url: width: '100%' }}"
                   alt=""
                   class="motion-reduce"
                   loading="lazy"
-                  width="{{ card_product.media[1].width }}"
-                  height="{{ card_product.media[1].height }}"
+                  width="100%"
+                  height="320px"
                 >
               {%- endif -%}
             </div>
