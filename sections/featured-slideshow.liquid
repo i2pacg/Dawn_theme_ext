@@ -190,7 +190,7 @@
         <div class="slideshow__media banner__media_blur banner__media media{% if product.featured_media == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
           {% assign videos = product.media | where: 'media_type', 'video' %}
           {% if videos.size > 0 %}
-            <video src="{{videos[0]}}"></video>
+            <video src="{{videos[0] | video_url}}"></video>
           {%- elsif product.featured_media -%}
             {%- liquid
               assign height = product.featured_media.width | divided_by: product.featured_media.aspect_ratio | round
