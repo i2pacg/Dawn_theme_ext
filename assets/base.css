@@ -2384,6 +2384,7 @@ product-info .loading-overlay:not(.hidden)~*,
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   width: 100vw;
+  background: #ffffffd1;
 }
 
 @media screen and (max-width: 749px) {
