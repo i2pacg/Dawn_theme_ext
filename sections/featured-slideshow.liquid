@@ -2,8 +2,8 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 <style>
-  #Slide-{{ section.id }}-{{ forloop.index }} .banner__media img {
-    filter: blur(5px) grayscale(.5);
+  .banner__media_blur.banner__media img {
+    filter: blur(5px) grayscale(0.5);
   }
 </style>
 {%- if section.settings.slide_height == 'adapt_image'
