@@ -102,23 +102,25 @@
           </div>
         {%- endif -%}
         <div class="card__content">
-          <div class="card__information">
-            <h3
-              class="card__heading"
-              {% if slide_product.featured_media == null and settings.card_style == 'standard' %}
-                id="title-{{ section_id }}-{{ slide_product.id }}"
-              {% endif %}
-            >
-              <a
-                href="{{ slide_product.url }}"
-                id="StandardCardNoMediaLink-{{ section_id }}-{{ slide_product.id }}"
-                class="full-unstyled-link"
-                aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ slide_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ slide_product.id }}"
+          {% comment %}
+            <div class="card__information">
+              <h3
+                class="card__heading"
+                {% if slide_product.featured_media == null and settings.card_style == 'standard' %}
+                  id="title-{{ section_id }}-{{ slide_product.id }}"
+                {% endif %}
               >
-                {{ slide_product.title | escape }}
-              </a>
-            </h3>
-          </div>
+                <a
+                  href="{{ slide_product.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ slide_product.id }}"
+                  class="full-unstyled-link"
+                  aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ slide_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ slide_product.id }}"
+                >
+                  {{ slide_product.title | escape }}
+                </a>
+              </h3>
+            </div>
+          {% endcomment %}
           <div class="card__badge {{ settings.badge_position }}">
             {%- if slide_product.available == false -%}
               <span
@@ -244,27 +246,25 @@
                   </div>
                 </button>
               </modal-opener>
-              {% comment %}
-                <quick-add-modal id="QuickAdd-{{ slide_product.id }}" class="quick-add-modal">
-                  <div
-                    role="dialog"
-                    aria-label="{{ 'products.product.choose_product_options' | t: product_name: slide_product.title | escape }}"
-                    aria-modal="true"
-                    class="quick-add-modal__content global-settings-popup"
-                    tabindex="-1"
+              <quick-add-modal id="QuickAdd-{{ slide_product.id }}" class="quick-add-modal">
+                <div
+                  role="dialog"
+                  aria-label="{{ 'products.product.choose_product_options' | t: product_name: slide_product.title | escape }}"
+                  aria-modal="true"
+                  class="quick-add-modal__content global-settings-popup"
+                  tabindex="-1"
+                >
+                  <button
+                    id="ModalClose-{{ slide_product.id }}"
+                    type="button"
+                    class="quick-add-modal__toggle"
+                    aria-label="{{ 'accessibility.close' | t }}"
                   >
-                    <button
-                      id="ModalClose-{{ slide_product.id }}"
-                      type="button"
-                      class="quick-add-modal__toggle"
-                      aria-label="{{ 'accessibility.close' | t }}"
-                    >
-                      {% render 'icon-close' %}
-                    </button>
-                    <div id="QuickAddInfo-{{ slide_product.id }}" class="quick-add-modal__content-info"></div>
-                  </div>
-                </quick-add-modal>
-              {% endcomment %}
+                    {% render 'icon-close' %}
+                  </button>
+                  <div id="QuickAddInfo-{{ slide_product.id }}" class="quick-add-modal__content-info"></div>
+                </div>
+              </quick-add-modal>
             {%- else -%}
               <product-form data-section-id="{{ section.id }}">
                 {%- form 'product',
