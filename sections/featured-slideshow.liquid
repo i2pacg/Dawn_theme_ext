@@ -58,11 +58,6 @@
   if section.settings.swipe_on_mobile and products_to_display > columns_mobile_int
     assign show_mobile_slider = true
   endif
-
-  assign show_desktop_slider = false
-  if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
-    assign show_desktop_slider = true
-  endif
 -%}
 
 <slideshow-component
@@ -298,15 +293,6 @@
       "step": 1,
       "default": 4,
       "label": "t:sections.featured-collection.settings.products_to_show.label"
-    },
-    {
-      "type": "range",
-      "id": "columns_desktop",
-      "min": 1,
-      "max": 5,
-      "step": 1,
-      "default": 4,
-      "label": "t:sections.featured-collection.settings.columns_desktop.label"
     },
     {
       "type": "select",
