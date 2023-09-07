@@ -44,11 +44,9 @@
 -%}
 <div class="product-gallery">
   {% for media in product.media %}
-    <div class="item-slide">
-      <a data-fancybox="gallery" href="{{ media | img_url}}">
-        <img src="{{ media | img_url}}" title="img" alt="img">
-      </a>
-    </div>
+    <a data-fancybox="gallery" href="{{ media | img_url}}">
+      <img src="{{ media | img_url}}" title="img" alt="img">
+    </a>
   {% endfor %}
   {% comment %}
     <div class="slider-nav">
@@ -73,8 +71,6 @@
     infinite: true,
     speed: 300,
     slidesToShow: 1,
-    centerMode: true,
-    variableWidth: true,
   });
   {% comment %} $('.slider-nav').slick({
     slidesToShow: 4,
