@@ -50,17 +50,17 @@
           {%- if option.name != 'Size' -%}
             <modal-opener
               class="product-popup-modal__opener no-js-hidden quick-add-hidden"
-              data-modal="#PopupModal-{{ product.id }}"
+              data-modal="#PopupModal-{{ option.id }}"
               {{ shopify_attributes }}
             >
               <button
-                id="ProductPopup-{{ product.id }}"
+                id="ProductPopup-{{ option.id }}"
                 class="product-popup-modal__button link"
                 type="button"
                 style="text-decoration: unset;display: inline-block;"
                 aria-haspopup="dialog"
               >
-                ... read more
+                Sizing chart
               </button>
             </modal-opener>
           {% endif %}
