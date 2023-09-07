@@ -12,6 +12,30 @@
 {% endcomment %}
 
 {%- liquid
+  unless lazy_load == false
+    assign lazy = 'lazy'
+  endunless
+
+  assign desktop_columns = 1
+  if desktop_layout == 'columns' and media_count > 1
+    assign desktop_columns = 2
+  endif
+
+  assign mobile_columns = 1
+  if mobile_layout == 'columns' and media_count > 1
+    assign mobile_columns = 2
+  endif
+
+  if media.media_type == 'image'
+    assign image_class = 'image-magnify-' | append: section.settings.image_zoom
+  endif
+-%}
+
+{%- capture sizes -%}
+  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | times: media_width | divided_by: desktop_columns | round }}px, (min-width: 990px) calc({{ media_width | times: 100 | divided_by: desktop_columns }}vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / {{ mobile_columns }} - 4rem)
+{%- endcapture -%}
+
+{%- liquid
   if section.settings.hide_variants and variant_images.size == product.media.size
     assign single_media_visible = true
   endif
@@ -46,9 +70,42 @@
 <div class="product-gallery">
   <div class="slider-for">
     {% for media in product.media %}
-      {{ media | img_url | image_tag }}
+      <noscript>
+        {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+          <span class="product__media-icon motion-reduce quick-add-hidden">{% render 'icon-play' %}</span>
+          <div class="product__media media">
+            {{
+              media.preview_image
+              | image_url: width: 1946
+              | image_tag:
+                loading: lazy,
+                sizes: sizes,
+                widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+            }}
+          </div>
+          <a
+            href="{% if media.media_type == 'video' %}{{ media.sources[1].url }}{% else %}{{ media | external_video_url }}{% endif %}"
+            class="product__media-toggle"
+          >
+            <span class="visually-hidden">
+              {{- 'products.product.video_exit_message' | t: title: product.title | escape -}}
+            </span>
+          </a>
+        {%- else -%}
+          <div class="product__media media">
+            {{
+              media.preview_image
+              | image_url: width: 1946
+              | image_tag:
+                loading: lazy,
+                sizes: sizes,
+                widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+            }}
+          </div>
+        {%- endif -%}
+      </noscript>
       {% comment %}
-        {% if media.media_type == 'image' %}
+         {{ media | img_url | image_tag }}  {% if media.media_type == 'image' %}
           {{ media.preview_image | image_url | image_tag }}
           {% comment %}  <img height="320px" style="object-fit:contain" src="{{ media | img_url: 'large'}}" title="img" alt="img"> {% endcomment %}
         {% elsif media.media_type == 'video' %}
