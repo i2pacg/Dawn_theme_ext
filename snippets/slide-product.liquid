@@ -187,7 +187,16 @@
                 assign qty_rules = true
               endif
             -%}
-            <button>view all</button>
+            <button>
+              <a
+                href="{{ routes.collections_url }}"
+                id="ViewAll-{{ section.id }}"
+                class="link underlined-link large-up-hide{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
+              >
+                {{- 'sections.collection_list.view_all' | t -}}
+              </a>
+            </button>
             {%- if slide_product.variants.size > 1 or qty_rules -%}
               <modal-opener data-modal="#QuickAdd-{{ slide_product.id }}">
                 <button
