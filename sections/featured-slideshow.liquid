@@ -27,9 +27,7 @@
   .banner__media_blur.banner__media video {
     filter: blur(5px) grayscale(0.5);
   }
-  .banner__media_blur.banner__media::after {
-    background: linear-gradient(180deg, white, #ffffff40);
-  }
+
   .slide-product-card .card__inner {
     height: 320px;
   }
@@ -180,6 +178,7 @@
       <style>
             #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
         background: linear-gradient(180deg, white, #ffffff40);
+        opacity: 1;
             }
       </style>
       <div
