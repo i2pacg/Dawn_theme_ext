@@ -49,7 +49,7 @@
       {% if media.media_type == 'image' %}
         <img height="320px" style="object-fit:contain" src="{{ media | img_url: 'large'}}" title="img" alt="img">
       {% endif %}
-      {% if media.media_type == 'image' %}
+      {% if media.media_type == 'video' %}
         {{ productVideo | video_tag: loop: true, autoplay: true, muted: true }}
         {% comment %}
           <img height="320px" style="object-fit:contain" src="{{ media | img_url: 'large'}}" title="img" alt="img">
