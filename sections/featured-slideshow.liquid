@@ -176,10 +176,8 @@
   >
     {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
       <style>
-            #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
-        background: linear-gradient(180deg, white, #ffffff40);
-        opacity: 1;
-            }
+        #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
+        }
       </style>
       <div
         class="slideshow__slide grid__item grid--1-col slider__slide"
