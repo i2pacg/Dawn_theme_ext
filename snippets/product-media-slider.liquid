@@ -76,11 +76,9 @@
           media.preview_image
           | image_url: height: '420px'
           | image_tag:
-            loading: lazy,
-            class: image_class,
-            sizes: sizes,
-            style: 'object-fit:contain',
-            widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+          loading: lazy,
+          class: image_class,
+          style: 'object-fit:contain',
         }}
       {% elsif media.media_type == 'video' %}
         {{ media | video_tag: loop: true, autoplay: true, muted: true }}
