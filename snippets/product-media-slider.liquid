@@ -105,16 +105,12 @@
 {% comment %}
 {% endcomment %}
 {{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js' | script_tag }}
-{{ '//cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js' | script_tag }}
 <script type="text/javascript">
   $('.slider-for').slick({
     infinite: true,
     speed: 300,
     slidesToShow: 1,
     asNavFor: '.slider-nav',
-  });
-  $('.slider-for').slickLightbox({
-    itemSelector: '> div > img',
   });
   $('.slider-nav').slick({
     slidesToShow: 5,
