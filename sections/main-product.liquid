@@ -98,9 +98,9 @@
               </div>
             {%- when 'description' -%}
                 {%- if product.description != blank -%}
-                  {% if product.description.size > 200 %}
+                  {% if product.description.size > 150 %}
                     <div class="product-description-short">
-                    {{ product.description | truncate: 200, ". . . " }}<a class="readmore" href="#">Show More</a>
+                    {{ product.description | truncate: 150, ". . . " }}
                     </div>
                   {% endif %}
                 {%- endif -%}
