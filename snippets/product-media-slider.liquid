@@ -67,6 +67,11 @@
 <div class="product-gallery">
   <div class="slider-for">
     {% for media in product.media %}
+      {%- liquid
+        if media.media_type == 'image'
+          assign image_class = 'image-magnify-' | append: section.settings.image_zoom
+        endif
+      -%}
       {% if media.media_type == 'image' %}
         {{
           media.preview_image
