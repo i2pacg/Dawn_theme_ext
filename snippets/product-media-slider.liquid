@@ -47,7 +47,7 @@
   <div class="slider-for">
     {% for media in product.media %}
       {% if media.media_type == 'image' %}
-        {{ media | image_tag: }}
+        {{ media | image_tag }}
         {% comment %}  <img height="320px" style="object-fit:contain" src="{{ media | img_url: 'large'}}" title="img" alt="img"> {% endcomment %}
       {% elsif media.media_type == 'video' %}
         {{ media | video_tag: loop: true, autoplay: true, muted: true }}
