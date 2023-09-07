@@ -24,6 +24,24 @@
       {%- for option in product.options_with_values -%}
         <fieldset class="js product-form__input">
           <legend class="form__label">{{ option.name }}</legend>
+          {%- if option.name == 'size' -%}
+            Sizing chart
+            <modal-opener
+              class="product-popup-modal__opener no-js-hidden quick-add-hidden"
+              data-modal="#PopupModal-{{ option.id }}"
+              {{ shopify_attributes }}
+            >
+              <button
+                id="ProductPopup-{{ option.id }}"
+                class="product-popup-modal__button link"
+                type="button"
+                style="text-decoration: unset;display: inline-block;"
+                aria-haspopup="dialog"
+              >
+                Sizing chart
+              </button>
+            </modal-opener>
+          {% endif %}
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
       {%- endfor -%}
@@ -47,24 +65,7 @@
           <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
             {{ option.name }}
           </label>
-          {%- if option.name == 'size' -%}
-            Sizing chart
-            <modal-opener
-              class="product-popup-modal__opener no-js-hidden quick-add-hidden"
-              data-modal="#PopupModal-{{ option.id }}"
-              {{ shopify_attributes }}
-            >
-              <button
-                id="ProductPopup-{{ option.id }}"
-                class="product-popup-modal__button link"
-                type="button"
-                style="text-decoration: unset;display: inline-block;"
-                aria-haspopup="dialog"
-              >
-                Sizing chart
-              </button>
-            </modal-opener>
-          {% endif %}
+
           <div class="select">
             <select
               id="Option-{{ section.id }}-{{ forloop.index0 }}"
