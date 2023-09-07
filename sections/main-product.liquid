@@ -96,6 +96,20 @@
                   </h2>
                 </a>
               </div>
+            {%- when 'description' -%}
+                {%- if product.description != blank -%}
+                  {% if product.description.size > 700 %}
+                    <div class="product-description-short">
+                    {{ product.description | truncate: 500, ". . . " }}<a class="readmore" href="#">Show More ></a>
+                    </div>
+                    <div class="product-description-full" style="display:none;">
+                    {{ product.description }}
+                    <br><a class="readless" href="#"> Show Less</a>
+                    </div>
+                    {% else %}
+                    {{ product.description }}
+                    {% endif %}
+                {%- endif -%}
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price',
@@ -172,21 +186,7 @@
                   {%- endif -%}
                 {%- endif -%}
               </p>
-            {%- when 'description' -%}
-              {%- if product.description != blank -%}
-              
-                {% if product.description.size > 700 %}
-                  <div class="product-description-short">
-                  {{ product.description | truncate: 500, ". . . " }}<a class="readmore" href="#">Show More ></a>
-                  </div>
-                  <div class="product-description-full" style="display:none;">
-                  {{ product.description }}
-                  <br><a class="readless" href="#"> Show Less</a>
-                  </div>
-                  {% else %}
-                  {{ product.description }}
-                  {% endif %}
-              {%- endif -%}
+          
             {%- when 'sku' -%}
               <p
                 class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
