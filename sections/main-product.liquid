@@ -106,7 +106,7 @@
                 <modal-opener
                   class="product-popup-modal__opener no-js-hidden quick-add-hidden"
                   data-modal="#PopupModal-{{ product.id }}"
-                  {{ block.shopify_attributes }}
+                  {{ shopify_attributes }}
                 >
                   <button
                     id="ProductPopup-{{ product.id }}"
@@ -117,10 +117,6 @@
                     read_more
                   </button>
                 </modal-opener>
-               
-                <button class="button button-link">
-                </button>
-
               {% endif %}
 
             {%- when 'price' -%}
