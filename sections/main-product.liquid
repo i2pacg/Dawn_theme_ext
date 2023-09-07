@@ -98,6 +98,8 @@
             {%- when 'description' -%}
               {%- if product.metafields.description.short != blank -%}
                 {{ product.metafields.description.short | truncate: 175, ". . . " }}
+              {%- elsif product.description != blank -%}
+                {{ product.description | truncate: 175, ". . . " }}
               {% endif %}
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
