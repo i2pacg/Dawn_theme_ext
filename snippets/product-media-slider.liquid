@@ -42,8 +42,8 @@
     assign id_append = '-duplicate'
   endif
 -%}
-{% assign videos = product.media | where: 'media_type', 'video' | first %}
-{% assign productImages = product.media | where: 'media_type', 'image' | first %}
+{% assign videos = product.media | where: 'media_type', 'video' %}
+{% assign productImages = product.media | where: 'media_type', 'image' %}
 
 <div class="product-gallery">
   <div class="slider-for">
