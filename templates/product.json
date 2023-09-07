@@ -54,13 +54,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "9e407b6a-c73f-4b0d-b650-79ab0602937a": {
-          "type": "popup",
-          "settings": {
-            "text": "Read More",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -72,8 +65,7 @@
         "quantity_selector",
         "price",
         "buy_buttons",
-        "share",
-        "9e407b6a-c73f-4b0d-b650-79ab0602937a"
+        "share"
       ],
       "custom_css": [
 
