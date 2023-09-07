@@ -102,9 +102,12 @@
                 {{ product.description | truncate: 175, ". . . " }}
               {% endif %}
               {%- if product.description != blank and product.description.size > 175 -%}
-                <a href="{{ product.url }}" class="product__description-link link">
-                  {{ 'products.product.read_more' | t }}
-                </a>
+                <button class="button button-link">
+                  read_more
+                </button>
+                <div class="description-drawer">
+                  {{ product.description  }}
+                </div>
               {% endif %}
 
             {%- when 'price' -%}
