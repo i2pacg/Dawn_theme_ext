@@ -24,26 +24,25 @@
       {%- for option in product.options_with_values -%}
         <fieldset class="js product-form__input">
           <legend class="form__label">{{ option.name }}</legend>
-          {% comment %}
-            {%- if option.name == 'size' -%}
-              Sizing chart
-              <modal-opener
-                class="product-popup-modal__opener no-js-hidden quick-add-hidden"
-                data-modal="#PopupModal-{{ option.id }}"
-                {{ shopify_attributes }}
+          {%- if option.name == 'Size' -%}
+            Sizing chart
+            <modal-opener
+              class="product-popup-modal__opener no-js-hidden quick-add-hidden"
+              data-modal="#PopupModal-{{ option.id }}"
+              {{ shopify_attributes }}
+            >
+              <button
+                id="ProductPopup-{{ option.id }}"
+                class="product-popup-modal__button link"
+                type="button"
+                style="text-decoration: unset;display: inline-block;"
+                aria-haspopup="dialog"
               >
-                <button
-                  id="ProductPopup-{{ option.id }}"
-                  class="product-popup-modal__button link"
-                  type="button"
-                  style="text-decoration: unset;display: inline-block;"
-                  aria-haspopup="dialog"
-                >
-                  Sizing chart
-                </button>
-              </modal-opener>
-            {% endif %}
-          {% endcomment %}
+                Sizing chart
+              </button>
+            </modal-opener>
+          {% endif %}
+
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
       {%- endfor -%}
