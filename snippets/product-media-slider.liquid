@@ -25,6 +25,10 @@
   if mobile_layout == 'columns' and media_count > 1
     assign mobile_columns = 2
   endif
+
+  if media.media_type == 'image'
+    assign image_class = 'image-magnify-' | append: section.settings.image_zoom
+  endif
 -%}
 
 {%- capture sizes -%}
@@ -67,6 +71,11 @@
 <div class="product-gallery">
   <div class="slider-for">
     {% for media in product.media %}
+      {%- liquid
+        if media.media_type == 'image'
+          assign image_class = 'image-magnify-' | append: section.settings.image_zoom
+        endif
+      -%}
       <div class="product__media media media--transparent">
         {% if media.media_type == 'image' %}
           {{ media.preview_image | image_url: height: '420px' | image_tag: loading: lazy, class: image_class }}
