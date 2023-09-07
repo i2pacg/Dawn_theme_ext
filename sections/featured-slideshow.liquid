@@ -27,6 +27,9 @@
   .banner__media_blur.banner__media video {
     filter: blur(5px) grayscale(0.5);
   }
+  .banner__media_blur.banner__media::after {
+    background: linear-gradient(180deg, white, #ffffff40);
+  }
   .slide-product-card .card__inner {
     height: 320px;
   }
@@ -175,9 +178,9 @@
   >
     {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
       <style>
-        #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
-          opacity: 0.5;
-        }
+            #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
+        background: linear-gradient(180deg, white, #ffffff40);
+            }
       </style>
       <div
         class="slideshow__slide grid__item grid--1-col slider__slide"
