@@ -55,6 +55,13 @@
     padding: 8px;
     font-weight: bold;
   }
+  .slide-product-card .product-price {
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    background: white;
+    border-bottom-right-radius: 16px;
+  }
 </style>
 {%- if section.settings.slide_height == 'adapt_image'
   and section.settings.collection.products.first.settings.image != blank
