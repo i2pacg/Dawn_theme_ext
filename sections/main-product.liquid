@@ -103,9 +103,22 @@
               {% endif %}
               {%- if product.description != blank and product.description.size > 175 -%}
              
+                <modal-opener
+                  class="product-popup-modal__opener no-js-hidden quick-add-hidden"
+                  data-modal="#PopupModal-{{ product.id }}"
+                  {{ block.shopify_attributes }}
+                >
+                  <button
+                    id="ProductPopup-{{ product.id }}"
+                    class="product-popup-modal__button link"
+                    type="button"
+                    aria-haspopup="dialog"
+                  >
+                    read_more
+                  </button>
+                </modal-opener>
                
                 <button class="button button-link">
-                  read_more
                 </button>
 
               {% endif %}
