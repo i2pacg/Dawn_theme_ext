@@ -72,14 +72,21 @@
     speed: 300,
     slidesToShow: 1,
   });
-  {% comment %} $('.slider-nav').slick({
-    slidesToShow: 4,
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav',
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 3,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
     dots: true,
-    centerMode: false,
+    centerMode: true,
     focusOnSelect: true,
-  }); {% endcomment %}
+  });
 </script>
 <style>
   .product-gallery {
