@@ -102,12 +102,33 @@
                 {{ product.description | truncate: 175, ". . . " }}
               {% endif %}
               {%- if product.description != blank and product.description.size > 175 -%}
+                <modal-dialog id="PopupModal-{{ product.id }}" class="product-popup-modal" {{ block.shopify_attributes }}>
+                  <div
+                    role="dialog"
+                    aria-label="{{ product.title }}"
+                    aria-modal="true"
+                    class="product-popup-modal__content"
+                    tabindex="-1"
+                  >
+                    <button
+                      id="ModalClose-{{ product.id }}"
+                      type="button"
+                      class="product-popup-modal__toggle"
+                      aria-label="{{ 'accessibility.close' | t }}"
+                    >
+                      {% render 'icon-close' %}
+                    </button>
+                    <div class="product-popup-modal__content-info">
+                      <h1 class="h2">{{ product.title }}</h1>
+                      {{ product.description  }}
+                    </div>
+                  </div>
+                </modal-dialog>
+               
                 <button class="button button-link">
                   read_more
                 </button>
-                <div class="description-drawer">
-                  {{ product.description  }}
-                </div>
+
               {% endif %}
 
             {%- when 'price' -%}
