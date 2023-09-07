@@ -46,7 +46,7 @@
 <div class="product-gallery">
   <div class="slider-for">
     {% for media in product.media %}
-      {{ media.preview_image | image_url | image_tag }}
+      {{ media | image_url: width: 300 | image_tag }}
       {% comment %}
         {% if media.media_type == 'image' %}
           {{ media.preview_image | image_url | image_tag }}
