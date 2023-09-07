@@ -72,7 +72,14 @@
   <div class="slider-for">
     {% for media in product.media %}
       <div>
-        {{ media.preview_image | image_url: height: '420px' | image_tag }}
+        {{
+          media.preview_image
+          | image_url: height: '420px'
+          | image_tag:
+            loading: lazy,
+            sizes: sizes,
+            widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+        }}
         {% comment %}
           <div class="product__media media">
             {{
