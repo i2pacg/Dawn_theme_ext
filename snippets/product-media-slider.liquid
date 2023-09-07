@@ -75,7 +75,7 @@
         {{
           media.preview_image
           | image_url: height: '420px'
-          | image_tag: loading: lazy, class: 'image-magnify-lightbox', style: 'object-fit: contain'
+          | image_tag: loading: lazy, class: image_class, style: 'object-fit: contain'
         }}
       {% elsif media.media_type == 'video' %}
         {{ media | video_tag: loop: true, autoplay: true, muted: true }}
