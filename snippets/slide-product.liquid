@@ -49,6 +49,21 @@
       <div
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}"
       >
+        <h3
+          class="card__heading{% if slide_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
+          {% if slide_product.featured_media or settings.card_style == 'card' %}
+            id="title-{{ section_id }}-{{ slide_product.id }}"
+          {% endif %}
+        >
+          <a
+            href="{{ slide_product.url }}"
+            id="CardLink-{{ section_id }}-{{ slide_product.id }}"
+            class="full-unstyled-link"
+            aria-labelledby="CardLink-{{ section_id }}-{{ slide_product.id }} Badge-{{ section_id }}-{{ slide_product.id }}"
+          >
+            {{ slide_product.title | escape }}
+          </a>
+        </h3>
         {%- if slide_product.featured_media -%}
           <div class="card__media">
             <div class="media media--transparent media--hover-effect">
@@ -119,21 +134,6 @@
       </div>
       <div class="card__content">
         <div class="card__information">
-          <h3
-            class="card__heading{% if slide_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
-            {% if slide_product.featured_media or settings.card_style == 'card' %}
-              id="title-{{ section_id }}-{{ slide_product.id }}"
-            {% endif %}
-          >
-            <a
-              href="{{ slide_product.url }}"
-              id="CardLink-{{ section_id }}-{{ slide_product.id }}"
-              class="full-unstyled-link"
-              aria-labelledby="CardLink-{{ section_id }}-{{ slide_product.id }} Badge-{{ section_id }}-{{ slide_product.id }}"
-            >
-              {{ slide_product.title | escape }}
-            </a>
-          </h3>
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
