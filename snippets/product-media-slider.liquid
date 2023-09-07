@@ -49,13 +49,17 @@
       {% if media.media_type == 'image' %}
         <img height="320px" style="object-fit:contain" src="{{ media | img_url: 'large'}}" title="img" alt="img">
       {% endif %}
+      {% if media.media_type == 'image' %}
+        {{ productVideo | video_tag: loop: true, autoplay: true, muted: true }}
+        {% comment %}
+          <img height="320px" style="object-fit:contain" src="{{ media | img_url: 'large'}}" title="img" alt="img">
+        {% endcomment %}
+      {% endif %}
     {% endfor %}
   </div>
   <div class="slider-nav">
     {% for media in product.media %}
-      {% if media.media_type == 'image' %}
-        <img height="75px" style="object-fit:contain" src="{{ media | img_url }}" title="img" alt="img">
-      {% endif %}
+      <img height="75px" style="object-fit:contain" src="{{ media | img_url }}" title="img" alt="img">
     {% endfor %}
   </div>
   {% comment %}
