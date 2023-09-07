@@ -136,6 +136,23 @@
             </p>
           {%- endif -%}
 
+          <div class="card__badge {{ settings.badge_position }}">
+            {%- if card_product.available == false -%}
+              <span
+                id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
+              >
+                {{- 'products.product.sold_out' | t -}}
+              </span>
+            {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+              <span
+                id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+              >
+                {{- 'products.product.on_sale' | t -}}
+              </span>
+            {%- endif -%}
+          </div>
           {% render 'price', product: slide_product, price_class: '', show_compare_at_price: true %}
           {%- if slide_product.quantity_price_breaks_configured? -%}
             <div class="card__information-volume-pricing-note">
@@ -260,23 +277,6 @@
             {%- endif -%}
           </div>
         {%- endif -%}
-        <div class="card__badge {{ settings.badge_position }}">
-          {%- if slide_product.available == false -%}
-            <span
-              id="Badge-{{ section_id }}-{{ slide_product.id }}"
-              class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
-            >
-              {{- 'products.product.sold_out' | t -}}
-            </span>
-          {%- elsif slide_product.compare_at_price > slide_product.price and slide_product.available -%}
-            <span
-              id="Badge-{{ section_id }}-{{ slide_product.id }}"
-              class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
-            >
-              {{- 'products.product.on_sale' | t -}}
-            </span>
-          {%- endif -%}
-        </div>
       </div>
     </div>
   </div>
