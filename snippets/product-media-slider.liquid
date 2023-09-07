@@ -53,7 +53,9 @@
   </div>
   <div class="slider-nav">
     {% for media in product.media %}
-      <img height="75px" style="object-fit:contain" src="{{ media | img_url }}" title="img" alt="img">
+      {% if media.media_type == 'image' %}
+        <img height="75px" style="object-fit:contain" src="{{ media | img_url }}" title="img" alt="img">
+      {% endif %}
     {% endfor %}
   </div>
   {% comment %}
