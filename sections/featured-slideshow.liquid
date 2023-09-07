@@ -70,6 +70,11 @@
     display: flex;
     align-items: center;
   }
+  .slide-product-card .product_price .savings-badge:after {
+    content: '/';
+    display: block;
+    width: 0;
+  }
 </style>
 {%- if section.settings.slide_height == 'adapt_image'
   and section.settings.collection.products.first.settings.image != blank
