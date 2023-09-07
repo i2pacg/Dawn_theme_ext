@@ -189,7 +189,7 @@
       >
         <div class="slideshow__media banner__media_blur banner__media media{% if product.featured_media == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
           {% assign productVideo = product.media | where: 'media_type', 'video' | first %}
-          {% if productVideos %}
+          {% if productVideo %}
             {{ productVideo | video_tag: loop: true, autoplay: false, muted: true }}
           {%- elsif product.featured_media -%}
             {%- liquid
