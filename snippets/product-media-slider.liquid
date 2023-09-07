@@ -46,15 +46,18 @@
 <div class="product-gallery">
   <div class="slider-for">
     {% for media in product.media %}
-      {% if media.media_type == 'image' %}
-        {{ media.preview_image | image_url: 'large' | image_tag }}
-        {% comment %}  <img height="320px" style="object-fit:contain" src="{{ media | img_url: 'large'}}" title="img" alt="img"> {% endcomment %}
-      {% elsif media.media_type == 'video' %}
-        {{ media | video_tag: loop: true, autoplay: true, muted: true }}
-        {% comment %}
-          <img height="320px" style="object-fit:contain" src="{{ media | img_url: 'large'}}" title="img" alt="img">
-        {% endcomment %}
-      {% endif %}
+      {{ media.preview_image | image_url | image_tag }}
+      {% comment %}
+        {% if media.media_type == 'image' %}
+          {{ media.preview_image | image_url | image_tag }}
+          {% comment %}  <img height="320px" style="object-fit:contain" src="{{ media | img_url: 'large'}}" title="img" alt="img"> {% endcomment %}
+        {% elsif media.media_type == 'video' %}
+          {{ media | video_tag: loop: true, autoplay: true, muted: true }}
+          {% comment %}
+            <img height="320px" style="object-fit:contain" src="{{ media | img_url: 'large'}}" title="img" alt="img">
+          {% endcomment %}
+        {% endif %}
+      {% endcomment %}
     {% endfor %}
   </div>
   <div class="slider-nav">
