@@ -166,8 +166,8 @@
             id="NoMediaStandardBadge-{{ section_id }}-{{ slide_product.id }}"
             class="savings-badge"
           >
-            SAVE
             {{- savings }}
+            <span> OFF </span>
           </span>
           {% render 'price', product: slide_product, price_class: '', show_compare_at_price: true %}
           {%- if slide_product.quantity_price_breaks_configured? -%}
