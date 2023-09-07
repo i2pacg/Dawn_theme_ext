@@ -99,13 +99,13 @@
       {% endcomment %}
     {% endfor %}
   </div>
-  {% comment %}
-    <div class="slider-nav">
-      {% for media in product.media %}
-        <img height="50px" style="object-fit:contain" src="{{ media | img_url }}" title="img" alt="img">
-      {% endfor %}
-    </div>
-  {% endcomment %}
+
+  <div class="slider-nav">
+    {% for media in product.media %}
+      {{ media.preview_image | image_url: height: '50px' | image_tag }}
+    {% endfor %}
+  </div>
+
   {% comment %}
     <div class="slider-nav">
       {% for media in product.media %}
