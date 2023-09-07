@@ -45,6 +45,14 @@
   .slide-product-card.card-wrapper {
     width: 100%;
   }
+  .slide-product-card .card__heading {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    background: white;
+    border-bottom-right-radius: 16px;
+    font-size: 16px;
+  }
 </style>
 {%- if section.settings.slide_height == 'adapt_image'
   and section.settings.collection.products.first.settings.image != blank
