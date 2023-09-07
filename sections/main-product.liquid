@@ -100,15 +100,9 @@
                 {%- if product.description != blank -%}
                   {% if product.description.size > 200 %}
                     <div class="product-description-short">
-                    {{ product.description | truncate: 200, ". . . " }}<a class="readmore" href="#">Show More </a>
+                    {{ product.description | truncate: 200, ". . . " }}<a class="readmore" href="#">Show More</a>
                     </div>
-                    <div class="product-description-full" style="display:none;">
-                    {{ product.description }}
-                    <br><a class="readless" href="#"> Show Less</a>
-                    </div>
-                    {% else %}
-                    {{ product.description }}
-                    {% endif %}
+                  {% endif %}
                 {%- endif -%}
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
