@@ -192,6 +192,16 @@
           {% if productVideo %}
             {{ productVideo | video_tag: loop: true, autoplay: false, muted: true }}
           {%- elsif product.featured_media -%}
+            {%- liquid
+              assign height = product.featured_media.width | divided_by: product.featured_media.aspect_ratio | round
+              if section.settings.image_behavior == 'ambient'
+                assign sizes = '120vw'
+                assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
+              else
+                assign sizes = '100vw'
+                assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+              endif
+            -%}
             {{
               product.featured_media
               | image_url
