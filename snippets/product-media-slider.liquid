@@ -58,7 +58,7 @@
   </div>
   <div class="slider-nav">
     {% for media in product.media %}
-      <img height="75px" style="object-fit:contain" src="{{ media | img_url }}" title="img" alt="img">
+      <img height="50px" style="object-fit:contain" src="{{ media | img_url }}" title="img" alt="img">
     {% endfor %}
   </div>
   {% comment %}
@@ -85,10 +85,9 @@
   });
 
   $('.slider-nav').slick({
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
-    centerMode: true,
     focusOnSelect: true,
   });
 </script>
