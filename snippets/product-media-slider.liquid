@@ -69,10 +69,12 @@
 
 <script type="text/javascript">
   $('.slider-for').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
     slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
+    centerMode: true,
+    variableWidth: true
     asNavFor: '.slider-nav',
   });
   $('.slider-nav').slick({
