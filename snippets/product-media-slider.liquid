@@ -71,19 +71,21 @@
 <div class="product-gallery">
   <div class="slider-for">
     {% for media in product.media %}
-      <noscript>
-        {{ media.preview_image }}
-        <div class="product__media media">
-          {{
-            media.preview_image
-            | image_url: width: 1946
-            | image_tag:
-              loading: lazy,
-              sizes: sizes,
-              widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
-          }}
-        </div>
-      </noscript>
+      <div>
+        {{ media }}
+        {% comment %}
+          <div class="product__media media">
+            {{
+              media.preview_image
+              | image_url: width: 1946
+              | image_tag:
+                loading: lazy,
+                sizes: sizes,
+                widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+            }}
+          </div>
+        {% endcomment %}
+      </div>
       {% comment %}
          {{ media | img_url | image_tag }}  {% if media.media_type == 'image' %}
           {{ media.preview_image | image_url | image_tag }}
