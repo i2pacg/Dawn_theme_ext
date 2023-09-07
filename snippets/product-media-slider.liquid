@@ -43,20 +43,20 @@
   endif
 -%}
 <div class="product-gallery">
-  <div class="slider-for">
-    {% for media in product.media %}
-      <div class="item-slide">
-        <a data-fancybox="gallery" href="{{ media | img_url: 'master'}}"
-          ><img src="{{ media | img_url}}" title="img" alt="img"
-        ></a>
-      </div>
-    {% endfor %}
-  </div>
-  <div class="slider-nav">
-    {% for media in product.media %}
-      <div class="thumb-slide"><img src="{{ media | img_url: '150x150'}}"></div>
-    {% endfor %}
-  </div>
+  {% for media in product.media %}
+    <div class="item-slide">
+      <a data-fancybox="gallery" href="{{ media | img_url: 'master'}}"
+        ><img src="{{ media | img_url}}" title="img" alt="img"
+      ></a>
+    </div>
+  {% endfor %}
+  {% comment %}
+    <div class="slider-nav">
+      {% for media in product.media %}
+        <div class="thumb-slide"><img src="{{ media | img_url: '150x150'}}"></div>
+      {% endfor %}
+    </div>
+  {% endcomment %}
 </div>
 {{ '//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css' | stylesheet_tag }}
 {{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css' | stylesheet_tag }}
@@ -74,8 +74,7 @@
     speed: 300,
     slidesToShow: 1,
     centerMode: true,
-    variableWidth: true
-    asNavFor: '.slider-nav',
+    variableWidth: true,
   });
   $('.slider-nav').slick({
     slidesToShow: 4,
