@@ -117,11 +117,13 @@
       {% endcomment %}
     {% endfor %}
   </div>
-  <div class="slider-nav">
-    {% for media in product.media %}
-      <img height="50px" style="object-fit:contain" src="{{ media | img_url }}" title="img" alt="img">
-    {% endfor %}
-  </div>
+  {% comment %}
+    <div class="slider-nav">
+      {% for media in product.media %}
+        <img height="50px" style="object-fit:contain" src="{{ media | img_url }}" title="img" alt="img">
+      {% endfor %}
+    </div>
+  {% endcomment %}
   {% comment %}
     <div class="slider-nav">
       {% for media in product.media %}
@@ -138,19 +140,19 @@
 {{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js' | script_tag }}
 
 <script type="text/javascript">
-  $('.slider-for').slick({
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    asNavFor: '.slider-nav',
-  });
+  {% comment %}  $('.slider-for').slick({
+     infinite: true,
+     speed: 300,
+     slidesToShow: 1,
+     asNavFor: '.slider-nav',
+   });
 
-  $('.slider-nav').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    asNavFor: '.slider-for',
-    focusOnSelect: true,
-  });
+   $('.slider-nav').slick({
+     slidesToShow: 5,
+     slidesToScroll: 1,
+     asNavFor: '.slider-for',
+     focusOnSelect: true,
+   }); {% endcomment %}
 </script>
 <style>
   .product-gallery {
