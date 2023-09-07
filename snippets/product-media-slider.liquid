@@ -72,7 +72,7 @@
   <div class="slider-for">
     {% for media in product.media %}
       <div>
-        {{ media.preview_image | image_url | image_tag }}
+        {{ media.preview_image | image_url | image_tag :height = '320px', :style = 'object-fit:contain' }}
         {% comment %}
           <div class="product__media media">
             {{
