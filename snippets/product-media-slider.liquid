@@ -45,16 +45,12 @@
 <div class="product-gallery">
   <div class="slider-for">
     {% for media in product.media %}
-      <a data-fancybox="gallery" href="{{ media | img_url}}">
-        <img height="320px" style="object-fit:contain" src="{{ media | img_url: 'large'}}" title="img" alt="img">
-      </a>
+      <img height="320px" style="object-fit:contain" src="{{ media | img_url: 'large'}}" title="img" alt="img">
     {% endfor %}
   </div>
   <div class="slider-nav">
     {% for media in product.media %}
-      <a data-fancybox="gallery" href="{{ media | img_url}}">
-        <img height="75px" style="object-fit:contain" src="{{ media | img_url }}" title="img" alt="img">
-      </a>
+      <img height="75px" style="object-fit:contain" src="{{ media | img_url }}" title="img" alt="img">
     {% endfor %}
   </div>
   {% comment %}
@@ -65,13 +61,11 @@
     </div>
   {% endcomment %}
 </div>
-{{ '//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css' | stylesheet_tag }}
 {{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css' | stylesheet_tag }}
 {{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css' | stylesheet_tag }}
 {{ '//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' | script_tag }}
 {% comment %}
 {% endcomment %}
-{{ '//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js' | script_tag }}
 {{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js' | script_tag }}
 
 <script type="text/javascript">
