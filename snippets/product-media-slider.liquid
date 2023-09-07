@@ -42,14 +42,17 @@
     assign id_append = '-duplicate'
   endif
 -%}
+{% assign videos = product.media | where: 'media_type', 'video' | first %}
+{% assign productImages = product.media | where: 'media_type', 'image' | first %}
+
 <div class="product-gallery">
   <div class="slider-for">
-    {% for media in product.media %}
+    {% for media in productImages %}
       <img height="320px" style="object-fit:contain" src="{{ media | img_url: 'large'}}" title="img" alt="img">
     {% endfor %}
   </div>
   <div class="slider-nav">
-    {% for media in product.media %}
+    {% for media in productImages %}
       <img height="75px" style="object-fit:contain" src="{{ media | img_url }}" title="img" alt="img">
     {% endfor %}
   </div>
