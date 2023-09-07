@@ -5,7 +5,7 @@
   color: rgb(var(--color-foreground));
 }
 
-.price > * {
+.price>* {
   display: inline-block;
   vertical-align: top;
 }
@@ -75,7 +75,7 @@
 
 .price--on-sale .price__sale {
   display: initial;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
