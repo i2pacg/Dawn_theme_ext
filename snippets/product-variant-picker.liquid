@@ -47,7 +47,7 @@
           <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
             {{ option.name }}
           </label>
-          {%- if option.name != 'Size' -%}
+          {%- if option.name == 'Size' -%}
             <modal-opener
               class="product-popup-modal__opener no-js-hidden quick-add-hidden"
               data-modal="#PopupModal-{{ option.id }}"
