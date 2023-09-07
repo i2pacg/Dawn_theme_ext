@@ -72,7 +72,11 @@
   <div class="slider-for">
     {% for media in product.media %}
       {% if media.media_type == 'image' %}
-        {{ media.preview_image | image_url: height: '420px' | image_tag: loading: lazy, style: 'object-fit: contain' }}
+        {{
+          media.preview_image
+          | image_url: height: '420px'
+          | image_tag: loading: lazy, class: 'image-magnify-lightbox', style: 'object-fit: contain'
+        }}
       {% elsif media.media_type == 'video' %}
         {{ media | video_tag: loop: true, autoplay: true, muted: true }}
       {% endif %}
