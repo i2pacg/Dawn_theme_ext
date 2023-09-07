@@ -26,6 +26,12 @@
             "picker_type": "button"
           }
         },
+        "28d3cf48-f336-46c8-8f7d-ec5bd99564a9": {
+          "type": "shopify:\/\/apps\/uploadly-file-upload\/blocks\/app-block\/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
+          "settings": {
+            "featured_product": "{{product}}"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -55,6 +61,7 @@
         "title",
         "price",
         "variant_picker",
+        "28d3cf48-f336-46c8-8f7d-ec5bd99564a9",
         "quantity_selector",
         "buy_buttons",
         "description",
