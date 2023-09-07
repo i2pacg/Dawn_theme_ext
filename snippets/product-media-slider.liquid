@@ -72,16 +72,13 @@
   <div class="slider-for">
     {% for media in product.media %}
       {% if media.media_type == 'image' %}
-        {{
-          media.preview_image
-          | image_url: height: '420px'
-          | image_tag: loading: lazy, class: 'image-magnify-lightbox', style: 'object-fit: contain'
-        }}
+        {{ media.preview_image | image_url: height: '420px' | image_tag: loading: lazy, style: 'object-fit: contain' }}
       {% elsif media.media_type == 'video' %}
         {{ media | video_tag: loop: true, autoplay: true, muted: true }}
       {% endif %}
     {% endfor %}
   </div>
+
   <div class="slider-nav">
     {% for media in product.media %}
       {{
@@ -91,17 +88,26 @@
       }}
     {% endfor %}
   </div>
+
+  {% comment %}
+    <div class="slider-nav">
+      {% for media in product.media %}
+        <div class="thumb-slide"><img src="{{ media | img_url: '150x150'}}"></div>
+      {% endfor %}
+    </div>
+  {% endcomment %}
 </div>
 {{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css' | stylesheet_tag }}
 {{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css' | stylesheet_tag }}
 {{ '//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' | script_tag }}
+{% comment %}
+{% endcomment %}
 {{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js' | script_tag }}
 <script type="text/javascript">
   $('.slider-for').slick({
     infinite: true,
     speed: 300,
     slidesToShow: 1,
-    cssEase: 'linear'
     asNavFor: '.slider-nav',
   });
   $('.slider-nav').slick({
