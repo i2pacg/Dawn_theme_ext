@@ -81,7 +81,11 @@
 
   <div class="slider-nav">
     {% for media in product.media %}
-      {{ media.preview_image | image_url: height: '50px' | image_tag: class: 'thumb-slide', loading: lazy }}
+      {{
+        media.preview_image
+        | image_url: height: '50px'
+        | image_tag: class: 'thumb-slide', loading: lazy, style: 'object-fit: contain'
+      }}
     {% endfor %}
   </div>
 
