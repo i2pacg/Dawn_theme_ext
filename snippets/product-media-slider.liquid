@@ -88,26 +88,17 @@
       }}
     {% endfor %}
   </div>
-
-  {% comment %}
-    <div class="slider-nav">
-      {% for media in product.media %}
-        <div class="thumb-slide"><img src="{{ media | img_url: '150x150'}}"></div>
-      {% endfor %}
-    </div>
-  {% endcomment %}
 </div>
 {{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css' | stylesheet_tag }}
 {{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css' | stylesheet_tag }}
 {{ '//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' | script_tag }}
-{% comment %}
-{% endcomment %}
 {{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js' | script_tag }}
 <script type="text/javascript">
   $('.slider-for').slick({
     infinite: true,
     speed: 300,
     slidesToShow: 1,
+    cssEase: 'linear'
     arrows: true,
     asNavFor: '.slider-nav',
   });
