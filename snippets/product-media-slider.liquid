@@ -72,7 +72,7 @@
   <div class="slider-for">
     {% for media in product.media %}
       <div>
-        {{ media.preview_image | image_url }}
+        {{ media.preview_image | image_url | image_tag }}
         {% comment %}
           <div class="product__media media">
             {{
