@@ -179,12 +179,6 @@
       </div>
       <div class="card__content">
         {%- if show_quick_add -%}
-          <button
-            href="{{ routes.collections_url }}"
-            class="button button--tertiary view-all-button"
-          >
-            {{- 'sections.collection_list.view_all' | t -}}
-          </button>
           <div class="quick-add no-js-hidden">
             {%- liquid
               assign product_form_id = 'quick-add-' | append: section_id | append: slide_product.id
