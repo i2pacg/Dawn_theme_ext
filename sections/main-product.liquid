@@ -101,6 +101,12 @@
               {%- elsif product.description != blank -%}
                 {{ product.description | truncate: 175, ". . . " }}
               {% endif %}
+              {%- if product.description != blank and product.description.size > 175 -%}
+                <a href="{{ product.url }}" class="product__description-link link">
+                  {{ 'products.product.read_more' | t }}
+                </a>
+              {% endif %}
+
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price',
