@@ -76,13 +76,11 @@
           assign image_class = 'image-magnify-' | append: section.settings.image_zoom
         endif
       -%}
-      <div class="product__media media media--transparent">
-        {% if media.media_type == 'image' %}
-          {{ media.preview_image | image_url: height: '420px' | image_tag: loading: lazy, class: image_class }}
-        {% elsif media.media_type == 'video' %}
-          {{ media | video_tag: loop: true, autoplay: true, muted: true }}
-        {% endif %}
-      </div>
+      {% if media.media_type == 'image' %}
+        {{ media.preview_image | image_url: height: '420px' | image_tag: loading: lazy, class: image_class }}
+      {% elsif media.media_type == 'video' %}
+        {{ media | video_tag: loop: true, autoplay: true, muted: true }}
+      {% endif %}
     {% endfor %}
   </div>
 
