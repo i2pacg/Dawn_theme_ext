@@ -155,7 +155,6 @@
               {%- endif -%}
             </div>
           {% endcomment %}
-          {% render 'price', product: slide_product, price_class: '', show_compare_at_price: true %}
           {%- assign savings = slide_product.compare_at_price
             | minus: slide_product.price
             | times: 100.0
@@ -169,6 +168,7 @@
           >
             {{- savings }} OFF
           </span>
+          {% render 'price', product: slide_product, price_class: '', show_compare_at_price: true %}
           {%- if slide_product.quantity_price_breaks_configured? -%}
             <div class="card__information-volume-pricing-note">
               <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
