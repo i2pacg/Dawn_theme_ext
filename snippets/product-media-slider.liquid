@@ -45,7 +45,7 @@
 <div class="product-gallery">
   {% for media in product.media %}
     <a data-fancybox="gallery" href="{{ media | img_url}}">
-      <img src="{{ media | img_url: 'large'}}" title="img" alt="img">
+      <img height="320px" style="object-fit:contain" src="{{ media | img_url: 'large'}}" title="img" alt="img">
     </a>
   {% endfor %}
   {% comment %}
@@ -70,7 +70,6 @@
     dots: true,
     infinite: true,
     speed: 300,
-    adaptiveHeight: true,
     slidesToShow: 1,
   });
   {% comment %} $('.slider-nav').slick({
