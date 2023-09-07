@@ -26,8 +26,12 @@
 <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
-
-
+{% if template.name != "index" %} 
+<style>
+  .header {
+  }
+</style>
+{% endif %}
 <style>
   header-drawer {
     justify-self: start;
