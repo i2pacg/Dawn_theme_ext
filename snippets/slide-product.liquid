@@ -187,6 +187,7 @@
                 assign qty_rules = true
               endif
             -%}
+            <button>view all</button>
             {%- if slide_product.variants.size > 1 or qty_rules -%}
               <modal-opener data-modal="#QuickAdd-{{ slide_product.id }}">
                 <button
