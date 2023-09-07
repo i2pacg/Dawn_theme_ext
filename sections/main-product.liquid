@@ -75,7 +75,6 @@
         class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
       >
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
-<div>{{product.metafields.description.short}}</div>
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
@@ -97,7 +96,11 @@
                 </a>
               </div>
             {%- when 'description' -%}
-                {%- if product.description != blank -%}
+{%- if product.metafields.description.short != blank -%}
+  {{ product.description | truncate: 175, ". . . " }}
+{% endif %}
+
+{%- if product.description != blank -%}
                   {% if product.description.size > 150 %}
                     <div class="product-description-short">
                     {{ product.description | truncate: 150, ". . . " }}
