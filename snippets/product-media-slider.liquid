@@ -72,6 +72,7 @@
   <div class="slider-for">
     {% for media in product.media %}
       <noscript>
+        {{ media.preview_image }}
         <div class="product__media media">
           {{
             media.preview_image
