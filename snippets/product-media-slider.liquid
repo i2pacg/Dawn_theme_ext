@@ -45,7 +45,7 @@
 <div class="product-gallery">
   {% for media in product.media %}
     <a data-fancybox="gallery" href="{{ media | img_url}}">
-      <img src="{{ media | img_url}}" title="img" alt="img">
+      <img src="{{ media | img_url: 'large'}}" title="img" alt="img">
     </a>
   {% endfor %}
   {% comment %}
