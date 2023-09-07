@@ -96,6 +96,7 @@
                 </a>
               </div>
             {%- when 'description' -%}
+              <span>
               {%- if product.metafields.description.short != blank -%}
                 {{ product.metafields.description.short | truncate: 175, ". . . " }}
               {%- elsif product.description != blank -%}
@@ -118,7 +119,7 @@
                   </button>
                 </modal-opener>
               {% endif %}
-
+            </span>
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price',
