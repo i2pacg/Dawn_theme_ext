@@ -30,7 +30,7 @@
     "header": {
       "type": "header",
       "custom_css": [
-        ".header {position: fixed;}"
+
       ],
       "settings": {
         "logo_position": "middle-center",
