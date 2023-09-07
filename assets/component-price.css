@@ -61,6 +61,8 @@
 .price--on-sale .price__regular,
 .price--on-sale .price__availability {
   display: none;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 
 .price--sold-out .price__badge-sold-out,
