@@ -61,7 +61,7 @@
         "share"
       ],
       "custom_css": [
-        "sticky-header header.header {position: relative;}"
+
       ],
       "settings": {
         "enable_sticky_info": true,
