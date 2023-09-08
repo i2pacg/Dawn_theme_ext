@@ -77,6 +77,8 @@
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
         {%- for block in section.blocks -%}
           {%- case block.type -%}
+            {%- when 'divider' -%}
+              <hr />
             {%- when '@app' -%}
               {% render block %}
             {%- when 'text' -%}
@@ -567,7 +569,6 @@
               %}
           {%- endcase -%}
 
-        <hr />
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
           {{ 'products.product.view_full_details' | t }}
