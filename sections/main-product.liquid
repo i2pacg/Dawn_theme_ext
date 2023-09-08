@@ -109,7 +109,7 @@
                   data-modal="#PopupModal-{{ product.id }}"
                   {{ shopify_attributes }}
                 >
-                  <a
+                  <button
                     id="ProductPopup-{{ product.id }}"
                     class="product-popup-modal__button link"
                     type="button"
@@ -117,7 +117,7 @@
                     aria-haspopup="dialog"
                   >
                     ... read more
-                  </a>
+                  </button>
                 </modal-opener>
               {% endif %}
             </span>
@@ -1152,6 +1152,11 @@
           "id": "page",
           "type": "page",
           "label": "t:sections.main-product.blocks.popup.settings.page.label"
+        },
+        {
+          "id": "image",
+          "type": "text",
+          "label": "Image"
         }
       ]
     },
