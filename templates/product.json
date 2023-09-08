@@ -26,6 +26,14 @@
             "picker_type": "button"
           }
         },
+        "6ee76b9f-2067-44f9-82d6-625200b1998a": {
+          "type": "popup",
+          "settings": {
+            "text": "Sizing chart",
+            "page": "",
+            "image": "shopify:\/\/shop_images\/IMG_1118_bc655a04-3bb1-4598-85db-0f0d031313f4.png"
+          }
+        },
         "28d3cf48-f336-46c8-8f7d-ec5bd99564a9": {
           "type": "shopify:\/\/apps\/uploadly-file-upload\/blocks\/app-block\/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
           "settings": {
@@ -61,6 +69,7 @@
         "title",
         "description",
         "variant_picker",
+        "6ee76b9f-2067-44f9-82d6-625200b1998a",
         "28d3cf48-f336-46c8-8f7d-ec5bd99564a9",
         "quantity_selector",
         "price",
