@@ -627,7 +627,7 @@
           {{ block.settings.page.content }}
           {{
             block.settings.image
-            | image_url
+            | image_url: height: '600px'
             | image_tag: loading: lazy, style: 'object-fit: contain'
           }}     
         </div>
