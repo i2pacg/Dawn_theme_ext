@@ -40,16 +40,16 @@
                 Sizing chart
               </button>
             </modal-opener>
-            <modal-dialog id="PopupModal-{{ product.id }}" class="product-popup-modal">
+            <modal-dialog id="PopupModal-{{ option.id }}" class="product-popup-modal">
               <div
                 role="dialog"
-                aria-label="{{ product.title }}"
+                aria-label="{{ option.name }}"
                 aria-modal="true"
                 class="product-popup-modal__content"
                 tabindex="-1"
               >
                 <button
-                  id="ModalClose-{{ product.id }}"
+                  id="ModalClose-{{ option.id }}"
                   type="button"
                   class="product-popup-modal__toggle"
                   aria-label="{{ 'accessibility.close' | t }}"
@@ -57,8 +57,8 @@
                   {% render 'icon-close' %}
                 </button>
                 <div class="product-popup-modal__content-info">
-                  <h1 class="h2">{{ product.title }}</h1>
-                  {{ product.description }}
+                  <h1 class="h2">{{ option.name }}</h1>
+                  {{  }}
                 </div>
               </div>
             </modal-dialog>
