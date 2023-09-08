@@ -23,48 +23,7 @@
     >
       {%- for option in product.options_with_values -%}
         <fieldset class="js product-form__input">
-          <legend class="form__label">{{ option.name }}</legend>
-          {% comment %}
-            {%- if option.name == 'Size' -%}
-              <modal-opener
-                class="product-popup-modal__opener no-js-hidden quick-add-hidden"
-                data-modal="#PopupModal-{{ option.id }}"
-                {{ shopify_attributes }}
-              >
-                <button
-                  id="ProductPopup-{{ option.id }}"
-                  class="product-popup-modal__button link"
-                  type="button"
-                  style="text-decoration: unset;display: inline-block;"
-                  aria-haspopup="dialog"
-                >
-                  Sizing chart
-                </button>
-              </modal-opener>
-              <modal-dialog id="PopupModal-{{ option.id }}" class="product-popup-modal">
-                <div
-                  role="dialog"
-                  aria-label="{{ option.name }}"
-                  aria-modal="true"
-                  class="product-popup-modal__content"
-                  tabindex="-1"
-                >
-                  <button
-                    id="ModalClose-{{ option.id }}"
-                    type="button"
-                    class="product-popup-modal__toggle"
-                    aria-label="{{ 'accessibility.close' | t }}"
-                  >
-                    {% render 'icon-close' %}
-                  </button>
-                  <div class="product-popup-modal__content-info">
-                    <h1 class="h2">{{ option.name }}</h1>
-                    {{  }}
-                  </div>
-                </div>
-              </modal-dialog>
-            {% endif %}
-          {% endcomment %}
+          <h4 class="form__label">{{ option.name }}</legend>
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
       {%- endfor -%}
