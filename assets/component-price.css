@@ -11,6 +11,10 @@
   justify-content: center;
 }
 
+.price.price-ext .price__sale {
+  padding-top: 2px;
+}
+
 .price>* {
   display: inline-block;
   vertical-align: top;
