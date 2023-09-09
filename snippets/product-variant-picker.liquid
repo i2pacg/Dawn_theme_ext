@@ -23,7 +23,9 @@
     >
       {%- for option in product.options_with_values -%}
         <fieldset class="js product-form__input">
-          <h4 class="form__label">{{ option.name }}</h4>
+          {% if option.name != 'Size' %}
+            <h4 class="form__label">{{ option.name }}</h4>
+          {% endif %}
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
       {%- endfor -%}
