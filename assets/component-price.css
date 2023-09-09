@@ -17,6 +17,10 @@
   padding: 2px 24px;
 }
 
+.price.price-ext .price__container {
+  display: flex;
+}
+
 .price.price-ext.price--on-sale {
   box-shadow: unset;
   padding: 0px;
