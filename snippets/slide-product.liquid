@@ -158,7 +158,7 @@
             assign priceClass = slide_product.price_varies
             or product.compare_at_price_varies ? 'price-varies' : ''
           -%}
-          {% render 'price-ext', product: slide_product, price_class: 'price-ext ', show_compare_at_price: true %}
+          {% render 'price-ext', product: slide_product, price_class: 'price-ext {{priceClass}}', show_compare_at_price: true %}
           {%- if slide_product.quantity_price_breaks_configured? -%}
             <div class="card__information-volume-pricing-note">
               <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
