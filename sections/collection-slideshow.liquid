@@ -459,25 +459,6 @@
       <p class="slider-content-description">{{ section.settings.collection.description }}</p>
       <div class="slider-nav">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-          <div class="slider-thumb">
-            {% if product.featured_media -%}
-              {{
-                product.featured_media
-                | image_url: width: '100px'
-                | image_tag: loading: 'lazy', height: '100px', width: '100px'
-              }}
-            {%- else -%}
-              {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
-              {%- if placeholder_slide == 1 -%}
-                {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
-              {%- else -%}
-                {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-              {%- endif -%}
-            {%- endif -%}
-            <div class="slider-thumb-title">
-              {{ product.title }}
-            </div>
-          </div>
         {%- endfor -%}
       </div>
     </div>
