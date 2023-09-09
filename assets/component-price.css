@@ -22,6 +22,10 @@
   padding: 0px;
 }
 
+.price.price-ext.price--on-sale .price__sale {
+  padding: 4px 16px;
+}
+
 .price>* {
   display: inline-block;
   vertical-align: top;
