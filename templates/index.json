@@ -2,10 +2,10 @@
   "sections": {
     "f79b48ca-0193-42c9-907d-33c4957023d4": {
       "type": "featured-slideshow",
+      "disabled": true,
       "settings": {
         "collection": "frenchies",
         "products_to_show": 4,
-        "columns_desktop": 4,
         "layout": "full_bleed",
         "slide_height": "full_height",
         "slider_visual": "dots",
@@ -33,9 +33,43 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "ccbbcda0-5ef1-4edb-acfb-9c71e2179e13": {
+      "type": "collection-slideshow",
+      "settings": {
+        "collection": "frenchies",
+        "products_to_show": 4,
+        "layout": "full_bleed",
+        "slide_height": "full_height",
+        "slider_visual": "counter",
+        "fixed_slider_visual": true,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "button_style_secondary": false,
+        "box_align": "middle-center",
+        "show_text_box": true,
+        "text_alignment": "center",
+        "image_overlay_opacity": 0,
+        "color_scheme": "",
+        "text_alignment_mobile": "center",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "f79b48ca-0193-42c9-907d-33c4957023d4"
+    "f79b48ca-0193-42c9-907d-33c4957023d4",
+    "ccbbcda0-5ef1-4edb-acfb-9c71e2179e13"
   ]
 }
