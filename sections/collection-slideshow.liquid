@@ -347,7 +347,7 @@
       <div class="slide-full">
         {% assign productVideo = product.media | where: 'media_type', 'video' | first %}
         {% if productVideo %}
-          {{ productVideo | video_tag: loop: true, height: '100%', width: '300px', muted: true }}
+          {{ productVideo | video_tag: loop: false, height: '100%', width: '300px', autoplay: true, muted: true }}
         {%- elsif product.featured_media -%}
           {%- liquid
             assign height = product.featured_media.width | divided_by: product.featured_media.aspect_ratio | round
