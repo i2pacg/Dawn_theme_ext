@@ -136,22 +136,24 @@
             </p>
           {%- endif -%}
           {% comment %}
-            {%- assign savings = slide_product.compare_at_price
-              | minus: slide_product.price
-              | times: 100.0
-              | divided_by: slide_product.compare_at_price
-              | round
-              | append: '%'
-            -%}
-            <span
-              id="NoMediaStandardBadge-{{ section_id }}-{{ slide_product.id }}"
-              class="savings-badge"
-            >
-              {{- savings }}
-              <span> OFF </span>
-            </span>
+                 {%- assign savings = slide_product.compare_at_price
+                   | minus: slide_product.price
+                   | times: 100.0
+                   | divided_by: slide_product.compare_at_price
+                   | round
+                   | append: '%'
+                 -%}
+                 <span
+                   id="NoMediaStandardBadge-{{ section_id }}-{{ slide_product.id }}"
+                   class="savings-badge"
+                 >
+                   {{- savings }}
+                   <span> OFF </span>
+                 </span>
+            product.price_varies == false and product.compare_at_price_varies
           {% endcomment %}
-          {% render 'price-ext', product: slide_product, price_class: 'price-ext', show_compare_at_price: true %}
+
+          {% render 'price-ext', product: slide_product, price_class: 'price-ext ', show_compare_at_price: true %}
           {%- if slide_product.quantity_price_breaks_configured? -%}
             <div class="card__information-volume-pricing-note">
               <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
