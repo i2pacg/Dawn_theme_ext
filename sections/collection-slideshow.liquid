@@ -464,7 +464,7 @@
             -%}
             {{
               product.featured_media
-              | image_url
+              | image_url: width: '100px'
               | image_tag: loading: 'lazy', height: '100vh', sizes: sizes, widths: widths
             }}
           {%- else -%}
