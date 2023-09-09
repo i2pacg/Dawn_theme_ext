@@ -135,6 +135,13 @@
   }
   .collection-slideshow .slider-content .slider-content-card .description {
   }
+
+  hr.half-divider {
+    flex: 1;
+    height: 2px;
+    margin: 0;
+    background-color: #e6d4a9;
+  }
 </style>
 {%- if section.settings.slide_height == 'adapt_image'
   and section.settings.collection.products.first.settings.image != blank
@@ -434,7 +441,6 @@
         {{ section.settings.collection.title }}
         <hr class="half-divider">
       </h1>
-      <hr>
       <p class="description">{{ section.settings.collection.description }}</p>
     </div>
   </div>
