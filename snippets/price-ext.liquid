@@ -68,6 +68,13 @@
         - div.price__sale: Displayed when a variant is a sale
     {%- endcomment -%}
 
+    <span
+      id="NoMediaStandardBadge-{{ block.id }}-{{ product.id }}"
+      class="savings-badge"
+    >
+      {{- savings }}
+      <span> OFF </span>
+    </span>
     <div class="price__regular">
       {%- if product.quantity_price_breaks_configured? -%}
         {%- if show_compare_at_price -%}
