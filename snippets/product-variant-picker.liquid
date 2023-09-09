@@ -24,8 +24,7 @@
     >
       {%- for option in product.options_with_values -%}
         <fieldset class="js product-form__input">
-          <h2>{{ option.name }}</h2>
-          <br>
+          <h2 style="margin:0;">{{ option.name }}</h2>
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
       {%- endfor -%}
