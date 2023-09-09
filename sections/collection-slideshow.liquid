@@ -304,7 +304,7 @@
         {{
           product.featured_media
           | image_url
-          | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+          | image_tag: loading: 'lazy', height: '100vh', sizes: sizes, widths: widths
         }}
       {%- else -%}
         {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
