@@ -20,102 +20,11 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+
 <style>
-  .slideshow.slideshow-products .banner__box {
-    padding: 0.5rem;
-  }
-  .slideshow.slideshow-products .banner__box > * + * {
-    margin-top: 0;
-  }
-  .banner__media_blur.banner__media img,
-  .banner__media_blur.banner__media video {
-    filter: blur(5px) grayscale(0.5);
-    object-fit: cover;
-  }
-
-  .slide-product-card .card__inner {
-    height: 320px;
-  }
-  .slide-product-card .card__media {
-    height: 320px;
-  }
-  .slide-product-card .card__media .media {
-    height: 320px !important;
-    width: 100%;
-  }
-  .slide-product-card .card__media img {
-    width: 100%;
-    object-fit: cover;
-  }
-  .slide-product-card .card__content {
-    display: flex;
-    justify-content: stretch;
-    margin-top: 4px;
-  }
-  .slide-product-card .card__content .view-all-button {
-    flex: 1;
-  }
-  .slide-product-card .card__content .quick-add {
-    flex: 2;
-    margin-bottom: 0px;
-  }
-  .slide-product-card .card__content .quick-add .quick-add-button {
-    background: rgba(63, 63, 68, 0.15);
-    font-weight: 700;
-    letter-spacing: 6px;
-    font-size: 16px;
-    border: unset;
-    color: black;
-    width: 100%;
-  }
-  .slide-product-card .card__content .quick-add .quick-add-button:hover {
-    background: rgba(63, 63, 68, 0.55);
-    font-weight: 900;
-    letter-spacing: 8px;
-    color: white;
-  }
-
-  .slide-product-card.card-wrapper {
-    width: 100%;
-  }
-  .slide-product-card .card__heading {
-    position: absolute;
-    top: 0;
-    z-index: 3;
-    background: white;
-    border-bottom-right-radius: 16px;
-    font-size: 16px;
-    padding: 8px;
-    font-weight: bold;
-  }
-  .slide-product-card .product-price {
-    position: absolute;
-    bottom: 0;
-    z-index: 3;
-    right: 0;
-    background: white;
-    border-top-left-radius: 16px;
-    display: flex;
-    align-items: stretch;
-    justify-content: end;
-  }
-  .slide-product-card .product-price.price-varies {
-  }
-  .slide-product-card .product-price .savings-badge {
-    display: flex;
-    align-items: center;
-    background: #41056c;
-    position: relative;
-    padding: 0px 16px;
-    color: white;
-    font-size: 24px;
-    border-top-left-radius: 16px;
-    font-weight: 900;
-  }
-  .slide-product-card .product-price .savings-badge span {
-    margin-left: 4px;
-  }
-  .slide-product-card .product-price .savings-badge:after {
+  .collection-slideshow {
+    height: 100vh;
+    width: 100vw;
   }
 </style>
 {%- if section.settings.slide_height == 'adapt_image'
