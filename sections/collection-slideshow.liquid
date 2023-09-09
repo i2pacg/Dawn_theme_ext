@@ -36,16 +36,17 @@
 
   .collection-slideshow .slider-for .slide-full:after {
     content: '';
+    display: flex;
+    z-index: 0;
     position: absolute;
     left: 0;
     top: 0;
-    background: #ffefba; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffffff, #ffefba); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #ffffff,
-      #ffefba
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    right: 0;
+    background: #ffefba;
+    background: -webkit-linear-gradient(to right, #ffffff, #ffefba);
+    background: linear-gradient(to right, #ffffff, #ffefba);
+    bottom: 0;
+    opacity: 0.8;
   }
 
   .collection-slideshow .slider-for .slide-full video,
