@@ -5,7 +5,7 @@
   color: rgb(var(--color-foreground));
 }
 
-.price .price-ext {
+.price.price-ext {
   flex: 1;
   justify-content: center;
 }
