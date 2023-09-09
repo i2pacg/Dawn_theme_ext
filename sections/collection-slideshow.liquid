@@ -22,14 +22,14 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 
 <style>
-  {% comment %}   .collection-slideshow {
-      height: 100vh;
-      width: 100vw;
-    }
-    .collection-slideshow .slider-for {
-      height: 100%;
-      width: 100%;
-    } {% endcomment %}
+  .collection-slideshow {
+    height: 100vh;
+    width: 100vw;
+  }
+  .collection-slideshow .slider-for {
+    height: 100%;
+    width: 100%;
+  }
 </style>
 {%- if section.settings.slide_height == 'adapt_image'
   and section.settings.collection.products.first.settings.image != blank
@@ -288,12 +288,7 @@
   </slideshow-component>
 {% endcomment %}
 
-<div
-  class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
-  role="region"
-  aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
-  aria-label="{{ section.settings.accessibility_info | escape }}"
->
+<div class="collection-slideshow">
   <div class="slider-for">
     {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
       {% assign productVideo = product.media | where: 'media_type', 'video' | first %}
