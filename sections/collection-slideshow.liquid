@@ -123,18 +123,18 @@
   .collection-slideshow .slider-content .slider-content-card hr {
     margin: 1rem 0;
   }
-  .collection-slideshow .slider-content .slider-content-card .header {
+  .collection-slideshow .slider-content .slider-content-card .slider-content-header {
     margin: 0;
     font-size: 14px;
     color: gray;
     text-align: left;
   }
-  .collection-slideshow .slider-content .slider-content-card .title {
+  .collection-slideshow .slider-content .slider-content-card .slider-content-title {
     display: flex;
     position: relative;
     margin: 0;
   }
-  .collection-slideshow .slider-content .slider-content-card .description {
+  .collection-slideshow .slider-content .slider-content-card .slider-content-description {
   }
 
   hr.half-divider {
@@ -437,12 +437,12 @@
   </div>
   <div class="slider-content">
     <div class="slider-content-card">
-      <h2 class="header">{{ section.settings.header }}</h2>
-      <h1 class="title">
+      <h2 class="slider-content-header">{{ section.settings.header }}</h2>
+      <h1 class="slider-content-title">
         {{ section.settings.collection.title }}
         <hr class="half-divider">
       </h1>
-      <p class="description">{{ section.settings.collection.description }}</p>
+      <p class="slider-content-description">{{ section.settings.collection.description }}</p>
     </div>
   </div>
   <div class="slider-nav"></div>
