@@ -155,8 +155,8 @@
           {% endcomment %}
 
           {%-
-            assign priceClass = slide_product.price_varies
-            or product.compare_at_price_varies ? 'price-varies' : ''
+            assign priceClass ='price-ext';
+            if(slide_product.price_varies ==true or slide_product.compare_at_price_varies == true)
           -%}
           {% render 'price-ext', product: slide_product, price_class: 'price-ext {{priceClass}}', show_compare_at_price: true %}
           {%- if slide_product.quantity_price_breaks_configured? -%}
