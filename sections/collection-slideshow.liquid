@@ -288,7 +288,12 @@
   </slideshow-component>
 {% endcomment %}
 
-<div class="collection-slideshow">
+<div
+  class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
+  role="region"
+  aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
+  aria-label="{{ section.settings.accessibility_info | escape }}"
+>
   <div class="slider-for">
     {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
       {% assign productVideo = product.media | where: 'media_type', 'video' | first %}
