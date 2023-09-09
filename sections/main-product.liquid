@@ -124,6 +124,20 @@
             <hr/>
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                {%- assign savings = product.compare_at_price
+                  | minus: product.price
+                  | times: 100.0
+                  | divided_by: product.compare_at_price
+                  | round
+                  | append: '%'
+                -%}
+                <span
+                  id="NoMediaStandardBadge-{{ section_id }}-{{ slide_product.id }}"
+                  class="savings-badge"
+                >
+                  {{- savings }}
+                  <span> OFF </span>
+                </span>
                 {%- render 'price',
                   product: product,
                   use_variant: true,
