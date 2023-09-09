@@ -28,6 +28,8 @@
 
 .price.price-ext.price--on-sale .price__sale {
   padding: 4px 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .price>* {
