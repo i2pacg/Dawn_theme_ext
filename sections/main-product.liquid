@@ -422,14 +422,16 @@
                 data-modal="#PopupModal-{{ block.id }}"
                 style="margin-top: {{ block.settings.label_margin_top | times: 0.75 | round: 0 }}px;
                 margin-bottom: {{ block.settings.label_margin_bottom | times: 0.75 | round: 0 }}px;
-                padding-top: {{ block.settings.label_padding_top | times: 0.75 | round: 0 }}px;
-                padding-bottom: {{ block.settings.label_padding_bottom | times: 0.75 | round: 0 }}px;
-                text-decoration: unset;"
+              "
                 {{ block.shopify_attributes }}
               >
                 <button
                   id="ProductPopup-{{ block.id }}"
                   class="product-popup-modal__button link"
+               style="
+               padding-top: {{ block.settings.label_padding_top | times: 0.75 | round: 0 }}px;
+               padding-bottom: {{ block.settings.label_padding_bottom | times: 0.75 | round: 0 }}px;
+               text-decoration: unset;"
                   type="button"
                   aria-haspopup="dialog"
                 >
