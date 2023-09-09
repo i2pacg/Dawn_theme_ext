@@ -27,7 +27,9 @@
             "page": "",
             "image": "shopify:\/\/shop_images\/IMG_1118_bc655a04-3bb1-4598-85db-0f0d031313f4.png",
             "label_margin_top": 0,
-            "label_margin_bottom": 0
+            "label_margin_bottom": 0,
+            "label_padding_top": 0,
+            "label_padding_bottom": 0
           }
         },
         "58d146aa-b8ea-4cad-ba11-20e849c9afed": {
