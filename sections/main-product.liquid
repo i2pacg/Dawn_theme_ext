@@ -576,7 +576,9 @@
                 block: block
               %}
           {%- endcase -%}
-
+{% if block.settings.with_divider%}
+<hr/>
+{%- endif -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
           {{ 'products.product.view_full_details' | t }}
