@@ -100,6 +100,16 @@
       /* Firefox */
     }
   }
+
+  .collection-slideshow .slider-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 1;
+  }
 </style>
 {%- if section.settings.slide_height == 'adapt_image'
   and section.settings.collection.products.first.settings.image != blank
@@ -392,7 +402,7 @@
       </div>
     {%- endfor -%}
   </div>
-  <div class="content">
+  <div class="slider-content">
     <h1>{{ section.settings.collection.title }}</h1>
   </div>
   <div class="slider-nav"></div>
