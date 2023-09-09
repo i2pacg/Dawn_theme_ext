@@ -5,6 +5,11 @@
   color: rgb(var(--color-foreground));
 }
 
+.price .price-ext {
+  flex: 1;
+  justify-content: center;
+}
+
 .price>* {
   display: inline-block;
   vertical-align: top;
