@@ -32,6 +32,12 @@
   flex-direction: column;
 }
 
+.price.price-ext.price--on-sale .price-item--regular {
+  text-decoration: line-through;
+  color: rgba(var(--color-foreground), 0.75);
+  font-size: 1.0rem;
+}
+
 .price>* {
   display: inline-block;
   vertical-align: top;
