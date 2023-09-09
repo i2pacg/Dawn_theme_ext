@@ -403,7 +403,11 @@
     {%- endfor -%}
   </div>
   <div class="slider-content">
-    <h1>{{ section.settings.collection.title }}</h1>
+    <div class="slider-content-card">
+      <h1>{{ section.settings.collection.title }}</h1>
+      <hr>
+      <p>{{ section.settings.collection.description }}</p>
+    </div>
   </div>
   <div class="slider-nav"></div>
 </div>
