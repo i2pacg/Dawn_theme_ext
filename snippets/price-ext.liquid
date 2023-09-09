@@ -43,7 +43,13 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 -%}
-
+{%- assign savings = product.compare_at_price
+  | minus: product.price
+  | times: 100.0
+  | divided_by: product.compare_at_price
+  | round
+  | append: '%'
+-%}
 <div
   class="
     price
