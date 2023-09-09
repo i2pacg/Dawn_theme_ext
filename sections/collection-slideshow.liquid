@@ -393,19 +393,18 @@
   <div class="slider-nav"></div>
 </div>
 <script>
-  {% comment %}  $('.slider-for').slick({
-     slidesToShow: 1,
-     slidesToScroll: 1,
-     height:'100vh'
-   }); {% endcomment %}
-   {% comment %} $('.slider-nav').slick({
-     slidesToShow: 3,
-     slidesToScroll: 1,
-     asNavFor: '.slider-for',
-     dots: true,
-     centerMode: true,
-     focusOnSelect: true,
-   }); {% endcomment %}
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  });
+  {% comment %} $('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true,
+  }); {% endcomment %}
 </script>
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
