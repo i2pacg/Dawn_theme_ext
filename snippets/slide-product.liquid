@@ -135,40 +135,22 @@
               </span>
             </p>
           {%- endif -%}
-
           {% comment %}
-            <div class="card__badge {{ settings.badge_position }}">
-              {%- if slide_product.available == false -%}
-                <span
-                  id="NoMediaStandardBadge-{{ section_id }}-{{ slide_product.id }}"
-                  class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
-                >
-                  {{- 'products.product.sold_out' | t -}}
-                </span>
-              {%- elsif slide_product.compare_at_price > slide_product.price and slide_product.available -%}
-                <span
-                  id="NoMediaStandardBadge-{{ section_id }}-{{ slide_product.id }}"
-                  class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
-                >
-                  {{- 'products.product.on_sale' | t -}}
-                </span>
-              {%- endif -%}
-            </div>
+            {%- assign savings = slide_product.compare_at_price
+              | minus: slide_product.price
+              | times: 100.0
+              | divided_by: slide_product.compare_at_price
+              | round
+              | append: '%'
+            -%}
+            <span
+              id="NoMediaStandardBadge-{{ section_id }}-{{ slide_product.id }}"
+              class="savings-badge"
+            >
+              {{- savings }}
+              <span> OFF </span>
+            </span>
           {% endcomment %}
-          {%- assign savings = slide_product.compare_at_price
-            | minus: slide_product.price
-            | times: 100.0
-            | divided_by: slide_product.compare_at_price
-            | round
-            | append: '%'
-          -%}
-          <span
-            id="NoMediaStandardBadge-{{ section_id }}-{{ slide_product.id }}"
-            class="savings-badge"
-          >
-            {{- savings }}
-            <span> OFF </span>
-          </span>
           {% render 'price', product: slide_product, price_class: '', show_compare_at_price: true %}
           {%- if slide_product.quantity_price_breaks_configured? -%}
             <div class="card__information-volume-pricing-note">
