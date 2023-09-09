@@ -459,7 +459,7 @@
       <p class="slider-content-description">{{ section.settings.collection.description }}</p>
       <div class="slider-nav">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-          {% render 'slide-product' %}
+          {% render 'slide-product', product: product %}
         {%- endfor -%}
       </div>
     </div>
