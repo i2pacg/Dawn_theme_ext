@@ -420,6 +420,7 @@
               <modal-opener
                 class="product-popup-modal__opener no-js-hidden quick-add-hidden"
                 data-modal="#PopupModal-{{ block.id }}"
+                style="margin_top: {{ block.settings.margin_top | times: 0.75 | round: 0 }}px;"
                 {{ block.shopify_attributes }}
               >
                 <button
@@ -880,6 +881,15 @@
           ],
           "default": "button",
           "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
+        },
+        {
+          "type": "range",
+          "id": "label_margin_top",
+          "min": 0,
+          "max": 32,
+          "step": 1,
+          "default": 16,
+          "label": "Label top margin"
         }
       ]
     },
