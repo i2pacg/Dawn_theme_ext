@@ -18,7 +18,8 @@
 }
 
 .price.price-ext.price--on-sale {
-  width: 62%;
+  box-shadow: unset;
+  padding: 0px;
 }
 
 .price>* {
