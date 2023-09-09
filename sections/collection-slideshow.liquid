@@ -22,14 +22,14 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 
 <style>
-  .collection-slideshow {
-    height: 100vh;
-    width: 100vw;
-  }
-  .collection-slideshow .slider-for {
-    height: 100%;
-    width: 100%;
-  }
+  {% comment %}   .collection-slideshow {
+      height: 100vh;
+      width: 100vw;
+    }
+    .collection-slideshow .slider-for {
+      height: 100%;
+      width: 100%;
+    } {% endcomment %}
 </style>
 {%- if section.settings.slide_height == 'adapt_image'
   and section.settings.collection.products.first.settings.image != blank
