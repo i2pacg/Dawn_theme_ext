@@ -20,23 +20,18 @@
           "settings": {
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "939a623b-7505-4ab3-adff-e13af0aa03e1": {
-          "type": "divider",
-          "settings": {
-          }
-        },
         "6ee76b9f-2067-44f9-82d6-625200b1998a": {
           "type": "popup",
           "settings": {
             "text": "Sizing chart",
             "page": "",
             "image": "shopify:\/\/shop_images\/IMG_1118_bc655a04-3bb1-4598-85db-0f0d031313f4.png"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
           }
         },
         "28d3cf48-f336-46c8-8f7d-ec5bd99564a9": {
@@ -73,9 +68,8 @@
         "vendor",
         "title",
         "description",
-        "variant_picker",
-        "939a623b-7505-4ab3-adff-e13af0aa03e1",
         "6ee76b9f-2067-44f9-82d6-625200b1998a",
+        "variant_picker",
         "28d3cf48-f336-46c8-8f7d-ec5bd99564a9",
         "quantity_selector",
         "price",
