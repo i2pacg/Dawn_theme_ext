@@ -508,7 +508,6 @@
           {{ productVideo | video_tag: loop: false, height: '100%', width: '300px', autoplay: true, muted: true }}
         {%- elsif product.featured_media -%}
           {%- liquid
-            assign height = product.featured_media.width | divided_by: product.featured_media.aspect_ratio | round
             if section.settings.image_behavior == 'ambient'
               assign sizes = '120vw'
               assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
@@ -557,7 +556,7 @@
           -%}
           <div
             data-aos="fade-up"
-            data-aos-delay="{{forloop.index | times: 200 | plus: 1800}}"
+            data-aos-delay="{{ forloop.index | times: 200 | plus: 1800 }}"
             class="slider-thumb"
           >
             {%
