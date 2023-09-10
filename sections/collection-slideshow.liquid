@@ -562,6 +562,16 @@
     centerMode: true,
     asNavFor: '.slider-for',
   });
+
+  $('.slider-description').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    variableWidth: true,
+    centerMode: true,
+    asNavFor: '.slider-nav',
+  });
+
   AOS.init();
 </script>
 {%- if request.design_mode -%}
