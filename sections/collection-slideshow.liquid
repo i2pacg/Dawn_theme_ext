@@ -541,7 +541,7 @@
           >
             {% render 'card-product-ext',
               product: product,
-              top_title: true,
+              top_title: section.settings.top_title,
               show_quick_add: section.settings.enable_quick_add
             %}
             {% comment %}
@@ -642,12 +642,6 @@
       "type": "text",
       "id": "header",
       "label": "Header"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_quick_add",
-      "default": false,
-      "label": "t:sections.featured-collection.settings.enable_quick_buy.label"
     }
   ],
   "presets": [
