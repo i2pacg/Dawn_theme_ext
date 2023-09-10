@@ -71,21 +71,28 @@
     | round
     | append: '%'
   -%}
-  {% if savings != '0%' %}
-    <div class="product-card-savings">
-      <span
-        id="NoMediaStandardBadge-{{ block.id }}-{{ product.id }}"
-        class="savings-badge"
-      >
-        {{- savings }}
-        <span> OFF </span>
-      </span>
+  <div class="product-content">
+    {% if savings != '0%' %}
+      <div class="product-card-savings">
+        <span
+          id="NoMediaStandardBadge-{{ block.id }}-{{ product.id }}"
+          class="savings-badge"
+        >
+          {{- savings }}
+          <span> OFF </span>
+        </span>
+      </div>
+    {% endif %}
+
+    <div class="product-price">
+      {% render 'price-ext', product: product, price_class: '', show_compare_at_price: true %}
     </div>
-  {% endif %}
-  <div class="product-price">
-    {% render 'price-ext', product: product, price_class: '', show_compare_at_price: true %}
+    {{
+      product.featured_media
+      | img_url: '240x320'
+      | img_tag: product.title, 'slider-thumb-image', style: 'width: 100%'
+    }}
   </div>
-  {{ product.featured_media | img_url: '240x320' | img_tag: product.title, 'slider-thumb-image', style: 'width: 100%' }}
   <h1 class="product-title">
     {{ product.title | escape }}
   </h1>
