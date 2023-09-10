@@ -56,6 +56,11 @@
   margin: 0 1rem 0 0;
 }
 
+.price.price-ext .price-item {
+  margin: 0;
+  line-height: 100%;
+}
+
 .price__regular .price-item--regular {
   margin-right: 0;
 }
