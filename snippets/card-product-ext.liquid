@@ -23,12 +23,12 @@
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
 <style>
-  .product-card img {
+  .product-card .product-content img {
     box-shadow: 1px 1px 16px #00000080;
     border-radius: 16px;
     overflow: hidden;
   }
-  .product-card .product-card-savings {
+  .product-card .product-content .product-card-savings {
     position: absolute;
     top: 0;
     left: 0;
@@ -52,7 +52,7 @@
     text-decoration-color: #a8a298;
     text-underline-offset: 8px;
   }
-  .product-card .product-price {
+  .product-card .product-content .product-price {
     position: absolute;
     bottom: 0;
     right: 0;
