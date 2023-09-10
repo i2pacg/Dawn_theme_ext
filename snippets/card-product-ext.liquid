@@ -86,7 +86,7 @@
   }
 </style>
 <style></style>
-<div class="product-card">
+<div class="product-card {% if top_title %} top-title {% endif %}">
   {%- assign savings = product.compare_at_price
     | minus: product.price
     | times: 100.0
@@ -121,7 +121,7 @@
       | img_tag: product.title, 'slider-thumb-image', style: 'width: 100%'
     }}
   </div>
-  <h1 class="product-title {% if top_title %} top-title {% endif %}">
+  <h1 class="product-title">
     {{ product.title | escape }}
   </h1>
 
