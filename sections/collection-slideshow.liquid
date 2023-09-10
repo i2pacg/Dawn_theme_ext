@@ -582,28 +582,7 @@
       <div class="slider-info">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <div class="slider-info-content">
-            <modal-dialog id="PopupModal-{{ product.id }}" class="product-popup-modal">
-              <div
-                role="dialog"
-                aria-label="{{ product.title }}"
-                aria-modal="true"
-                class="product-popup-modal__content"
-                tabindex="-1"
-              >
-                <button
-                  id="ModalClose-{{ product.id }}"
-                  type="button"
-                  class="product-popup-modal__toggle"
-                  aria-label="{{ 'accessibility.close' | t }}"
-                >
-                  {% render 'icon-close' %}
-                </button>
-                <div class="product-popup-modal__content-info">
-                  <h1 class="h2">{{ product.title }}</h1>
-                </div>
-              </div>
-            </modal-dialog>
-            <p class="slider-description-text">
+            <div class="slider-description-text">
               <span>
                 {%- if product.metafields.description.short != blank -%}
                   {{ product.metafields.description.short | truncate: 175, '. . . ' }}
@@ -630,7 +609,7 @@
                   {% endcomment %}
                 {% endif %}
               </span>
-            </p>
+            </div>
 
             {% if section.settings.quick_add == 'below_description' %}
               <div class="quick-add no-js-hidden">
