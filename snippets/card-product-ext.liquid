@@ -88,12 +88,7 @@
     {% endif %}
 
     <div class="product-price">
-      {% render 'price-ext',
-        product: product,
-        price_class: 'price-ext',
-        show_compare_at_price: true,
-        show_savings: true
-      %}
+      {% render 'price-ext', product: product, price_class: 'price-ext', show_compare_at_price: true %}
     </div>
     {{
       product.featured_media
