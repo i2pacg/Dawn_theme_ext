@@ -332,28 +332,6 @@
               top_title: section.settings.top_title,
               show_quick_add: quick_add ,
             %}
-            {% comment %}
-              <div class="product-card">
-                <div class="product-card-savings"></div>
-                {{
-                  product.featured_media
-                  | img_url: '240x320'
-                  | img_tag: product.title, 'slider-thumb-image', style: 'width: 100%'
-                }}
-              </div>
-            {% endcomment %}
-            {% comment %}
-              {% render 'card-product-ext',
-                card_product: product,
-                media_aspect_ratio: section.settings.image_ratio,
-                image_shape: section.settings.image_shape,
-                show_secondary_image: section.settings.show_secondary_image,
-                show_vendor: section.settings.show_vendor,
-                show_rating: section.settings.show_rating,
-                show_quick_add: section.settings.enable_quick_add,
-                section_id: section.id
-              %}
-            {% endcomment %}
           </div>
         {%- endfor -%}
       </div>
@@ -368,29 +346,9 @@
                   {{ product.description | truncate: 175, '. . . ' }}
                 {% endif %}
                 {%- if product.description != blank and product.description.size > 175 -%}
-                  {% comment %}
-                    <modal-opener
-                      class="product-popup-modal__opener no-js-hidden quick-add-hidden"
-                      data-modal="#PopupModal-{{ product.id }}"
-                      {{ shopify_attributes }}
-                    >
-                      <button
-                        id="ProductPopup-{{ product.id }}"
-                        class="product-popup-modal__button link"
-                        type="button"
-                        style="text-decoration: unset;display: inline-block;"
-                        aria-haspopup="dialog"
-                      >
-                        .read more
-                      </button>
-                    </modal-opener>
-                  {% endcomment %}
-                  {% comment %}
-                  {% endcomment %}
                 {% endif %}
               </span>
             </div>
-
             {% if section.settings.quick_add == 'below_description' %}
               <div class="quick-add no-js-hidden">
                 {%- liquid
