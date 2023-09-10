@@ -579,11 +579,6 @@
       <div class="slider-info">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <div class="slider-info-content">
-            {% comment %}
-              <h1 class="slider-title">
-                {{ product.title | escape }}
-              </h1>
-            {% endcomment %}
             <p class="slider-description-text">
               <span>
                 {%- if product.metafields.description.short != blank -%}
