@@ -535,7 +535,7 @@
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <div class="slider-description-item">
             <p class="slider-description-text">
-              {{ product.metafields.short.description }}
+              {{ product.metafields.description.short }}
             </p>
           </div>
         {% endfor %}
