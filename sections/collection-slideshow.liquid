@@ -543,7 +543,7 @@
               render 'card-product-ext',
               product: product,
               top_title: section.settings.top_title,
-              show_quick_add: section.settings.enable_quick_add and section.settings.quick_add_seprate != true,
+              show_quick_add: section.settings.quick_add == 'inside_card',
             %}
             {% comment %}
               <div class="product-card">
