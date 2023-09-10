@@ -10,9 +10,9 @@
 {{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css' | asset_url | stylesheet_tag }}
 {{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css' | asset_url | stylesheet_tag }}
 {{ 'https://unpkg.com/aos@2.3.1/dist/aos.css' | asset_url | stylesheet_tag }}
-<script src="{{ '//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' | asset_url }}" defer></script>
-<script src="{{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js' | asset_url }}" defer></script>
-<script src="{{ '//unpkg.com/aos@2.3.1/dist/aos.js' | asset_url }}" defer></script>
+<script src="{{ '//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' | asset_url }}" async></script>
+<script src="{{ '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js' | asset_url }}" async></script>
+<script src="{{ '//unpkg.com/aos@2.3.1/dist/aos.js' | asset_url }}" async></script>
 
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
