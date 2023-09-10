@@ -715,28 +715,8 @@
   </div>
 </div>
 <script>
-    $('.slider-for').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      asNavFor: '.slider-nav',
-      fade: true,
-    });
-    $('.slider-nav').slick({
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      infinite: true,
-      variableWidth: true,
-      centerMode: true,
-      asNavFor: '.slider-for , .slider-info',
-    });
-
-    $('.slider-info').slick({
-      arrows: false,
-      fade: true,
-      asNavFor: '.slider-nav',
-    });
-    AOS.init();
-    function initSlick(){
+    initSlick();
+   AOS.init();  function initSlick(){
       $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
