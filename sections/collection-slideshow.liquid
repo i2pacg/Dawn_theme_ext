@@ -585,7 +585,7 @@
                 {{ product.description | truncate: 175, '. . . ' }}
               {% endif %}
             </p>
-            {% if section.settings.quick_add_seprate %}
+            {% if section.settings.quick_add_seprate and section.settings.enable_quick_add %}
               <div class="quick-add no-js-hidden">
                 {%- liquid
                   assign product_form_id = 'quick-add-' | append: section_id | append: product.id
