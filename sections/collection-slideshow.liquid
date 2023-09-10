@@ -534,6 +534,7 @@
       </p>
       <div class="slider-nav">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+          {{ section.settings.quick_add }}
           <div
             data-aos="fade-up"
             data-aos-delay="{{forloop.index | times: 200 | plus: 1800}}"
