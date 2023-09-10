@@ -743,8 +743,10 @@
 
   function init() {
   AOS.init();
-  {% comment %} $('.slider-for').slick('refresh');
-    $('.slider-nav').slick('refresh');
+  $('.slider-nav').slick('refresh');
+
+  {% comment %}
+  $('.slider-for').slick('refresh');
     $('.slider-info').slick('refresh'); {% endcomment %}
 
    {% comment %}  $('.slider-nav').slick({
