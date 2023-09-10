@@ -540,6 +540,8 @@
               assign quick_add = true
             endif
           -%}
+
+          {{ quick_add }}
           <div
             data-aos="fade-up"
             data-aos-delay="{{forloop.index | times: 200 | plus: 1800}}"
