@@ -591,28 +591,35 @@
   </div>
 </div>
 <script>
-  $('.slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    asNavFor: '.slider-nav',
-    fade: true,
-  });
-  $('.slider-nav').slick({
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    infinite: true,
-    variableWidth: true,
-    centerMode: true,
-    asNavFor: '.slider-for , .slider-info',
-  });
-
-  $('.slider-info').slick({
-    arrows: false,
-    fade: true,
-    asNavFor: '.slider-nav',
-  });
-
   AOS.init();
+
+  if (Shopify.designMode) {
+    document.addEventListener('shopify:section:load', (event) => initSlick());
+    document.addEventListener('shopify:section:reorder', () => initSlick());
+  }
+
+  function initSlick() {
+    $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      asNavFor: '.slider-nav',
+      fade: true,
+    });
+    $('.slider-nav').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      infinite: true,
+      variableWidth: true,
+      centerMode: true,
+      asNavFor: '.slider-for , .slider-info',
+    });
+
+    $('.slider-info').slick({
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-nav',
+    });
+  }
 </script>
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
