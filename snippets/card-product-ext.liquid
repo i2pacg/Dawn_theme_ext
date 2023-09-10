@@ -136,6 +136,7 @@
     {{ product.title | escape }}
   </h1>
   {%- if show_quick_add -%}
+    <br>
     <div class="quick-add no-js-hidden">
       {%- liquid
         assign product_form_id = 'quick-add-' | append: section_id | append: product.id
