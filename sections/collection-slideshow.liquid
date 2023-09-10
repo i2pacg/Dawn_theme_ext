@@ -50,10 +50,14 @@
     top: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.9;
-    background: #20002c;
-    background: -webkit-linear-gradient(to right, #cbb4d4, #20002c);
-    background: linear-gradient(to bottom, #cbb4d4, #20002c);
+    opacity: 0.7;
+    background: #ffefba; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #ffffff, #ffefba); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #ffffff,
+      #ffefba
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
   .collection-slideshow .slider-for .slide-full video,
