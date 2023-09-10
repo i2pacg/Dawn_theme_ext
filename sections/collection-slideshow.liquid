@@ -175,7 +175,7 @@
     stroke: #8e8e8e;
   }
   [data-aos='svg-draw-fade'].aos-animate svg path {
-    animation: svgDrawFade 3s 0.6s cubic-bezier(0.47, 0, 0.75, 0.72) forwards;
+    animation: svgDrawFade 1.5s 0.6s cubic-bezier(0.47, 0, 0.75, 0.72) forwards;
   }
   @keyframes svgDrawFade {
     50% {
@@ -479,7 +479,7 @@
     {%- endfor -%}
   </div>
   <div class="slider-content">
-    <div class="slider-content-card">
+    <div class="slider-content-card" data-aos="fade-up">
       <h2 class="slider-content-header">
         {{ section.settings.header }}
       </h2>
