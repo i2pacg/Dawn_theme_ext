@@ -618,14 +618,14 @@
   }
 
   function init() {
-    $('.slider-nav').slick({
+   {% comment %}  $('.slider-nav').slick({
       slidesToShow: 2,
       slidesToScroll: 1,
       infinite: true,
       variableWidth: true,
       centerMode: true,
       asNavFor: '.slider-for , .slider-info',
-    });
+    }); {% endcomment %}
   }
 </script>
 {%- if request.design_mode -%}
