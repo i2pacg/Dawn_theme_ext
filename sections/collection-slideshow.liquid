@@ -582,6 +582,27 @@
       <div class="slider-info">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <div class="slider-info-content">
+            <modal-dialog id="PopupModal-{{ product.id }}" class="product-popup-modal">
+              <div
+                role="dialog"
+                aria-label="{{ product.title }}"
+                aria-modal="true"
+                class="product-popup-modal__content"
+                tabindex="-1"
+              >
+                <button
+                  id="ModalClose-{{ product.id }}"
+                  type="button"
+                  class="product-popup-modal__toggle"
+                  aria-label="{{ 'accessibility.close' | t }}"
+                >
+                  {% render 'icon-close' %}
+                </button>
+                <div class="product-popup-modal__content-info">
+                  <h1 class="h2">{{ product.title }}</h1>
+                </div>
+              </div>
+            </modal-dialog>
             <div class="slider-description-text">
               <span>
                 {%- if product.metafields.description.short != blank -%}
@@ -611,28 +632,6 @@
               </span>
             </div>
 
-            <modal-dialog id="PopupModal-{{ product.id }}" class="product-popup-modal">
-              <div
-                role="dialog"
-                aria-label="{{ product.title }}"
-                aria-modal="true"
-                class="product-popup-modal__content"
-                tabindex="-1"
-              >
-                <button
-                  id="ModalClose-{{ product.id }}"
-                  type="button"
-                  class="product-popup-modal__toggle"
-                  aria-label="{{ 'accessibility.close' | t }}"
-                >
-                  {% render 'icon-close' %}
-                </button>
-                <div class="product-popup-modal__content-info">
-                  <h1 class="h2">{{ product.title }}</h1>
-                </div>
-              </div>
-            </modal-dialog>
-
             {% if section.settings.quick_add == 'below_description' %}
               <div class="quick-add no-js-hidden">
                 {%- liquid
@@ -648,13 +647,15 @@
                       id="{{ product_form_id }}-submit"
                       type="submit"
                       name="add"
-                      class="quick-add__submit button button--full-width"
+                      class="quick-add__submit button button--full-width {% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
                       aria-haspopup="dialog"
                       aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ product.id }}"
                       data-product-url="{{ product.url }}"
                     >
                       {{ 'products.product.buy_now' | t }}
-
+                      {%- if horizontal_quick_add -%}
+                        <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+                      {%- endif -%}
                       <div class="loading-overlay__spinner hidden">
                         <svg
                           aria-hidden="true"
