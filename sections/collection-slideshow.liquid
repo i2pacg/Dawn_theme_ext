@@ -539,10 +539,11 @@
             data-aos-delay="{{forloop.index | times: 200 | plus: 1800}}"
             class="slider-thumb"
           >
-            {% render 'card-product-ext',
+            {%
+              render 'card-product-ext',
               product: product,
               top_title: section.settings.top_title,
-              show_quick_add: section.settings.enable_quick_add
+              show_quick_add: section.settings.enable_quick_add and section.settings.quick_add_seprate,
             %}
             {% comment %}
               <div class="product-card">
