@@ -52,6 +52,16 @@
     text-decoration-color: #a8a298;
     text-underline-offset: 8px;
   }
+  .product-card .product-price {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 8px;
+    margin-bottom: 0px;
+  }
 </style>
 <div class="product-card">
   {%- assign savings = product.compare_at_price
@@ -72,8 +82,9 @@
       </span>
     </div>
   {% endif %}
-  {% render 'price-ext', product: product, price_class: '', show_compare_at_price: true %}
-
+  <div class="product-price">
+    {% render 'price-ext', product: product, price_class: '', show_compare_at_price: true %}
+  </div>
   {{ product.featured_media | img_url: '240x320' | img_tag: product.title, 'slider-thumb-image', style: 'width: 100%' }}
   <h1 class="product-title">
     {{ product.title | escape }}
