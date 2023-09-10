@@ -489,14 +489,14 @@
         {{ section.settings.collection.metafields.svg.title }}
         <hr class="half-divider" data-aos="fade-left" data-aos-duration="400" data-aos-delay="1000">
       </h1>
-      <p class="slider-content-description" data-aos="fade-up" data-aos-delay="1600">
+      <p class="slider-content-description" data-aos="fade-up" data-aos-delay="1400">
         {{ section.settings.collection.description }}
       </p>
       <div class="slider-nav">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <div
             data-aos="fade-up"
-            data-aos-delay="{{forloop.index | times: 100 | plus: 2000}}"
+            data-aos-delay="{{forloop.index | times: 100 | plus: 1400}}"
             class="slider-thumb"
           >
             {% render 'card-product-ext',
