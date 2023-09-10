@@ -539,7 +539,7 @@
             data-aos-delay="{{forloop.index | times: 200 | plus: 1800}}"
             class="slider-thumb"
           >
-            {% render 'card-product-ext', product: product, show_quick_add: true %}
+            {% render 'card-product-ext', product: product, show_quick_add: section.settings.enable_quick_add %}
             {% comment %}
               <div class="product-card">
                 <div class="product-card-savings"></div>
