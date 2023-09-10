@@ -71,13 +71,15 @@
     {%- endcomment -%}
 
     {% if savings != '0%' and show_savings %}
-      <span
-        id="NoMediaStandardBadge-{{ block.id }}-{{ product.id }}"
-        class="savings-badge"
-      >
-        {{- savings }}
-        <span> OFF </span>
-      </span>
+      <div class="product-card-savings">
+        <span
+          id="NoMediaStandardBadge-{{ block.id }}-{{ product.id }}"
+          class="savings-badge"
+        >
+          {{- savings }}
+          <span> OFF </span>
+        </span>
+      </div>
     {% endif %}
     <div class="price__regular">
       {%- if product.quantity_price_breaks_configured? -%}
