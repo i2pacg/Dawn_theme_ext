@@ -337,12 +337,8 @@
       </div>
       <div class="slider-info">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-          <div
-            class="slider-info-content"
-          >
-            <div
-              class="slider-description-text"
-            >
+          <div class="slider-info-content">
+            <div class="slider-description-text">
               <span>
                 {%- if product.metafields.description.short != blank -%}
                   {{ product.metafields.description.short | truncate: 175, '. . . ' }}
