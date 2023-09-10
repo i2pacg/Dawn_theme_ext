@@ -72,10 +72,13 @@
       </span>
     </div>
   {% endif %}
+  {% render 'price-ext', product: product, price_class: '', show_compare_at_price: true %}
+
   {{ product.featured_media | img_url: '240x320' | img_tag: product.title, 'slider-thumb-image', style: 'width: 100%' }}
   <h1 class="product-title">
     {{ product.title | escape }}
   </h1>
+
   {%- if show_quick_add -%}
     <div class="quick-add no-js-hidden">
       {%- liquid
