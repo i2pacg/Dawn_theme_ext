@@ -535,7 +535,11 @@
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <div class="slider-description-item">
             <p class="slider-description-text">
-              {{ product.metafields.description.short }}
+              {%- if product.metafields.description.short != blank -%}
+                {{ product.metafields.description.short | truncate: 175, '. . . ' }}
+              {%- elsif product.description != blank -%}
+                {{ product.description | truncate: 175, '. . . ' }}
+              {% endif %}
             </p>
           </div>
         {% endfor %}
