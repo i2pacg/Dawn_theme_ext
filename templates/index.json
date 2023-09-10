@@ -41,7 +41,7 @@
         "products_to_show": 6,
         "header": "Checkout our new collection",
         "enable_quick_add": true,
-        "top_title": false
+        "top_title": true
       }
     }
   },
