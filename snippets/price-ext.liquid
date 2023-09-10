@@ -70,7 +70,7 @@
         - div.price__sale: Displayed when a variant is a sale
     {%- endcomment -%}
 
-    {% if savings != '0%' %}
+    {% if savings != '0%' and show_savings %}
       <span
         id="NoMediaStandardBadge-{{ block.id }}-{{ product.id }}"
         class="savings-badge"
