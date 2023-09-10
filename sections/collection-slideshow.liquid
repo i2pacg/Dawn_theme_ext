@@ -533,7 +533,7 @@
       </div>
       <div class="slider-description">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-          <div class="slider-description-item" style="width:100%">
+          <div class="slider-description-item">
             <p class="slider-description-text">
               {%- if product.metafields.description.short != blank -%}
                 {{ product.metafields.description.short | truncate: 175, '. . . ' }}
@@ -564,7 +564,6 @@
   });
 
   $('.slider-description').slick({
-    slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
     infinite: true,
