@@ -534,11 +534,6 @@
       </p>
       <div class="slider-nav">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-          {% if section.settings.quick_add == 'inside_card' %}
-            assign quick_add = true;
-          {% else %}
-            assign quick_add = fade;
-          {% endif %}
           <div
             data-aos="fade-up"
             data-aos-delay="{{forloop.index | times: 200 | plus: 1800}}"
