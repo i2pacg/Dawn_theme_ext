@@ -337,11 +337,13 @@
       </div>
       <div class="slider-info">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-          <div class="slider-info-content">
+          <div
+            class="slider-info-content"
+            data-aos="fade-right"
+            data-aos-delay="{{ forloop.index | times: 200 | plus: 5000 }}"
+          >
             <div
               class="slider-description-text"
-              data-aos="fade-right"
-              data-aos-delay="{{ forloop.index | times: 200 | plus: 5000 }}"
             >
               <span>
                 {%- if product.metafields.description.short != blank -%}
