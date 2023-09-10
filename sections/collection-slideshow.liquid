@@ -191,7 +191,7 @@
   }
 </style>
 <style>
-  .slider-thumb:not(.slick-current.slick-active) .slider-card {
+  .slider-thumb:not(.slick-current.slick-active) .product-card {
     filter: grayscale(1);
     transform: scale(0.9);
     transition: all 0.3s 0s ease;
@@ -199,7 +199,7 @@
     border-radius: 4px;
     box-shadow: unset;
   }
-  .slider-thumb .slider-card {
+  .slider-thumb .product-card {
     box-shadow: 1px 1px 16px #00000080;
     border-radius: 16px;
     overflow: hidden;
@@ -544,14 +544,16 @@
             data-aos-delay="{{forloop.index | times: 200 | plus: 1800}}"
             class="slider-thumb"
           >
-            <div class="slider-card">
-              <div class="slider-card-savings"></div>
-              {{
-                product.featured_media
-                | img_url: '240x320'
-                | img_tag: product.title, 'slider-thumb-image', style: 'width: 100%'
-              }}
-            </div>
+            {% comment %}
+              <div class="product-card">
+                <div class="product-card-savings"></div>
+                {{
+                  product.featured_media
+                  | img_url: '240x320'
+                  | img_tag: product.title, 'slider-thumb-image', style: 'width: 100%'
+                }}
+              </div>
+            {% endcomment %}
             {% comment %}
               {% render 'card-product-ext',
                 card_product: product,
