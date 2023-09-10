@@ -12,7 +12,7 @@
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
 
-{%- if section.settings.enable_quick_add -%}
+{%- if section.settings.quick_add != 'off' -%}
   {{ 'quick-add.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
@@ -534,7 +534,9 @@
       </p>
       <div class="slider-nav">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-          {{ section.settings.quick_add }}
+          {% if section.settings.quick_add == 'inside_card' %}
+            <div>true</div>
+          {% endif %}
           <div
             data-aos="fade-up"
             data-aos-delay="{{forloop.index | times: 200 | plus: 1800}}"
