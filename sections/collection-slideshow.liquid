@@ -267,13 +267,6 @@
   {%- endstyle -%}
 {%- endif -%}
 
-{%- liquid
-  assign products_to_display = section.settings.collection.all_products_count
-
-  if section.settings.collection.all_products_count > section.settings.products_to_show
-    assign products_to_display = section.settings.products_to_show
-  endif
--%}
 {% comment %}
   <slideshow-component
     class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
