@@ -137,9 +137,6 @@
   </h1>
   <div class="product-buttons">
     {%- if show_quick_add -%}
-      {%- if top_title %}
-        <br>
-      {%- endif -%}
       <div class="quick-add no-js-hidden">
         {%- liquid
           assign product_form_id = 'quick-add-' | append: section_id | append: product.id
