@@ -715,46 +715,47 @@
   </div>
 </div>
 <script>
-   $('.slider-for').slick({
-     slidesToShow: 1,
-     slidesToScroll: 1,
-     asNavFor: '.slider-nav',
-     fade: true,
-   });
-   $('.slider-nav').slick({
-     slidesToShow: 2,
-     slidesToScroll: 1,
-     infinite: true,
-     variableWidth: true,
-     centerMode: true,
-     asNavFor: '.slider-for , .slider-info',
-   });
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '.slider-nav',
+    fade: true,
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    infinite: true,
+    variableWidth: true,
+    centerMode: true,
+    asNavFor: '.slider-for , .slider-info',
+  });
 
-   $('.slider-info').slick({
-     arrows: false,
-     fade: true,
-     asNavFor: '.slider-nav',
-   });
-   AOS.init();
-   if (Shopify.designMode) {
-     document.addEventListener('shopify:section:load', init);
-  //   document.addEventListener('shopify:section:reorder', init);
-   }
+  $('.slider-info').slick({
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav',
+  });
+  AOS.init();
+  if (Shopify.designMode) {
+    document.addEventListener('shopify:section:load', init);
+    document.addEventListener('shopify:section:reorder', init); //
+  }
 
-   function init() {
-     $('.slider-for').slick('refresh');
-     $('.slider-nav').slick('refresh');
-     $('.slider-info').slick('refresh');
+  function init() {
+  AOS.init();
+  {% comment %} $('.slider-for').slick('refresh');
+    $('.slider-nav').slick('refresh');
+    $('.slider-info').slick('refresh'); {% endcomment %}
 
-    {% comment %}  $('.slider-nav').slick({
-       slidesToShow: 2,
-       slidesToScroll: 1,
-       infinite: true,
-       variableWidth: true,
-       centerMode: true,
-       asNavFor: '.slider-for , .slider-info',
-     }); {% endcomment %}
-   }
+   {% comment %}  $('.slider-nav').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      infinite: true,
+      variableWidth: true,
+      centerMode: true,
+      asNavFor: '.slider-for , .slider-info',
+    }); {% endcomment %}
+  }
 </script>
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
