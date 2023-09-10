@@ -75,17 +75,19 @@
     | append: '%'
   -%}
   <div class="product-content">
-    {% if savings != '0%' %}
-      <div class="product-card-savings">
-        <span
-          id="NoMediaStandardBadge-{{ block.id }}-{{ product.id }}"
-          class="savings-badge"
-        >
-          {{- savings }}
-          <span> OFF </span>
-        </span>
-      </div>
-    {% endif %}
+    {% comment %}
+      {% if savings != '0%' %}
+        <div class="product-card-savings">
+          <span
+            id="NoMediaStandardBadge-{{ block.id }}-{{ product.id }}"
+            class="savings-badge"
+          >
+            {{- savings }}
+            <span> OFF </span>
+          </span>
+        </div>
+      {% endif %}
+    {% endcomment %}
 
     <div class="product-price">
       {% render 'price-ext',
