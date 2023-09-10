@@ -41,7 +41,24 @@
   }
 </style>
 <div class="product-card">
-  <div class="product-card-savings"></div>
+  <div class="product-card-savings">
+    {%- assign savings = product.compare_at_price
+      | minus: product.price
+      | times: 100.0
+      | divided_by: product.compare_at_price
+      | round
+      | append: '%'
+    -%}
+    {% if savings != '0%' %}
+      <span
+        id="NoMediaStandardBadge-{{ block.id }}-{{ product.id }}"
+        class="savings-badge"
+      >
+        {{- savings }}
+        <span> OFF </span>
+      </span>
+    {% endif %}
+  </div>
   {{ product.featured_media | img_url: '240x320' | img_tag: product.title, 'slider-thumb-image', style: 'width: 100%' }}
 </div>
 {% comment %}
