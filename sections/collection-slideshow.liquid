@@ -533,17 +533,19 @@
       </div>
       <div class="slider-info">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-          <div class="slider-title">
-            {{ product.title | escape }}
-          </div>
-          <div class="slider-description-item">
-            <p class="slider-description-text">
-              {%- if product.metafields.description.short != blank -%}
-                {{ product.metafields.description.short | truncate: 175, '. . . ' }}
-              {%- elsif product.description != blank -%}
-                {{ product.description | truncate: 175, '. . . ' }}
-              {% endif %}
-            </p>
+          <div class="slider-info-content">
+            <div class="slider-title">
+              {{ product.title | escape }}
+            </div>
+            <div class="slider-description-item">
+              <p class="slider-description-text">
+                {%- if product.metafields.description.short != blank -%}
+                  {{ product.metafields.description.short | truncate: 175, '. . . ' }}
+                {%- elsif product.description != blank -%}
+                  {{ product.description | truncate: 175, '. . . ' }}
+                {% endif %}
+              </p>
+            </div>
           </div>
         {% endfor %}
       </div>
