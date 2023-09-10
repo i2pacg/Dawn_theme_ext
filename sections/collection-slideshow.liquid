@@ -170,18 +170,16 @@
 
   [data-aos='svg-draw-fade'] svg path {
     fill-opacity: 0;
-    stroke-dasharray: 5000;
+    stroke-dasharray: 1000;
     stroke-dashoffset: 5000;
     stroke: #8e8e8e;
-    transition: stroke-dashoffset 1.5s ease-in-out, fill-opacity 1.2s 1.5s ease-in-out;
   }
   [data-aos='svg-draw-fade'].aos-animate svg path {
-    fill-opacity: 1;
-    stroke-dashoffset: 0;
+    animation: svgDrawFade 5s ease-in-out forwards;
   }
   @keyframes svgDrawFade {
     0% {
-      stroke-dashoffset: 3000;
+      stroke-dashoffset: 5000;
     }
     50% {
       fill-opacity: 0;
@@ -488,7 +486,7 @@
       <h2 class="slider-content-header">
         {{ section.settings.header }}
       </h2>
-      <h1 class="slider-content-title " data-aos="svg-draw-fade">
+      <h1 class="slider-content-title " data-aos-delay="5000" data-aos="svg-draw-fade">
         <hr class="half-divider">
         {{ section.settings.collection.metafields.svg.title }}
         <hr class="half-divider">
