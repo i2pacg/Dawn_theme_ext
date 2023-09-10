@@ -341,11 +341,12 @@
             class="slider-info-content"
           >
             <div
-              data-aos="fade-up"
-              data-aos-delay="{{ forloop.index | times: 200 | plus: 10000 }}"
               class="slider-description-text"
             >
-              <span>
+              <span
+                data-aos="fade-up"
+                data-aos-delay="{{ forloop.index | times: 200 | plus: 10000 }}"
+              >
                 {%- if product.metafields.description.short != blank -%}
                   {{ product.metafields.description.short | truncate: 175, '. . . ' }}
                 {%- elsif product.description != blank -%}
