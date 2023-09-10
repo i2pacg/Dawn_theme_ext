@@ -188,6 +188,11 @@
     }
   }
 </style>
+<style>
+  .slider-thumb:not(.slick-current.slick-active) {
+    filter: grayscale(1);
+  }
+</style>
 {%- if section.settings.slide_height == 'adapt_image'
   and section.settings.collection.products.first.settings.image != blank
 -%}
@@ -479,6 +484,7 @@
       </div>
     {%- endfor -%}
   </div>
+
   <div class="slider-content">
     <div class="slider-content-card" data-aos="fade" data-aos-duration="400">
       <h2 class="slider-content-header" data-aos="fade-right" data-aos-delay="400">
@@ -529,7 +535,7 @@
     asNavFor: '.slider-nav',
   });
   $('.slider-nav').slick({
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     infinite: true,
     centerMode: true,
