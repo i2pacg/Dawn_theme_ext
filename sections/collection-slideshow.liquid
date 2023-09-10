@@ -172,14 +172,13 @@
     background-color: #e6d4a9;
   }
 
-  [data-aos='svg-draw-fade'] {
+  [data-aos='svg-draw-fade'] svg path {
     fill-opacity: 0;
     stroke-dasharray: 5000;
     stroke-dashoffset: 5000;
     stroke: #8e8e8e;
   }
-
-  [data-aos='draw-fade-svg'].aos-animate {
+  [data-aos='draw-fade-svg'] .aos-animate svg path {
     animation: drawFadeSvg 1s ease-in-out forwards;
   }
   @keyframes svgDrawFade {
