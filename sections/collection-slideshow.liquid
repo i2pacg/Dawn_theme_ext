@@ -199,11 +199,17 @@
   .slider-thumb:not(.slick-current.slick-active) .product-card .product-buttons {
     opacity: 0;
   }
+
+  .slider-thumb:not(.slick-current.slick-active) .product-card .product-title,
+  .slider-thumb:not(.slick-current.slick-active) .product-card .product-price,
+  .slider-thumb:not(.slick-current.slick-active) .product-card .product-buttons {
+    opacity: 0;
+  }
+
   .product-card .product-title,
   .product-card .product-price,
   .product-card .product-buttons,
   .product-card .product-content {
-    opacity: 1;
     transition: all 0.6s ease;
   }
   .slider-thumb:not(.slick-current.slick-active) .product-card .product-content {
