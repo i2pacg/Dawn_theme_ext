@@ -591,15 +591,14 @@
   </div>
 </div>
 <script>
-  initSlick();
-  AOS.init();
+  init();
 
   if (Shopify.designMode) {
-    document.addEventListener('shopify:section:load', (event) => initSlick());
-    document.addEventListener('shopify:section:reorder', () => initSlick());
+    document.addEventListener('shopify:section:load', init);
+    document.addEventListener('shopify:section:reorder', init);
   }
 
-  function initSlick() {
+  function init() {
     $('.slider-for').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -620,6 +619,7 @@
       fade: true,
       asNavFor: '.slider-nav',
     });
+    AOS.init();
   }
 </script>
 {%- if request.design_mode -%}
