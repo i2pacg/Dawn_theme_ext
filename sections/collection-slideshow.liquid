@@ -508,11 +508,13 @@
             data-aos-delay="{{forloop.index | times: 200 | plus: 1800}}"
             class="slider-thumb"
           >
-            {{
-              product.featured_media
-              | img_url: '240x320'
-              | img_tag: product.title, 'slider-thumb-image', style: 'width: 100%'
-            }}
+            <div class="card">
+              {{
+                product.featured_media
+                | img_url: '240x320'
+                | img_tag: product.title, 'slider-thumb-image', style: 'width: 100%'
+              }}
+            </div>
             {% comment %}
               {% render 'card-product-ext',
                 card_product: product,
