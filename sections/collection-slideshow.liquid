@@ -488,7 +488,9 @@
         {{ section.settings.collection.metafields.svg.title }}
         <hr class="half-divider" data-aos="fade-right" data-aos-delay="1200">
       </h1>
-      <p class="slider-content-description">{{ section.settings.collection.description }}</p>
+      <p class="slider-content-description" data-aos="fade-up" data-aos-delay="1800">
+        {{ section.settings.collection.description }}
+      </p>
       <div class="slider-nav">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <div
