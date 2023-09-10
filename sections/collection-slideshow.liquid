@@ -172,14 +172,17 @@
     background-color: #e6d4a9;
   }
 
-  [data-aos='draw-fade-svg'] {
+  [data-aos='svg-draw-fade'] {
     fill-opacity: 0;
     stroke-dasharray: 5000;
     stroke-dashoffset: 5000;
     stroke: #8e8e8e;
-    transition-property: transform, opacity;
   }
-  @keyframes drawFadeSvg {
+
+  [data-aos='draw-fade-svg'].aos-animate {
+    animation: drawFadeSvg 1s ease-in-out forwards;
+  }
+  @keyframes svgDrawFade {
     0% {
       stroke-dashoffset: 5000;
     }
@@ -190,9 +193,6 @@
       fill-opacity: 1;
       stroke-dashoffset: 0;
     }
-  }
-  [data-aos='draw-fade-svg'].aos-animate {
-    animation: drawFadeSvg 1s ease-in-out forwards;
   }
 </style>
 {%- if section.settings.slide_height == 'adapt_image'
@@ -491,7 +491,7 @@
       <h2 class="slider-content-header">
         {{ section.settings.header }}
       </h2>
-      <h1 class="slider-content-title">
+      <h1 class="slider-content-title " data-aos="svg-draw-fade">
         <hr class="half-divider">
         {{ section.settings.collection.metafields.svg.title }}
         <hr class="half-divider">
