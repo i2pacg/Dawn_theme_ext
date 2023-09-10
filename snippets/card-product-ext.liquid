@@ -3,7 +3,7 @@
 
   Accepts:
   - product: {Object} Product Liquid object (optional)
-  - title_top: {Boolean} Product (optional)
+  - top_title: {Boolean} Product (optional)
   - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
   - image_shape: {String} Image mask to apply to the product image card. Values are "arch", "blob", "chevronleft", "chevronright", "diamond", "parallelogram", and "round". (optional)
   - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
@@ -114,7 +114,7 @@
       | img_tag: product.title, 'slider-thumb-image', style: 'width: 100%'
     }}
   </div>
-  <h1 class="product-title">
+  <h1 class="product-title {% if top-title %} top-title {% endif %}">
     {{ product.title | escape }}
   </h1>
 
