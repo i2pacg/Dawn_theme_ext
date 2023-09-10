@@ -743,8 +743,15 @@
 
   function init() {
   AOS.init();
-  $('.slider-nav').slick('refresh');
 
+  $('.slider-nav').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    infinite: true,
+    variableWidth: true,
+    centerMode: true,
+    asNavFor: '.slider-for , .slider-info',
+  });
   {% comment %}
   $('.slider-for').slick('refresh');
     $('.slider-info').slick('refresh'); {% endcomment %}
