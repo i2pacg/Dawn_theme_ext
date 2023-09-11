@@ -243,6 +243,7 @@
                       class="quantity__input"
                       type="number"
                       name="quantity"
+                      @change="updateQuantity"
                       id="Quantity-{{ section.id }}"
                       data-cart-quantity="{{ cart_qty }}"
                       data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
@@ -752,8 +753,14 @@
     }
   </script>
 </section>
+<script>
+function updateQuantity(event){
+  console.log("updateQuantity");
+  console.log(event);
+}
 
-{% schema %}
+</script>
+  {% schema %}
 {
   "name": "t:sections.main-product.name",
   "tag": "section",
