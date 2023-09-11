@@ -373,7 +373,7 @@
               align-items: center;
             "
           >
-            <div class="slider-description-text">
+            <div class="slider-description-text" style="flex:2">
               <span>
                 {%- if product.metafields.description.short != blank -%}
                   {{ product.metafields.description.short | truncate: 175, '. . . ' }}
@@ -385,7 +385,7 @@
               </span>
             </div>
             {% if section.settings.quick_add == 'below_description' %}
-              <div class="quick-add no-js-hidden">
+              <div class="quick-add no-js-hidden" style="flex:1">
                 {%- liquid
                   assign product_form_id = 'quick-add-' | append: section.id | append: product.id
                   assign qty_rules = false
