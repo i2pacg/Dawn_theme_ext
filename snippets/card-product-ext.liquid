@@ -103,7 +103,7 @@
       } {% endcomment %}
 </style>
 <style></style>
-<div class="product-card {% if title_option == 'top' %} top-title {% endif %}">
+<div class="product-card">
   {%- assign savings = product.compare_at_price
     | minus: product.price
     | times: 100.0
