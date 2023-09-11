@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log("delay: ", delay);
     collectionSvg.removeAttribute('data-aos-delay');
     collectionSvg.removeAttribute('data-aos');
-    collectionSvg.querySelector("svg").querySelectorAll('path').forEach(function (path, index) {
+    document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path').forEach(function (path, index) {
         console.log(path);
         path.style.transition = `fillOpacity 1s ease ${delay + index * 100}ms,
-        strokeDashoffset 1s ease ${1000 + delay + index * 100}ms,`;
+        strokeDashoffset 1s ease ${1000 + delay + index * 100}ms`;
         /* 
         path.setAttribute('stroke-dasharray', path.getTotalLength()); */
     });
