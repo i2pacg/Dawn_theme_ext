@@ -48,6 +48,10 @@
   display: none;
 }
 
+.product-card.savings-option-bottom .product-content>.product-card-savings {
+  display: none;
+}
+
 
 .product-card .product-content .product-card-savings {
   position: absolute;
