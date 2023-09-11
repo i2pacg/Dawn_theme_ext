@@ -142,16 +142,18 @@
         | image_tag: widths: '240, 200', sizes: '(min-width: 750px) 240px, 200px'
       }}
     </picture>
-    {{
-      product.featured_media
-      | image_url: width: 240, height: 320
-      | image_tag:
-        alt: product.featured_media.alt,
-        widths: '240, 200',
-        heights: '320, 300',
-        sizes: '(min-width: 750px) 240px, 200px',
-        style: 'width: 100%'
-    -}}
+    {% comment %}
+      {{
+        product.featured_media
+        | image_url: width: 240, height: 320
+        | image_tag:
+          alt: product.featured_media.alt,
+          widths: '240, 200',
+          heights: '320, 300',
+          sizes: '(min-width: 750px) 240px, 200px',
+          style: 'width: 100%'
+      -}}
+    {% endcomment %}
 
     {% comment %}
       <img
