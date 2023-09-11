@@ -38,7 +38,7 @@
   position: relative;
 }
 
-.product-card.title-option-top .product-content .product-card-savings {
+.product-card.title-option-top.savings-option-top .product-content .product-card-savings {
   top: 47px;
   border-top-left-radius: 0;
   border-bottom-right-radius: 0;
