@@ -7,9 +7,8 @@ let collectionSvg = document.querySelector("[data-aos='svg-draw-fade']");
 const delay = Number(collectionSvg.getAttribute('data-aos-delay'));
 document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos-delay');
 document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos');
-document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path').forEach(function (path, index) {
-
-
+document.querySelectorAll("[data-aos='svg-draw-fade'] svg path").forEach(function (path, index) {
+    console.log(path.getTotalLength());
 });
 initSlick();
 AOS.init();
