@@ -390,6 +390,7 @@
                 {%- endif -%}
 
               </div>
+              <div>
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price-ext',
                   product: product,
@@ -419,6 +420,7 @@
                   {{ form | payment_terms }}
                 {%- endform -%}
               </div>
+            </div>
             </div>
             {%- when 'popup' -%}
               <modal-opener
