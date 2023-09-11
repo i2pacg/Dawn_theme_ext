@@ -102,6 +102,7 @@
 </style>
 <style></style>
 <div class="product-card {% if top_title %} top-title {% endif %}">
+  {{ title_position }}
   {%- assign savings = product.compare_at_price
     | minus: product.price
     | times: 100.0
