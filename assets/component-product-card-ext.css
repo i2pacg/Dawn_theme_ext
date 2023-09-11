@@ -46,6 +46,7 @@
 
 .product-card.savings-option-bottom .product-content .product-card-savings {
   position: relative;
+  font-size: 18px;
 }
 
 .product-card.savings-option-off .product-content .product-card-savings {
