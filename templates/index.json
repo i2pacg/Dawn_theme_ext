@@ -43,7 +43,8 @@
         "card_buy_option": false,
         "card_title_option": "off",
         "card_savings_option": "top",
-        "slider_title_option": "left"
+        "slider_title_option": "left",
+        "slider_buy_option": "right"
       }
     }
   },
