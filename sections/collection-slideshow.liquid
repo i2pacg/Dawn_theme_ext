@@ -365,12 +365,6 @@
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <div
             class="slider-info-content"
-            style="
-              display:flex;
-              flex-direction: row;
-              justify-content: space-between;
-              align-items: center;
-            "
           >
             <div class="slider-description-text" style="flex:2">
               <h1 class="product-title">
@@ -386,17 +380,75 @@
                 {% endif %}
               </span>
             </div>
-            {% if section.settings.slider_buy_option == 'center' %}
-              <div class="quick-add no-js-hidden" style="flex:1">
-                {%- liquid
-                  assign product_form_id = 'quick-add-' | append: section.id | append: product.id
-                  assign qty_rules = false
-                  if product.selected_or_first_available_variant.quantity_rule.min > 1 or product.selected_or_first_available_variant.quantity_rule.max != null or product.selected_or_first_available_variant.quantity_rule.increment > 1
-                    assign qty_rules = true
-                  endif
-                -%}
-                {%- if product.variants.size > 1 or qty_rules -%}
-                  <modal-opener data-modal="#QuickAdd-{{ product.id }}">
+            <div class="quick-add no-js-hidden" style="flex:1">
+              {%- liquid
+                assign product_form_id = 'quick-add-' | append: section.id | append: product.id
+                assign qty_rules = false
+                if product.selected_or_first_available_variant.quantity_rule.min > 1 or product.selected_or_first_available_variant.quantity_rule.max != null or product.selected_or_first_available_variant.quantity_rule.increment > 1
+                  assign qty_rules = true
+                endif
+              -%}
+              {%- if product.variants.size > 1 or qty_rules -%}
+                <modal-opener data-modal="#QuickAdd-{{ product.id }}">
+                  <button
+                    id="{{ product_form_id }}-submit"
+                    type="submit"
+                    name="add"
+                    class="quick-add__submit button button--full-width"
+                    aria-haspopup="dialog"
+                    aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
+                    data-product-url="{{ product.url }}"
+                  >
+                    {{ 'products.product.buy_now' | t }}
+
+                    <div class="loading-overlay__spinner hidden">
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        class="spinner"
+                        viewBox="0 0 66 66"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                      </svg>
+                    </div>
+                  </button>
+                </modal-opener>
+                <quick-add-modal id="QuickAdd-{{ product.id }}" class="quick-add-modal">
+                  <div
+                    role="dialog"
+                    aria-label="{{ 'products.product.choose_product_options' | t: product_name: product.title | escape }}"
+                    aria-modal="true"
+                    class="quick-add-modal__content global-settings-popup"
+                    tabindex="-1"
+                  >
+                    <button
+                      id="ModalClose-{{ product.id }}"
+                      type="button"
+                      class="quick-add-modal__toggle"
+                      aria-label="{{ 'accessibility.close' | t }}"
+                    >
+                      {% render 'icon-close' %}
+                    </button>
+                    <div id="QuickAddInfo-{{ product.id }}" class="quick-add-modal__content-info"></div>
+                  </div>
+                </quick-add-modal>
+              {%- else -%}
+                <product-form data-section-id="{{ section.id }}">
+                  {%- form 'product',
+                    product,
+                    id: product_form_id,
+                    class: 'form',
+                    novalidate: 'novalidate',
+                    data-type: 'add-to-cart-form'
+                  -%}
+                    <input
+                      type="hidden"
+                      name="id"
+                      value="{{ product.selected_or_first_available_variant.id }}"
+                      class="product-variant-id"
+                      disabled
+                    >
                     <button
                       id="{{ product_form_id }}-submit"
                       type="submit"
@@ -404,10 +456,22 @@
                       class="quick-add__submit button button--full-width"
                       aria-haspopup="dialog"
                       aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
-                      data-product-url="{{ product.url }}"
+                      aria-live="polite"
+                      data-sold-out-message="true"
+                      {% if product.selected_or_first_available_variant.available == false %}
+                        disabled
+                      {% endif %}
                     >
-                      {{ 'products.product.buy_now' | t }}
-
+                      <span>
+                        {%- if product.selected_or_first_available_variant.available -%}
+                          {{ 'products.product.buy_now' | t }}
+                        {%- else -%}
+                          {{ 'products.product.sold_out' | t }}
+                        {%- endif -%}
+                      </span>
+                      <span class="sold-out-message hidden">
+                        {{ 'products.product.sold_out' | t }}
+                      </span>
                       <div class="loading-overlay__spinner hidden">
                         <svg
                           aria-hidden="true"
@@ -420,82 +484,10 @@
                         </svg>
                       </div>
                     </button>
-                  </modal-opener>
-                  <quick-add-modal id="QuickAdd-{{ product.id }}" class="quick-add-modal">
-                    <div
-                      role="dialog"
-                      aria-label="{{ 'products.product.choose_product_options' | t: product_name: product.title | escape }}"
-                      aria-modal="true"
-                      class="quick-add-modal__content global-settings-popup"
-                      tabindex="-1"
-                    >
-                      <button
-                        id="ModalClose-{{ product.id }}"
-                        type="button"
-                        class="quick-add-modal__toggle"
-                        aria-label="{{ 'accessibility.close' | t }}"
-                      >
-                        {% render 'icon-close' %}
-                      </button>
-                      <div id="QuickAddInfo-{{ product.id }}" class="quick-add-modal__content-info"></div>
-                    </div>
-                  </quick-add-modal>
-                {%- else -%}
-                  <product-form data-section-id="{{ section.id }}">
-                    {%- form 'product',
-                      product,
-                      id: product_form_id,
-                      class: 'form',
-                      novalidate: 'novalidate',
-                      data-type: 'add-to-cart-form'
-                    -%}
-                      <input
-                        type="hidden"
-                        name="id"
-                        value="{{ product.selected_or_first_available_variant.id }}"
-                        class="product-variant-id"
-                        disabled
-                      >
-                      <button
-                        id="{{ product_form_id }}-submit"
-                        type="submit"
-                        name="add"
-                        class="quick-add__submit button button--full-width"
-                        aria-haspopup="dialog"
-                        aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
-                        aria-live="polite"
-                        data-sold-out-message="true"
-                        {% if product.selected_or_first_available_variant.available == false %}
-                          disabled
-                        {% endif %}
-                      >
-                        <span>
-                          {%- if product.selected_or_first_available_variant.available -%}
-                            {{ 'products.product.buy_now' | t }}
-                          {%- else -%}
-                            {{ 'products.product.sold_out' | t }}
-                          {%- endif -%}
-                        </span>
-                        <span class="sold-out-message hidden">
-                          {{ 'products.product.sold_out' | t }}
-                        </span>
-                        <div class="loading-overlay__spinner hidden">
-                          <svg
-                            aria-hidden="true"
-                            focusable="false"
-                            class="spinner"
-                            viewBox="0 0 66 66"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                          </svg>
-                        </div>
-                      </button>
-                    {%- endform -%}
-                  </product-form>
-                {%- endif -%}
-              </div>
-            {% endif %}
+                  {%- endform -%}
+                </product-form>
+              {%- endif -%}
+            </div>
           </div>
         {% endfor %}
       </div>
