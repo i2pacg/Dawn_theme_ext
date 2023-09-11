@@ -8,7 +8,7 @@ const delay = Number(collectionSvg.getAttribute('data-aos-delay'));
 document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos-delay');
 document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos');
 document.querySelectorAll("[data-aos='svg-draw-fade'] svg path").forEach(function (path, index) {
-    console.log(path.getTotalLength());
+    console.log(path);
 });
 initSlick();
 AOS.init();
