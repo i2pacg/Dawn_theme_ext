@@ -1,11 +1,20 @@
 .slick-next {
-    right: -16px;
-    background: red;
+    right: -8px;
+    background: #60450894;
+    font-size: 24px;
     border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    font-weight: 900;
 }
 
 .slick-next:before {
     content: '›';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: unset;
+    font-size: 24px;
 }
 
 .collection-slideshow {
