@@ -44,6 +44,11 @@
   border-bottom-right-radius: 0;
 }
 
+.product-card.savings-option-off .product-content .product-card-savings {
+  display: none;
+}
+
+
 .product-card .product-content .product-card-savings {
   position: absolute;
   top: 0;
