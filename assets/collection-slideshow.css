@@ -1,6 +1,9 @@
 .slick-next {
-    color: red;
     right: -16px;
+}
+
+.slick-next:before {
+    color: red;
 }
 
 .collection-slideshow {
