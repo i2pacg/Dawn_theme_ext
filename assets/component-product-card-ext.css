@@ -39,7 +39,9 @@
 }
 
 .product-card.title-option-top .product-content .product-card-savings {
-  top: 64;
+  top: 47px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .product-card .product-content .product-card-savings {
