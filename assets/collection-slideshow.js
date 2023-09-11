@@ -7,10 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     collectionSvg.removeAttribute('data-aos');
     collectionSvg.querySelector("svg").querySelectorAll('path').forEach(function (path, index) {
         console.log(path);
-        /*         path.style.fillOpacity = 0;
-         */        /*     path.setAttribute('data-aos', 'svg-draw-fade');
-                  path.style.strokeDasharray = path.getTotalLength();
-                  path.style.strokeDashoffset = path.getTotalLength(); */
         path.style.transition = `fillOpacity 1s ease ${delay + index * 100}ms,
         strokeDashoffset 1s ease ${1000 + delay + index * 100}ms,`;
         /* 
