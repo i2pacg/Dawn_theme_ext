@@ -206,6 +206,7 @@
           >
             <div class="slider-text">
               {% if product.metafields.svg.title != '' %}
+                {{ product.metafields.svg.title }}
               {% endif %}
               <h1 class="product-title" data-aos-delay="2400" data-aos="fade-right">
                 {{ product.title | escape }}
