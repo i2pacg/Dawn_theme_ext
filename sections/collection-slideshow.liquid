@@ -208,15 +208,13 @@
             class="slider-info-content"
           >
             <div class="slider-text">
-              {% if product.metafields.svg.title %}
-                <div class="product-title-svg">
+              <h1 class="product-title" data-aos-delay="2400" data-aos="fade-right">
+                {% if product.metafields.svg.title %}
                   {{ product.metafields.svg.title }}
-                </div>
-              {% else %}
-                <h1 class="product-title" data-aos-delay="2400" data-aos="fade-right">
+                {% else %}
                   {{ product.title | escape }}
-                </h1>
-              {% endif %}
+                {% endif %}
+              </h1>
               <span>
                 {%- if product.metafields.description.short != blank -%}
                   {{ product.metafields.description.short | truncate: 175, '. . . ' }}
