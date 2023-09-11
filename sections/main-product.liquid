@@ -393,15 +393,14 @@
               </div>
               <div  style="margin-left:16px" >
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-            {{cart_qty}}
-                {%- render 'price-ext',
+              {% comment %}   {%- render 'price-ext',
                   product: product,
                   use_variant: true,
                   show_badges: true,
                   show_savings: true,
                   quantity: cart_qty,
                   price_class: 'price-ext price--large'
-                -%}
+                -%} {% endcomment %}
               </div>
               {%- if product.quantity_price_breaks_configured? -%}
                 <div class="volume-pricing-note">
