@@ -364,7 +364,15 @@
       </div>
       <div class="slider-info">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-          <div class="slider-info-content">
+          <div
+            class="slider-info-content"
+            style="
+              display:flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
             <div class="slider-description-text">
               <span>
                 {%- if product.metafields.description.short != blank -%}
