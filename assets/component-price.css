@@ -20,6 +20,7 @@
 
 .price.price-ext .price__container {
   display: flex;
+  width: 100%;
 }
 
 .price.price-ext.price--on-sale {
