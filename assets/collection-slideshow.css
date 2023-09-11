@@ -3,6 +3,7 @@
 }
 
 .slick-next:before {
+    content: '›';
     color: red;
 }
 
