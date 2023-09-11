@@ -10,7 +10,7 @@ document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path'
     console.log(index);
     path.style.strokeDasharray = path.getTotalLength();
     path.style.strokeDashoffset = path.getTotalLength();
-    path.style.transition = `fillOpacity 0.5s ease-in-out ${delay + (index * 100)}ms,
+    path.style.transition = `fillOpacity 0.5s ease-in-out ${1000 + delay + (index * 100)}ms,
      strokeDashoffset 0.5s ease-in-out ${delay + (index * 100)}ms`
 });
 document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos');
