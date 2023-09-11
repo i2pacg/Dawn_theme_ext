@@ -111,7 +111,7 @@
     | append: '%'
   -%}
   <div class="product-content">
-    {% if savings != '0%' %}
+    {% if savings != '0%' and savings_option == 'top' %}
       <div class="product-card-savings">
         <span
           id="NoMediaStandardBadge-{{ block.id }}-{{ product.id }}"
