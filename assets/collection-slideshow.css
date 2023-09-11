@@ -1,11 +1,12 @@
 .slick-next {
     right: -16px;
+    background: red;
+    border-radius: 50%;
 }
 
 .slick-next:before {
     content: '›';
-    background: red;
-    border-radius: 50%;
+
 }
 
 .collection-slideshow {
