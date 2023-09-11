@@ -21,6 +21,7 @@
 .price.price-ext .price__container {
   display: flex;
   width: 100%;
+  margin-bottom: 0;
 }
 
 .price.price-ext.price--on-sale {
