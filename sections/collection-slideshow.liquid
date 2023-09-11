@@ -204,8 +204,10 @@
           <div
             class="slider-info-content"
           >
-            <div class="slider-text" data-aos-delay="2400" data-aos="fade-right">
-              <h1 class="product-title">
+            <div class="slider-text">
+              {% if product.metafields.svg.title != '' %}
+              {% endif %}
+              <h1 class="product-title" data-aos-delay="2400" data-aos="fade-right">
                 {{ product.title | escape }}
               </h1>
               <span>
