@@ -26,7 +26,7 @@
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
 <style></style>
-<div class="product-card title-option-{{ title_option }}">
+<div class="product-card title-option-{{ title_option }} savings-option-{{ savings_option }}">
   {%- assign savings = product.compare_at_price
     | minus: product.price
     | times: 100.0
