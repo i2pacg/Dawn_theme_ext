@@ -8,8 +8,10 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 
 {{ 'slick.min.css' | asset_url | stylesheet_tag }}
-{{ 'slick-theme.min.css' | asset_url | stylesheet_tag }}
-{{ 'aos.css' | asset_url | stylesheet_tag }}
+{% comment %}
+  {{ 'slick-theme.min.css' | asset_url | stylesheet_tag }}
+{% endcomment %}
+{{- 'aos.css' | asset_url | stylesheet_tag }}
 
 {{ 'jquery.min.js' | asset_url | script_tag }}
 {{ 'slick.min.js' | asset_url | script_tag }}
