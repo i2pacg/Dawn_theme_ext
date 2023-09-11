@@ -203,7 +203,13 @@
     margin: 0;
     background-color: #462a4e;
   }
-
+  [data-aos='svg-draw-fade'] {
+    fill-opacity: 0;
+  }
+  [data-aos='svg-draw-fade'].aos-animate svg path {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
   {% comment %} [data-aos='svg-draw-fade'] svg path {
     fill-opacity: 0;
     stroke-dasharray: 5000;
