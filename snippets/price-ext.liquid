@@ -58,6 +58,7 @@
   "
 >
   <div class="price__container">
+    {{ quantity }}
     {% if savings != '0%' and show_savings %}
       <div class="product-card-savings">
         <span
@@ -69,7 +70,6 @@
         </span>
       </div>
     {% endif %}
-    {{ quantity }}
     <div class="price__regular">
       {%- if product.quantity_price_breaks_configured? -%}
         {%- if show_compare_at_price -%}
