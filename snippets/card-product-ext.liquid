@@ -147,15 +147,17 @@
       width="240"
       height="320"
     >
-    {{
-      product.featured_media
-      | image_url: width: 240, height: 320
-      | image_tag:
-        alt: product.featured_media.alt,
-        widths: '240, 180',
-        sizes: '(min-width: 750px) 240px, 180px',
-        style: 'width: 100%'
-    -}}
+    {% comment %}
+      {{
+        product.featured_media
+        | image_url: width: 240, height: 320
+        | image_tag:
+          alt: product.featured_media.alt,
+          widths: '240, 180',
+          sizes: '(min-width: 750px) 240px, 180px',
+          style: 'width: 100%'
+      -}}
+    {% endcomment %}
     {% comment %}
       <img
       srcset="
