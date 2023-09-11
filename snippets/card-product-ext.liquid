@@ -131,9 +131,16 @@
     </div>
     {{
       product.featured_media
-      | img_url: '240x320'
-      | img_tag: product.title, 'slider-thumb-image', style: 'width: 100%'
-    }}
+      | image_url: width: 240, height: 320
+      | image_tag: widths: '300, 600', sizes: '(min-width: 400px) 298px, 78.75vw', style: 'width: 300px'
+    -}}
+    {% comment %}
+      {{
+        product.featured_media
+        | img_url: '240x320'
+        | img_tag: product.title, 'slider-thumb-image', style: 'width: 100%'
+      }}
+    {% endcomment %}
   </div>
   <h1 class="product-title">
     {{ product.title | escape }}
