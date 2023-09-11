@@ -581,10 +581,25 @@
       "label": "Header"
     },
     {
-      "type": "checkbox",
-      "id": "card_show_title",
-      "default": false,
-      "label": "Card: Show Title"
+      "type": "select",
+      "id": "quick_add",
+      "options": [
+        {
+          "value": "off",
+          "label": "Hide"
+        },
+        {
+          "value": "inside_card",
+          "label": "Inside Card"
+        },
+        {
+          "value": "below_description",
+          "label": "Below Description"
+        }
+      ],
+      "default": "inside_card",
+      "label": "Quick Add",
+      "info": "Turn off or choose quick add button position"
     }
   ],
   "presets": [
