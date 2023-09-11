@@ -210,6 +210,15 @@
     fill-opacity: 1 !important;
     stroke-dashoffset: 0 !important;
   }
+  @keyframes svgDrawFade {
+    50% {
+      fill-opacity: 0;
+    }
+    100% {
+      fill-opacity: 1;
+      stroke-dashoffset: 0;
+    }
+  }
   {% comment %} [data-aos='svg-draw-fade'] svg path {
     fill-opacity: 0;
     stroke-dasharray: 5000;
@@ -225,15 +234,7 @@
 
     animation: svgDrawFade 3s 0.8s cubic-bezier(0.47, 0, 0.75, 0.72) forwards;
 
-  @keyframes svgDrawFade {
-    50% {
-      fill-opacity: 0;
-    }
-    100% {
-      fill-opacity: 1;
-      stroke-dashoffset: 0;
-    }
-  } {% endcomment %}
+  {% endcomment %}
 </style>
 <style>
   .slider-thumb:not(.slick-current.slick-active) .product-card .product-title,
