@@ -82,11 +82,9 @@
       height="360"
     >
   </div>
-  {% if title_option != 'off' %}
-    <h1 class="product-title">
-      {{ product.title | escape }}
-    </h1>
-  {% endif %}
+  <h1 class="product-title">
+    {{ product.title | escape }}
+  </h1>
   <div class="product-buttons">
     {%- if show_quick_add -%}
       <div class="quick-add no-js-hidden">
