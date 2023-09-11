@@ -24,13 +24,17 @@ AOS.init();
 
 
 
-for (let x = 3000; x < 5000; x + 50) {
+for (let x = 3000; x < 5000; x += 50) {
     console.log(`[data-aos][data-aos][data-aos-delay="${x}"].aos-animate,
     body[data-aos-delay="${x}"] [data-aos].aos-animate {
         transition-delay: ${x / 1000}s
     }`);
 }
 
+/* [data-aos][data-aos][data-aos-delay="3100"].aos-animate,
+body[data-aos-delay="3100"] [data-aos].aos-animate {
+    transition-delay: 3s
+} */
 function initSlick() {
     $('.slider-for').slick({
         slidesToShow: 1,
