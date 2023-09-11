@@ -374,6 +374,9 @@
             "
           >
             <div class="slider-description-text" style="flex:2">
+              <h1 class="product-title">
+                {{ product.title | escape }}
+              </h1>
               <span>
                 {%- if product.metafields.description.short != blank -%}
                   {{ product.metafields.description.short | truncate: 175, '. . . ' }}
