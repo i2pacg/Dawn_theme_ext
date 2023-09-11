@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     collectionSvg.querySelector("svg").querySelectorAll('path').forEach(function (path, index) {
         console.log(path);
         /*   path.setAttribute('data-aos', 'svg-draw-fade'); */
-        path.style.transition = 'fillOpacity 6.s ease ' + (index * 100 + delay) + 'ms';
+        path.style.transition = `fillOpacity 6.s ease ${(index * 100 + delay)}ms`;
         /* 
         path.setAttribute('stroke-dasharray', path.getTotalLength()); */
     });
