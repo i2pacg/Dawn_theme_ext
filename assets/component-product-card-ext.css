@@ -38,6 +38,10 @@
   position: relative;
 }
 
+.product-card.title-option-top .product-content .product-card-savings {
+  top: 64;
+}
+
 .product-card .product-content .product-card-savings {
   position: absolute;
   top: 0;
