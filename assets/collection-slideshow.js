@@ -1,17 +1,16 @@
 
 /* 
-document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path').forEach(function (path, index) {
 
-
-});
  */
 
 let collectionSvg = document.querySelector("[data-aos='svg-draw-fade']");
 const delay = Number(collectionSvg.getAttribute('data-aos-delay'));
-console.log("delay: ", delay);
 document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos-delay');
 document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos');
+document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path').forEach(function (path, index) {
 
+
+});
 initSlick();
 AOS.init();
 function initSlick() {
