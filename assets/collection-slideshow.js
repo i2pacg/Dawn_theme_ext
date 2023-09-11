@@ -34,6 +34,7 @@ function initSlick() {
         slidesToScroll: 1,
         infinite: true,
         variableWidth: true,
+        nextArrow: '#slider-arrow-right',
         centerMode: true,
         asNavFor: '.slider-for , .slider-info',
     });
