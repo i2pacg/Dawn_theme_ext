@@ -243,7 +243,7 @@
                       class="quantity__input"
                       type="number"
                       name="quantity"
-                      @change="updateQuantity"
+                      onchange="updateQuantity"
                       id="Quantity-{{ section.id }}"
                       data-cart-quantity="{{ cart_qty }}"
                       data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
