@@ -204,7 +204,7 @@
     background-color: #462a4e;
   }
 
-  [data-aos='svg-draw-fade'] svg path {
+  {% comment %} [data-aos='svg-draw-fade'] svg path {
     fill-opacity: 0;
     stroke-dasharray: 5000;
     stroke-dashoffset: 5000;
@@ -214,7 +214,7 @@
   [data-aos='svg-draw-fade'].aos-animate svg path {
     fill-opacity: 1;
     stroke-dashoffset: 0;
-  }
+  } {% endcomment %}
   {% comment %}
 
     animation: svgDrawFade 3s 0.8s cubic-bezier(0.47, 0, 0.75, 0.72) forwards;
