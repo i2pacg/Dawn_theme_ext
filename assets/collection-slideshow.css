@@ -4,7 +4,8 @@
 
 .slick-next:before {
     content: '›';
-    color: red;
+    background: red;
+    border-radius: 50%;
 }
 
 .collection-slideshow {
