@@ -7,6 +7,7 @@
     height: 32px;
     width: 32px;
     font-weight: 900;
+
 }
 
 .slick-prev {
@@ -22,6 +23,7 @@
     justify-content: center;
     font-family: unset;
     font-size: 24px;
+    pointer-events: none;
 }
 
 .slick-prev:before {
