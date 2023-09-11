@@ -8,7 +8,8 @@ const delay = Number(collectionSvg.getAttribute('data-aos-delay'));
 document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos-delay');
 document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path').forEach(function (path, index) {
     console.log(index);
-    path.setAttribute('fill-opacity', 0);
+    path.setAttribute('data-aos', 'svg-draw-fade');
+    path.style.fillOpacity = 0;
     path.style.strokeDasharray = path.getTotalLength();
     path.style.strokeDashoffset = path.getTotalLength();
     path.style.transition = `fillOpacity 0.5s ease-in-out ${1000 + delay + (index * 100)}ms,
