@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
     collectionSvg.removeAttribute('data-aos');
     collectionSvg.querySelector("svg").querySelectorAll('path').forEach(function (path, index) {
         console.log(path);
-        path.style.transition = `fillOpacity 1s ease ${delay + index * 100}ms`;
+        path.style.transition = `fillOpacity 1s ease ${delay + index * 100}ms,
+        strokeDashoffset 1s ease ${1000 + delay + index * 100}ms,`;
         /* 
         path.setAttribute('stroke-dasharray', path.getTotalLength()); */
     });
