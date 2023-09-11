@@ -218,7 +218,7 @@
                   {% endif %}
                 {% endcomment %}
               </h1>
-              <span>
+              <span data-aos-delay="3000" data-aos="fade-right">
                 {%- if product.metafields.description.short != blank -%}
                   {{ product.metafields.description.short | truncate: 175, '. . . ' }}
                 {%- elsif product.description != blank -%}
