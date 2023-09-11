@@ -1,9 +1,14 @@
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path').forEach(function (path, index) {
+    let collectionSvg = document.querySelector("[data-aos='svg-draw-fade']");
+    const delay = collectionSvg.getAttribute('data-aos-delay');
+    collectionSvg.removeAttribute('data-aos-delay');
+    collectionSvg.removeAttribute('data-aos');
+    collectionSvg.querySelector("svg").querySelectorAll('path').forEach(function (path, index) {
         console.log(path);
         path.setAttribute('data-aos', 'svg-draw-fade');
-        path.setAttribute('data-aos-delay', index * 100 + 100);/* 
+        path.setAttribute('data-aos-delay', index * 100 + delay);
+        /* 
         path.setAttribute('stroke-dasharray', path.getTotalLength()); */
     });
 
