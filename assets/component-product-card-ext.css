@@ -15,6 +15,22 @@
   display: none;
 }
 
+.product-card.title-option-top .product-title {
+  position: absolute;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: unset;
+  top: 0;
+  left: 0;
+  background: #680870;
+  color: white;
+  padding: 8px;
+  border-bottom-right-radius: 16px;
+  border-top-left-radius: 16px;
+}
+
 .product-card .product-content {
   box-shadow: 1px 1px 16px #00000080;
   border-radius: 16px;
