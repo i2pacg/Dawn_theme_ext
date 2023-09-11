@@ -48,13 +48,11 @@
     {% endif %}
 
     <div class="product-price">
-      {{ savings_option }}
-      {%
-        render 'price-ext',
+      {% render 'price-ext',
         product: product,
         price_class: 'price-ext',
         show_compare_at_price: true,
-        show_savings: savings_option == 'bottom'
+        savings_option: savings_option
       %}
     </div>
     {% comment %}
