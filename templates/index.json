@@ -40,7 +40,7 @@
         "collection": "frenchies",
         "products_to_show": 6,
         "header": "Checkout our new collection",
-        "card_title_option": "off",
+        "card_title_option": "top",
         "card_savings_option": "bottom",
         "card_buy_option": false
       }
