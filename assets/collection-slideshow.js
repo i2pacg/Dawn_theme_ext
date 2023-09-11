@@ -27,7 +27,6 @@ function initSlick() {
         slidesToScroll: 1,
         asNavFor: '.slider-nav',
         fade: true,
-        arrows: false,
     });
     $('.slider-nav').slick({
         centerPadding: '32px',
@@ -41,7 +40,6 @@ function initSlick() {
     $('.slider-info').slick({
         arrows: false,
         fade: true,
-        arrows: false,
         asNavFor: '.slider-nav',
     });
 }
