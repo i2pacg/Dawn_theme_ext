@@ -2,9 +2,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path').forEach(function (path, index) {
         console.log(path);
-        path.setAttribute('data-aos', 'svg-draw-fade');
-        path.setAttribute('data-aos-delay', index * 100 + 100);/* 
-        path.setAttribute('stroke-dasharray', path.getTotalLength()); */
+        /*  path.setAttribute('data-aos', 'svg-draw-fade');
+         path.setAttribute('data-aos-delay', index * 100 + 100); *//* 
+      path.setAttribute('stroke-dasharray', path.getTotalLength()); */
     });
 
     initSlick();
