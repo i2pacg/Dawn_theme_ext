@@ -33,6 +33,29 @@
   flex-direction: column;
 }
 
+
+.price.price-ext .product-card-savings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  padding: 4px 8px;
+  font-weight: 600;
+  font-size: 24px;
+  border-bottom-right-radius: 16px;
+  border-top-left-radius: 16px;
+  background-color: #da2828;
+  line-height: 100%;
+}
+
+.price.price-ext .product-card-savings {
+  position: relative;
+  font-size: 16px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (max-width: 749px) {
   .price.price-ext.price--on-sale .price__sale {
     padding: 4px 8px;
