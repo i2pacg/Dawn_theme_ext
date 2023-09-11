@@ -11,6 +11,7 @@
 
 .slick-prev {
     left: -8px;
+    right: unset;
 }
 
 .slick-next:before,
