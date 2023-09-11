@@ -11,7 +11,7 @@
   text-underline-offset: 8px;
 }
 
-.product-card.product-title-off .product-title {
+.product-card.title-option-off .product-title {
   display: none;
 }
 
