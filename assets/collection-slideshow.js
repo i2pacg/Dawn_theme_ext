@@ -2,6 +2,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path').forEach(function (path) {
         console.log(path);
+        path.setAttribute('data-aos', 'svg-draw-fade');
+        path.setAttribute('stroke-dasharray', path.getTotalLength());
     });
 
     initSlick();
