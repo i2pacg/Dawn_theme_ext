@@ -529,57 +529,58 @@
   </div>
 </div>
 <script>
+  document.addEventListener('DOMContentLoaded', function () {
     Array.from(document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path')).foreach((path)  {
-  console.log(path);
-    });
-      initSlick();
-
-
-      AOS.init();
-      function initSlick(){
-        $('.slider-for').slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          asNavFor: '.slider-nav',
-          fade: true,
+      console.log(path);
         });
-        $('.slider-nav').slick({
-          centerPadding: '32px',
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          variableWidth: true,
-          centerMode: true,
-          asNavFor: '.slider-for , .slider-info',
-        });
-        $('.slider-info').slick({
-          arrows: false,
-          fade: true,
-          asNavFor: '.slider-nav',
-        });
-      }
-      if (Shopify.designMode) {
-        document.addEventListener('shopify:section:load', init);
-        document.addEventListener('shopify:section:reorder', init); //
-      }
+          initSlick();
 
-      function init() {
-      AOS.refresh();
-    setTimeout(initSlick, 1000);
 
-      {% comment %}
-      $('.slider-for').slick('refresh');
-        $('.slider-info').slick('refresh'); {% endcomment %}
+          AOS.init();
+          function initSlick(){
+            $('.slider-for').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              asNavFor: '.slider-nav',
+              fade: true,
+            });
+            $('.slider-nav').slick({
+              centerPadding: '32px',
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              variableWidth: true,
+              centerMode: true,
+              asNavFor: '.slider-for , .slider-info',
+            });
+            $('.slider-info').slick({
+              arrows: false,
+              fade: true,
+              asNavFor: '.slider-nav',
+            });
+          }
+          if (Shopify.designMode) {
+            document.addEventListener('shopify:section:load', init);
+            document.addEventListener('shopify:section:reorder', init); //
+          }
 
-       {% comment %}  $('.slider-nav').slick({
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          variableWidth: true,
-          centerMode: true,
-          asNavFor: '.slider-for , .slider-info',
-        }); {% endcomment %}
-      }
+          function init() {
+          AOS.refresh();
+        setTimeout(initSlick, 1000);
+
+          {% comment %}
+          $('.slider-for').slick('refresh');
+            $('.slider-info').slick('refresh'); {% endcomment %}
+
+           {% comment %}  $('.slider-nav').slick({
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              variableWidth: true,
+              centerMode: true,
+              asNavFor: '.slider-for , .slider-info',
+            }); {% endcomment %}
+          }  }, false);
 </script>
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
