@@ -24,14 +24,31 @@ AOS.init();
 
 
 
-/* let delays = '';
+let delays = '';
 for (let x = 3000; x < 5000; x += 50) {
-    delays += `[data-aos][data-aos][data-aos-delay="${x}"].aos-animate,
+    delays += `
+    
+[data-aos][data-aos][data-aos-duration="3000"],
+body[data-aos-duration="3000"] [data-aos] {
+    transition-duration: 3s
+}
+
+[data-aos][data-aos][data-aos-delay="3000"],
+body[data-aos-delay="3000"] [data-aos] {
+    transition-delay: 0
+}
+
+[data-aos][data-aos][data-aos-delay="3000"].aos-animate,
+body[data-aos-delay="3000"] [data-aos].aos-animate {
+    transition-delay:${x / 1000}s
+}
+
+    [data-aos][data-aos][data-aos-delay="${x}"].aos-animate,
    body[data-aos-delay="${x}"] [data-aos].aos-animate {
        transition-delay: ${x / 1000}s
    }`;
 }
-console.log(delays); */
+console.log(delays);
 
 /* [data-aos][data-aos][data-aos-delay="3100"].aos-animate,
 body[data-aos-delay="3100"] [data-aos].aos-animate {
