@@ -228,7 +228,7 @@
                 {% endif %}
               </span>
             </div>
-            <div class="quick-add no-js-hidden slider-buttons">
+            <div class="quick-add no-js-hidden slider-buttons" data-aos-delay="3000" data-aos="fade-left">
               {%- liquid
                 assign product_form_id = 'quick-add-' | append: section.id | append: product.id
                 assign qty_rules = false
