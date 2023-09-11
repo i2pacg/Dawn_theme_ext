@@ -10,7 +10,7 @@
  }
 
  @media screen and (max-width: 540px) {
-   .price.price-ext.price--on-sale .price__sale {
+   .product-title {
      font-size: 18px;
    }
  }
