@@ -8,13 +8,18 @@
     font-weight: 900;
 }
 
-.slick-next:before {
+.slick-next:before,
+.slick-prev:before {
     content: '›';
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: unset;
     font-size: 24px;
+}
+
+.slick-prev:before {
+    content: '‹';
 }
 
 .collection-slideshow {
