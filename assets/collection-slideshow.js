@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     collectionSvg.querySelector("svg").querySelectorAll('path').forEach(function (path, index) {
         console.log(path);
         path.style.fillOpacity = 0;
-        path.setAttribute('stroke-dasharray', path.getTotalLength());
+        path.setAttribute('data-aos', 'svg-draw-fade');
         path.style.strokeDasharray = path.getTotalLength();
         path.style.strokeDashoffset = path.getTotalLength();
         path.style.transition = `fillOpacity 1s ease ${delay + index * 100}ms,
