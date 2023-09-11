@@ -342,14 +342,6 @@
       </p>
       <div class="slider-nav">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-          {% comment %}
-            {%- liquid
-              assign quick_add = false
-              if section.settings.quick_add == 'inside_card'
-                assign quick_add = true
-              endif
-            -%}
-          {% endcomment %}
           <div
             data-aos="fade-up"
             data-aos-delay="{{ forloop.index | times: 200 | plus: 1800 }}"
@@ -358,7 +350,7 @@
             {%
               render 'card-product-ext',
               product: product,
-              top_title: section.settings.top_title,
+              title_position: section.settings.card_title_option,
               show_quick_add: section.settings.card_buy_option,
             %}
           </div>
