@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     let collectionSvg = document.querySelector("[data-aos='svg-draw-fade']");
     const delay = parseFLoat(collectionSvg.getAttribute('data-aos-delay'));
+    console.log("delay: ", delay);
     collectionSvg.removeAttribute('data-aos-delay');
     collectionSvg.removeAttribute('data-aos');
     collectionSvg.querySelector("svg").querySelectorAll('path').forEach(function (path, index) {
