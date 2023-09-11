@@ -2,7 +2,6 @@
 .slick-prev {
     right: -8px;
     background: #60450894;
-    font-size: 24px;
     border-radius: 50%;
     height: 32px;
     width: 32px;
@@ -18,11 +17,7 @@
 .slick-next:before,
 .slick-prev:before {
     content: '›';
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: unset;
-    font-size: 24px;
     pointer-events: none;
 }
 
