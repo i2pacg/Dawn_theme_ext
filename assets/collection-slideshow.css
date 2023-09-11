@@ -1,4 +1,5 @@
-.slick-next {
+.slick-next,
+.slick-prev {
     right: -8px;
     background: #60450894;
     font-size: 24px;
@@ -6,6 +7,10 @@
     height: 32px;
     width: 32px;
     font-weight: 900;
+}
+
+.slick-prev {
+    left: -8px;
 }
 
 .slick-next:before,
