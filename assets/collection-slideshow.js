@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
     let collectionSvg = document.querySelector("[data-aos='svg-draw-fade']");
     const delay = Number(collectionSvg.getAttribute('data-aos-delay'));
     console.log("delay: ", delay);
@@ -45,3 +45,5 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(initSlick, 1000);
     }
 }, false);
+
+
