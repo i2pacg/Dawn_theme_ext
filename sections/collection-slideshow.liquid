@@ -285,6 +285,12 @@
   .slider-info.slider-buy-off .slider-info-content .slider-buttons {
     display: none;
   }
+  .slider-info.slider-buy-right .slider-info-content .slider-buttons {
+    order: 2;
+  }
+  .slider-info.slider-buy-left .slider-info-content .slider-buttons {
+    order: 1;
+  }
 </style>
 {%- if section.settings.slide_height == 'adapt_image'
   and section.settings.collection.products.first.settings.image != blank
