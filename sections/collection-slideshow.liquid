@@ -477,31 +477,6 @@
       </div>
     </div>
   </div>
-  {% comment %}
-    {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-      <modal-dialog id="PopupModal-{{ product.id }}" class="product-popup-modal">
-        <div
-          role="dialog"
-          aria-label="{{ product.title }}"
-          aria-modal="true"
-          class="product-popup-modal__content"
-          tabindex="-1"
-        >
-          <button
-            id="ModalClose-{{ product.id }}"
-            type="button"
-            class="product-popup-modal__toggle"
-            aria-label="{{ 'accessibility.close' | t }}"
-          >
-            {% render 'icon-close' %}
-          </button>
-          <div class="product-popup-modal__content-info">
-            <h1 class="h2">{{ product.title }}</h1>
-          </div>
-        </div>
-      </modal-dialog>
-    {% endfor %}
-  {% endcomment %}
 </div>
 <script>
     initSlick();
