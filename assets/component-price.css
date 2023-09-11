@@ -108,7 +108,7 @@
   }
 }
 
-.price.price-ext .price--large .product-card-savings {
+.price.price-ext.price--large .product-card-savings {
   font-size: 20px;
 }
 
