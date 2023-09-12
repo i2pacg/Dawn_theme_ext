@@ -2383,7 +2383,6 @@ product-info .loading-overlay:not(.hidden)~*,
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   min-width: 100vw;
-  background: #ffffffd1;
 }
 
 @media screen and (max-width: 749px) {
@@ -2953,7 +2952,6 @@ details-disclosure>details {
 .gradient {
   background: rgb(var(--color-background));
   background: var(--gradient-background);
-  background-attachment: fixed;
 }
 
 @media screen and (forced-colors: active) {
