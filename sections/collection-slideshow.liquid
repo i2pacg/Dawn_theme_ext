@@ -226,14 +226,14 @@
           >
             <div class="slider-text">
               <h1 class="product-title" data-aos-delay="2400" data-aos="fade-right">
-                {{ product.title | escape }}
                 {% comment %}
-                  {% if product.metafields.svg.title %}
-                    {{ product.metafields.svg.title }}
-                  {% else %}
-                    {{ product.title | escape }}
-                  {% endif %}
+                  {{ product.title | escape }}
                 {% endcomment %}
+                {% if product.metafields.svg.title %}
+                  {{ product.metafields.svg.title }}
+                {% else %}
+                  {{ product.title | escape }}
+                {% endif %}
               </h1>
               <span data-aos-delay="3000" data-aos="fade-right">
                 {%- if product.metafields.description.short != blank -%}
