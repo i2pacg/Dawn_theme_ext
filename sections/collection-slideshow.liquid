@@ -259,7 +259,7 @@
                     id="{{ product_form_id }}-submit"
                     type="submit"
                     name="add"
-                    class="quick-add__submit button button--full-width"
+                    class="quick-add__submit button-36"
                     aria-haspopup="dialog"
                     aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
                     data-product-url="{{ product.url }}"
@@ -290,7 +290,7 @@
                     <button
                       id="ModalClose-{{ product.id }}"
                       type="button"
-                      class="button-36"
+                      class="quick-add-modal__toggle"
                       aria-label="{{ 'accessibility.close' | t }}"
                     >
                       {% render 'icon-close' %}
