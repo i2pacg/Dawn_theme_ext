@@ -269,21 +269,21 @@
     </script>
     {% if template.name == 'index' %}
       <style>
-        .header-wrapper {
-          position: fixed;
-          top: 0;
-          width: 100%;
-        }
+        {% comment %}        .header-wrapper {
+                 position: fixed;
+                 top: 0;
+                 width: 100%;
+               } {% endcomment %}
 
-        {% comment %} .header__menu-item,
-        .header__active-menu-item,
-        .header__icon .icon {
-          color: #fff;
-        }
+               {% comment %} .header__menu-item,
+               .header__active-menu-item,
+               .header__icon .icon {
+                 color: #fff;
+               }
 
-        .header__menu-item:hover {
-          color: #fff;
-        } {% endcomment %}
+               .header__menu-item:hover {
+                 color: #fff;
+               } {% endcomment %}
       </style>
     {% endif %}
   </head>
