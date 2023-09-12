@@ -318,7 +318,7 @@
                       id="{{ product_form_id }}-submit"
                       type="submit"
                       name="add"
-                      class="button button-36"
+                      class="button-36"
                       aria-haspopup="dialog"
                       aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
                       aria-live="polite"
@@ -403,18 +403,18 @@
                   transform: translateY(0);
                 } /* CSS */
 
-                .button.loading {
+                .button-36.loading {
                   color: transparent;
                   position: relative;
                 }
 
                 @media screen and (forced-colors: active) {
-                  .button.loading {
+                  .button-36.loading {
                     color: rgb(var(--color-foreground));
                   }
                 }
 
-                .button.loading > .loading-overlay__spinner {
+                .button-36.loading > .loading-overlay__spinner {
                   top: 50%;
                   left: 50%;
                   transform: translate(-50%, -50%);
@@ -424,11 +424,11 @@
                   align-items: center;
                 }
 
-                .button.loading > .loading-overlay__spinner .spinner {
+                .button-36.loading > .loading-overlay__spinner .spinner {
                   width: fit-content;
                 }
 
-                .button.loading > .loading-overlay__spinner .path {
+                .button-36.loading > .loading-overlay__spinner .path {
                   stroke: rgb(var(--color-button-text));
                 }
                 .button-36 {
