@@ -100,11 +100,11 @@ function initSlick() {
         arrows: false,
         asNavFor: '.slider-nav',
     });
-}/* 
+}
 if (Shopify.designMode) {
     document.addEventListener('shopify:section:load', init);
     document.addEventListener('shopify:section:reorder', init); //
-} */
+}
 
 function init() {
     /*   AOS.refresh(); */
