@@ -33,10 +33,11 @@ function initSlick() {
     });
 
     $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
-        console.log("Slide Nav Init");
-        setTimeout(() => {
-            tl.play();
-        }, 5000);
+        console.log("Slide Nav Init", this);
+        /*  slick-slide
+         setTimeout(() => {
+             tl.play();
+         }, 5000); */
     });
     $('.slider-nav').slick({
         centerPadding: '32px',
