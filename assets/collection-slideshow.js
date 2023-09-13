@@ -232,14 +232,14 @@ async function init() {
             duration: 400,
         }, 2600);
 
-    anime({
+    tl.add({
         targets: infoSlide.querySelector("[data-slick-index='0'] .slider-buttons"),
         opacity: [0, 1],
         translateX: [100, 0],
         easing: 'easeInOutSine',
         duration: 400,
     })
-    anime({
+    tl.add({
         targets: infoSlide.querySelector("[data-slick-index='0'] .product-description"),
         opacity: [0, 1],
         translateY: [100, 0],
