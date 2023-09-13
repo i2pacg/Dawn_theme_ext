@@ -6,7 +6,9 @@ var tl = anime.timeline({
     autoplay: false,
 });
 const animObjects = {};
-document.querySelectorAll("[data-aos]").forEach(animElement => {
+
+// get qyerySelectorAll for "[data-aos]" and loop through them to get the delay and duration and add them to animObjects
+/* document.querySelectorAll("[data-aos]").forEach(animElement => {
     let delay = Number(animElement.getAttribute('data-aos-delay'));
     let duration = Number(animElement.getAttribute('data-aos-duration'));
     let animName = animElement.getAttribute('data-aos')
@@ -24,55 +26,9 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
 
     animObjects[animName][delay].push(animElement);
 
-});
+}); */
 // Add AnimeJs to animOBjects;
-for (const animName in animObjects) {
-    if (Object.hasOwnProperty.call(animObjects, animName)) {
-        const animObject = animObjects[animName];
-        for (const delay in animObject) {
-            if (Object.hasOwnProperty.call(animObject, delay)) {
-                const animElements = animObject[delay];
-                let animObjectTemp = {
-                    targets: animElements,
-                    easing: 'easeInOutSine',
-                    delay: 0,
-                };
-                //loop and add duration
 
-                if (animName == 'svg-draw-fade') {
-                    let duration = Number(element.getAttribute('data-aos-duration'));
-                    duration = duration != NaN ? duration : 600;
-                    animObjectTemp.duration = duration;
-                    animObjectTemp = {
-                        targets: animElements[0].querySelectorAll('svg path'),
-                        easing: 'easeInOutSine',
-                        fillOpacity: [0, 1],
-                        strokeDashoffset: [anime.setDashoffset, 0],
-                        delay: 0,
-                        direction: 'alternate',
-                        loop: false,
-                        duration: 1000,
-                    }
-                } else {
-                    const anims = animName.split(',');
-                    anims.forEach(anim => {
-                        if (anim == 'fade') {
-                            animObjectTemp.opacity = [0, 1];
-                        }
-                        if (anim == 'scaleX') {
-                            animObjectTemp.scaleX = [0, 1];
-                        }
-                    });
-                }
-                if (delay == 0) {
-                    tl.add(animObjectTemp);
-                } else {
-                    tl.add(animObjectTemp, delay);
-                }
-            }
-        }
-    }
-}
 console.log("animObjects", animObjects);
 /* for (const delay in animObjects) {
     if (Object.hasOwnProperty.call(animObjects, delay)) {
