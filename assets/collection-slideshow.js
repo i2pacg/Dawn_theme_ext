@@ -238,14 +238,14 @@ async function init() {
         translateX: [100, 0],
         easing: 'easeInOutSine',
         duration: 400,
-    })
+    }, 2600)
     tl.add({
         targets: infoSlide.querySelector("[data-slick-index='0'] .product-description"),
         opacity: [0, 1],
         translateY: [100, 0],
         easing: 'easeInOutSine',
         duration: 400,
-    })
+    }, 2600)
 
     setTimeout(() => {
         tl.play();
