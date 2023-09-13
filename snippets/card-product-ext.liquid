@@ -28,7 +28,7 @@
 <style></style>
 <div class="product-card title-option-{{ title_option }} savings-option-{{ savings_option }}">
   <a
-    href="{{ card_product.url }}"
+    href="{{ product.url }}"
   >
     {%- assign savings = product.compare_at_price
       | minus: product.price
