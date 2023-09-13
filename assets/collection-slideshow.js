@@ -34,6 +34,23 @@ function initSlick() {
 
     $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
         console.log("Slide Nav Init", this);
+        this.querySelectorAll('.slick-slide').forEach(function (slide, index) {
+            console.log("fade", element);
+            let delay = Number(element.getAttribute('data-aos-delay'));
+            let duration = Number(element.getAttribute('data-aos-duration'));
+            console.log("fade delay", delay);
+            console.log("fade duration", duration);
+            tl.add({
+                targets: element,
+                opacity: [0, 1],
+                duration: duration != NaN ? duration : 600,
+                delay: function (el, i) { return delay != NaN ? delay : 0; },
+                easing: 'easeInOutSine'
+            })
+            element.removeAttribute('data-aos');
+            element.removeAttribute('data-aos-delay');
+            element.removeAttribute('data-aos-duration');
+        });
         /*  slick-slide
          setTimeout(() => {
              tl.play();
