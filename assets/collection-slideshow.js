@@ -89,7 +89,6 @@ for (const anim in animObjects) {
                     try {
                         elements.forEach(function (element, index) {
                             console.log("element delay", delay, element.querySelectorAll('svg path'));
-
                             tl.add({
                                 targets: element.querySelectorAll('svg path'),
                                 fillOpacity: [0, 1],
