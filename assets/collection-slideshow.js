@@ -40,7 +40,21 @@ for (const anim in animObjects) {
         for (const duration in animObjects[anim][delay]) {
             const elements = animObjects[anim][delay][duration];
             console.log("elements", elements);
+            switch (anim) {
+                case 'fade':
+                    tl.add({
+                        targets: elements,
+                        opacity: [0, 1],
+                        duration: duration,
+                        delay: delay,
+                        easing: 'easeInOutSine'
+                    });
+                    break;
+                default:
+                    break;
+            }
         }
+
     }
 }
 
