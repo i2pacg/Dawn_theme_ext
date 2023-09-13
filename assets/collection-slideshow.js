@@ -80,7 +80,7 @@ Object.keys(animObjects).forEach(function (key, index) {
                         easing: 'easeInOutSine'
                     })
                     break;
-                case 'fade':
+                case 'slideX':
                     tl.add({
                         targets: element,
                         opacity: [0, 1],
