@@ -18,20 +18,24 @@ document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos')
  */
 initSlick();
 
-
+var tl = anime.timeline({
+    easing: 'easeInOutSine',
+    duration: 400
+});
+// Add children
 document.querySelectorAll("[data-aos='fade']").forEach(element => {
     console.log("fade", element);
+    tl.add({
+        targets: element,
+        opacity: [0, 1],
+        delay: function (el, i) { return 3000; },
+        easing: 'easeInOutSine'
+    })
 });;
 /* data-aos="fade" data-aos-duration="400" */
 
-var animation = anime({
-    targets: '.slider-content-card',
-    opacity: [0, 1],
-    duration: 3000,
-    delay: function (el, i) { return 3000; },
-    easing: 'easeInOutSine'
-})
-animation.play();
+
+tl.play();
 /* 
 AOS.init({
     offset: 120, // offset (in px) from the original trigger point
