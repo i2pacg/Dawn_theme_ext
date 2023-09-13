@@ -7,7 +7,7 @@ var tl = anime.timeline({
 });
 const animObjects = {};
 
-// get all elements with data-aos attribute split by comma and add them to animObjects under delay , duration ,anim name as key and elements as value
+// get all elements with data-aos attribute split by comma and add them to animObjects under delay , duration ,anim name as key and elements as value exept svg-draw-fade
 document.querySelectorAll("[data-aos]").forEach(element => {
     element.getAttribute('data-aos').split(',').forEach(function (anim, index) {
         if (animObjects[anim] == undefined) {
