@@ -9,10 +9,22 @@
    text-underline-offset: 8px;
  }
 
+ .product-card .product-picture {
+   position: relative;
+   overflow: hidden;
+   border-radius: 16px;
+   width: 240px;
+ }
+
  @media screen and (max-width: 540px) {
    .product-title {
      font-size: 18px;
    }
+
+   .product-card .product-picture {
+     width: 180px;
+   }
+
  }
 
 
