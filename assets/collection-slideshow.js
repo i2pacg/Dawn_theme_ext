@@ -12,37 +12,11 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     if (element.getAttribute('data-aos') == 'svg-draw-fade') {
         // add paths to animObjects with delay and duration from parent and add animation to path
         const parent = element;
-        const delay = Number(parent.getAttribute('data-aos-delay')) != NaN ? Number(parent.getAttribute('data-aos-delay')) : 0;
-        const duration = Number(parent.getAttribute('data-aos-duration')) != NaN ? Number(parent.getAttribute('data-aos-delay')) : 0;
-
 
     }
 });
-// loop animObjects and add animations to timeline 
-
-
-// add all the animObjects to timeline
-/* Object.keys(animObjects).forEach(function (key, index) {
-    console.log("animObjects", animObjects);
-    animObjects[key].elements.forEach(function (element, index) {
-        tl.add({
-            targets: element,
-            opacity: [0, 1],
-            duration: animObjects[key].duration[index],
-            delay: function (el, i) { return animObjects[key].delay[index]; },
-            easing: 'easeInOutSine'
-        })
-    });
-}); */
-/* 
- */
 console.log("animObjects", animObjects);
 
-// start the timeline
-/* setTimeout(() => {
-    tl.play();
-}, 300);
- */
 
 initSlick();
 function initSlick() {
