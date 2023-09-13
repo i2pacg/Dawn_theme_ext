@@ -140,6 +140,14 @@ function initSlick() {
             duration: 600,
             easing: 'easeInOutSine'
         }, 300);
+        tl.add({
+            targets: element.querySelectorAll('svg path'),
+            fillOpacity: [0, 1],
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutSine',
+            delay: function (el, i) { return i * 100 },
+            duration: duration,
+        }, delay);
         this.querySelectorAll(".slick-slide:not([data-slick-index='0'])").forEach(function (slide, index) {
             console.log("fade slide", slide);
             tl.add({
