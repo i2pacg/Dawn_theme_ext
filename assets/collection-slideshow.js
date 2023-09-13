@@ -119,33 +119,9 @@ console.log("animObjects", animObjects);
 //init slick slider
 
 let initPromise = Promise(resolve => {
-    $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
-        console.log("Slide Nav Init", this);
-
-        tl.add({
-            targets: this.querySelector("[data-slick-index='0']"),
-            opacity: [0, 1],
-            translateY: [100, 0],
-            duration: 400,
-            easing: 'easeInOutSine'
-        }, 2200);
-        tl.add({
-            targets: this.querySelectorAll(".slick-slide:not([data-slick-index='0'])"),
-            opacity: [0, 1],
-            translateY: [100, 0],
-            easing: 'easeInOutSine',
-            delay: function (el, i) { return i * 100 },
-            duration: 400,
-        }, 2200);
-
-        setTimeout(() => {
-            tl.play();
-        }, 300);
-        /*  tl.add({
-         targets: this.querySelector("[data-slick-index='0']"),
-         opacity: [0, 1],
-         easing: 'easeInOutSine'
-     });
+    $('.slider-for').on('init', function (event, slick, currentSlide, nextSlide) {
+        console.log("Slide for Init", this);
+    });
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -308,7 +284,7 @@ if (Shopify.designMode) {
 } */
 
 function init() {
-        /*   AOS.refresh(); */
-        setTimeout(initSlick, 1000);
-    }
+    /*   AOS.refresh(); */
+    setTimeout(initSlick, 1000);
+}
 
