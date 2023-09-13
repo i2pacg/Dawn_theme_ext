@@ -35,6 +35,7 @@ for (const anim in animObjects) {
             break;
     }
 }
+console.log("animObjects", animObjects);
 
 initSlick();
 function initSlick() {
