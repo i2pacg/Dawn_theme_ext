@@ -10,7 +10,7 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
     const anims = animElement.getAttribute('data-aos').split(',');
     console.log("anim", anims);
 
-    if (anims.includes('svg')) {
+    if (anims.includes('svg-draw-fade')) {
         console.log("svg", animElement);
         animElement.querySelectorAll('svg path').forEach(function (path, index) {
             tl.add({
