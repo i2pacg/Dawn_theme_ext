@@ -251,6 +251,7 @@ hr.half-divider {
     color: #616161;
     letter-spacing: 1px;
     flex: 2;
+    margin-bottom: auto;
 }
 
 
