@@ -80,7 +80,6 @@ for (const anim in animObjects) {
                     break;
 
                 case 'svg-draw-fade':
-                    console.log("svg-draw-fade", elements);
                     try {
                         elements.forEach(function (element, index) {
                             console.log("element", element);
