@@ -9,19 +9,20 @@ const animObjects = {};
 document.querySelectorAll("[data-aos]").forEach(animElement => {
     let delay = Number(animElement.getAttribute('data-aos-delay'));
     let animName = animElement.getAttribute('data-aos')
-    let animObject = animObjects[animName];
+    /* let animObject = animObjects[animName];
     if (!Array.isArray(animObject[delay != NaN ? delay : 0]))
         animObject[delay != NaN ? delay : 0] = [];
     animObject[delay != NaN ? delay : 0].push(animElement);
-
+ */
 });
-for (const delay in animObjects) {
+console.log("animObjects", animObjects);
+/* for (const delay in animObjects) {
     if (Object.hasOwnProperty.call(animObjects, delay)) {
         const anims = animObjects[delay];
         console.log("anims", anims);
 
     }
-}
+} */
 /*  const anims = animElement.getAttribute('data-aos').split(',');
 console.log("anim", anims); if (anims.includes('svg-draw-fade')) {
      console.log("svg", animElement);
