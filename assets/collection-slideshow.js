@@ -135,6 +135,20 @@ function initSlick() {
         setTimeout(() => {
             tl.play();
         }, 300);
+        tl.add({
+            targets: this.querySelector("[data-slick-index='0']"),
+            opacity: [0, 1],
+            easing: 'easeInOutSine'
+        });
+        this.querySelectorAll(".slick-slide:not([data-slick-index='0'])").forEach(function (slide, index) {
+            console.log("fade slide", slide);
+            tl.add({
+                targets: slide,
+                opacity: [0, 1],
+                duration: 600,
+                easing: 'easeInOutSine'
+            })
+        });
         /*  tl.add({
            targets: this.querySelector("[data-slick-index='0']"),
            opacity: [0, 1],
