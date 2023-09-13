@@ -205,6 +205,13 @@ async function init() {
             easing: 'easeInOutSine',
             duration: 400,
         })
+        anime({
+            targets: nextSlideElement.querySelector(".product-description"),
+            opacity: [0, 1],
+            translateY: [100, 0],
+            easing: 'easeInOutSine',
+            duration: 400,
+        })
 
     });
     if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg"))
