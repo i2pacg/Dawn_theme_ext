@@ -141,23 +141,14 @@ function initSlick() {
             easing: 'easeInOutSine'
         }, 300);
         tl.add({
-            targets: element.querySelectorAll('svg path'),
-            fillOpacity: [0, 1],
-            strokeDashoffset: [anime.setDashoffset, 0],
+            targets: this.querySelectorAll(".slick-slide:not([data-slick-index='0'])"),
+            opacity: [0, 1],
+            translateY: [20, 0],
             easing: 'easeInOutSine',
             delay: function (el, i) { return i * 100 },
-            duration: duration,
+            duration: 400,
         }, delay);
-        this.querySelectorAll(".slick-slide:not([data-slick-index='0'])").forEach(function (slide, index) {
-            console.log("fade slide", slide);
-            tl.add({
-                targets: slide,
-                opacity: [0, 1],
-                translateY: [20, 0],
-                duration: 600,
-                easing: 'easeInOutSine'
-            }, 300 * (index + 1))
-        });
+
         setTimeout(() => {
             tl.play();
         }, 300);
