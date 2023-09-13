@@ -177,11 +177,13 @@ async function init() {
         delay: function (el, i) { return i * 100 },
         duration: 400,
     }, 2200);
-    navSlide.querySelectorAll("[data-slick-index='0']"),
+    infoSlide.querySelectorAll("[data-slick-index='0']").forEach(function (slide, index) {
+        console.log("fade slide", slide);
+    });
 
-        setTimeout(() => {
-            tl.play();
-        }, 300);
+    setTimeout(() => {
+        tl.play();
+    }, 300);
 }
 /* 
 initSlick();
