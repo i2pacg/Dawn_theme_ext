@@ -180,8 +180,9 @@ async function init() {
 
     $(infoSlide).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         console.log('beforeChange', slick.$slides[nextSlide]);
+        const slideElement = slick.$slides[nextSlide];
         anime({
-            targets: slick.$slides[nextSlide].querySelectorAll(".product-title svg path"),
+            targets: slideElement.querySelectorAll(".product-title svg path"),
             fillOpacity: [0, 1],
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: 'easeInOutSine',
