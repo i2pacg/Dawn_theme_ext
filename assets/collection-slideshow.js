@@ -34,16 +34,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
 console.log("animObjects", animObjects);
 
 
-for (const anim in animObjects) {
-    console.log("anim", animObjects[anim]);
-    /* switch (anim) {
-        case 'fade':
-            console.log("fade", animObjects[anim]);
-            break;
-        default:
-            break;
-    } */
-}
+
 
 initSlick();
 function initSlick() {
