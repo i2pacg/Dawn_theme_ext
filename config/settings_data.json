@@ -12,7 +12,7 @@
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
     "animations_reveal_on_scroll": true,
-    "animations_hover_elements": "none",
+    "animations_hover_elements": "vertical-lift",
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
     "buttons_radius": 0,
@@ -203,7 +203,7 @@
       },
       "scheme-91669cbb-597f-4ef7-bd49-362ea6f57818": {
         "settings": {
-          "background": "#ffffff",
+          "background": "#dd1d1d",
           "background_gradient": "linear-gradient(180deg, rgba(255, 239, 186, 1) 12%, rgba(255, 255, 255, 0.63) 86%)",
           "text": "#121212",
           "button": "#121212",
