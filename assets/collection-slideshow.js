@@ -29,9 +29,11 @@ for (const [delay, delayElements] of Object.entries(animObjects)) {
         // group elements via data-aos attribute
         const groups = durationElements.reduce((r, a) => {
             r[a.getAttribute('data-aos')] = [...r[a.getAttribute('data-aos')] || [], a];
-            return r;
+            return r.split(',');
         }, {});
         console.log("groups", groups);
+
+
         // add all elements with same delay and duration to timeline 
 
         // add all elements with same delay and duration to timeline 
