@@ -19,13 +19,12 @@ document.querySelectorAll("[data-aos]").forEach(element => {
 
     const anim = parent.getAttribute('data-aos');
 
-    if (!animObjects[anim][delay]) {
-        animObjects[anim][delay] = {};
+    if (!animObjects[anim][delay.toString()]) {
+        animObjects[anim][delay.toString()] = {};
     }
-    console.log("animObjects", animObjects);
-    /*  if (!animObjects[anim][delay][duration]) {
-             animObjects[anim][delay][duration] = [];
-         } */
+    if (!animObjects[anim][delay][duration.toString()]) {
+        animObjects[anim][delay][duration.toString()] = [];
+    }
     //animObjects[anim][delay][duration].push(parent);
 });
 console.log("animObjects", animObjects);
