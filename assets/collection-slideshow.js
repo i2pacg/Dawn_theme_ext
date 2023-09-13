@@ -27,19 +27,18 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     }
     animObjects[anim][delay][duration].push(parent);
 });
-console.log("animObjects", animObjects);
-console.log("animObjects");
 
-/* for (const anim in animObjects) {
+
+for (const anim in animObjects) {
     console.log("anim", animObjects[anim]);
-    switch (anim) {
+    /* switch (anim) {
         case 'fade':
             console.log("fade", animObjects[anim]);
             break;
         default:
             break;
-    }
-} */
+    } */
+}
 
 initSlick();
 function initSlick() {
