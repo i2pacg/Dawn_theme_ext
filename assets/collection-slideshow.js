@@ -160,7 +160,7 @@ async function init() {
     console.log("init");
     const s = await initVideoSlickPromise;
     const navSlide = await initNavSlickPromise;
-    const i = await initInfoSlickPromise;
+    const infoSlide = await initInfoSlickPromise;
     console.log("navSlide ", navSlide);
     tl.add({
         targets: navSlide.querySelector("[data-slick-index='0']"),
@@ -176,6 +176,13 @@ async function init() {
         easing: 'easeInOutSine',
         delay: function (el, i) { return i * 100 },
         duration: 400,
+    }, 2200);
+    tl.add({
+        targets: infoSlide.querySelector("[data-slick-index='0']"),
+        opacity: [0, 1],
+        translateY: [100, 0],
+        duration: 400,
+        easing: 'easeInOutSine'
     }, 2200);
 
     setTimeout(() => {
