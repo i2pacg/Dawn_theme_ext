@@ -48,7 +48,6 @@ for (const anim in animObjects) {
     for (const delay in animObjects[anim]) {
         for (const duration in animObjects[anim][delay]) {
             const elements = animObjects[anim][delay][duration];
-            console.log("elements", elements);
             switch (anim) {
                 case 'fade':
                     tl.add({
@@ -115,9 +114,7 @@ console.log("animObjects", animObjects);
 //loop through animObjects and add the right animation to the timeline
 
 //play the timeline
-setTimeout(() => {
-    tl.play();
-}, 1500);
+
 
 //init slick slider
 
