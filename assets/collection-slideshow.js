@@ -55,8 +55,6 @@ document.querySelectorAll("[data-aos]").forEach(element => {
 // loop animObjects and add animations to timeline 
 Object.keys(animObjects).forEach(function (key, index) {
     if (key != 'svg-draw-fade') {
-        console.log("key", key);
-        console.log("animObjects", animObjects[key]);
         animObjects[key].elements.forEach(function (element, index) {
             console.log("element", element);
             console.log("index", index);
@@ -84,49 +82,6 @@ Object.keys(animObjects).forEach(function (key, index) {
                     tl.add({
                         targets: element,
                         transformX: [0, 1],
-                        duration: animObjects[key].duration[index],
-                        delay: function (el, i) { return animObjects[key].delay[index]; },
-                        easing: 'easeInOutSine'
-                    })
-                    break;
-                case 'slide-up':
-                    tl.add({
-                        targets: element,
-                        translateY: [50, 0],
-                        opacity: [0, 1],
-                        duration: animObjects[key].duration[index],
-                        delay: function (el, i) { return animObjects[key].delay[index]; },
-                        easing: 'easeInOutSine'
-                    })
-                    break;
-
-                case 'slide-down':
-                    tl.add({
-                        targets: element,
-                        translateY: [-50, 0],
-                        opacity: [0, 1],
-                        duration: animObjects[key].duration[index],
-                        delay: function (el, i) { return animObjects[key].delay[index]; },
-                        easing: 'easeInOutSine'
-                    })
-                    break;
-
-                case 'slide-left':
-                    tl.add({
-                        targets: element,
-                        translateX: [50, 0],
-                        opacity: [0, 1],
-                        duration: animObjects[key].duration[index],
-                        delay: function (el, i) { return animObjects[key].delay[index]; },
-                        easing: 'easeInOutSine'
-                    })
-                    break;
-
-                case 'slide-right':
-                    tl.add({
-                        targets: element,
-                        translateX: [-50, 0],
-                        opacity: [0, 1],
                         duration: animObjects[key].duration[index],
                         delay: function (el, i) { return animObjects[key].delay[index]; },
                         easing: 'easeInOutSine'
