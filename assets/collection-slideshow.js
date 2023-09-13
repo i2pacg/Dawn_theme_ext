@@ -163,6 +163,13 @@ async function init() {
     const i = await initInfoSlickPromise;
     console.log("navSlide ", navSlide);
     tl.add({
+        targets: navSlide.querySelector("[data-slick-index='0']"),
+        opacity: [0, 1],
+        translateY: [100, 0],
+        duration: 400,
+        easing: 'easeInOutSine'
+    }, 2200);
+    tl.add({
         targets: navSlide.querySelectorAll(".slick-slide:not([data-slick-index='0'])"),
         opacity: [0, 1],
         translateY: [100, 0],
