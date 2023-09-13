@@ -8,7 +8,7 @@ var tl = anime.timeline({
 const animObjects = {
     'fade': {},
     'fade-scaleX': {},
-    'svg-fade-draw': {},
+    'svg-draw-fade': {},
 };
 
 // get all elements with data-aos attribute split by comma and add them to animObjects under delay , duration ,anim name as key and elements as value exept svg-draw-fade
@@ -17,11 +17,9 @@ document.querySelectorAll("[data-aos]").forEach(element => {
         // add paths to animObjects with delay and duration from parent and add animation to path
         const parent = element;
         const anim = parent.getAttribute('data-aos');
-        if (!animObjects[anim]) {
 
-        }
-        if (!animObjects[parent.getAttribute('data-aos-delay')]) {
-            animObjects[parent.getAttribute('data-aos-delay')] = {};
+        if (!animObjects[anim][parent.getAttribute('data-aos-delay')]) {
+            animObjects[anim][parent.getAttribute('data-aos-delay')] = {};
         }
 
     }
