@@ -16,7 +16,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
         const duration = Number(parent.getAttribute('data-aos-duration'));
         parent.removeAttribute('data-aos-delay');
         parent.removeAttribute('data-aos-duration');
-        parent.querySelectorAll('path').forEach(function (path, index) {
+        parent.querySelectorAll('svg path').forEach(function (path, index) {
             path.style.fillOpacity = 0;
             path.style.strokeDasharray = path.getTotalLength();
             path.style.strokeDashoffset = path.getTotalLength();
@@ -31,7 +31,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
                 }
             }
             animObjects['svg-draw-fade'].delay.push(delay + (index * 100));
-            animObjects['svg-draw-fade'].duration.push(1000);
+            animObjects['svg-draw-fade'].duration.push(duration);
             animObjects['svg-draw-fade'].anim.push('svg-draw-fade');
             animObjects['svg-draw-fade'].elements.push(path);
         });
