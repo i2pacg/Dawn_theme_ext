@@ -82,9 +82,8 @@ for (const anim in animObjects) {
                         targets: elements,
                         translateY: [20, 0],
                         duration: duration,
-                        delay: delay,
                         easing: 'easeInOutSine'
-                    });
+                    }, delay);
                     break;
 
                 case 'svg-draw-fade':
@@ -98,8 +97,7 @@ for (const anim in animObjects) {
                                 strokeDashoffset: [anime.setDashoffset, 0],
                                 easing: 'easeInOutSine',
                                 duration: duration,
-                                delay: delay,
-                            })
+                            }, delay);
                         });
                     } catch (error) {
                         console.log("error", error);
