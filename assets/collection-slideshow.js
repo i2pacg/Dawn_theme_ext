@@ -119,6 +119,9 @@ console.log("animObjects", animObjects);
 //init slick slider
 
 let initPromise = Promise(resolve => {
+    $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
+        console.log("Slide Nav Init", this);
+    });
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
