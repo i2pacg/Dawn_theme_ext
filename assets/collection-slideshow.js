@@ -23,7 +23,21 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
         }
         if (anim == 'svg-draw-fade') {
             console.log("fade", animElement);
-            animObject.targets = animElement.querySelector('svg');
+            animElement.querySelectorAll('svg path').forEach(function (path, index) {
+                animObject.targets = path;
+                animObject.fillOpacity = [0, 1];
+                animObject.astrokeDashoffset = [anime.setDashoffset, 1];
+                animObject.delay = index * 250;
+                animObject.direction = 'alternate';
+
+
+                /*   astrokeDashoffset: [anime.setDashoffset, 0],
+                  easing: 'easeInOutSine',
+                  duration: 1500,
+                  delay: function(el, i) { return i * 250 },
+                  direction: 'alternate', */
+            });
+
             /* element.removeChild('svg') */
         }
     });
