@@ -29,6 +29,12 @@
    position: absolute;
    left: 0;
    top: 0;
+   opacity: 0;
+   transition: all 0.3s ease-in-out;
+ }
+
+ .product-card a:hover .product-picture.product-picture-secondary {
+   opacity: 1;
  }
 
  @media screen and (max-width: 540px) {
