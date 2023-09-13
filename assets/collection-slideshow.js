@@ -159,9 +159,7 @@ init();
 async function init() {
     console.log("init");
     const s = await initVideoSlickPromise;
-    console.log("initVideoSlickPromise ", s);
     const n = await initNavSlickPromise;
-    console.log("initNavSlickPromise ", n);
     const i = await initInfoSlickPromise;
     console.log("initInfoSlickPromise ", i);
 }
