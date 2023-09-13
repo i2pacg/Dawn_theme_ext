@@ -21,7 +21,6 @@ document.querySelectorAll("[data-aos]").forEach(element => {
 
     const anim = parent.getAttribute('data-aos');
     try {
-
         if (!animObjects[anim][delay]) {
             animObjects[anim][delay] = {};
         }
@@ -31,7 +30,6 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     } catch (error) {
         console.log("error", anim, delay, duration);
     }
-    //animObjects[anim][delay][duration].push(parent);
 });
 console.log("animObjects", animObjects);
 
