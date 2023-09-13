@@ -27,6 +27,7 @@ var animation = anime({
     autoplay: false,
     easing: 'easeInOutSine'
 })
+animation.play();
 /* 
 AOS.init({
     offset: 120, // offset (in px) from the original trigger point
