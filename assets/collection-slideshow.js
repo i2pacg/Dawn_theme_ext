@@ -86,6 +86,15 @@ for (const anim in animObjects) {
                         element.querySelectorAll('path').forEach(function (path, index) {
                             console.log("path", path);
                         });
+                        t1.add({
+                            targets: '.line-drawing-demo .lines path',
+                            strokeDashoffset: [anime.setDashoffset, 0],
+                            easing: 'easeInOutSine',
+                            duration: 1500,
+                            delay: function (el, i) { return i * 250 },
+                            direction: 'alternate',
+                            loop: true
+                        })
                     });
                     break;
 
