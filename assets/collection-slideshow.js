@@ -178,7 +178,7 @@ async function init() {
         duration: 400,
     }, 2200);
 
-    infoSlide.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    $(infoSlide).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         console.log(nextSlide);
         /*   anime({
               targets: nextSlide.querySelectorAll(".product-title svg path"),
