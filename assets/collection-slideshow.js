@@ -35,56 +35,58 @@ document.querySelectorAll("[data-aos]").forEach(element => {
 console.log("animObjects", animObjects);
 //loop through animObjects and push elements to the right array
 for (const anim in animObjects) {
-    if (anim == 'svg-draw-fade') continue;
-    for (const delay in animObjects[anim]) {
-        for (const duration in animObjects[anim][delay]) {
-            const elements = animObjects[anim][delay][duration];
-            console.log("elements", elements);
-            switch (anim) {
-                case 'fade':
-                    tl.add({
-                        targets: elements,
-                        opacity: [0, 1],
-                        duration: duration,
-                        delay: delay,
-                        easing: 'easeInOutSine'
-                    });
-                    break;
-                case 'fade-scaleX':
-                    tl.add({
-                        targets: elements,
-                        opacity: [0, 1],
-                        scaleX: [0.0, 1],
-                        duration: duration,
-                        delay: delay,
-                        easing: 'easeInOutSine'
-                    });
-                    break;
-                case 'fade-slideUp':
-                    tl.add({
-                        targets: elements,
-                        opacity: [0, 1],
-                        translateY: [20, 0],
-                        duration: duration,
-                        delay: delay,
-                        easing: 'easeInOutSine'
-                    });
-                    break;
-                case 'slideUp':
-                    tl.add({
-                        targets: elements,
-                        translateY: [20, 0],
-                        duration: duration,
-                        delay: delay,
-                        easing: 'easeInOutSine'
-                    });
-                    break;
-                default:
-                    break;
-            }
-        }
+    if (anim == 'svg-draw-fade') {
 
-    }
+    } else
+        for (const delay in animObjects[anim]) {
+            for (const duration in animObjects[anim][delay]) {
+                const elements = animObjects[anim][delay][duration];
+                console.log("elements", elements);
+                switch (anim) {
+                    case 'fade':
+                        tl.add({
+                            targets: elements,
+                            opacity: [0, 1],
+                            duration: duration,
+                            delay: delay,
+                            easing: 'easeInOutSine'
+                        });
+                        break;
+                    case 'fade-scaleX':
+                        tl.add({
+                            targets: elements,
+                            opacity: [0, 1],
+                            scaleX: [0.0, 1],
+                            duration: duration,
+                            delay: delay,
+                            easing: 'easeInOutSine'
+                        });
+                        break;
+                    case 'fade-slideUp':
+                        tl.add({
+                            targets: elements,
+                            opacity: [0, 1],
+                            translateY: [20, 0],
+                            duration: duration,
+                            delay: delay,
+                            easing: 'easeInOutSine'
+                        });
+                        break;
+                    case 'slideUp':
+                        tl.add({
+                            targets: elements,
+                            translateY: [20, 0],
+                            duration: duration,
+                            delay: delay,
+                            easing: 'easeInOutSine'
+                        });
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+        }
 }
 
 console.log("animObjects", animObjects);
