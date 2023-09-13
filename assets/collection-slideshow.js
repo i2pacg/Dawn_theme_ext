@@ -82,10 +82,10 @@ for (const anim in animObjects) {
                 case 'svg-draw-fade':
                     try {
                         elements.forEach(function (element, index) {
-                            console.log("element", element);
+                            console.log("element", element.querySelectorAll('svg path'));
 
                             tl.add({
-                                targets: element.querySelectorAll('path'),
+                                targets: element.querySelectorAll('svg path'),
                                 strokeDashoffset: [anime.setDashoffset, 0],
                                 easing: 'easeInOutSine',
                                 duration: duration,
