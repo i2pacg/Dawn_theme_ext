@@ -37,8 +37,8 @@ document.querySelectorAll("[data-aos='fade']").forEach(element => {
     })
 });;
 /* data-aos="fade" data-aos-duration="400" */
-initSlick();
-
+/* initSlick();
+ */
 setTimeout(() => {
     tl.play();
 }, 5000);
