@@ -15,13 +15,17 @@ const animObjects = {
 document.querySelectorAll("[data-aos]").forEach(element => {
     const parent = element;
     const delay = parent.getAttribute('data-aos-delay') ? parent.getAttribute('data-aos-delay') : 0;
-    const duration = parent.getAttribute('data-aos-delay') != NaN ? parent.getAttribute('data-aos-delay') : 0;
+    const duration = parent.getAttribute('data-aos-delay') ? parent.getAttribute('data-aos-delay') : 0;
 
     const anim = parent.getAttribute('data-aos');
-
-    if (!animObjects[anim][delay.toString()]) {
-        animObjects[anim][delay.toString()] = {};
+    try {
+        if (!animObjects[anim][delay]) {
+            animObjects[anim][delay.toString()] = {};
+        }
+    } catch (error) {
+        console.log("error", error);
     }
+
     /*     if (!animObjects[anim][delay][duration.toString()]) {
             animObjects[anim][delay][duration.toString()] = [];
         } */
