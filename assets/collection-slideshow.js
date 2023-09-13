@@ -86,7 +86,6 @@ for (const anim in animObjects) {
 
                             tl.add({
                                 targets: element.querySelectorAll('svg path'),
-                                fillOpacity: [0, 1],
                                 strokeDashoffset: [anime.setDashoffset, 0],
                                 easing: 'easeInOutSine',
                                 duration: duration,
