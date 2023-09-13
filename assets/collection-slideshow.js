@@ -9,39 +9,39 @@ const animObjects = {};
 document.querySelectorAll("[data-aos]").forEach(animElement => {
     const anims = animElement.getAttribute('data-aos').split(',');
     console.log("anim", anims);
-
-    if (anims.includes('svg-draw-fade')) {
-        console.log("svg", animElement);
-        tl.add({
-            targets: animElement.querySelectorAll('svg path'),
-            easing: 'easeInOutSine',
-            fillOpacity: [0, 1],
-            strokeDashoffset: [anime.setDashoffset, 0],
-            delay: 0,
-            direction: 'alternate',
-            loop: false,
-            duration: 1000,
-        })
-
-    } else {
-        const animObject = {
-            targets: animElement,
-            easing: 'easeInOutSine',
-            delay: 0,
-        };
-        anims.forEach(anim => {
-            if (anim == 'fade') {
-                animObject.opacity = [0, 1];
-            }
-            if (anim == 'scaleX') {
-                animObject.scaleX = [0, 1];
-            }
-            if (anim == 'svg-draw-fade') {
-
-            }
-        });
-        tl.add(animObject);
-    }
+    animObjects[animElement.getAttribute('data-aos-delay')] = animElement;
+    /*  if (anims.includes('svg-draw-fade')) {
+         console.log("svg", animElement);
+         tl.add({
+             targets: animElement.querySelectorAll('svg path'),
+             easing: 'easeInOutSine',
+             fillOpacity: [0, 1],
+             strokeDashoffset: [anime.setDashoffset, 0],
+             delay: 0,
+             direction: 'alternate',
+             loop: false,
+             duration: 1000,
+         })
+ 
+     } else {
+         const animObject = {
+             targets: animElement,
+             easing: 'easeInOutSine',
+             delay: 0,
+         };
+         anims.forEach(anim => {
+             if (anim == 'fade') {
+                 animObject.opacity = [0, 1];
+             }
+             if (anim == 'scaleX') {
+                 animObject.scaleX = [0, 1];
+             }
+             if (anim == 'svg-draw-fade') {
+ 
+             }
+         });
+         tl.add(animObject);
+     } */
 });
 /* 
 document.querySelectorAll("[data-aos='fade']").forEach(element => {
