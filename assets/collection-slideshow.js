@@ -144,6 +144,17 @@ let initNavSlickPromise = new Promise(resolve => {
         asNavFor: '.slider-for , .slider-info',
     });
 })
+let initInfoSlickPromise = new Promise(resolve => {
+    $('.slider-info').on('init', function (event, slick, currentSlide, nextSlide) {
+        resolve("info I am done");
+    });
+    $('.slider-info').slick({
+        arrows: false,
+        fade: true,
+        arrows: false,
+        asNavFor: '.slider-nav',
+    });
+})
 $('.slider-info').slick({
     arrows: false,
     fade: true,
