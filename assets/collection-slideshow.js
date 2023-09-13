@@ -81,21 +81,21 @@ for (const anim in animObjects) {
 
                 case 'svg-draw-fade':
                     console.log("svg-draw-fade", elements);
-                    elements.forEach(function (element, index) {
-                        console.log("element", element);
-                        element.querySelectorAll('path').forEach(function (path, index) {
-                            console.log("path", path);
+                    try {
+                        elements.forEach(function (element, index) {
+                            console.log("element", element);
+
+                            t1.add({
+                                targets: element.querySelectorAll('path'),
+                                strokeDashoffset: [anime.setDashoffset, 0],
+                                easing: 'easeInOutSine',
+                                duration: duration,
+                                delay: function (el, i) { return i * 250 + delay },
+                            })
                         });
-                        t1.add({
-                            targets: '.line-drawing-demo .lines path',
-                            strokeDashoffset: [anime.setDashoffset, 0],
-                            easing: 'easeInOutSine',
-                            duration: 1500,
-                            delay: function (el, i) { return i * 250 },
-                            direction: 'alternate',
-                            loop: true
-                        })
-                    });
+                    } catch (error) {
+                        console.log("error", error);
+                    }
                     break;
 
                 default:
