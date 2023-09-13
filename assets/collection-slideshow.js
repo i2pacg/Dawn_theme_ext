@@ -7,7 +7,6 @@ var tl = anime.timeline({
 });
 
 document.querySelectorAll("[data-aos]").forEach(element => {
-    console.log("data-aos", element);
     const anims = element.getAttribute('data-aos').split(',');
     console.log("anim", anims);
     const animObject = {
@@ -23,10 +22,10 @@ document.querySelectorAll("[data-aos]").forEach(element => {
             animObject.scaleX = [0, 1];
         }
         if (anim == 'svg-draw-fade') {
+            console.log("fade", element);
             /* element.removeChild('svg') */
         }
     });
-    console.log("animObject", animObject);
     tl.add(animObject);
 });
 /* 
