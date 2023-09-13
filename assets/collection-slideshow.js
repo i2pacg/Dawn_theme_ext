@@ -13,12 +13,14 @@ document.querySelectorAll("[data-aos='fade']").forEach(element => {
 
     tl.add({
         targets: element,
-        opacity: 1,
+        opacity: [0, 1],
         duration: duration != NaN ? duration : 600,
         delay: function (el, i) { return delay != NaN ? delay : 0; },
         easing: 'easeInOutSine'
     })
-
+    element.removeAttribute('data-aos');
+    element.removeAttribute('data-aos-delay');
+    element.removeAttribute('data-aos-duration');
 });
 initSlick();
 function initSlick() {
