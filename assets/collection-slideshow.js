@@ -51,7 +51,7 @@ for (const animName in animObjects) {
                         delay: 0,
                         direction: 'alternate',
                         loop: false,
-                        duration: 1000,
+                        duration: duration,
                     }
                 } else {
                     const anims = animName.split(',');
