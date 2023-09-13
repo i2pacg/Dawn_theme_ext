@@ -11,8 +11,30 @@ const animObjects = {};
 document.querySelectorAll("[data-aos]").forEach(element => {
     if (element.getAttribute('data-aos') == 'svg-draw-fade') {
         // add paths to animObjects with delay and duration from parent and add animation to path
-
-
+        const parent = element;
+        const delay = Number(parent.getAttribute('data-aos-delay'));
+        const duration = Number(parent.getAttribute('data-aos-duration'));
+        parent.removeAttribute('data-aos-delay');
+        parent.removeAttribute('data-aos-duration');
+        parent.querySelectorAll('path').forEach(function (path, index) {
+            path.style.fillOpacity = 0;
+            path.style.strokeDasharray = path.getTotalLength();
+            path.style.strokeDashoffset = path.getTotalLength();
+            path.style.animation = `svgDrawFade 1s ease-in-out ${delay + (index * 100)}ms forwards`;
+            // add to animObjects
+            if (animObjects['svg-draw-fade'] == undefined) {
+                animObjects['svg-draw-fade'] = {
+                    delay: [],
+                    duration: [],
+                    anim: [],
+                    elements: [],
+                }
+            }
+            animObjects['svg-draw-fade'].delay.push(delay + (index * 100));
+            animObjects['svg-draw-fade'].duration.push(1000);
+            animObjects['svg-draw-fade'].anim.push('svg-draw-fade');
+            animObjects['svg-draw-fade'].elements.push(path);
+        });
 
     } else
         element.getAttribute('data-aos').split(',').forEach(function (anim, index) {
