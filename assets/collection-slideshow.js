@@ -40,7 +40,7 @@ function initSlick() {
             duration: 600,
             easing: 'easeInOutSine'
         });
-        this.querySelectorAll('.slick-slide').forEach(function (slide, index) {
+        this.querySelectorAll('.slick-slide:not([data-slick-index='0'])').forEach(function (slide, index) {
             console.log("fade slide", slide);
             tl.add({
                 targets: slide,
