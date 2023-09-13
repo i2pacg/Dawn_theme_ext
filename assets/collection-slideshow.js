@@ -135,11 +135,18 @@ let initNavSlickPromise = new Promise(resolve => {
         resolve("nav I am done");
     });
     $('.slider-nav').slick({
-        slidesToShow: 1,
+        centerPadding: '32px',
+        slidesToShow: 2,
         slidesToScroll: 1,
-        asNavFor: '.slider-nav',
+        infinite: true,
+        variableWidth: true,
+        centerMode: true,
+        asNavFor: '.slider-for , .slider-info',
+    }); $('.slider-info').slick({
+        arrows: false,
         fade: true,
         arrows: false,
+        asNavFor: '.slider-nav',
     });
 })
 
