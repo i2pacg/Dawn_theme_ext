@@ -54,7 +54,7 @@ function initSlick() {
         console.log("Slide Nav Init", this);
         setTimeout(() => {
             tl.play();
-        }, 100);
+        }, 300);
         /*  tl.add({
            targets: this.querySelector("[data-slick-index='0']"),
            opacity: [0, 1],
