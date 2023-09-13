@@ -23,11 +23,7 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
     }
 
     animObjects[animName][delay].push(animElement);
-    /* let animObject = animObjects[animName];
-    if (!Array.isArray(animObject[delay != NaN ? delay : 0]))
-        animObject[delay != NaN ? delay : 0] = [];
-    animObject[delay != NaN ? delay : 0].push(animElement);
- */
+
 });
 console.log("animObjects", animObjects);
 /* for (const delay in animObjects) {
