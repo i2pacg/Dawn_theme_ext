@@ -16,6 +16,8 @@ function initSlick() {
         variableWidth: true,
         centerMode: true,
         asNavFor: '.slider-for , .slider-info',
+    }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        console.log("Slide Nav Init", nextSlide);
     });
     $('.slider-info').slick({
         arrows: false,
