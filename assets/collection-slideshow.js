@@ -1,4 +1,31 @@
 
+initSlick();
+function initSlick() {
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.slider-nav',
+        fade: true,
+        arrows: false,
+    });
+    $('.slider-nav').slick({
+        centerPadding: '32px',
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        variableWidth: true,
+        centerMode: true,
+        asNavFor: '.slider-for , .slider-info',
+    });
+    $('.slider-info').slick({
+        arrows: false,
+        fade: true,
+        arrows: false,
+        asNavFor: '.slider-nav',
+    });
+}
+
+
 /* 
 
  */
@@ -16,7 +43,7 @@ document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path'
 });
 document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos');
  */
-initSlick();/* 
+/* 
 var tl = anime.timeline({
     easing: 'easeInOutSine',
     autoplay: false,
@@ -77,30 +104,7 @@ console.log(delays); */
 body[data-aos-delay="3100"] [data-aos].aos-animate {
     transition-delay: 3s
 } */
-function initSlick() {
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        asNavFor: '.slider-nav',
-        fade: true,
-        arrows: false,
-    });
-    $('.slider-nav').slick({
-        centerPadding: '32px',
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: true,
-        variableWidth: true,
-        centerMode: true,
-        asNavFor: '.slider-for , .slider-info',
-    });
-    $('.slider-info').slick({
-        arrows: false,
-        fade: true,
-        arrows: false,
-        asNavFor: '.slider-nav',
-    });
-}/* 
+/* 
 if (Shopify.designMode) {
     document.addEventListener('shopify:section:load', init);
     document.addEventListener('shopify:section:reorder', init); //
