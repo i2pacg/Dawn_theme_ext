@@ -20,7 +20,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     const anim = parent.getAttribute('data-aos');
     try {
         if (animObjects[anim].hasOwnProperty(delay)) {
-            animObjects[anim][delay.toString()] = {};
+            animObjects[anim][delay] = {};
         }
     } catch (error) {
         console.log("error", error);
