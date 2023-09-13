@@ -7,66 +7,11 @@ var tl = anime.timeline({
 });
 const animObjects = {};
 
-// get qyerySelectorAll for "[data-aos]" and loop through them to get the delay and duration and add them to animObjects
+// get querySelectorAll for "[data-aos]" and loop through them to get the delay and duration and add them to animObjects
 
 
 console.log("animObjects", animObjects);
-/* for (const delay in animObjects) {
-    if (Object.hasOwnProperty.call(animObjects, delay)) {
-        const anims = animObjects[delay];
-        console.log("anims", anims);
 
-    }
-} */
-/*  const anims = animElement.getAttribute('data-aos').split(',');
-console.log("anim", anims); if (anims.includes('svg-draw-fade')) {
-     console.log("svg", animElement);
-     tl.add({
-         targets: animElement.querySelectorAll('svg path'),
-         easing: 'easeInOutSine',
-         fillOpacity: [0, 1],
-         strokeDashoffset: [anime.setDashoffset, 0],
-         delay: 0,
-         direction: 'alternate',
-         loop: false,
-         duration: 1000,
-     })
-
- } else {
-     const animObject = {
-         targets: animElement,
-         easing: 'easeInOutSine',
-         delay: 0,
-     };
-     anims.forEach(anim => {
-         if (anim == 'fade') {
-             animObject.opacity = [0, 1];
-         }
-         if (anim == 'scaleX') {
-             animObject.scaleX = [0, 1];
-         }
-         if (anim == 'svg-draw-fade') {
-
-         }
-     });
-     tl.add(animObject);
- } */
-/* 
-document.querySelectorAll("[data-aos='fade']").forEach(element => {
-    console.log("fade", element);
-    let delay = Number(element.getAttribute('data-aos-delay'));
-    let duration = Number(element.getAttribute('data-aos-duration'));
-    console.log("fade delay", delay);
-    console.log("fade duration", duration);
-    tl.add({
-        targets: element,
-        opacity: [0, 1],
-        easing: 'easeInOutSine'
-    })
-    element.removeAttribute('data-aos');
-    element.removeAttribute('data-aos-delay');
-    element.removeAttribute('data-aos-duration');
-}); */
 initSlick();
 function initSlick() {
     $('.slider-for').slick({
