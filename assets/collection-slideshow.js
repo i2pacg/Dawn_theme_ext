@@ -4,6 +4,7 @@ var tl = anime.timeline({
     easing: 'easeInOutSine',
     duration: 600,
     autoplay: false,
+    delay: 0
 });
 const animObjects = {
     'fade': {},
