@@ -6,7 +6,7 @@ var tl = anime.timeline({
     autoplay: false,
 });
 
-document.querySelectorAll("[data-aos^=][data-aos^=]").forEach(element => {
+document.querySelectorAll("[data-aos^=]").forEach(element => {
     console.log("data-aos", element);
 
 });
