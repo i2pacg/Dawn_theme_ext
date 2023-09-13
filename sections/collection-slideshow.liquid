@@ -11,12 +11,14 @@
 
 {{ 'slick.min.css' | asset_url | stylesheet_tag }}
 {{ 'slick-theme.min.css' | asset_url | stylesheet_tag }}
-{{ 'aos.css' | asset_url | stylesheet_tag }}
-
+{% comment %}
+  {{ 'aos.css' | asset_url | stylesheet_tag }}
+{% endcomment %}
 {{ 'jquery.min.js' | asset_url | script_tag }}
 {{ 'slick.min.js' | asset_url | script_tag }}
-{{ 'aos.js' | asset_url | script_tag }}
-
+{% comment %}
+  {{ 'aos.js' | asset_url | script_tag }}
+{% endcomment %}
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
