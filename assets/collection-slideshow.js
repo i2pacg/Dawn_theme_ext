@@ -88,8 +88,8 @@ for (const anim in animObjects) {
                             targets: element.querySelectorAll('path'),
                             strokeDashoffset: [anime.setDashoffset, 0],
                             easing: 'easeInOutSine',
-                            duration: 1500,
-                            delay: function (el, i) { return i * 250 },
+                            duration: duration,
+                            delay: function (el, i) { return i * 250 + delay },
                             direction: 'alternate',
                             loop: true
                         })
