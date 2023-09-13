@@ -177,7 +177,9 @@ async function init() {
         delay: function (el, i) { return i * 100 },
         duration: 400,
     }, 2200);
-
+    $(infoSlide).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        console.log(nextSlide);
+    });
     if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg")) {
         tl.add({
             targets: infoSlide.querySelectorAll("[data-slick-index='0'] .product-title svg path"),
@@ -187,7 +189,6 @@ async function init() {
             delay: function (el, i) { return i * 150 },
             duration: 400,
         }, 2600);
-
     } else
         tl.add({
             targets: infoSlide.querySelector("[data-slick-index='0'] .product-title"),
