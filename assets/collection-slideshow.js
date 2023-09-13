@@ -27,6 +27,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
         if (!animObjects[anim][delay][duration]) {
             animObjects[anim][delay][duration] = [];
         }
+        animObjects[anim][delay][duration].push(parent);
     } catch (error) {
         console.log("error", anim, delay, duration);
     }
