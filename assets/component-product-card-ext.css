@@ -53,6 +53,7 @@
    border-radius: 16px;
    overflow: hidden;
    position: relative;
+   display: flex;
  }
 
  .product-card.title-option-top.savings-option-top .product-content .product-card-savings {
