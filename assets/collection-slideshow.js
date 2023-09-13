@@ -119,10 +119,7 @@ console.log("animObjects", animObjects);
 //init slick slider
 
 let initVideoSlickPromise = Promise(resolve => {
-    $('.slider-for').on('init', function (event, slick, currentSlide, nextSlide) {
-        console.log("Slide for Init", this);
-        resolve
-    });
+    $('.slider-for').on('init', resolve);
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -131,7 +128,7 @@ let initVideoSlickPromise = Promise(resolve => {
         arrows: false,
     });
 })
-
+/* 
 initSlick();
 function initSlick() {
     $('.slider-for').slick({
@@ -164,23 +161,7 @@ function initSlick() {
         setTimeout(() => {
             tl.play();
         }, 300);
-        /*  tl.add({
-         targets: this.querySelector("[data-slick-index='0']"),
-         opacity: [0, 1],
-         easing: 'easeInOutSine'
-     });
-     this.querySelectorAll(".slick-slide:not([data-slick-index='0'])").forEach(function (slide, index) {
-         console.log("fade slide", slide);
-         tl.add({
-             targets: slide,
-             opacity: [0, 1],
-             duration: 600,
-             easing: 'easeInOutSine'
-         })
-     });
-     setTimeout(() => {
-         tl.play();
-     }, 600); */
+
     });
     $('.slider-nav').slick({
         centerPadding: '32px',
@@ -197,9 +178,25 @@ function initSlick() {
         arrows: false,
         asNavFor: '.slider-nav',
     });
-}
+} */
 
-
+/*  tl.add({
+       targets: this.querySelector("[data-slick-index='0']"),
+       opacity: [0, 1],
+       easing: 'easeInOutSine'
+   });
+   this.querySelectorAll(".slick-slide:not([data-slick-index='0'])").forEach(function (slide, index) {
+       console.log("fade slide", slide);
+       tl.add({
+           targets: slide,
+           opacity: [0, 1],
+           duration: 600,
+           easing: 'easeInOutSine'
+       })
+   });
+   setTimeout(() => {
+       tl.play();
+   }, 600); */
 /* 
 
  */
