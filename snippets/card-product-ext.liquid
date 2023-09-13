@@ -81,25 +81,23 @@
         loading="lazy"
         height="360"
       >
-      {% comment %}
-        {%- if product.media[1] != null and show_secondary_image -%}
-          <img
-            src="{{ product.featured_media | image_url: width: 240 }}"
-            class="product-picture product-picture-secondary"
-            srcset="
-              {{ product.media[1] | image_url: width: 240 }},
-              {{ product.media[1] | image_url: width: 220 }},
-              {{ product.media[1] | image_url: width: 180 }}
-            "
-            sizes="
-              (max-width: 375) 180px,
-              (max-width: 500) 220px,
-              240px
-            "
-            loading="lazy"
-          >
-        {%- endif -%}
-      {% endcomment %}
+      {%- if product.media[1] != null and show_secondary_image -%}
+        <img
+          src="{{ product.featured_media | image_url: width: 240 }}"
+          class="product-picture product-picture-secondary"
+          srcset="
+            {{ product.media[1] | image_url: width: 240 }},
+            {{ product.media[1] | image_url: width: 220 }},
+            {{ product.media[1] | image_url: width: 180 }}
+          "
+          sizes="
+            (max-width: 375) 180px,
+            (max-width: 500) 220px,
+            240px
+          "
+          loading="lazy"
+        >
+      {%- endif -%}
       {% comment %}
         srcset=”{{ product.featured_media | image_url: width: 1200 }},
         {{ product.featured_media | image_url: width: 1200 }} ”
