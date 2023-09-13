@@ -136,14 +136,14 @@ function initSlick() {
         tl.add({
             targets: this.querySelector("[data-slick-index='0']"),
             opacity: [0, 1],
-            translateY: [20, 0],
-            duration: 600,
+            translateY: [100, 0],
+            duration: 400,
             easing: 'easeInOutSine'
         }, 2200);
         tl.add({
             targets: this.querySelectorAll(".slick-slide:not([data-slick-index='0'])"),
             opacity: [0, 1],
-            translateY: [20, 0],
+            translateY: [100, 0],
             easing: 'easeInOutSine',
             delay: function (el, i) { return i * 100 },
             duration: 400,
