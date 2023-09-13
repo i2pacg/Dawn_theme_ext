@@ -95,7 +95,7 @@ for (const anim in animObjects) {
                                 fillOpacity: [0, 1],
                                 strokeDashoffset: [anime.setDashoffset, 0],
                                 easing: 'easeInOutSine',
-                                delay: function (el, i) { return i * 250 },
+                                delay: function (el, i) { return i * 100 },
                                 duration: duration,
                             }, delay);
                         });
