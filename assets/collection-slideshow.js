@@ -21,7 +21,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
 });
 
 // add animations to the timeline
-for (const delay in animObjects) {
+/* for (const delay in animObjects) {
     for (const duration in animObjects[delay]) {
         animObjects[delay][duration].forEach(element => {
             tl.add({
@@ -33,7 +33,7 @@ for (const delay in animObjects) {
             })
         });
     }
-}
+} */
 console.log("animObjects", animObjects);
 
 // start the timeline
