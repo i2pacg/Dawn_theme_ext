@@ -19,6 +19,11 @@ document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos')
 initSlick();
 
 
+document.querySelector("[data-aos='fade']").forEach(element => {
+    console.log("fade", element);
+});;
+/* data-aos="fade" data-aos-duration="400" */
+
 var animation = anime({
     targets: '.slider-content-card',
     opacity: [0, 1],
