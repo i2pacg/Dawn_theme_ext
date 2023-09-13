@@ -20,20 +20,8 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     animObjects[delay][duration].push(element);
 });
 
-// add animations to the timeline
-/* for (const delay in animObjects) {
-    for (const duration in animObjects[delay]) {
-        animObjects[delay][duration].forEach(element => {
-            tl.add({
-                targets: element,
-                opacity: [0, 1],
-                duration: duration != NaN ? duration : 600,
-                delay: function (el, i) { return delay != NaN ? delay : 0; },
-                easing: 'easeInOutSine'
-            })
-        });
-    }
-} */
+// add animations to the timeline based on the animObjects object and add path animations if there are any paths
+
 console.log("animObjects", animObjects);
 
 // start the timeline
