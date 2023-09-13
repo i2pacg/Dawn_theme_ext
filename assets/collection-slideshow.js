@@ -17,11 +17,9 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
     anims.forEach(anim => {
         if (anim == 'fade') {
             animObject.opacity = [0, 1];
-            tl.add(animObject);
         }
         if (anim == 'scaleX') {
             animObject.scaleX = [0, 1];
-            tl.add(animObject);
         }
         if (anim == 'svg-draw-fade') {
             console.log("fade", animElement);
@@ -31,9 +29,11 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
                 animObject.astrokeDashoffset = [anime.setDashoffset, 1];
                 animObject.delay = index * 250;
                 animObject.direction = 'alternate';
+                tl.add(animObject);
             });
         }
     });
+    tl.add(animObject);
 });
 /* 
 document.querySelectorAll("[data-aos='fade']").forEach(element => {
