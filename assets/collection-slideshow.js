@@ -135,9 +135,7 @@ let initVideoSlickPromise = new Promise(resolve => {
 init();
 async function init() {
     console.log("init");
-    await initVideoSlickPromise.then((value) => {
-        console.log("initVideoSlickPromise", value);
-    });
+    await initVideoSlickPromise.;
     console.log("initDFOne");
 }
 /* 
