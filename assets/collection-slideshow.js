@@ -14,8 +14,6 @@ document.querySelectorAll("[data-aos='fade']").forEach(element => {
     tl.add({
         targets: element,
         opacity: [0, 1],
-        duration: duration != NaN ? duration : 600,
-        delay: function (el, i) { return delay != NaN ? delay : 0; },
         easing: 'easeInOutSine'
     })
     element.removeAttribute('data-aos');
@@ -37,10 +35,9 @@ function initSlick() {
         tl.add({
             targets: this.querySelector("[data-slick-index='0']"),
             opacity: [0, 1],
-            duration: 600,
             easing: 'easeInOutSine'
         });
-        this.querySelectorAll('.slick-slide').forEach(function (slide, index) {
+        this.querySelectorAll(".slick-slide:not([data-slick-index='0'])").forEach(function (slide, index) {
             console.log("fade slide", slide);
             tl.add({
                 targets: slide,
