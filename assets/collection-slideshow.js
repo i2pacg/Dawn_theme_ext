@@ -53,6 +53,23 @@ document.querySelectorAll("[data-aos]").forEach(element => {
         });
 });
 // loop animObjects and add animations to timeline 
+Object.keys(animObjects).forEach(function (key, index) {
+    if (key != 'svg-draw-fade') {
+        console.log("key", key);
+        console.log("animObjects", animObjects[key]);
+        animObjects[key].elements.forEach(function (element, index) {
+            console.log("element", element);
+            console.log("index", index);
+            tl.add({
+                targets: element,
+                opacity: [0, 1],
+                duration: animObjects[key].duration[index],
+                delay: function (el, i) { return animObjects[key].delay[index]; },
+                easing: 'easeInOutSine'
+            })
+        });
+    }
+});
 
 // add all the animObjects to timeline
 /* Object.keys(animObjects).forEach(function (key, index) {
