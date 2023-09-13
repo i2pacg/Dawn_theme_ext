@@ -142,14 +142,14 @@ let initNavSlickPromise = new Promise(resolve => {
         variableWidth: true,
         centerMode: true,
         asNavFor: '.slider-for , .slider-info',
-    }); $('.slider-info').slick({
-        arrows: false,
-        fade: true,
-        arrows: false,
-        asNavFor: '.slider-nav',
     });
 })
-
+$('.slider-info').slick({
+    arrows: false,
+    fade: true,
+    arrows: false,
+    asNavFor: '.slider-nav',
+});
 init();
 async function init() {
     console.log("init");
