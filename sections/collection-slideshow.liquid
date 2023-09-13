@@ -152,7 +152,7 @@
             class="slider-info-content"
           >
             <div class="slider-text">
-              <h1 class="product-title" data-aos-delay="2400" data-aos="fade-right">
+              <h1 class="product-title">
                 {% comment %}
                   {{ product.title | escape }}
                 {% endcomment %}
@@ -162,7 +162,7 @@
                   {{ product.title | escape }}
                 {% endif %}
               </h1>
-              <div data-aos-delay="3000" data-aos="fade-right" data-aos-once="true">
+              <div>
                 {%- if product.metafields.description.short != blank -%}
                   {{ product.metafields.description.short | truncate: 175, '. . . ' }}
                 {%- elsif product.description != blank -%}
