@@ -14,21 +14,17 @@ const animObjects = {
 // get all elements with data-aos attribute split by comma and add them to animObjects under delay , duration ,anim name as key and elements as value exept svg-draw-fade
 document.querySelectorAll("[data-aos]").forEach(element => {
     if (element.getAttribute('data-aos') != 'svg-draw-fade') {
-        // add paths to animObjects with delay and duration from parent and add animation to path
         const parent = element;
         const delay = Number(parent.getAttribute('data-aos-delay')) != NaN ? Number(parent.getAttribute('data-aos-delay')) : 0;
         const duration = Number(parent.getAttribute('data-aos-duration')) != NaN ? Number(parent.getAttribute('data-aos-duration')) : 0;
         const anim = parent.getAttribute('data-aos');
-
         if (!animObjects[anim][delay]) {
             animObjects[anim][delay] = {};
         }
         if (!animObjects[anim][delay][duration]) {
             animObjects[anim][delay][duration] = [];
         }
-
         animObjects[anim][delay][duration].push(parent);
-
     }
 });
 console.log("animObjects", animObjects);
