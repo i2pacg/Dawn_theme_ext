@@ -8,8 +8,8 @@ var tl = anime.timeline({
 const animObjects = {
     'fade': {},
     'fade-scaleX': {},
-    'fade-slideUp ': {},
-    'slideUp ': {},
+    'fade-slideUp': {},
+    'slideUp': {},
     'svg-draw-fade': {},
 };
 
