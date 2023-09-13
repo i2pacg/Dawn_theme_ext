@@ -177,16 +177,11 @@ async function init() {
         delay: function (el, i) { return i * 100 },
         duration: 400,
     }, 2200);
-    tl.add({
-        targets: infoSlide.querySelector("[data-slick-index='0']"),
-        opacity: [0, 1],
-        duration: 400,
-        easing: 'easeInOutSine'
-    }, 2200);
+    navSlide.querySelectorAll("[data-slick-index='0']"),
 
-    setTimeout(() => {
-        tl.play();
-    }, 300);
+        setTimeout(() => {
+            tl.play();
+        }, 300);
 }
 /* 
 initSlick();
