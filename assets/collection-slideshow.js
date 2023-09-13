@@ -30,6 +30,7 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
                 animObject.astrokeDashoffset = [anime.setDashoffset, 1];
                 animObject.delay = index * 250;
                 animObject.direction = 'alternate';
+                tl.add(animObject);
             });
 
             /* element.removeChild('svg') */
