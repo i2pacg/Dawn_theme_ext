@@ -26,7 +26,13 @@ for (const [delay, delayElements] of Object.entries(animObjects)) {
     for (const [duration, durationElements] of Object.entries(delayElements)) {
         console.log("duration", duration);
         console.log("durationElements", durationElements);
-
+        tl.add({
+            targets: durationElements,
+            opacity: [0, 1],
+            duration: duration != NaN ? duration : 600,
+            delay: function (el, i) { return delay != NaN ? delay : 0; },
+            easing: 'easeInOutSine'
+        })
     }
 }
 
