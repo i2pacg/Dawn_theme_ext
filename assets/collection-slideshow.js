@@ -40,7 +40,6 @@ function initSlick() {
                 targets: slide,
                 opacity: [0, 1],
                 duration: 600,
-                delay: index * 100 + 600,
                 easing: 'easeInOutSine'
             })
         });
