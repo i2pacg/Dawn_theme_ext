@@ -12,10 +12,9 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     if (element.getAttribute('data-aos') == 'svg-draw-fade') {
         // add paths to animObjects with delay and duration from parent and add animation to path
         const parent = element;
-        const delay = Number(parent.getAttribute('data-aos-delay'));
-        const duration = Number(parent.getAttribute('data-aos-duration'));
-        parent.removeAttribute('data-aos-delay');
-        parent.removeAttribute('data-aos-duration');
+        const delay = Number(parent.getAttribute('data-aos-delay')) != NaN ? Number(parent.getAttribute('data-aos-delay')) : 0;
+        const duration = Number(parent.getAttribute('data-aos-duration')) != NaN ? Number(parent.getAttribute('data-aos-delay')) : 0;
+
 
     }
 });
