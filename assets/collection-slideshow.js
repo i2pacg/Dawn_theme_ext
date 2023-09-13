@@ -26,10 +26,10 @@ for (const [delay, delayElements] of Object.entries(animObjects)) {
     for (const [duration, durationElements] of Object.entries(delayElements)) {
         console.log("duration", duration);
         console.log("durationElements", durationElements);
-        // group elements via data-aos attribute
+        // group elements via data-aos attribute split by comma
         const groups = durationElements.reduce((r, a) => {
             r[a.getAttribute('data-aos')] = [...r[a.getAttribute('data-aos')] || [], a];
-            return r.split(',');
+            return r;
         }, {});
         console.log("groups", groups);
 
