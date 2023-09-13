@@ -8,15 +8,19 @@ var tl = anime.timeline({
 
 document.querySelectorAll("[data-aos]").forEach(element => {
     console.log("data-aos", element);
-    const anim = element.getAttribute('data-aos');
-    console.log("anim", anim);
+    const anims = element.getAttribute('data-aos').split(',');
+    console.log("anim", anims);
     let animObject = {
         targets: element,
         easing: 'easeInOutSine'
     };
-    if (anim == 'fade') {
-        animObject.opacity = [0, 1];
-    }
+    anims.forEach(anim => {
+        if (anim == 'fade') {
+            animObject.opacity = [0, 1];
+        }
+    });
+
+
     tl.add(animObject);
 });
 /* 
