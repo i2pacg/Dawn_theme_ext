@@ -233,14 +233,14 @@ async function init() {
         }, 2600);
 
     anime({
-        targets: nextSlideElement.querySelector(".slider-buttons"),
+        targets: infoSlide.querySelector("[data-slick-index='0'] .slider-buttons"),
         opacity: [0, 1],
         translateX: [100, 0],
         easing: 'easeInOutSine',
         duration: 400,
     })
     anime({
-        targets: nextSlideElement.querySelector(".product-description"),
+        targets: infoSlide.querySelector("[data-slick-index='0'] .product-description"),
         opacity: [0, 1],
         translateY: [100, 0],
         easing: 'easeInOutSine',
