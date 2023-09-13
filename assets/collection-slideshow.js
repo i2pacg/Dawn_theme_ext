@@ -180,7 +180,6 @@ async function init() {
     tl.add({
         targets: infoSlide.querySelector("[data-slick-index='0']"),
         opacity: [0, 1],
-        translateX: [-100, 0],
         duration: 400,
         easing: 'easeInOutSine'
     }, 2200);
