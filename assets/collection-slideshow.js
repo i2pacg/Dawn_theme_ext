@@ -7,14 +7,12 @@ var tl = anime.timeline({
 });
 const animObjects = {};
 document.querySelectorAll("[data-aos]").forEach(animElement => {
-    console.log("animElement", animElement);
     let delay = Number(animElement.getAttribute('data-aos-delay'));
     if (!Array.isArray(animObjects[delay != NaN ? delay : 0]))
         animObjects[delay != NaN ? delay : 0] = [];
     animObjects[delay != NaN ? delay : 0].push(animElement);
 
 });
-console.log("animObjects", animObjects);
 for (const delay in animObjects) {
     if (Object.hasOwnProperty.call(animObjects, delay)) {
         const anims = animObjects[delay];
