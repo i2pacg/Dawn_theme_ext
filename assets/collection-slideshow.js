@@ -121,7 +121,7 @@ console.log("animObjects", animObjects); */
 let initVideoSlickPromise = new Promise(resolve => {
     $('.slider-for').on('init', setTimeout(() => {
         console.log("init slider-for");
-        resolve;
+        resolve("I am done");
     }, 5000));
     $('.slider-for').slick({
         slidesToShow: 1,
