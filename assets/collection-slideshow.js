@@ -20,7 +20,8 @@ initSlick();
 
 var tl = anime.timeline({
     easing: 'easeInOutSine',
-    duration: 400
+    duration: 400,
+    autoplay: false,
 });
 // Add children
 document.querySelectorAll("[data-aos='fade']").forEach(element => {
