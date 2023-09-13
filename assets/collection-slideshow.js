@@ -118,9 +118,10 @@ console.log("animObjects", animObjects);
 
 //init slick slider
 
-let initPromise = Promise(resolve => {
+let initVideoSlickPromise = Promise(resolve => {
     $('.slider-for').on('init', function (event, slick, currentSlide, nextSlide) {
         console.log("Slide for Init", this);
+        resolve
     });
     $('.slider-for').slick({
         slidesToShow: 1,
