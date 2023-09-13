@@ -19,11 +19,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     }
 });
 // loop animObjects and add animations to timeline 
-Object.keys(animObjects).forEach(function (key, index) {
-    if (key != 'svg-draw-fade') {
 
-    }
-});
 
 // add all the animObjects to timeline
 /* Object.keys(animObjects).forEach(function (key, index) {
