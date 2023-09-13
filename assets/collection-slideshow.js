@@ -182,16 +182,16 @@ async function init() {
         console.log('beforeChange', slick.$slides[nextSlide]);
         const slideElement = slick.$slides[nextSlide];
         const nextSlideElement = slick.$slides[nextSlide];
-        /*   anime({
-              targets: slideElement.querySelectorAll(".product-title svg path"),
-              fillOpacity: [0, 1],
-              strokeDashoffset: [anime.setDashoffset, 0],
-              easing: 'easeInOutSine',
-              direction: 'reverse',
-              delay: function (el, i) { return i * 75 },
-              duration: 400,
-          });
-   */
+        anime({
+            targets: slideElement.querySelectorAll(".product-title svg path"),
+            fillOpacity: [0, 1],
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutSine',
+            direction: 'reverse',
+            delay: function (el, i) { return i * 75 },
+            duration: 400,
+        });
+
         if (nextSlideElement.querySelector(".product-title svg"))
             anime({
                 targets: nextSlideElement.querySelectorAll(".product-title svg path"),
