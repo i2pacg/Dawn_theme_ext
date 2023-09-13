@@ -11,20 +11,17 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
     console.log("anim", anims);
 
     if (anims.includes('svg')) {
-        console.log("fade", animElement);
+        console.log("svg", animElement);
         animElement.querySelectorAll('svg path').forEach(function (path, index) {
-            const animObject = {
-                targets: animElement,
-                easing: 'easeInOutSine'
-            };
-            animObject.targets = path;
-            animObject.fillOpacity = [0, 1];
-            animObject.astrokeDashoffset = [anime.setDashoffset, 1];
-            animObject.delay = 0;
-            animObject.direction = 'alternate';
             tl.add({
-                targets: animElement,
-                easing: 'easeInOutSine'
+                targets: path,
+                easing: 'easeInOutSine',
+                fillOpacity: [0, 1],
+                strokeDashoffset: [anime.setDashoffset, 0],
+                delay: function (el, i) { return 100 * i; },
+                direction: 'alternate',
+                loop: false,
+                duration: 1000,
             });
         });
 
