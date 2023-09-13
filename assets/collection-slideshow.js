@@ -162,6 +162,7 @@ async function init() {
     const navSlide = await initNavSlickPromise;
     const i = await initInfoSlickPromise;
     console.log("navSlide ", navSlide);
+    navSlide.querySelectorAll(".slick-slide").forEach(function (slide, index) { });
     setTimeout(() => {
         tl.play();
     }, 300);
