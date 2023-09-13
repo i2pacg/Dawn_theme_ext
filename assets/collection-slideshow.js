@@ -18,9 +18,7 @@ document.querySelectorAll("[data-aos='fade']").forEach(element => {
         delay: function (el, i) { return delay != NaN ? delay : 0; },
         easing: 'easeInOutSine'
     })
-    element.removeAttribute('data-aos');
-    element.removeAttribute('data-aos-delay');
-    element.removeAttribute('data-aos-duration');
+
 });
 initSlick();
 function initSlick() {
