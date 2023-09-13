@@ -8,7 +8,8 @@ var tl = anime.timeline({
 
 document.querySelectorAll("[data-aos]").forEach(element => {
     console.log("data-aos", element);
-
+    const anim = element.getAttribute('data-aos');
+    console.log("anim", anim);
 });
 /* 
 document.querySelectorAll("[data-aos='fade']").forEach(element => {
