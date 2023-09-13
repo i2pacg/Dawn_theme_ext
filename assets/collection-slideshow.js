@@ -17,7 +17,7 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
             easing: 'easeInOutSine',
             fillOpacity: [0, 1],
             strokeDashoffset: [anime.setDashoffset, 0],
-            delay: function (el, i) { return 100 * i; },
+            delay: 0,
             direction: 'alternate',
             loop: false,
             duration: 1000,
