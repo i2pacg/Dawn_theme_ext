@@ -15,7 +15,12 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
 
 });
 console.log("animObjects", animObjects);
-
+for (const delay in animObjects) {
+    if (Object.hasOwnProperty.call(animObjects, delay)) {
+        const anims = animObjects[delay];
+        console.log("anims", anims);
+    }
+}
 /*  const anims = animElement.getAttribute('data-aos').split(',');
 console.log("anim", anims); if (anims.includes('svg-draw-fade')) {
      console.log("svg", animElement);
