@@ -8,11 +8,9 @@ var tl = anime.timeline({
 const animObjects = {};
 document.querySelectorAll("[data-aos]").forEach(animElement => {
     let delay = Number(element.getAttribute('data-aos-delay'));
-    let duration = Number(element.getAttribute('data-aos-duration'));
-    const anims = animElement.getAttribute('data-aos').split(',');
-    console.log("anim", anims);
-    animObjects[animElement.getAttribute('data-aos-delay')] = animElement;
-    /*  if (anims.includes('svg-draw-fade')) {
+    animObjects[delay] = animElement;
+    /*  const anims = animElement.getAttribute('data-aos').split(',');
+    console.log("anim", anims); if (anims.includes('svg-draw-fade')) {
          console.log("svg", animElement);
          tl.add({
              targets: animElement.querySelectorAll('svg path'),
