@@ -16,7 +16,6 @@ document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path'
 });
 document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos');
  */
-initSlick();
 
 var tl = anime.timeline({
     easing: 'easeInOutSine',
@@ -38,6 +37,7 @@ document.querySelectorAll("[data-aos='fade']").forEach(element => {
     })
 });;
 /* data-aos="fade" data-aos-duration="400" */
+initSlick();
 
 setTimeout(() => {
     tl.play();
