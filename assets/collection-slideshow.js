@@ -25,6 +25,7 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
     animObjects[animName][delay].push(animElement);
 
 });
+// Add AnimeJs to animOBjects
 console.log("animObjects", animObjects);
 /* for (const delay in animObjects) {
     if (Object.hasOwnProperty.call(animObjects, delay)) {
