@@ -14,11 +14,15 @@ document.querySelectorAll("[data-aos]").forEach(element => {
         targets: element,
         easing: 'easeInOutSine'
     };
+
     anims.forEach(anim => {
         if (anim == 'fade') {
             animObject.opacity = [0, 1];
         }
         if (anim == 'scaleX') {
+            animObject.scaleX = [0, 1];
+        }
+        if (anim == 'svg-draw-fade') {
             animObject.scaleX = [0, 1];
         }
     });
