@@ -87,6 +87,7 @@
    border-top-left-radius: 16px;
    background-color: #da2828;
    line-height: 100%;
+   z-index: 1;
  }
 
  .product-card .product-content .product-price {
