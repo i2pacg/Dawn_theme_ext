@@ -253,9 +253,7 @@ hr.half-divider {
     flex: 2;
 }
 
-.slider-info-content .slider-text .product-title-svg {
-    height: 32px;
-}
+
 
 .slider-info .slick-track {
     display: flex;
@@ -264,6 +262,11 @@ hr.half-divider {
 .slider-info .slider-text .product-title {
     margin: 0;
     font-size: 32px;
+}
+
+.slider-info .slider-text .product-title svg {
+    width: unset;
+    height: 24px;
 }
 
 @media screen and (max-width: 540px) {
@@ -288,10 +291,7 @@ hr.half-divider {
     text-align: right;
 }
 
-.slider-info.slider-title-right .slider-text .product-title svg {
-    width: unset;
-    height: 24px;
-}
+
 
 .slider-info.slider-title-right .slider-text {
     order: 2;
