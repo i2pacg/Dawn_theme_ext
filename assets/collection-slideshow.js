@@ -107,7 +107,7 @@ if (Shopify.designMode) {
 }
 
 function init() {
-    AOS.refresh();
+    /*   AOS.refresh(); */
     setTimeout(initSlick, 1000);
 }
 
