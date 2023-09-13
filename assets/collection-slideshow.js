@@ -136,6 +136,8 @@ function initSlick() {
         tl.add({
             targets: this.querySelector("[data-slick-index='0']"),
             opacity: [0, 1],
+            translateY: [20, 0],
+            duration: 600,
             easing: 'easeInOutSine'
         });
         this.querySelectorAll(".slick-slide:not([data-slick-index='0'])").forEach(function (slide, index) {
@@ -143,6 +145,7 @@ function initSlick() {
             tl.add({
                 targets: slide,
                 opacity: [0, 1],
+                translateY: [20, 0],
                 duration: 600,
                 easing: 'easeInOutSine'
             })
