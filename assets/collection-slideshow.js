@@ -178,15 +178,13 @@ async function init() {
         duration: 400,
     }, 2200);
     tl.add({
-        targets: navSlide.querySelectorAll(".slick-slide:not([data-slick-index='0'])"),
+        targets: infoSlide.querySelectorAll("[data-slick-index='0'] .product-title"),
         opacity: [0, 1],
-        translateY: [100, 0],
         easing: 'easeInOutSine',
         delay: function (el, i) { return i * 100 },
         duration: 400,
-    }, 2200); infoSlide.querySelectorAll("[data-slick-index='0'] .product-title").forEach(function (slide, index) {
-        console.log("fade slide", slide);
-    });
+    }, 2200);
+
 
     setTimeout(() => {
         tl.play();
