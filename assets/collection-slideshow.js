@@ -179,7 +179,7 @@ async function init() {
     }, 2200);
 
     $(infoSlide).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        console.log(nextSlide);
+        console.log('beforeChange', slick);
         /*   anime({
               targets: nextSlide.querySelectorAll(".product-title svg path"),
               fillOpacity: [0, 1],
