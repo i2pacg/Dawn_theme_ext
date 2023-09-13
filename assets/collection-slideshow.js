@@ -12,7 +12,17 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
 
     if (anims.includes('svg-draw-fade')) {
         console.log("svg", animElement);
-        animElement.querySelectorAll('svg path').forEach(function (path, index) {
+        tl.add({
+            targets: animElement.querySelectorAll('svg path'),
+            easing: 'easeInOutSine',
+            fillOpacity: [0, 1],
+            strokeDashoffset: [anime.setDashoffset, 0],
+            delay: function (el, i) { return 100 * i; },
+            direction: 'alternate',
+            loop: false,
+            duration: 1000,
+        })
+        /* animElement.querySelectorAll('svg path').forEach(function (path, index) {
             tl.add({
                 targets: path,
                 easing: 'easeInOutSine',
@@ -23,7 +33,7 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
                 loop: false,
                 duration: 1000,
             });
-        });
+        }); */
 
     } else {
         const animObject = {
