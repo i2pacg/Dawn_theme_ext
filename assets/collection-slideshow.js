@@ -30,6 +30,7 @@ function initSlick() {
 
     $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
         console.log("Slide Nav Init");
+        tl.play();
     });
     $('.slider-nav').slick({
         centerPadding: '32px',
