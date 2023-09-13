@@ -179,6 +179,17 @@ async function init() {
     }, 2200);
 
     if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg")) {
+        elements.forEach(function (element, index) {
+            console.log("element delay", delay, element.querySelectorAll('svg path'));
+            tl.add({
+                targets: element.querySelectorAll('svg path'),
+                fillOpacity: [0, 1],
+                strokeDashoffset: [anime.setDashoffset, 0],
+                easing: 'easeInOutSine',
+                delay: function (el, i) { return i * 100 },
+                duration: duration,
+            }, delay);
+        });
         tl.add({
             targets: infoSlide.querySelector("[data-slick-index='0'] .product-title svg path"),
             fillOpacity: [0, 1],
