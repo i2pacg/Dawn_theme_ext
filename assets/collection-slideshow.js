@@ -7,6 +7,7 @@ var tl = anime.timeline({
 });
 const animObjects = {};
 document.querySelectorAll("[data-aos]").forEach(animElement => {
+    console.log("animElement", animElement);
     let delay = Number(element.getAttribute('data-aos-delay'));
     animObjects[`${delay != NaN ? delay : 0}`] = animElement;
     /*  const anims = animElement.getAttribute('data-aos').split(',');
