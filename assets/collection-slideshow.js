@@ -128,6 +128,10 @@ let initVideoSlickPromise = Promise(resolve => {
         arrows: false,
     });
 })
+initVideoSlickPromise.then((e) => {
+    console.log("initVideoSlickPromise", e);
+
+});
 /* 
 initSlick();
 function initSlick() {
