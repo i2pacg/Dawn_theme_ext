@@ -56,9 +56,8 @@ for (const anim in animObjects) {
                         targets: elements,
                         opacity: [0, 1],
                         duration: duration,
-                        delay: delay,
                         easing: 'easeInOutSine'
-                    });
+                    }, delay);
                     break;
                 case 'fade-scaleX':
                     tl.add({
@@ -66,9 +65,8 @@ for (const anim in animObjects) {
                         opacity: [0, 1],
                         scaleX: [0.0, 1],
                         duration: duration,
-                        delay: delay,
                         easing: 'easeInOutSine'
-                    });
+                    }, delay);
                     break;
                 case 'fade-slideUp':
                     tl.add({
@@ -76,9 +74,8 @@ for (const anim in animObjects) {
                         opacity: [0, 1],
                         translateY: [20, 0],
                         duration: duration,
-                        delay: delay,
                         easing: 'easeInOutSine'
-                    });
+                    }, delay);
                     break;
                 case 'slideUp':
                     tl.add({
