@@ -17,26 +17,23 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
     anims.forEach(anim => {
         if (anim == 'fade') {
             animObject.opacity = [0, 1];
+            tl.add(animObject);
         }
         if (anim == 'scaleX') {
             animObject.scaleX = [0, 1];
+            tl.add(animObject);
         }
         if (anim == 'svg-draw-fade') {
             console.log("fade", animElement);
             animElement.querySelectorAll('svg path').forEach(function (path, index) {
-                console.log("path", path);
                 animObject.targets = path;
                 animObject.fillOpacity = [0, 1];
                 animObject.astrokeDashoffset = [anime.setDashoffset, 1];
                 animObject.delay = index * 250;
                 animObject.direction = 'alternate';
-                tl.add(animObject);
             });
-
-            /* element.removeChild('svg') */
         }
     });
-    tl.add(animObject);
 });
 /* 
 document.querySelectorAll("[data-aos='fade']").forEach(element => {
