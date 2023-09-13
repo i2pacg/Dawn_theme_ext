@@ -6,11 +6,11 @@ var tl = anime.timeline({
     autoplay: false,
 });
 
-document.querySelectorAll("[data-aos]").forEach(element => {
-    const anims = element.getAttribute('data-aos').split(',');
+document.querySelectorAll("[data-aos]").forEach(animElement => {
+    const anims = animElement.getAttribute('data-aos').split(',');
     console.log("anim", anims);
     const animObject = {
-        targets: element,
+        targets: animElement,
         easing: 'easeInOutSine'
     };
 
@@ -22,7 +22,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
             animObject.scaleX = [0, 1];
         }
         if (anim == 'svg-draw-fade') {
-            console.log("fade", element);
+            console.log("fade", animElement);
             /* element.removeChild('svg') */
         }
     });
