@@ -10,7 +10,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     console.log("data-aos", element);
     const anims = element.getAttribute('data-aos').split(',');
     console.log("anim", anims);
-    let animObject = {
+    const animObject = {
         targets: element,
         easing: 'easeInOutSine'
     };
@@ -23,7 +23,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
             animObject.scaleX = [0, 1];
         }
         if (anim == 'svg-draw-fade') {
-            animObject.scaleX = [0, 1];
+            element.remove('svg')
         }
     });
     tl.add(animObject);
