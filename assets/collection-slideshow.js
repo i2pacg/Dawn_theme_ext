@@ -26,6 +26,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
             element.remove('svg')
         }
     });
+    console.log("animObject", animObject);
     tl.add(animObject);
 });
 /* 
