@@ -44,13 +44,14 @@ for (const [delay, delayElements] of Object.entries(animObjects)) {
                 strokeDashoffset: [anime.setDashoffset, 0],
                 fillOpacity: [0, 1],
                 easing: 'easeInOutSine',
-                duration != NaN ? duration : 600, delay: function (el, i) { return delay != NaN ? delay + (index * 100) : 0; },
+                duration: duration != NaN ? duration : 600,
+                delay: function (el, i) { return delay != NaN ? delay + (index * 100) : 0; },
             });
 
-    });
+        });
 
 
-}
+    }
 }
 
 console.log("animObjects", animObjects);
