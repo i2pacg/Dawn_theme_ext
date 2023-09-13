@@ -37,6 +37,7 @@ for (const animName in animObjects) {
                     easing: 'easeInOutSine',
                     delay: 0,
                 };
+                //loop and add duration
                 if (animName == 'svg-draw-fade') {
                     animObjectTemp = {
                         targets: animElements[0].querySelectorAll('svg path'),
