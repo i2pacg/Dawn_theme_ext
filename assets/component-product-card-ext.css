@@ -25,6 +25,12 @@
    width: 100%;
  }
 
+ .product-card .product-picture.product-picture-secondary {
+   position: absolute;
+   left: 0;
+   top: 0;
+ }
+
  @media screen and (max-width: 540px) {
    .product-title {
      font-size: 18px;
