@@ -2,6 +2,7 @@
 
 var tl = anime.timeline({
     easing: 'easeInOutSine',
+    duration: 600,
     autoplay: false,
 });
 document.querySelectorAll("[data-aos='fade']").forEach(element => {
@@ -33,7 +34,9 @@ function initSlick() {
 
     $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
         console.log("Slide Nav Init");
-        tl.play();
+        setTimeout(() => {
+            tl.play();
+        }, 5000);
     });
     $('.slider-nav').slick({
         centerPadding: '32px',
