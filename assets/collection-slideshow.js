@@ -37,9 +37,8 @@ for (const anim in animObjects) {
     if (anim == 'svg-draw-fade') continue;
     for (const delay in animObjects[anim]) {
         for (const duration in animObjects[anim][delay]) {
-            const elements = document.querySelectorAll(`[data-aos="${anim}"][data-aos-duration="${duration}"][data-aos-delay="${delay}"]`);
+            const elements = animObjects[anim][delay][duration];
             console.log("elements", elements);
-
         }
     }
 }
