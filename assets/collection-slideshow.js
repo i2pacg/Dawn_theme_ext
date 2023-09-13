@@ -36,10 +36,6 @@ function initSlick() {
         console.log("Slide Nav Init", this);
         this.querySelectorAll('.slick-slide').forEach(function (slide, index) {
             console.log("fade slide", slide);
-            /*   let delay = Number(element.getAttribute('data-aos-delay'));
-              let duration = Number(element.getAttribute('data-aos-duration'));
-              console.log("fade delay", delay);
-              console.log("fade duration", duration); */
             tl.add({
                 targets: slide,
                 opacity: [0, 1],
