@@ -57,7 +57,7 @@ for (const animName in animObjects) {
                         if (anim == 'scaleX') {
                             animObjectTemp.scaleX = [0, 1];
                         }
-                        if (anim == 'slide-up') {
+                        if (anim == 'slideUp') {
                             animObjectTemp.translateY = [100, 0];
                         }
                     });
