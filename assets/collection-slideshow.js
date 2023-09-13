@@ -33,41 +33,7 @@ for (const [delay, delayElements] of Object.entries(animObjects)) {
         }, {});
         console.log("groups", groups);
         // add all elements with same delay and duration to timeline 
-        for (const [key, value] of Object.entries(groups)) {
-            console.log("key", key);
-            console.log("value", value);
-            switch (key) {
-                case 'fade':
-                    tl.add({
-                        targets: value,
-                        opacity: [0, 1],
-                        duration: duration != NaN ? duration : 600,
-                        delay: function (el, i) { return delay != NaN ? delay : 0; },
-                        easing: 'easeInOutSine'
-                    })
-                    break;
-                case 'svg-draw-fade':
-                    console.log("durationElements", durationElements.filter((el) => el.getAttribute('data-aos') == 'svg-draw-fade').map((el) => el.querySelectorAll('svg path')).flat());
-                    durationElements.filter((el) => el.getAttribute('data-aos') == 'svg-draw-fade').map((el) => el.querySelectorAll('svg path')).flat().forEach(function (path, index) {
-                        console.log("path", path);
-                        path.style.fillOpacity = 0;
-                        path.style.strokeDasharray = path.getTotalLength();
-                        path.style.strokeDashoffset = path.getTotalLength();
-                        tl.add({
-                            targets: path,
-                            strokeDashoffset: [anime.setDashoffset, 0],
-                            fillOpacity: [0, 1],
-                            easing: 'easeInOutSine',
-                            duration: duration != NaN ? duration : 600,
-                            delay: function (el, i) { return delay != NaN ? delay + (index * 100) : 0; },
-                        });
 
-                    });
-                    break;
-                default:
-                    break;
-            }
-        }
         // add all elements with same delay and duration to timeline 
         /*   tl.add({
               targets: durationElements.filter((el) => el.getAttribute('data-aos') != 'svg-draw-fade'),
