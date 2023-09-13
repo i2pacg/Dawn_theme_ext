@@ -52,6 +52,8 @@ document.querySelectorAll("[data-aos]").forEach(element => {
             animObjects[anim].elements.push(element);
         });
 });
+// loop animObjects and add animations to timeline 
+
 // add all the animObjects to timeline
 /* Object.keys(animObjects).forEach(function (key, index) {
     console.log("animObjects", animObjects);
