@@ -179,15 +179,15 @@ async function init() {
     }, 2200);
 
     $(infoSlide).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        console.log('beforeChange', slick);
-        /*   anime({
-              targets: nextSlide.querySelectorAll(".product-title svg path"),
-              fillOpacity: [0, 1],
-              strokeDashoffset: [anime.setDashoffset, 0],
-              easing: 'easeInOutSine',
-              delay: function (el, i) { return i * 150 },
-              duration: 400,
-          }, 2600); */
+        console.log('beforeChange', slick.$slides[nextSlide]);
+        anime({
+            targets: slick.$slides[nextSlide].querySelectorAll(".product-title svg path"),
+            fillOpacity: [0, 1],
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutSine',
+            delay: function (el, i) { return i * 150 },
+            duration: 400,
+        }, 2600);
     });
     if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg")) {
         tl.add({
