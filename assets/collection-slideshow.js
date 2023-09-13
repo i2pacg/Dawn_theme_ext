@@ -193,7 +193,6 @@ async function init() {
             opacity: [0, 1],
             translateX: [-50, 0],
             easing: 'easeInOutSine',
-            delay: function (el, i) { return i * 100 },
             duration: 400,
         }, 2600);
 
