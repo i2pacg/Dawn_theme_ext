@@ -35,7 +35,7 @@ function initSlick() {
     $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
         console.log("Slide Nav Init", this);
         tl.add({
-            targets: this.querySelector('.slick-slide.slick-active'),
+            targets: this.querySelector("[data-slick-index='0']"),
             opacity: [0, 1],
             duration: 600,
             easing: 'easeInOutSine'
