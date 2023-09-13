@@ -9,20 +9,25 @@ const animObjects = {};
 
 // get all elements with data-aos attribute split by comma and add them to animObjects under delay , duration ,anim name as key and elements as value exept svg-draw-fade
 document.querySelectorAll("[data-aos]").forEach(element => {
-    element.getAttribute('data-aos').split(',').forEach(function (anim, index) {
-        if (animObjects[anim] == undefined) {
-            animObjects[anim] = {
-                delay: [],
-                duration: [],
-                anim: [],
-                elements: [],
+    if (element.getAttribute('data-aos') == 'svg-draw-fade') {
+
+
+
+    } else
+        element.getAttribute('data-aos').split(',').forEach(function (anim, index) {
+            if (animObjects[anim] == undefined) {
+                animObjects[anim] = {
+                    delay: [],
+                    duration: [],
+                    anim: [],
+                    elements: [],
+                }
             }
-        }
-        animObjects[anim].delay.push(Number(element.getAttribute('data-aos-delay') != null ? element.getAttribute('data-aos-delay') : 0));
-        animObjects[anim].duration.push(Number(element.getAttribute('data-aos-duration') != null ? element.getAttribute('data-aos-duration') : 600));
-        animObjects[anim].anim.push(anim);
-        animObjects[anim].elements.push(element);
-    });
+            animObjects[anim].delay.push(Number(element.getAttribute('data-aos-delay') != null ? element.getAttribute('data-aos-delay') : 0));
+            animObjects[anim].duration.push(Number(element.getAttribute('data-aos-duration') != null ? element.getAttribute('data-aos-duration') : 600));
+            animObjects[anim].anim.push(anim);
+            animObjects[anim].elements.push(element);
+        });
     // get svg-fade-draw animation
 });
 
