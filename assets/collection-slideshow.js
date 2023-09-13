@@ -46,21 +46,7 @@ for (const anim in animObjects) {
 
 console.log("animObjects", animObjects);
 //loop through animObjects and add the right animation to the timeline
-for (const anim in animObjects) {
-    for (const delay in animObjects[anim]) {
-        for (const duration in animObjects[anim][delay]) {
-            const elements = animObjects[anim][delay][duration];
-            console.log("elements", elements);
-            tl.add({
-                targets: elements,
-                opacity: [0, 1],
-                duration: duration != NaN ? duration : 600,
-                delay: function (el, i) { return delay != NaN ? delay : 0; },
-                easing: 'easeInOutSine'
-            })
-        }
-    }
-}
+
 //play the timeline
 setTimeout(() => {
     tl.play();
