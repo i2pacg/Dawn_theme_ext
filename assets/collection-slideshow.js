@@ -78,6 +78,17 @@ for (const anim in animObjects) {
                         easing: 'easeInOutSine'
                     });
                     break;
+
+                case 'svg-draw-fade':
+                    console.log("svg-draw-fade", elements);
+                    elements.forEach(function (element, index) {
+                        console.log("element", element);
+                        element.querySelectorAll('path').forEach(function (path, index) {
+                            console.log("path", path);
+                        });
+                    });
+                    break;
+
                 default:
                     break;
             }
