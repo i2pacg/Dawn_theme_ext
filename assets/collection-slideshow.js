@@ -155,12 +155,6 @@ let initInfoSlickPromise = new Promise(resolve => {
         asNavFor: '.slider-nav',
     });
 })
-$('.slider-info').slick({
-    arrows: false,
-    fade: true,
-    arrows: false,
-    asNavFor: '.slider-nav',
-});
 init();
 async function init() {
     console.log("init");
