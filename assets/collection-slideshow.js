@@ -29,13 +29,6 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
                 animObject.astrokeDashoffset = [anime.setDashoffset, 1];
                 animObject.delay = index * 250;
                 animObject.direction = 'alternate';
-
-
-                /*   astrokeDashoffset: [anime.setDashoffset, 0],
-                  easing: 'easeInOutSine',
-                  duration: 1500,
-                  delay: function(el, i) { return i * 250 },
-                  direction: 'alternate', */
             });
 
             /* element.removeChild('svg') */
