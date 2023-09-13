@@ -22,9 +22,9 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     if (!animObjects[anim][delay.toString()]) {
         animObjects[anim][delay.toString()] = {};
     }
-    if (!animObjects[anim][delay][duration.toString()]) {
-        animObjects[anim][delay][duration.toString()] = [];
-    }
+    /*     if (!animObjects[anim][delay][duration.toString()]) {
+            animObjects[anim][delay][duration.toString()] = [];
+        } */
     //animObjects[anim][delay][duration].push(parent);
 });
 console.log("animObjects", animObjects);
