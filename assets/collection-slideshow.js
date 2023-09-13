@@ -177,9 +177,7 @@ async function init() {
         delay: function (el, i) { return i * 100 },
         duration: 400,
     }, 2200);
-    infoSlide.querySelectorAll("[data-slick-index='0']").forEach(function (slide, index) {
-        console.log("fade slide", slide);
-    });
+
 
     setTimeout(() => {
         tl.play();
