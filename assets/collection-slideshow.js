@@ -36,7 +36,8 @@ for (const [delay, delayElements] of Object.entries(animObjects)) {
         console.log("durationElements", durationElements.filter((el) => el.getAttribute('data-aos') == 'svg-draw-fade').map((el) => el.querySelectorAll('svg path')).flat());
         tl.add({
             targets: durationElements.filter((el) => el.getAttribute('data-aos') == 'svg-draw-fade').map((el) => el.querySelectorAll('svg path')).flat(),
-            opacity: [0, 1],
+            fillOpacity: [0, 1],
+            strokeDashoffset: [anime.setDashoffset, 0],
             duration: duration != NaN ? duration : 600,
             delay: function (el, i) { return delay != NaN ? delay : 0; },
             easing: 'easeInOutSine'
