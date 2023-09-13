@@ -60,6 +60,10 @@
     border-radius: 4px;
     box-shadow: unset;
   }
+
+  .slider-thumb:not(.slick-current.slick-active) .product-card a {
+    pointer-events: none;
+  }
 </style>
 <style></style>
 {%- if section.settings.slide_height == 'adapt_image'
