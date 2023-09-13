@@ -10,6 +10,14 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     console.log("data-aos", element);
     const anim = element.getAttribute('data-aos');
     console.log("anim", anim);
+    let animObject = {
+        targets: element,
+        easing: 'easeInOutSine'
+    };
+    if (anim == 'fade') {
+        animObject.opacity = [0, 1];
+    }
+    tl.add(animObject);
 });
 /* 
 document.querySelectorAll("[data-aos='fade']").forEach(element => {
