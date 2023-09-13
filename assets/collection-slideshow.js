@@ -85,7 +85,7 @@ for (const anim in animObjects) {
                         elements.forEach(function (element, index) {
                             console.log("element", element);
 
-                            t1.add({
+                            tl.add({
                                 targets: element.querySelectorAll('path'),
                                 strokeDashoffset: [anime.setDashoffset, 0],
                                 easing: 'easeInOutSine',
