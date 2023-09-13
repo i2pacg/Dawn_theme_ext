@@ -1,3 +1,14 @@
+.preloader {
+    display: fixed;
+    z-index: 9999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
 .slick-next,
 .slick-prev {
     right: -8px;
