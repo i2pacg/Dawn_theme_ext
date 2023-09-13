@@ -130,7 +130,6 @@ let initVideoSlickPromise = Promise(resolve => {
 })
 initVideoSlickPromise.then((e) => {
     console.log("initVideoSlickPromise", e);
-
 });
 /* 
 initSlick();
