@@ -181,6 +181,15 @@ async function init() {
     $(infoSlide).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         console.log('beforeChange', slick.$slides[nextSlide]);
         const slideElement = slick.$slides[nextSlide];
+        anime({
+            targets: slideElement.querySelectorAll(".product-title svg path"),
+            fillOpacity: [0, 1],
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutSine',
+            delay: function (el, i) { return i * 75 },
+            duration: 400,
+        });
+
         if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg"))
             anime({
                 targets: slideElement.querySelectorAll(".product-title svg path"),
