@@ -48,10 +48,9 @@ function initSlick() {
                 easing: 'easeInOutSine'
             })
         });
-        /*  slick-slide
-         setTimeout(() => {
-             tl.play();
-         }, 5000); */
+        setTimeout(() => {
+            tl.play();
+        }, 5000);
     });
     $('.slider-nav').slick({
         centerPadding: '32px',
