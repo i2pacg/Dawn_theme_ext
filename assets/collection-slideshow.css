@@ -1,5 +1,5 @@
 .preloader {
-    display: fixed;
+    position: fixed;
     z-index: 9999;
     background: #fff;
     width: 100%;
