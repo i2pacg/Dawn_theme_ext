@@ -20,7 +20,32 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     animObjects[delay][duration].push(element);
 });
 
-// add animations to the timeline based on the animObjects object and add path animations if there are any paths
+// add animations to the timeline based on the animObjects object and add path animations if there are any paths in the element
+for (const [delay, delayElements] of Object.entries(animObjects)) {
+    for (const [duration, durationElements] of Object.entries(delayElements)) {
+        durationElements.forEach(element => {
+            const paths = element.querySelectorAll('path');
+            if (paths.length > 0) {
+                const pathAnim = anime({
+                    targets: paths,
+                    strokeDashoffset: [anime.setDashoffset, 0],
+                    easing: 'easeInOutSine',
+                    duration: duration,
+                    delay: delay,
+                    autoplay: false,
+                });
+                tl.add(pathAnim.play);
+            }
+            tl.add({
+                targets: element,
+                opacity: [0, 1],
+                easing: 'easeInOutSine',
+                duration: duration,
+                delay: delay,
+            });
+        });
+    }
+}
 
 console.log("animObjects", animObjects);
 
