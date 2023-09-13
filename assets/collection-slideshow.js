@@ -139,7 +139,7 @@ function initSlick() {
             translateY: [20, 0],
             duration: 600,
             easing: 'easeInOutSine'
-        });
+        }, 300);
         this.querySelectorAll(".slick-slide:not([data-slick-index='0'])").forEach(function (slide, index) {
             console.log("fade slide", slide);
             tl.add({
@@ -148,7 +148,7 @@ function initSlick() {
                 translateY: [20, 0],
                 duration: 600,
                 easing: 'easeInOutSine'
-            })
+            }, 300 * (index + 1))
         });
         setTimeout(() => {
             tl.play();
