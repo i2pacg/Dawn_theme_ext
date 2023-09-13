@@ -83,11 +83,9 @@ for (const anim in animObjects) {
                     console.log("svg-draw-fade", elements);
                     elements.forEach(function (element, index) {
                         console.log("element", element);
-                        element.querySelectorAll('path').forEach(function (path, index) {
-                            console.log("path", path);
-                        });
+
                         t1.add({
-                            targets: '.line-drawing-demo .lines path',
+                            targets: element.querySelectorAll('path'),
                             strokeDashoffset: [anime.setDashoffset, 0],
                             easing: 'easeInOutSine',
                             duration: 1500,
