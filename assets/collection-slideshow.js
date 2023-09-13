@@ -162,7 +162,15 @@ async function init() {
     const navSlide = await initNavSlickPromise;
     const i = await initInfoSlickPromise;
     console.log("navSlide ", navSlide);
-    navSlide.querySelectorAll(".slick-slide").forEach(function (slide, index) { });
+    tl.add({
+        targets: navSlide.querySelectorAll(".slick-slide:not([data-slick-index='0'])"),
+        opacity: [0, 1],
+        translateY: [100, 0],
+        easing: 'easeInOutSine',
+        delay: function (el, i) { return i * 100 },
+        duration: 400,
+    }, 2200);
+
     setTimeout(() => {
         tl.play();
     }, 300);
