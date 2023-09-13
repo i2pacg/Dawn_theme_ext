@@ -166,14 +166,17 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
-                  {%
-                    render 'card-product-ext',
-                    product: product,
-                    savings_option: section.settings.card_savings_option,
-                    show_vendor: section.settings.show_vendor,
-                    title_option: section.settings.card_title_option,
-                    show_quick_add: section.settings.enable_quick_add,
-                  %}
+                  {% comment %}
+                    {%
+                      render 'card-product-ext',
+                      product: product,
+                      savings_option: section.settings.card_savings_option,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      title_option: ,
+                      show_quick_add: section.settings.enable_quick_add,
+                    %}
+                  {% endcomment %}
                   {% render 'card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
