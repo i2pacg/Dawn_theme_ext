@@ -16,7 +16,7 @@ document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path'
 });
 document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos');
  */
-
+initSlick();/* 
 var tl = anime.timeline({
     easing: 'easeInOutSine',
     autoplay: false,
@@ -35,13 +35,13 @@ document.querySelectorAll("[data-aos='fade']").forEach(element => {
         delay: function (el, i) { return delay != NaN ? delay : 0; },
         easing: 'easeInOutSine'
     })
-});;
+});; */
 /* data-aos="fade" data-aos-duration="400" */
 /*
  */
-setTimeout(() => {
+/* setTimeout(() => {
     tl.play();
-}, 5000);
+}, 5000); */
 /* 
 AOS.init({
     offset: 120, // offset (in px) from the original trigger point
