@@ -16,12 +16,16 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
             const animObject = {
                 targets: animElement,
                 easing: 'easeInOutSine'
-            }; animObject.targets = path;
+            };
+            animObject.targets = path;
             animObject.fillOpacity = [0, 1];
             animObject.astrokeDashoffset = [anime.setDashoffset, 1];
             animObject.delay = 0;
             animObject.direction = 'alternate';
-            tl.add(animObject);
+            tl.add({
+                targets: animElement,
+                easing: 'easeInOutSine'
+            });
         });
 
     } else {
