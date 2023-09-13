@@ -33,6 +33,16 @@ for (const [delay, delayElements] of Object.entries(animObjects)) {
             delay: function (el, i) { return delay != NaN ? delay : 0; },
             easing: 'easeInOutSine'
         })
+        tl.add({
+            targets: durationElements.filter((el) => el.getAttribute('data-aos') != 'svg-draw-fade'),
+            opacity: [0, 1],
+            duration: duration != NaN ? duration : 600,
+            delay: function (el, i) { return delay != NaN ? delay : 0; },
+            easing: 'easeInOutSine'
+        })  durationElements.filter((el) => el.getAttribute('data-aos') == 'svg-draw-fade').forEach(function (element, index) {
+
+
+        });
     }
 }
 
