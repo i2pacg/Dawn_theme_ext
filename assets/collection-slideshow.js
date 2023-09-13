@@ -132,7 +132,7 @@ let initVideoSlickPromise = new Promise(resolve => {
 })
 let initNavSlickPromise = new Promise(resolve => {
     $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
-        resolve("nav I am done");
+        resolve(this);
     });
     $('.slider-nav').slick({
         centerPadding: '32px',
@@ -159,9 +159,9 @@ init();
 async function init() {
     console.log("init");
     const s = await initVideoSlickPromise;
-    const n = await initNavSlickPromise;
+    const navSlide = await initNavSlickPromise;
     const i = await initInfoSlickPromise;
-    console.log("initInfoSlickPromise ", i);
+    console.log("navSlide ", navSlide);
     setTimeout(() => {
         tl.play();
     }, 300);
