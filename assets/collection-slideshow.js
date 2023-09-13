@@ -8,7 +8,20 @@ var tl = anime.timeline({
 const animObjects = {};
 document.querySelectorAll("[data-aos]").forEach(animElement => {
     let delay = Number(animElement.getAttribute('data-aos-delay'));
+    let duration = Number(animElement.getAttribute('data-aos-duration'));
     let animName = animElement.getAttribute('data-aos')
+
+    delay = delay != NaN ? delay : 0;
+    duration = duration != NaN ? duration : 600;
+
+    if (!animObjects[animName]) {
+        animObjects[animName] = {};
+    }
+
+    if (!animObjects[animName][delay]) {
+        animObjects[animName][delay] = [];
+    }
+
     /* let animObject = animObjects[animName];
     if (!Array.isArray(animObject[delay != NaN ? delay : 0]))
         animObject[delay != NaN ? delay : 0] = [];
