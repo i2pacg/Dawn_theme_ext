@@ -1,3 +1,14 @@
+[data-aos^=fade][data-aos^=fade] {
+    opacity: 0;
+    transition-property: opacity, transform
+}
+
+[data-aos=fade-right] {
+    transform: translate3d(-100px, 0, 0)
+}
+
+
+
 @keyframes lds-heart {
     0% {
         transform: scale(0.95);

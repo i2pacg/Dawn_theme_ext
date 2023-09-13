@@ -1,23 +1,4 @@
 
-
-var tl = anime.timeline({
-    easing: 'easeInOutSine',
-    autoplay: false,
-});
-document.querySelectorAll("[data-aos='fade']").forEach(element => {
-    console.log("fade", element);
-    let delay = Number(element.getAttribute('data-aos-delay'));
-    let duration = Number(element.getAttribute('data-aos-duration'));
-    console.log("fade delay", delay);
-    console.log("fade duration", duration);
-    tl.add({
-        targets: element,
-        opacity: [0, 1],
-        duration: duration != NaN ? duration : 600,
-        delay: function (el, i) { return delay != NaN ? delay : 0; },
-        easing: 'easeInOutSine'
-    })
-});
 initSlick();
 function initSlick() {
     $('.slider-for').slick({
