@@ -189,8 +189,9 @@ async function init() {
         }, 2600);
     } else
         tl.add({
-            targets: infoSlide.querySelectorAll("[data-slick-index='0'] .product-title"),
+            targets: infoSlide.querySelector("[data-slick-index='0'] .product-title"),
             opacity: [0, 1],
+            translateX: [-50, 0],
             easing: 'easeInOutSine',
             delay: function (el, i) { return i * 100 },
             duration: 400,
