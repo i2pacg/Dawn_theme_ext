@@ -235,7 +235,7 @@
                   {{ product.title | escape }}
                 {% endif %}
               </h1>
-              <span data-aos-delay="3000" data-aos="fade-right" data-aos-once="true">
+              <div data-aos-delay="3000" data-aos="fade-right" data-aos-once="true">
                 {%- if product.metafields.description.short != blank -%}
                   {{ product.metafields.description.short | truncate: 175, '. . . ' }}
                 {%- elsif product.description != blank -%}
@@ -243,7 +243,7 @@
                 {% endif %}
                 {%- if product.description != blank and product.description.size > 175 -%}
                 {% endif %}
-              </span>
+              </div>
             </div>
             <div class="quick-add no-js-hidden slider-buttons" data-aos-delay="3000" data-aos="fade-left">
               {%- liquid
