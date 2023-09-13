@@ -18,7 +18,7 @@ function initSlick() {
         asNavFor: '.slider-for , .slider-info',
     });
     $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
-        console.log("Slide Nav Init", nextSlide);
+        console.log("Slide Nav Init");
     });
     $('.slider-info').slick({
         arrows: false,
