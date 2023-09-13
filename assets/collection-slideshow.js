@@ -8,8 +8,39 @@ var tl = anime.timeline({
 const animObjects = {};
 
 // get all elements with data-aos attribute and add them to animObjects under delay as key and duration as key and elements as value
+document.querySelectorAll("[data-aos]").forEach(element => {
+    const delay = Number(element.getAttribute('data-aos-delay'));
+    const duration = Number(element.getAttribute('data-aos-duration'));
+    if (!animObjects[delay]) {
+        animObjects[delay] = {};
+    }
+    if (!animObjects[delay][duration]) {
+        animObjects[delay][duration] = [];
+    }
+    animObjects[delay][duration].push(element);
+});
 
+// add animations to the timeline
+for (const delay in animObjects) {
+    for (const duration in animObjects[delay]) {
+        animObjects[delay][duration].forEach(element => {
+            tl.add({
+                targets: element,
+                opacity: [0, 1],
+                duration: duration != NaN ? duration : 600,
+                delay: function (el, i) { return delay != NaN ? delay : 0; },
+                easing: 'easeInOutSine'
+            })
+        });
+    }
+}
 console.log("animObjects", animObjects);
+
+// start the timeline
+/* setTimeout(() => {
+    tl.play();
+}, 300);
+ */
 
 initSlick();
 function initSlick() {
