@@ -16,6 +16,8 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     const parent = element;
     const delay = Number(parent.getAttribute('data-aos-delay')) != NaN ? Number(parent.getAttribute('data-aos-delay')) : 0;
     const duration = Number(parent.getAttribute('data-aos-duration')) != NaN ? Number(parent.getAttribute('data-aos-duration')) : 0;
+    console.log("delay", delay);
+    console.log("duration", duration);
     const anim = parent.getAttribute('data-aos');
     if (!animObjects[anim][delay]) {
         animObjects[anim][delay] = {};
