@@ -82,6 +82,7 @@
     }
   {%- endstyle -%}
 {%- endif -%}
+
 <div class="collection-slideshow">
   <div class="slider-for">
     {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
@@ -400,6 +401,7 @@
     </div>
   </div>
 </div>
+<div class="preloader"></div>
 <script src="{{ 'collection-slideshow.js' | asset_url }}" defer="defer"></script>
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
