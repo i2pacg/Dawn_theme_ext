@@ -158,7 +158,11 @@
                   {{ product.title | escape }}
                 {% endif %}
               </h1>
-              <div>
+              <div
+                data-aos="fade"
+                data-aos-delay="2800"
+                data-aos-duration="600"
+              >
                 {%- if product.metafields.description.short != blank -%}
                   {{ product.metafields.description.short | truncate: 175, '. . . ' }}
                 {%- elsif product.description != blank -%}
