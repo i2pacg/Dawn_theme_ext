@@ -60,6 +60,14 @@ Object.keys(animObjects).forEach(function (key, index) {
         animObjects[key].elements.forEach(function (element, index) {
             console.log("element", element);
             console.log("index", index);
+            switch (key) {
+                case 'fade':
+
+                    break;
+
+                default:
+                    break;
+            }
             tl.add({
                 targets: element,
                 opacity: [0, 1],
