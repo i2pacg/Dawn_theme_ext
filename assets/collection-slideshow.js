@@ -8,26 +8,7 @@ var tl = anime.timeline({
 const animObjects = {};
 
 // get qyerySelectorAll for "[data-aos]" and loop through them to get the delay and duration and add them to animObjects
-/* document.querySelectorAll("[data-aos]").forEach(animElement => {
-    let delay = Number(animElement.getAttribute('data-aos-delay'));
-    let duration = Number(animElement.getAttribute('data-aos-duration'));
-    let animName = animElement.getAttribute('data-aos')
 
-    delay = delay != NaN ? delay : 0;
-    duration = duration != NaN ? duration : 600;
-
-    if (!animObjects[animName]) {
-        animObjects[animName] = {};
-    }
-
-    if (!animObjects[animName][delay]) {
-        animObjects[animName][delay] = [];
-    }
-
-    animObjects[animName][delay].push(animElement);
-
-}); */
-// Add AnimeJs to animOBjects;
 
 console.log("animObjects", animObjects);
 /* for (const delay in animObjects) {
