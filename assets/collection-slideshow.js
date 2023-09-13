@@ -9,6 +9,8 @@ const animObjects = {};
 document.querySelectorAll("[data-aos]").forEach(animElement => {
     console.log("animElement", animElement);
     let delay = Number(animElement.getAttribute('data-aos-delay'));
+    if (!Array.isArray(animObjects[delay != NaN ? delay : 0]))
+        animObjects[delay != NaN ? delay : 0] = [];
     animObjects[delay != NaN ? delay : 0].push(animElement);
     /*  const anims = animElement.getAttribute('data-aos').split(',');
     console.log("anim", anims); if (anims.includes('svg-draw-fade')) {
