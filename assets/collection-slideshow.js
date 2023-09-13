@@ -8,6 +8,10 @@ function initSlick() {
         fade: true,
         arrows: false,
     });
+
+    $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
+        console.log("Slide Nav Init");
+    });
     $('.slider-nav').slick({
         centerPadding: '32px',
         slidesToShow: 2,
@@ -16,9 +20,6 @@ function initSlick() {
         variableWidth: true,
         centerMode: true,
         asNavFor: '.slider-for , .slider-info',
-    });
-    $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
-        console.log("Slide Nav Init");
     });
     $('.slider-info').slick({
         arrows: false,
