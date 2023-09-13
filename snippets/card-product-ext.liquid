@@ -62,18 +62,31 @@
         | image_tag: alt: product.featured_media.alt, widths: '240px, 200px', sizes: '(min-width: 750px) 240px, 200px'
       -}}
     {% endcomment %}
-    <picture class=”Dummy” >
-      < source media=”( max-width: 375px )”
-      srcset=”{{ collection | img_url: '375x' }},
-      {{ collection | img_url: '375x', scale: 2 }} 2x”>
-      < source media=”( max-width: 768px )”
-      srcset=”{{ collection | img_url: '768x' }},
-      {{ collection | img_url: '768x', scale: 2 }} 2x”>
-      < img src=”{{ collection | img_url: '1200x' }}”
-      srcset=”{{ collection | img_url: '1200x' }},
-      {{ collection | img_url: '1200x', scale: 2 }} 2x”
-      alt=”…” loading=”lazy” >
-      </picture >
+    <picture class="Dummy">
+      <source
+        media="( max-width: 375px )"
+        srcset="
+          {{ collection | img_url: '375x' }},
+          {{ collection | img_url: '375x', scale: 2 }} 2x
+        "
+      >
+      <source
+        media="( max-width: 768px )"
+        srcset="
+          {{ collection | img_url: '768x' }},
+          {{ collection | img_url: '768x', scale: 2 }} 2x
+        "
+      >
+      <img
+        src="{{ collection | img_url: '1200x' }}"
+        srcset="
+          {{ collection | img_url: '1200x' }},
+          {{ collection | img_url: '1200x', scale: 2 }} 2x
+        "
+        alt="…"
+        loading="lazy"
+      >
+    </picture>
     <img
       srcset="
         {%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
