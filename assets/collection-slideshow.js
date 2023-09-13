@@ -19,14 +19,12 @@ document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos')
 initSlick();
 
 
-var animation = anime({
+anime({
     targets: '.slider-content-card',
-    opacity: 1,
-    delay: function (el, i) { return 5000; },
-    autoplay: false,
+    opacity: 0,
+    delay: function (el, i) { return 100; },
     easing: 'easeInOutSine'
 })
-animation.play();
 /* 
 AOS.init({
     offset: 120, // offset (in px) from the original trigger point
