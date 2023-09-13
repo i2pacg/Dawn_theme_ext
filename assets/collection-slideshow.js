@@ -7,7 +7,7 @@ var tl = anime.timeline({
 });
 const animObjects = {};
 
-// get all elements with data-aos attribute and loop through them to get the delay and duration and add them to animObjects
+// get all elements with data-aos attribute and add them to animObjects under delay as key and duration as key and elements as value
 
 console.log("animObjects", animObjects);
 
