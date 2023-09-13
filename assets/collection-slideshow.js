@@ -197,10 +197,11 @@ async function init() {
             easing: 'easeInOutSine',
             duration: 400,
         })
+
         anime({
             targets: nextSlideElement.querySelector(".slider-buttons"),
             opacity: [0, 1],
-            translateX: [-50, 0],
+            translateX: [50, 0],
             easing: 'easeInOutSine',
             duration: 400,
         })
