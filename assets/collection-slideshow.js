@@ -5,7 +5,7 @@ var tl = anime.timeline({
     duration: 600,
     autoplay: false,
 });
-
+const animObjects = {};
 document.querySelectorAll("[data-aos]").forEach(animElement => {
     const anims = animElement.getAttribute('data-aos').split(',');
     console.log("anim", anims);
