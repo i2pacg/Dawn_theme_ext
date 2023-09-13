@@ -10,7 +10,6 @@ document.querySelectorAll("[data-aos='fade']").forEach(element => {
     let duration = Number(element.getAttribute('data-aos-duration'));
     console.log("fade delay", delay);
     console.log("fade duration", duration);
-
     tl.add({
         targets: element,
         opacity: [0, 1],
