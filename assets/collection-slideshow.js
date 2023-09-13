@@ -22,6 +22,7 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
         animObjects[animName][delay] = [];
     }
 
+    animObjects[animName][delay].push(animElement);
     /* let animObject = animObjects[animName];
     if (!Array.isArray(animObject[delay != NaN ? delay : 0]))
         animObject[delay != NaN ? delay : 0] = [];
