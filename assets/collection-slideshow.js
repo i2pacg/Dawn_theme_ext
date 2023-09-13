@@ -20,12 +20,13 @@ document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path'
 document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos');
 
 initSlick();
+/* 
 AOS.init({
     offset: 120, // offset (in px) from the original trigger point
     duration: 400, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
     once: false,
-});
+}); */
 
 
 /* 
