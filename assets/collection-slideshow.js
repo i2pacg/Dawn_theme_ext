@@ -16,7 +16,8 @@ function initSlick() {
         variableWidth: true,
         centerMode: true,
         asNavFor: '.slider-for , .slider-info',
-    }).on('init', function (event, slick, currentSlide, nextSlide) {
+    });
+    $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
         console.log("Slide Nav Init", nextSlide);
     });
     $('.slider-info').slick({
