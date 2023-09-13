@@ -139,7 +139,7 @@ function initSlick() {
             translateY: [20, 0],
             duration: 600,
             easing: 'easeInOutSine'
-        }, 300);
+        }, 2200);
         tl.add({
             targets: this.querySelectorAll(".slick-slide:not([data-slick-index='0'])"),
             opacity: [0, 1],
@@ -147,7 +147,7 @@ function initSlick() {
             easing: 'easeInOutSine',
             delay: function (el, i) { return i * 100 },
             duration: 400,
-        }, delay);
+        }, 2200);
 
         setTimeout(() => {
             tl.play();
