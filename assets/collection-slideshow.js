@@ -51,10 +51,9 @@ document.querySelectorAll("[data-aos]").forEach(element => {
             animObjects[anim].anim.push(anim);
             animObjects[anim].elements.push(element);
         });
-    // get svg-fade-draw animation
 });
 // add all the animObjects to timeline
-Object.keys(animObjects).forEach(function (key, index) {
+/* Object.keys(animObjects).forEach(function (key, index) {
     console.log("animObjects", animObjects);
     animObjects[key].elements.forEach(function (element, index) {
         tl.add({
@@ -65,7 +64,7 @@ Object.keys(animObjects).forEach(function (key, index) {
             easing: 'easeInOutSine'
         })
     });
-});
+}); */
 /* 
  */
 console.log("animObjects", animObjects);
