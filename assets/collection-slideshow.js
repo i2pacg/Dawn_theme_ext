@@ -21,7 +21,7 @@ initSlick();
 
 var animation = anime({
     targets: '.slider-content-card',
-    opacity: 0,
+    opacity: [0, 1],
     duration: 3000,
     delay: function (el, i) { return 3000; },
     easing: 'easeInOutSine'
