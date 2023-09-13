@@ -20,10 +20,14 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     animObjects[delay][duration].push(element);
 });
 
-// add animations to the timeline based on the animObjects object and add path animations if there are any paths in the element
 for (const [delay, delayElements] of Object.entries(animObjects)) {
     console.log("delay", delay);
     console.log("delayElements", delayElements);
+    for (const [duration, durationElements] of Object.entries(delayElements)) {
+        console.log("duration", duration);
+        console.log("durationElements", durationElements);
+
+    }
 }
 
 console.log("animObjects", animObjects);
