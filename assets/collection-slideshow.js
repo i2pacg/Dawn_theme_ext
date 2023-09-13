@@ -24,6 +24,7 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
         if (anim == 'svg-draw-fade') {
             console.log("fade", animElement);
             animElement.querySelectorAll('svg path').forEach(function (path, index) {
+                console.log("path", path);
                 animObject.targets = path;
                 animObject.fillOpacity = [0, 1];
                 animObject.astrokeDashoffset = [anime.setDashoffset, 1];
