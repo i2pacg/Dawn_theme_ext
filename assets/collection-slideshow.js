@@ -27,6 +27,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     animObjects[anim][delay][duration].push(parent);
 });
 for (const anim in animObjects) {
+    console.log("anim", animObjects[anim]);
     switch (anim) {
         case 'fade':
             console.log("fade", animObjects[anim]);
