@@ -17,6 +17,16 @@ document.querySelector("[data-aos='svg-draw-fade'] svg").querySelectorAll('path'
 document.querySelector("[data-aos='svg-draw-fade']").removeAttribute('data-aos');
  */
 initSlick();
+
+
+var animation = anime({
+    targets: '.slider-content-card',
+    translateX: 270,
+    delay: function (el, i) { return 5000; },
+    direction: 'alternate',
+    autoplay: false,
+    easing: 'easeInOutSine'
+})
 /* 
 AOS.init({
     offset: 120, // offset (in px) from the original trigger point
