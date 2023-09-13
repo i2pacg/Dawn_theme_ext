@@ -185,9 +185,9 @@ async function init() {
             fillOpacity: [0, 1],
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: 'easeInOutSine',
-            delay: function (el, i) { return i * 150 },
+            delay: function (el, i) { return i * 75 },
             duration: 400,
-        }, 2600);
+        });
     });
     if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg")) {
         tl.add({
