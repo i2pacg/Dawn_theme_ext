@@ -50,6 +50,35 @@ for (const anim in animObjects) {
                         easing: 'easeInOutSine'
                     });
                     break;
+                case 'fade-scaleX':
+                    tl.add({
+                        targets: elements,
+                        opacity: [0, 1],
+                        scaleX: [0.9, 1],
+                        duration: duration,
+                        delay: delay,
+                        easing: 'easeInOutSine'
+                    });
+                    break;
+                case 'fade-slideUp ':
+                    tl.add({
+                        targets: elements,
+                        opacity: [0, 1],
+                        translateY: [20, 0],
+                        duration: duration,
+                        delay: delay,
+                        easing: 'easeInOutSine'
+                    });
+                    break;
+                case 'slideUp ':
+                    tl.add({
+                        targets: elements,
+                        translateY: [20, 0],
+                        duration: duration,
+                        delay: delay,
+                        easing: 'easeInOutSine'
+                    });
+                    break;
                 default:
                     break;
             }
