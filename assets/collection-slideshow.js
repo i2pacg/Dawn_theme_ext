@@ -38,7 +38,8 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
     } else {
         const animObject = {
             targets: animElement,
-            easing: 'easeInOutSine'
+            easing: 'easeInOutSine',
+            delay: 0,
         };
         anims.forEach(anim => {
             if (anim == 'fade') {
