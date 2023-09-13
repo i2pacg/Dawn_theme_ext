@@ -16,41 +16,8 @@ document.querySelectorAll("[data-aos]").forEach(element => {
         const duration = Number(parent.getAttribute('data-aos-duration'));
         parent.removeAttribute('data-aos-delay');
         parent.removeAttribute('data-aos-duration');
-        parent.querySelectorAll('svg path').forEach(function (path, index) {
-            path.style.fillOpacity = 0;
-            path.style.strokeDasharray = path.getTotalLength();
-            path.style.strokeDashoffset = path.getTotalLength();
-            path.style.animation = `svgDrawFade 1s ease-in-out ${delay + (index * 100)}ms forwards`;
-            // add to animObjects
-            if (animObjects['svg-draw-fade'] == undefined) {
-                animObjects['svg-draw-fade'] = {
-                    delay: [],
-                    duration: [],
-                    anim: [],
-                    elements: [],
-                }
-            }
-            animObjects['svg-draw-fade'].delay.push(delay + (index * 100));
-            animObjects['svg-draw-fade'].duration.push(duration);
-            animObjects['svg-draw-fade'].anim.push('svg-draw-fade');
-            animObjects['svg-draw-fade'].elements.push(path);
-        });
 
-    } else
-        element.getAttribute('data-aos').split(',').forEach(function (anim, index) {
-            if (animObjects[anim] == undefined) {
-                animObjects[anim] = {
-                    delay: [],
-                    duration: [],
-                    anim: [],
-                    elements: [],
-                }
-            }
-            animObjects[anim].delay.push(Number(element.getAttribute('data-aos-delay') != null ? element.getAttribute('data-aos-delay') : 0));
-            animObjects[anim].duration.push(Number(element.getAttribute('data-aos-duration') != null ? element.getAttribute('data-aos-duration') : 600));
-            animObjects[anim].anim.push(anim);
-            animObjects[anim].elements.push(element);
-        });
+    }
 });
 // loop animObjects and add animations to timeline 
 Object.keys(animObjects).forEach(function (key, index) {
