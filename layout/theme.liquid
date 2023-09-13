@@ -267,25 +267,6 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-    {% if template.name == 'index' %}
-      <style>
-        {% comment %}        .header-wrapper {
-                 position: fixed;
-                 top: 0;
-                 width: 100%;
-               } {% endcomment %}
-
-               {% comment %} .header__menu-item,
-               .header__active-menu-item,
-               .header__icon .icon {
-                 color: #fff;
-               }
-
-               .header__menu-item:hover {
-                 color: #fff;
-               } {% endcomment %}
-      </style>
-    {% endif %}
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
