@@ -21,9 +21,8 @@ initSlick();
 
 var animation = anime({
     targets: '.slider-content-card',
-    translateX: 270,
+    opacity: 1,
     delay: function (el, i) { return 5000; },
-    direction: 'alternate',
     autoplay: false,
     easing: 'easeInOutSine'
 })
