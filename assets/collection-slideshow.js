@@ -162,6 +162,9 @@ async function init() {
     const n = await initNavSlickPromise;
     const i = await initInfoSlickPromise;
     console.log("initInfoSlickPromise ", i);
+    setTimeout(() => {
+        tl.play();
+    }, 300);
 }
 /* 
 initSlick();
