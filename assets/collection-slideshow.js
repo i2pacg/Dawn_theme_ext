@@ -12,7 +12,7 @@ const animObjects = {
     'slideUp': {},
     'svg-draw-fade': {},
 };
-
+/* 
 // get all elements with data-aos attribute split by comma and add them to animObjects under delay , duration ,anim name as key and elements as value exept svg-draw-fade
 document.querySelectorAll("[data-aos]").forEach(element => {
     const parent = element;
@@ -110,7 +110,7 @@ for (const anim in animObjects) {
     }
 }
 
-console.log("animObjects", animObjects);
+console.log("animObjects", animObjects); */
 //loop through animObjects and add the right animation to the timeline
 
 //play the timeline
