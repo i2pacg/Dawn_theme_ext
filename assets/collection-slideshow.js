@@ -42,7 +42,6 @@ for (const [delay, delayElements] of Object.entries(animObjects)) {
               delay: function (el, i) { return delay != NaN ? delay : 0; },
               easing: 'easeInOutSine'
           }) */
-        console.log("durationElements", durationElements.filter((el) => el.getAttribute('data-aos') == 'svg-draw-fade').map((el) => el.querySelectorAll('svg path')).flat());
         /*   durationElements.filter((el) => el.getAttribute('data-aos') == 'svg-draw-fade').map((el) => el.querySelectorAll('svg path')).flat().forEach(function (path, index) {
               console.log("path", path);
               path.style.fillOpacity = 0;
