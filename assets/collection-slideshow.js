@@ -23,6 +23,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
         animObjects[anim].anim.push(anim);
         animObjects[anim].elements.push(element);
     });
+    // get svg-fade-draw animation
 });
 
 // add all the animObjects to timeline
