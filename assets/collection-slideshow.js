@@ -7,57 +7,19 @@ var tl = anime.timeline({
 });
 const animObjects = {};
 
-// get querySelectorAll for "[data-aos]" and loop through them to get the delay and duration and add them to animObjects
-document.querySelectorAll("[data-aos]").forEach(function (element, index) {
-    console.log("element", element);
-    let delay = Number(element.getAttribute('data-aos-delay'));
-    let duration = Number(element.getAttribute('data-aos-duration'));
-    let easing = element.getAttribute('data-aos-easing');
-    if (easing == null) {
-        easing = 'easeInOutSine';
-    }
-    let animObject = {
-        targets: element,
-        opacity: [0, 1],
-        duration: duration != NaN ? duration : 600,
-        delay: function (el, i) { return delay != NaN ? delay : 0; },
-        easing: easing,
-        autoplay: false,
-    };
-    animObjects[index] = animObject;
-    console.log("animObject", animObject);
-});
-// Play timeline
-tl.play();
-
-// get querySelectorAll for "[data-aos]" and loop through them to get the delay and duration and add them to animObjects
-document.querySelectorAll("[data-aos='fade-up']").forEach(function (element, index) {
-    console.log("element", element);
-    let delay = Number(element.getAttribute('data-aos-delay'));
-    let duration = Number(element.getAttribute('data-aos-duration'));
-    let easing = element.getAttribute('data-aos-easing');
-    if (easing == null) {
-        easing = 'easeInOutSine';
-    }
-    let animObject = {
-        targets: element,
-        translateY: [100, 0],
-        opacity: [0, 1],
-        duration: duration != NaN ? duration : 600,
-        delay: function (el
-
+// get all elements with data-aos attribute and loop through them to get the delay and duration and add them to animObjects
 
 console.log("animObjects", animObjects);
 
-        initSlick();
+initSlick();
 function initSlick() {
-            $('.slider-for').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                asNavFor: '.slider-nav',
-                fade: true,
-                arrows: false,
-            });
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.slider-nav',
+        fade: true,
+        arrows: false,
+    });
 
     $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
         console.log("Slide Nav Init", this);
@@ -185,7 +147,7 @@ if (Shopify.designMode) {
 } */
 
 function init() {
-        /*   AOS.refresh(); */
-        setTimeout(initSlick, 1000);
-    }
+    /*   AOS.refresh(); */
+    setTimeout(initSlick, 1000);
+}
 
