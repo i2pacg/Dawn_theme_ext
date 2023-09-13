@@ -22,8 +22,6 @@ document.querySelectorAll("[data-aos]").forEach(element => {
             animObject.scaleX = [0, 1];
         }
     });
-
-
     tl.add(animObject);
 });
 /* 
@@ -54,23 +52,26 @@ function initSlick() {
 
     $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
         console.log("Slide Nav Init", this);
+        setTimeout(() => {
+            tl.play();
+        }, 100);
         /*  tl.add({
-             targets: this.querySelector("[data-slick-index='0']"),
-             opacity: [0, 1],
-             easing: 'easeInOutSine'
-         });
-         this.querySelectorAll(".slick-slide:not([data-slick-index='0'])").forEach(function (slide, index) {
-             console.log("fade slide", slide);
-             tl.add({
-                 targets: slide,
-                 opacity: [0, 1],
-                 duration: 600,
-                 easing: 'easeInOutSine'
-             })
-         });
-         setTimeout(() => {
-             tl.play();
-         }, 600); */
+           targets: this.querySelector("[data-slick-index='0']"),
+           opacity: [0, 1],
+           easing: 'easeInOutSine'
+       });
+       this.querySelectorAll(".slick-slide:not([data-slick-index='0'])").forEach(function (slide, index) {
+           console.log("fade slide", slide);
+           tl.add({
+               targets: slide,
+               opacity: [0, 1],
+               duration: 600,
+               easing: 'easeInOutSine'
+           })
+       });
+       setTimeout(() => {
+           tl.play();
+       }, 600); */
     });
     $('.slider-nav').slick({
         centerPadding: '32px',
