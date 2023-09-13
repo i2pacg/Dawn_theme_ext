@@ -11,11 +11,16 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
     console.log("anim", anims);
 
     if (anims.includes('svg-draw-fade')) {
+        const animObject = {
+            targets: animElement,
+            easing: 'easeInOutSine'
+        };
     } else {
         const animObject = {
             targets: animElement,
             easing: 'easeInOutSine'
-        }; anims.forEach(anim => {
+        };
+        anims.forEach(anim => {
             if (anim == 'fade') {
                 animObject.opacity = [0, 1];
             }
