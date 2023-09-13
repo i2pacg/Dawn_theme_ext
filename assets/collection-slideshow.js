@@ -46,7 +46,7 @@ function initSlick() {
         });
         setTimeout(() => {
             tl.play();
-        }, 5000);
+        }, 600);
     });
     $('.slider-nav').slick({
         centerPadding: '32px',
