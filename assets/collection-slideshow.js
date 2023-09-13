@@ -197,7 +197,7 @@ async function init() {
             easing: 'easeInOutSine',
             delay: function (el, i) { return i * 100 },
             duration: 400,
-        }, 2200);
+        }, 2600);
     } else
         tl.add({
             targets: infoSlide.querySelectorAll("[data-slick-index='0'] .product-title"),
@@ -205,7 +205,7 @@ async function init() {
             easing: 'easeInOutSine',
             delay: function (el, i) { return i * 100 },
             duration: 400,
-        }, 2200);
+        }, 2600);
 
 
     setTimeout(() => {
