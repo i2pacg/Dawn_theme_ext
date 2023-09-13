@@ -23,7 +23,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
             animObject.scaleX = [0, 1];
         }
         if (anim == 'svg-draw-fade') {
-            element.remove('svg')
+            element.removeChild('svg')
         }
     });
     console.log("animObject", animObject);
