@@ -13,6 +13,10 @@
    padding: 0px 16px;
  }
 
+ .product-card a {
+   text-decoration: unset;
+ }
+
  .product-card .product-title {
    margin-top: 4px;
  }
