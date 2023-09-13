@@ -7,63 +7,37 @@ var tl = anime.timeline({
 });
 const animObjects = {};
 
-// get all elements with data-aos attribute and add them to animObjects under delay as key and duration as key and elements as value
+// get all elements with data-aos attribute split by comma and add them to animObjects under delay , duration ,anim name as key and elements as value
 document.querySelectorAll("[data-aos]").forEach(element => {
-    const delay = Number(element.getAttribute('data-aos-delay'));
-    const duration = Number(element.getAttribute('data-aos-duration'));
-    if (!animObjects[delay]) {
-        animObjects[delay] = {};
-    }
-    if (!animObjects[delay][duration]) {
-        animObjects[delay][duration] = [];
-    }
-    animObjects[delay][duration].push(element);
+    element.getAttribute('data-aos').split(',').forEach(function (anim, index) {
+        if (animObjects[anim] == undefined) {
+            animObjects[anim] = {
+                delay: [],
+                duration: [],
+                anim: [],
+                elements: [],
+            }
+        }
+        animObjects[anim].delay.push(Number(element.getAttribute('data-aos-delay') != null ? element.getAttribute('data-aos-delay') : 0));
+        animObjects[anim].duration.push(Number(element.getAttribute('data-aos-duration') != null ? element.getAttribute('data-aos-duration') : 600));
+        animObjects[anim].anim.push(anim);
+        animObjects[anim].elements.push(element);
+    });
 });
-
-for (const [delay, delayElements] of Object.entries(animObjects)) {
-    console.log("delay", delay);
-    console.log("delayElements", delayElements);
-    for (const [duration, durationElements] of Object.entries(delayElements)) {
-        console.log("duration", duration);
-        console.log("durationElements", durationElements);
-        // group elements via data-aos attribute split by comma
-        const groups = durationElements.reduce((r, a) => {
-            r[a.getAttribute('data-aos')] = [...r[a.getAttribute('data-aos')] || [], a];
-            return r;
-        }, {});
-        console.log("groups", groups);
-
-
-        // add all elements with same delay and duration to timeline 
-
-        // add all elements with same delay and duration to timeline 
-        /*   tl.add({
-              targets: durationElements.filter((el) => el.getAttribute('data-aos') != 'svg-draw-fade'),
-              opacity: [0, 1],
-              duration: duration != NaN ? duration : 600,
-              delay: function (el, i) { return delay != NaN ? delay : 0; },
-              easing: 'easeInOutSine'
-          }) */
-        /*   durationElements.filter((el) => el.getAttribute('data-aos') == 'svg-draw-fade').map((el) => el.querySelectorAll('svg path')).flat().forEach(function (path, index) {
-              console.log("path", path);
-              path.style.fillOpacity = 0;
-              path.style.strokeDasharray = path.getTotalLength();
-              path.style.strokeDashoffset = path.getTotalLength();
-              tl.add({
-                  targets: path,
-                  strokeDashoffset: [anime.setDashoffset, 0],
-                  fillOpacity: [0, 1],
-                  easing: 'easeInOutSine',
-                  duration: duration != NaN ? duration : 600,
-                  delay: function (el, i) { return delay != NaN ? delay + (index * 100) : 0; },
-              });
-  
-          }); */
-
-
-    }
-}
-
+// add all the animObjects to timeline
+/* Object.keys(animObjects).forEach(function (key, index) {
+    console.log("animObjects", animObjects);
+    animObjects[key].elements.forEach(function (element, index) {
+        tl.add({
+            targets: element,
+            opacity: [0, 1],
+            duration: animObjects[key].duration[index],
+            delay: function (el, i) { return animObjects[key].delay[index]; },
+            easing: 'easeInOutSine'
+        })
+    });
+});
+ */
 console.log("animObjects", animObjects);
 
 // start the timeline
