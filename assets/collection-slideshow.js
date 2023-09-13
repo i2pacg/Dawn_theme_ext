@@ -16,18 +16,18 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     const parent = element;
     const delay = Number(parent.getAttribute('data-aos-delay')) != NaN ? Number(parent.getAttribute('data-aos-delay')) : 0;
     const duration = Number(parent.getAttribute('data-aos-duration')) != NaN ? Number(parent.getAttribute('data-aos-duration')) : 0;
-    console.log("delay", delay);
-    console.log("duration", duration);
+
     const anim = parent.getAttribute('data-aos');
+
     if (!animObjects[anim][delay]) {
         animObjects[anim][delay] = {};
     }
     if (!animObjects[anim][delay][duration]) {
         animObjects[anim][delay][duration] = [];
     }
+    console.log("animObjects", animObjects);
     animObjects[anim][delay][duration].push(parent);
 });
-console.log("animObjects", animObjects);
 
 /* for (const anim in animObjects) {
     console.log("anim", animObjects[anim]);
