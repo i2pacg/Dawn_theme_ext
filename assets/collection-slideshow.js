@@ -24,6 +24,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
         animObjects[anim].elements.push(element);
     });
 });
+
 // add all the animObjects to timeline
 /* Object.keys(animObjects).forEach(function (key, index) {
     console.log("animObjects", animObjects);
