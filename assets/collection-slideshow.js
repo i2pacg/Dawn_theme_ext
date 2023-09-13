@@ -184,9 +184,10 @@ async function init() {
             fillOpacity: [0, 1],
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: 'easeInOutSine',
-            delay: function (el, i) { return i * 100 },
+            delay: function (el, i) { return i * 150 },
             duration: 400,
         }, 2600);
+
     } else
         tl.add({
             targets: infoSlide.querySelector("[data-slick-index='0'] .product-title"),
