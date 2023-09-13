@@ -37,7 +37,7 @@ document.querySelectorAll("[data-aos='fade']").forEach(element => {
     })
 });;
 /* data-aos="fade" data-aos-duration="400" */
-/* initSlick();
+/*
  */
 setTimeout(() => {
     tl.play();
@@ -100,11 +100,11 @@ function initSlick() {
         arrows: false,
         asNavFor: '.slider-nav',
     });
-}
+}/* 
 if (Shopify.designMode) {
     document.addEventListener('shopify:section:load', init);
     document.addEventListener('shopify:section:reorder', init); //
-}
+} */
 
 function init() {
     /*   AOS.refresh(); */
