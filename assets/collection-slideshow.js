@@ -21,8 +21,8 @@ initSlick();
 
 anime({
     targets: '.slider-content-card',
-    opacity: 0,
-    delay: function (el, i) { return 100; },
+    opacity: 1,
+    delay: function (el, i) { return 3000; },
     easing: 'easeInOutSine'
 })
 /* 
