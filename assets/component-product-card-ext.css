@@ -13,6 +13,10 @@
    padding: 0px 16px;
  }
 
+ .product-card .product-title {
+   margin-top: 4px;
+ }
+
  .product-card .product-picture {
    position: relative;
    overflow: hidden;
