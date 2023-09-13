@@ -20,11 +20,11 @@ document.querySelectorAll("[data-aos]").forEach(element => {
         const duration = Number(parent.getAttribute('data-aos-duration')) != NaN ? Number(parent.getAttribute('data-aos-duration')) : 0;
         const anim = parent.getAttribute('data-aos');
 
-        if (!animObjects[anim][parent.getAttribute('data-aos-delay')]) {
-            animObjects[anim][parent.getAttribute('data-aos-delay')] = {};
+        if (!animObjects[anim][delay]) {
+            animObjects[anim][delay] = {};
         }
-        if (!animObjects[anim][parent.getAttribute('data-aos-duration')]) {
-            animObjects[anim][parent.getAttribute('data-aos-duration')] = {};
+        if (!animObjects[anim][delay][duration]) {
+            animObjects[anim][delay][duration] = [];
         }
 
 
