@@ -57,8 +57,8 @@ for (const animName in animObjects) {
                         if (anim == 'scaleX') {
                             animObjectTemp.scaleX = [0, 1];
                         }
-                        if (anim == 'svg-draw-fade') {
-
+                        if (anim == 'slide-up') {
+                            animObjectTemp.translateY = [100, 0];
                         }
                     });
                 }
