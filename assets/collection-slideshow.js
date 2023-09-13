@@ -27,7 +27,7 @@ for (const [delay, delayElements] of Object.entries(animObjects)) {
         console.log("duration", duration);
         console.log("durationElements", durationElements);
         tl.add({
-            targets: durationElements,
+            targets: durationElements.filter((el) => el.getAttribute('data-aos') != 'svg-draw-fade'),
             opacity: [0, 1],
             duration: duration != NaN ? duration : 600,
             delay: function (el, i) { return delay != NaN ? delay : 0; },
