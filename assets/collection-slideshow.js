@@ -70,7 +70,6 @@ Object.keys(animObjects).forEach(function (key, index) {
                         easing: 'easeInOutSine'
                     })
                     break;
-
                 case 'zoom':
                     tl.add({
                         targets: element,
@@ -81,7 +80,15 @@ Object.keys(animObjects).forEach(function (key, index) {
                         easing: 'easeInOutSine'
                     })
                     break;
-
+                case 'fade':
+                    tl.add({
+                        targets: element,
+                        opacity: [0, 1],
+                        duration: animObjects[key].duration[index],
+                        delay: function (el, i) { return animObjects[key].delay[index]; },
+                        easing: 'easeInOutSine'
+                    })
+                    break;
                 case 'slide-up':
                     tl.add({
                         targets: element,
@@ -125,28 +132,16 @@ Object.keys(animObjects).forEach(function (key, index) {
                         easing: 'easeInOutSine'
                     })
                     break;
-
-                case 'slide-up-right':
-                    tl.add({
-                        targets: element,
-                        translateX: [-50, 0],
-                        translateY: [-50, 0],
-                        opacity: [0, 1],
-                        duration: animObjects[key].duration[index],
-                        delay:
-
+                default:
                     break;
-
-                        default:
-                    break;
-                    }
+            }
             tl.add({
-                        targets: element,
-                        opacity: [0, 1],
-                        duration: animObjects[key].duration[index],
-                        delay: function (el, i) { return animObjects[key].delay[index]; },
-                        easing: 'easeInOutSine'
-                    })
+                targets: element,
+                opacity: [0, 1],
+                duration: animObjects[key].duration[index],
+                delay: function (el, i) { return animObjects[key].delay[index]; },
+                easing: 'easeInOutSine'
+            })
         });
     }
 });
