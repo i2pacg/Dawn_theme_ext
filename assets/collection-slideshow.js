@@ -55,7 +55,34 @@ document.querySelectorAll("[data-aos]").forEach(element => {
 // loop animObjects and add animations to timeline 
 Object.keys(animObjects).forEach(function (key, index) {
     if (key != 'svg-draw-fade') {
+        animObjects[key].elements.forEach(function (element, index) {
+            console.log("element", element);
+            console.log("index", index);
+            console.log("key", key);
+            switch (key) {
+                case 'fade':
+                    tl.add({
+                        targets: element,
+                        opacity: [0, 1],
+                        duration: animObjects[key].duration[index],
+                        delay: function (el, i) { return animObjects[key].delay[index]; },
+                        easing: 'easeInOutSine'
+                    })
+                    break;
+                case 'scaleX':
+                    tl.add({
+                        targets: element,
+                        transformX: [0, 1],
+                        duration: animObjects[key].duration[index],
+                        delay: function (el, i) { return animObjects[key].delay[index]; },
+                        easing: 'easeInOutSine'
+                    })
+                    break;
+                default:
+                    break;
+            }
 
+        });
     }
 });
 
@@ -96,7 +123,7 @@ function initSlick() {
         console.log("Slide Nav Init", this);
         setTimeout(() => {
             tl.play();
-        }, 300);
+        }, 1500);
         /*  tl.add({
            targets: this.querySelector("[data-slick-index='0']"),
            opacity: [0, 1],
