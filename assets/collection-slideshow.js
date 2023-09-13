@@ -177,13 +177,24 @@ async function init() {
         delay: function (el, i) { return i * 100 },
         duration: 400,
     }, 2200);
-    tl.add({
-        targets: infoSlide.querySelectorAll("[data-slick-index='0'] .product-title"),
-        opacity: [0, 1],
-        easing: 'easeInOutSine',
-        delay: function (el, i) { return i * 100 },
-        duration: 400,
-    }, 2200);
+
+    if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg")) {
+        tl.add({
+            targets: infoSlide.querySelector("[data-slick-index='0'] .product-title svg path"),
+            fillOpacity: [0, 1],
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutSine',
+            delay: function (el, i) { return i * 100 },
+            duration: 400,
+        }, 2200);
+    } else
+        tl.add({
+            targets: infoSlide.querySelectorAll("[data-slick-index='0'] .product-title"),
+            opacity: [0, 1],
+            easing: 'easeInOutSine',
+            delay: function (el, i) { return i * 100 },
+            duration: 400,
+        }, 2200);
 
 
     setTimeout(() => {
