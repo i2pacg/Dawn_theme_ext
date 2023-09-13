@@ -27,7 +27,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
             animObjects[anim][delay][duration] = [];
         }
     } catch (error) {
-        console.log("error", error);
+        console.log("error", anim, delay, duration);
     }
     //animObjects[anim][delay][duration].push(parent);
 });
