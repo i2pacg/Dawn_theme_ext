@@ -120,9 +120,21 @@ console.log("animObjects", animObjects); */
 
 let initVideoSlickPromise = new Promise(resolve => {
     $('.slider-for').on('init', function (event, slick, currentSlide, nextSlide) {
-        resolve("I am done");
+        resolve("for I am done");
     });
     $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.slider-nav',
+        fade: true,
+        arrows: false,
+    });
+})
+let initNavSlickPromise = new Promise(resolve => {
+    $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
+        resolve("nav I am done");
+    });
+    $('.slider-nav').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.slider-nav',
