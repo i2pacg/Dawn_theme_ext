@@ -118,7 +118,17 @@ console.log("animObjects", animObjects);
 
 //init slick slider
 
+let initPromise = Promise(resolve => {
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.slider-nav',
+        fade: true,
+        arrows: false,
+    });
+}
 
+)
 
 initSlick();
 function initSlick() {
