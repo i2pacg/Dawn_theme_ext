@@ -152,9 +152,6 @@
           >
             <div class="slider-text">
               <h1 class="product-title">
-                {% comment %}
-                  {{ product.title | escape }}
-                {% endcomment %}
                 {% if product.metafields.svg.title %}
                   {{ product.metafields.svg.title }}
                 {% else %}
