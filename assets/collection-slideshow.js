@@ -26,10 +26,12 @@ var tl = anime.timeline({
 // Add children
 document.querySelectorAll("[data-aos='fade']").forEach(element => {
     console.log("fade", element);
+    let delay = Number(element.getAttribute('data-aos-delay'));
+    console.log("fade delay", delay);
     tl.add({
         targets: element,
         opacity: [0, 1],
-        delay: function (el, i) { return 3000; },
+        delay: function (el, i) { return delay != NaN ? delay : 0; },
         easing: 'easeInOutSine'
     })
 });;
