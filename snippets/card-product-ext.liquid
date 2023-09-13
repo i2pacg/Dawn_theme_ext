@@ -81,24 +81,26 @@
       alt=”…” loading=”lazy” >
       </picture>
     {% endcomment %}
-    <img
-      srcset="
-        {%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
-        {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
-        {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
-        {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
-        {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
-        {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
-        {{ product.featured_media | image_url }} {{ product.featured_media.width }}w
-      "
-      src="{{ product.featured_media | image_url: width: 240 }}"
-      sizes="(min-width: 750px) 240px, 200px"
-      alt="{{ product.featured_media.alt | escape }}"
-      class="motion-reduce"
-      loading="lazy"
-      width="240"
-      height="360"
-    >
+    {% comment %}
+      <img
+        srcset="
+          {%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
+          {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
+          {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
+          {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
+          {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
+          {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
+          {{ product.featured_media | image_url }} {{ product.featured_media.width }}w
+        "
+        src="{{ product.featured_media | image_url: width: 240 }}"
+        sizes="(min-width: 750px) 240px, 200px"
+        alt="{{ product.featured_media.alt | escape }}"
+        class="motion-reduce"
+        loading="lazy"
+        width="240"
+        height="360"
+      >
+    {% endcomment %}
   </div>
   <h1 class="product-title">
     {{ product.title | escape }}
