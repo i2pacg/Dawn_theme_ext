@@ -32,7 +32,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
     }
 });
 console.log("animObjects", animObjects);
-
+//loop through animObjects and add elements to the timeline with svg-draw-fade as exception
 
 
 
