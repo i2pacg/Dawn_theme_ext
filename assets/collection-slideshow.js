@@ -8,6 +8,7 @@ var tl = anime.timeline({
 const animObjects = {};
 document.querySelectorAll("[data-aos]").forEach(animElement => {
     let delay = Number(animElement.getAttribute('data-aos-delay'));
+    let animName = animElement.getAttribute('data-aos')
     if (!Array.isArray(animObjects[delay != NaN ? delay : 0]))
         animObjects[delay != NaN ? delay : 0] = [];
     animObjects[delay != NaN ? delay : 0].push(animElement);
@@ -17,6 +18,7 @@ for (const delay in animObjects) {
     if (Object.hasOwnProperty.call(animObjects, delay)) {
         const anims = animObjects[delay];
         console.log("anims", anims);
+
     }
 }
 /*  const anims = animElement.getAttribute('data-aos').split(',');
