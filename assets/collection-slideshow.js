@@ -62,19 +62,91 @@ Object.keys(animObjects).forEach(function (key, index) {
             console.log("index", index);
             switch (key) {
                 case 'fade':
+                    tl.add({
+                        targets: element,
+                        opacity: [0, 1],
+                        duration: animObjects[key].duration[index],
+                        delay: function (el, i) { return animObjects[key].delay[index]; },
+                        easing: 'easeInOutSine'
+                    })
+                    break;
+
+                case 'zoom':
+                    tl.add({
+                        targets: element,
+                        scale: [0, 1],
+                        opacity: [0, 1],
+                        duration: animObjects[key].duration[index],
+                        delay: function (el, i) { return animObjects[key].delay[index]; },
+                        easing: 'easeInOutSine'
+                    })
+                    break;
+
+                case 'slide-up':
+                    tl.add({
+                        targets: element,
+                        translateY: [50, 0],
+                        opacity: [0, 1],
+                        duration: animObjects[key].duration[index],
+                        delay: function (el, i) { return animObjects[key].delay[index]; },
+                        easing: 'easeInOutSine'
+                    })
+                    break;
+
+                case 'slide-down':
+                    tl.add({
+                        targets: element,
+                        translateY: [-50, 0],
+                        opacity: [0, 1],
+                        duration: animObjects[key].duration[index],
+                        delay: function (el, i) { return animObjects[key].delay[index]; },
+                        easing: 'easeInOutSine'
+                    })
+                    break;
+
+                case 'slide-left':
+                    tl.add({
+                        targets: element,
+                        translateX: [50, 0],
+                        opacity: [0, 1],
+                        duration: animObjects[key].duration[index],
+                        delay: function (el, i) { return animObjects[key].delay[index]; },
+                        easing: 'easeInOutSine'
+                    })
+                    break;
+
+                case 'slide-right':
+                    tl.add({
+                        targets: element,
+                        translateX: [-50, 0],
+                        opacity: [0, 1],
+                        duration: animObjects[key].duration[index],
+                        delay: function (el, i) { return animObjects[key].delay[index]; },
+                        easing: 'easeInOutSine'
+                    })
+                    break;
+
+                case 'slide-up-right':
+                    tl.add({
+                        targets: element,
+                        translateX: [-50, 0],
+                        translateY: [-50, 0],
+                        opacity: [0, 1],
+                        duration: animObjects[key].duration[index],
+                        delay:
 
                     break;
 
-                default:
+                        default:
                     break;
-            }
+                    }
             tl.add({
-                targets: element,
-                opacity: [0, 1],
-                duration: animObjects[key].duration[index],
-                delay: function (el, i) { return animObjects[key].delay[index]; },
-                easing: 'easeInOutSine'
-            })
+                        targets: element,
+                        opacity: [0, 1],
+                        duration: animObjects[key].duration[index],
+                        delay: function (el, i) { return animObjects[key].delay[index]; },
+                        easing: 'easeInOutSine'
+                    })
         });
     }
 });
