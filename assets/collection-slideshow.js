@@ -42,11 +42,10 @@ for (const anim in animObjects) {
         sortable.push([delay, animObjects[anim][delay]]);
     }
     sortable.sort(function (a, b) {
-        return a[0] - b[0];
+        return b[0] - a[0];
     });
     animObjects[anim] = Object.fromEntries(sortable);
-    console.log("animObjects", animObjects);
-
+    console.log("animObjects", animObjects[anim]);
     for (const delay in animObjects[anim]) {
         for (const duration in animObjects[anim][delay]) {
             const elements = animObjects[anim][delay][duration];
