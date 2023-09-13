@@ -66,7 +66,10 @@
       <source media="(max-width: 375)" srcset="{{ product.featured_media | image_url: width: 180 }}">
       <source media="(max-width: 500)" srcset="{{ product.featured_media | image_url: width: 220 }}">
       <source media="(min-width: 749)" srcset="{{ product.featured_media | image_url: width: 240 }}">
-      <img src="{{ product.featured_media | image_url: width: 1200 }}">
+      <img
+        src="{{ product.featured_media | image_url: width: 240 }}"
+        srcset="{{ product.featured_media | image_url: width: 180 }}"
+      >
     </picture>
     {% comment %}
       srcset=”{{ product.featured_media | image_url: width: 1200 }},
