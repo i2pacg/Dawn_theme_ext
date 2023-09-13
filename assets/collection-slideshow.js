@@ -26,6 +26,8 @@ for (const [delay, delayElements] of Object.entries(animObjects)) {
     for (const [duration, durationElements] of Object.entries(delayElements)) {
         console.log("duration", duration);
         console.log("durationElements", durationElements);
+        // group elements via data-aos attribute
+        // add all elements with same delay and duration to timeline 
         tl.add({
             targets: durationElements.filter((el) => el.getAttribute('data-aos') != 'svg-draw-fade'),
             opacity: [0, 1],
