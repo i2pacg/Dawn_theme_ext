@@ -62,8 +62,10 @@
         | image_tag: alt: product.featured_media.alt, widths: '240px, 200px', sizes: '(min-width: 750px) 240px, 200px'
       -}}
     {% endcomment %}
-    <picture class="Dummy">
+    <picture class="Dummy" loading="lazy">
       <source media="(max-width: 375)" srcset="{{ product.featured_media | image_url: width: 180 }}">
+      <source media="(max-width: 500)" srcset="{{ product.featured_media | image_url: width: 220 }}">
+      <source media="(min-width: 749)" srcset="{{ product.featured_media | image_url: width: 240 }}">
     </picture>
 
     {% comment %}
