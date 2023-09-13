@@ -181,16 +181,25 @@ async function init() {
     $(infoSlide).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         console.log('beforeChange', slick.$slides[nextSlide]);
         const slideElement = slick.$slides[nextSlide];
-        anime({
-            targets: slideElement.querySelectorAll(".product-title svg path"),
-            fillOpacity: [0, 1],
-            strokeDashoffset: [anime.setDashoffset, 0],
+        if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg"))
+            anime({
+                targets: slideElement.querySelectorAll(".product-title svg path"),
+                fillOpacity: [0, 1],
+                strokeDashoffset: [anime.setDashoffset, 0],
+                easing: 'easeInOutSine',
+                delay: function (el, i) { return i * 75 },
+                duration: 400,
+            });
+        else anime({
+            targets: infoSlide.querySelector("[data-slick-index='0'] .product-title"),
+            opacity: [0, 1],
+            translateX: [-50, 0],
             easing: 'easeInOutSine',
-            delay: function (el, i) { return i * 75 },
             duration: 400,
-        });
+        })
+
     });
-    if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg")) {
+    if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg"))
         tl.add({
             targets: infoSlide.querySelectorAll("[data-slick-index='0'] .product-title svg path"),
             fillOpacity: [0, 1],
@@ -199,7 +208,7 @@ async function init() {
             delay: function (el, i) { return i * 150 },
             duration: 400,
         }, 2600);
-    } else
+    else
         tl.add({
             targets: infoSlide.querySelector("[data-slick-index='0'] .product-title"),
             opacity: [0, 1],
