@@ -132,9 +132,9 @@ function initSlick() {
 
     $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
         console.log("Slide Nav Init", this);
-        /*  setTimeout(() => {
-             tl.play();
-         }, 1500); */
+        setTimeout(() => {
+            tl.play();
+        }, 300);
         /*  tl.add({
            targets: this.querySelector("[data-slick-index='0']"),
            opacity: [0, 1],
