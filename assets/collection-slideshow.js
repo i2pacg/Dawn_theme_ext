@@ -146,7 +146,7 @@ let initNavSlickPromise = new Promise(resolve => {
 })
 let initInfoSlickPromise = new Promise(resolve => {
     $('.slider-info').on('init', function (event, slick, currentSlide, nextSlide) {
-        resolve("info I am done");
+        resolve(this);
     });
     $('.slider-info').slick({
         arrows: false,
@@ -180,7 +180,7 @@ async function init() {
     tl.add({
         targets: infoSlide.querySelector("[data-slick-index='0']"),
         opacity: [0, 1],
-        translateY: [100, 0],
+        translateX: [100, 0],
         duration: 400,
         easing: 'easeInOutSine'
     }, 2200);
