@@ -166,7 +166,14 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
-                  {% render 'card-product-ext',
+                  {%
+                    render 'card-product-ext',
+                    product: product,
+                    savings_option: section.settings.card_savings_option,
+                    title_option: section.settings.card_title_option,
+                    show_quick_add: section.settings.card_buy_option,
+                  %}
+                  {% render 'card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
                     image_shape: section.settings.image_shape,
