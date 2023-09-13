@@ -19,7 +19,7 @@ document.querySelectorAll("[data-aos]").forEach(element => {
 
     const anim = parent.getAttribute('data-aos');
     try {
-        if (!animObjects[anim][delay]) {
+        if (animObjects[anim].hasOwnProperty(delay)) {
             animObjects[anim][delay.toString()] = {};
         }
     } catch (error) {
