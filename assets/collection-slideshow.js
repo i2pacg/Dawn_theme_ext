@@ -25,7 +25,52 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
     animObjects[animName][delay].push(animElement);
 
 });
-// Add AnimeJs to animOBjects
+// Add AnimeJs to animOBjects;
+for (const animName in animObjects) {
+    if (Object.hasOwnProperty.call(animObjects, animName)) {
+        const animObject = animObjects[animName];
+        for (const delay in animObject) {
+            if (Object.hasOwnProperty.call(animObject, delay)) {
+                const animElements = animObject[delay];
+                let animObjectTemp = {
+                    targets: animElements,
+                    easing: 'easeInOutSine',
+                    delay: 0,
+                };
+                if (animName == 'svg-draw-fade') {
+                    animObjectTemp = {
+                        targets: animElements[0].querySelectorAll('svg path'),
+                        easing: 'easeInOutSine',
+                        fillOpacity: [0, 1],
+                        strokeDashoffset: [anime.setDashoffset, 0],
+                        delay: 0,
+                        direction: 'alternate',
+                        loop: false,
+                        duration: 1000,
+                    }
+                } else {
+                    const anims = animName.split(',');
+                    anims.forEach(anim => {
+                        if (anim == 'fade') {
+                            animObjectTemp.opacity = [0, 1];
+                        }
+                        if (anim == 'scaleX') {
+                            animObjectTemp.scaleX = [0, 1];
+                        }
+                        if (anim == 'svg-draw-fade') {
+
+                        }
+                    });
+                }
+                if (delay == 0) {
+                    tl.add(animObjectTemp);
+                } else {
+                    tl.add(animObjectTemp, delay);
+                }
+            }
+        }
+    }
+}
 console.log("animObjects", animObjects);
 /* for (const delay in animObjects) {
     if (Object.hasOwnProperty.call(animObjects, delay)) {
