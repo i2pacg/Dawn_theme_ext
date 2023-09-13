@@ -70,11 +70,14 @@
  }
 
  .product-card .product-content {
-   box-shadow: 1px 1px 16px #00000080;
    border-radius: 16px;
    overflow: hidden;
    position: relative;
    display: flex;
+ }
+
+ .product-card:hover .product-content {
+   box-shadow: 1px 1px 16px #00000080;
  }
 
  .product-card.title-option-top.savings-option-top .product-content .product-card-savings {
