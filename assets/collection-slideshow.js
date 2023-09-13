@@ -10,11 +10,20 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
     const anims = animElement.getAttribute('data-aos').split(',');
     console.log("anim", anims);
 
-    if (anims.includes('svg-draw-fade')) {
-        const animObject = {
-            targets: animElement,
-            easing: 'easeInOutSine'
-        };
+    if (anims.includes('svg')) {
+        console.log("fade", animElement);
+        animElement.querySelectorAll('svg path').forEach(function (path, index) {
+            const animObject = {
+                targets: animElement,
+                easing: 'easeInOutSine'
+            }; animObject.targets = path;
+            animObject.fillOpacity = [0, 1];
+            animObject.astrokeDashoffset = [anime.setDashoffset, 1];
+            animObject.delay = 0;
+            animObject.direction = 'alternate';
+            tl.add(animObject);
+        });
+
     } else {
         const animObject = {
             targets: animElement,
@@ -28,15 +37,7 @@ document.querySelectorAll("[data-aos]").forEach(animElement => {
                 animObject.scaleX = [0, 1];
             }
             if (anim == 'svg-draw-fade') {
-                console.log("fade", animElement);
-                animElement.querySelectorAll('svg path').forEach(function (path, index) {
-                    animObject.targets = path;
-                    animObject.fillOpacity = [0, 1];
-                    animObject.astrokeDashoffset = [anime.setDashoffset, 1];
-                    animObject.delay = 0;
-                    animObject.direction = 'alternate';
-                    tl.add(animObject);
-                });
+
             }
         });
         tl.add(animObject);
