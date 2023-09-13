@@ -39,9 +39,7 @@ for (const anim in animObjects) {
     //sort by delay
 
 
-    for (const delay in animObjects[anim].sort(function (a, b) {
-        return a[0] - b[0];
-    })) {
+    for (const delay in ) {
         for (const duration in animObjects[anim][delay]) {
             const elements = animObjects[anim][delay][duration];
             console.log("elements", elements);
