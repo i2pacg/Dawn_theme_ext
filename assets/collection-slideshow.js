@@ -133,8 +133,9 @@ let initVideoSlickPromise = new Promise(resolve => {
 
 init();
 async function init() {
+    console.log("init");
     await initVideoSlickPromise();
-
+    console.log("initDFOne");
 }
 /* 
 initSlick();
@@ -289,8 +290,4 @@ if (Shopify.designMode) {
     document.addEventListener('shopify:section:reorder', init); //
 } */
 
-function init() {
-    /*   AOS.refresh(); */
-    setTimeout(initSlick, 1000);
-}
 
