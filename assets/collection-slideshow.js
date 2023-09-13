@@ -121,63 +121,14 @@ console.log("animObjects", animObjects);
 let initPromise = Promise(resolve => {
     $('.slider-for').on('init', function (event, slick, currentSlide, nextSlide) {
         console.log("Slide Nav Init", this);
-        $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
-            console.log("Slide Nav Init", this);
-
-            tl.add({
-                targets: this.querySelector("[data-slick-index='0']"),
-                opacity: [0, 1],
-                translateY: [100, 0],
-                duration: 400,
-                easing: 'easeInOutSine'
-            }, 2200);
-            tl.add({
-                targets: this.querySelectorAll(".slick-slide:not([data-slick-index='0'])"),
-                opacity: [0, 1],
-                translateY: [100, 0],
-                easing: 'easeInOutSine',
-                delay: function (el, i) { return i * 100 },
-                duration: 400,
-            }, 2200);
-
-            setTimeout(() => {
-                tl.play();
-            }, 300);
-            /*  tl.add({
-             targets: this.querySelector("[data-slick-index='0']"),
-             opacity: [0, 1],
-             easing: 'easeInOutSine'
-         });
-         this.querySelectorAll(".slick-slide:not([data-slick-index='0'])").forEach(function (slide, index) {
-             console.log("fade slide", slide);
-             tl.add({
-                 targets: slide,
-                 opacity: [0, 1],
-                 duration: 600,
-                 easing: 'easeInOutSine'
-             })
-         });
-         setTimeout(() => {
-             tl.play();
-         }, 600); */
-        });
-        $('.slider-nav').slick({
-            centerPadding: '32px',
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            infinite: true,
-            variableWidth: true,
-            centerMode: true,
-            asNavFor: '.slider-for , .slider-info',
-        });
-        $('.slider-info').slick({
-            arrows: false,
-            fade: true,
-            arrows: false,
-            asNavFor: '.slider-nav',
-        });
     });
-
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.slider-nav',
+        fade: true,
+        arrows: false,
+    });
 }
 
 )
