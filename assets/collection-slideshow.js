@@ -80,10 +80,10 @@ Object.keys(animObjects).forEach(function (key, index) {
                         easing: 'easeInOutSine'
                     })
                     break;
-                case 'slideX':
+                case 'scaleX':
                     tl.add({
                         targets: element,
-                        opacity: [0, 1],
+                        transformX: [0, 1],
                         duration: animObjects[key].duration[index],
                         delay: function (el, i) { return animObjects[key].delay[index]; },
                         easing: 'easeInOutSine'
@@ -135,13 +135,7 @@ Object.keys(animObjects).forEach(function (key, index) {
                 default:
                     break;
             }
-            tl.add({
-                targets: element,
-                opacity: [0, 1],
-                duration: animObjects[key].duration[index],
-                delay: function (el, i) { return animObjects[key].delay[index]; },
-                easing: 'easeInOutSine'
-            })
+
         });
     }
 });
