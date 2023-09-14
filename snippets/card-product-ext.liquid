@@ -28,7 +28,7 @@
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
 <style></style>
-<div class="product-card {{card_class}} title-option-{{ title_option }} savings-option-{{ savings_option }}">
+<div class="product-card {{ card_class }} title-option-{{ title_option }} savings-option-{{ savings_option }}">
   {%- liquid
     assign savings = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round | append: '%'
     assign ratio = 1
@@ -44,7 +44,7 @@
   <a
     href="{{ product.url }}"
   >
-    <div class="product-content" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+    <div class="product-content">
       {% if savings != '0%' %}
         <div class="product-card-savings">
           <span
