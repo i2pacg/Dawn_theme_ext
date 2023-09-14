@@ -193,7 +193,7 @@ async function init() {
                     fillOpacity: [0, 1],
                     strokeDashoffset: [anime.setDashoffset, 0],
                     easing: 'easeInOutSine',
-                    delay: function (el, i) { return i * 75 + 400 },
+                    delay: function (el, i) { return i * 75 + 200 },
                     duration: 400,
                 });
             }
