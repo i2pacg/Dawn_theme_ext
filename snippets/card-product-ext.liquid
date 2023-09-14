@@ -89,16 +89,16 @@
 
         {%- if product.media[1] != null and show_secondary_image -%}
           <img
-            src="{{ product.featured_media | image_url: width: 240 }}"
+            src="{{ product.featured_media | image_url: width: 320 }}"
             srcset="
-              {{ product.media[1] | image_url: width: 240 }},
+              {{ product.media[1] | image_url: width: 320 }},
               {{ product.media[1] | image_url: width: 220 }},
               {{ product.media[1] | image_url: width: 180 }}
             "
             sizes="
               (max-width: 375) 180px,
               (max-width: 500) 220px,
-              240px
+              320px
             "
             loading="lazy"
           >
