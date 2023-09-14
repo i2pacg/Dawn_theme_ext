@@ -161,7 +161,7 @@
           >
             <div class="slider-text">
               <h1 class="product-title">
-                {% if product.metafields.svg.title %}
+                {% if product.metafields.svg.title != blank %}
                   {{ product.metafields.svg.title }}
                 {% else %}
                   {{ product.title | escape }}
