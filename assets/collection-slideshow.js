@@ -180,7 +180,6 @@ async function init() {
     }, 2200);
 
     $(infoSlide).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        console.log('beforeChange', slick.$slides[nextSlide]);
         const nextSlideElement = slick.$slides[nextSlide];
         if (nextSlideElement.querySelector(".product-title svg")) {
             const shuffle = (array) => {
@@ -198,7 +197,8 @@ async function init() {
                 easing: 'easeInOutSine',
                 delay: function (el, i) { return i * 75 },
                 duration: 400,
-            }, 600);
+            });
+            console.log('beforeChange');
         }
         else anime({
             targets: nextSlideElement.querySelector(".product-title"),
