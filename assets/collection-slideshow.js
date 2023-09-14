@@ -239,6 +239,7 @@ async function init() {
                     translateY: [100, 0],
                     easing: 'easeInOutSine',
                     duration: 400,
+                    delay: 300,
                 })
             } catch (error) {
                 console.log("error", error);
@@ -259,7 +260,7 @@ async function init() {
             translateY: [100, 0],
             easing: 'easeInOutSine',
             duration: 400,
-        }, 2600)
+        }, 2900)
     } catch (error) {
         console.log("error", error);
     }
