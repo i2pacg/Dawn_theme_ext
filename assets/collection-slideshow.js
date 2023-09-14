@@ -122,7 +122,7 @@ const shuffle = (array) => {
 };
 let initVideoSlickPromise = new Promise(resolve => {
     $('.slider-for').on('init', function (event, slick, currentSlide, nextSlide) {
-        resolve("for I am done");
+        resolve(this);
     });
     $('.slider-for').slick({
         slidesToShow: 1,
@@ -162,11 +162,10 @@ let initInfoSlickPromise = new Promise(resolve => {
 init();
 async function init() {
     console.log("init");
-    const s = await initVideoSlickPromise;
+    const vidSlide = await initVideoSlickPromise;
     const navSlide = await initNavSlickPromise;
     const infoSlide = await initInfoSlickPromise;
     try {
-        console.log("navSlide ", navSlide);
         tl.add({
             targets: navSlide.querySelector("[data-slick-index='0']"),
             opacity: [0, 1],
