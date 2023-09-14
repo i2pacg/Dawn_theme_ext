@@ -190,7 +190,7 @@ async function init() {
                 }
                 return array;
             };
-            console.log(JSON.parse(JSON.stringify(nextSlideElement.querySelector(".product-title svg path"))))
+            console.log(JSON.parse(JSON.stringify(nextSlideElement.querySelectorAll(".product-title svg path"))))
             let paths = shuffle(infoSlide.querySelectorAll("[data-slick-index='0'] .product-title svg path"));
             console.log(JSON.parse(JSON.stringify(paths)))
             anime({
