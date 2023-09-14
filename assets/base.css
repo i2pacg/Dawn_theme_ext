@@ -938,6 +938,7 @@ summary::-webkit-details-marker {
   flex-grow: 1;
   flex-shrink: 0;
   padding: 8px;
+  background-color: #fff8e1;
 }
 
 @media screen and (min-width: 750px) {
