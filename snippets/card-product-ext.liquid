@@ -39,17 +39,11 @@
     if ratio == 0 or ratio == null
       assign ratio = 1
     endif
+    assign savings = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round | append: '%'
   -%}
   <a
     href="{{ product.url }}"
   >
-    {%- assign savings = product.compare_at_price
-      | minus: product.price
-      | times: 100.0
-      | divided_by: product.compare_at_price
-      | round
-      | append: '%'
-    -%}
     <div class="product-content">
       {% if savings != '0%' %}
         <div class="product-card-savings">
