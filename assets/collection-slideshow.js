@@ -198,6 +198,7 @@ async function init() {
                 easing: 'easeInOutSine',
                 delay: function (el, i) { return i * 75 },
                 duration: 400,
+                delay: 400,
             });
         }
         else anime({
