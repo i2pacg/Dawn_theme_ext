@@ -167,14 +167,15 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
-                  {%
-                    render 'card-product-ext',
+                  {% render 'card-product-ext',
                     product: product,
-                    savings_option: "top",
+                    savings_option: 'top',
                     show_vendor: section.settings.show_vendor,
                     show_rating: section.settings.show_rating,
+                    show_secondary_image: section.settings.show_secondary_image,
                     title_option: 'bottom',
                     show_quick_add: section.settings.enable_quick_add,
+                    section_id: section.id
                   %}
 
                   {% render 'card-product',
