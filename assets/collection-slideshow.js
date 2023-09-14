@@ -186,8 +186,13 @@ async function init() {
                 return array.sort(() => Math.random() - 0.5);
             };
             console.log(nextSlideElement.querySelectorAll(".product-title svg path"));
-            let paths = shuffle(nextSlideElement.querySelectorAll(".product-title svg path"));
-            console.log(paths);
+            try {
+                let paths = shuffle(nextSlideElement.querySelectorAll(".product-title svg path"));
+                console.log(paths);
+            } catch (error) {
+
+            }
+
             anime({
                 targets: paths,
                 fillOpacity: [0, 1],
