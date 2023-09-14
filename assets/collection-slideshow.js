@@ -187,9 +187,10 @@ async function init() {
             };
             console.log(nextSlideElement.querySelectorAll(".product-title svg path"));
             try {
-                let paths = shuffle(nextSlideElement.querySelectorAll(".product-title svg path"));
+                let paths = shuffle(Array.from(nextSlideElement.querySelectorAll(".product-title svg path")));
                 console.log(paths);
             } catch (error) {
+                console.log("error", error);
 
             }
 
