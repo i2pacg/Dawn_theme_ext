@@ -82,7 +82,8 @@
             240px
           "
           loading="lazy"
-          height="320"
+          width="{{ product.featured_media.width }}"
+          height="{{ product.featured_media.height }}"
         >
         {%- if product.media[1] != null and show_secondary_image -%}
           <img
