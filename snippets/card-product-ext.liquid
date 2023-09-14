@@ -137,9 +137,14 @@
         >
       {% endcomment %}
     </div>
+    {%- if show_vendor -%}
+      <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+      <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
+    {%- endif -%}
     <h1 class="product-title">
       {{ product.title | escape }}
     </h1>
+
     <div class="product-buttons">
       {%- if show_quick_add -%}
         <div class="quick-add no-js-hidden">
