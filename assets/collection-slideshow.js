@@ -181,50 +181,51 @@ async function init() {
 
     $(infoSlide).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         const nextSlideElement = slick.$slides[nextSlide];
-        if (nextSlideElement.querySelector(".product-title svg")) {
-            const shuffle = (array) => {
-                return array.sort(() => Math.random() - 0.5);
-            };
-            console.log(nextSlideElement.querySelectorAll(".product-title svg path"));
-            try {
+        try {
+            if (nextSlideElement.querySelector(".product-title svg")) {
+                const shuffle = (array) => {
+                    return array.sort(() => Math.random() - 0.5);
+                };
+                console.log(nextSlideElement.querySelectorAll(".product-title svg path"));
                 let paths = shuffle(Array.from(nextSlideElement.querySelectorAll(".product-title svg path")));
                 console.log(paths);
-            } catch (error) {
-                console.log("error", error);
 
+
+                anime({
+                    targets: paths,
+                    fillOpacity: [0, 1],
+                    strokeDashoffset: [anime.setDashoffset, 0],
+                    easing: 'easeInOutSine',
+                    delay: function (el, i) { return i * 75 + 400 },
+                    duration: 400,
+                });
             }
+            else anime({
+                targets: nextSlideElement.querySelector(".product-title"),
+                opacity: [0, 1],
+                translateX: [-100, 0],
+                easing: 'easeInOutSine',
+                duration: 400,
+            })
 
             anime({
-                targets: paths,
-                fillOpacity: [0, 1],
-                strokeDashoffset: [anime.setDashoffset, 0],
+                targets: nextSlideElement.querySelector(".slider-buttons"),
+                opacity: [0, 1],
+                translateX: [100, 0],
                 easing: 'easeInOutSine',
-                delay: function (el, i) { return i * 75 + 400 },
                 duration: 400,
-            });
-        }
-        else anime({
-            targets: nextSlideElement.querySelector(".product-title"),
-            opacity: [0, 1],
-            translateX: [-100, 0],
-            easing: 'easeInOutSine',
-            duration: 400,
-        })
+            })
+            anime({
+                targets: nextSlideElement.querySelector(".product-description"),
+                opacity: [0, 1],
+                translateY: [100, 0],
+                easing: 'easeInOutSine',
+                duration: 400,
+            })
+        } catch (error) {
+            console.log("error", error);
 
-        anime({
-            targets: nextSlideElement.querySelector(".slider-buttons"),
-            opacity: [0, 1],
-            translateX: [100, 0],
-            easing: 'easeInOutSine',
-            duration: 400,
-        })
-        anime({
-            targets: nextSlideElement.querySelector(".product-description"),
-            opacity: [0, 1],
-            translateY: [100, 0],
-            easing: 'easeInOutSine',
-            duration: 400,
-        })
+        }
 
     });
     if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg")) {
