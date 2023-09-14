@@ -182,6 +182,29 @@ async function init() {
             duration: 400,
         }, 2200);
 
+        if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg")) {
+            try {
+                tl.add({
+                    targets: shuffle(Array.from(infoSlide.querySelectorAll("[data-slick-index='0'] .product-title svg path"))),
+                    fillOpacity: [0, 1],
+                    strokeDashoffset: [anime.setDashoffset, 0],
+                    easing: 'easeInOutSine',
+                    delay: function (el, i) { return i * 100 },
+                    duration: 400,
+                }, 2600);
+            } catch (error) {
+                console.log("error", error);
+            }
+        }
+        else
+            tl.add({
+                targets: infoSlide.querySelector("[data-slick-index='0'] .product-title"),
+                opacity: [0, 1],
+                translateX: [-50, 0],
+                easing: 'easeInOutSine',
+                duration: 400,
+            }, 2600);
+
         $(infoSlide).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             const nextSlideElement = slick.$slides[nextSlide];
             try {
@@ -223,29 +246,6 @@ async function init() {
             }
 
         });
-        if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg")) {
-            try {
-                tl.add({
-                    targets: shuffle(Array.from(infoSlide.querySelectorAll("[data-slick-index='0'] .product-title svg path"))),
-                    fillOpacity: [0, 1],
-                    strokeDashoffset: [anime.setDashoffset, 0],
-                    easing: 'easeInOutSine',
-                    delay: function (el, i) { return i * 100 },
-                    duration: 400,
-                }, 2600);
-            } catch (error) {
-                console.log("error", error);
-            }
-        }
-        else
-            tl.add({
-                targets: infoSlide.querySelector("[data-slick-index='0'] .product-title"),
-                opacity: [0, 1],
-                translateX: [-50, 0],
-                easing: 'easeInOutSine',
-                duration: 400,
-            }, 2600);
-
         tl.add({
             targets: infoSlide.querySelector("[data-slick-index='0'] .slider-buttons"),
             opacity: [0, 1],
