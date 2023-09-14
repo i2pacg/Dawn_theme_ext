@@ -183,11 +183,7 @@ async function init() {
         const nextSlideElement = slick.$slides[nextSlide];
         if (nextSlideElement.querySelector(".product-title svg")) {
             const shuffle = (array) => {
-                for (let i = array.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [array[i], array[j]] = [array[j], array[i]];
-                }
-                return array;
+                return array.sort(() => Math.random() - 0.5);
             };
             console.log(nextSlideElement.querySelectorAll(".product-title svg path"));
             let paths = shuffle(nextSlideElement.querySelectorAll(".product-title svg path"));
