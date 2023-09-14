@@ -18,6 +18,10 @@
    margin-top: 4px;
  }
 
+ .product-card .product-vendor {
+   margin-top: 4px;
+ }
+
  .product-card .product-picture {
    position: relative;
    overflow: hidden;
@@ -74,10 +78,12 @@
    overflow: hidden;
    position: relative;
    display: flex;
+   transition: all 0.3s ease-in-out;
  }
 
  .product-card:hover .product-content {
    box-shadow: 1px 1px 16px #00000080;
+
  }
 
  .product-card.title-option-top.savings-option-top .product-content .product-card-savings {
