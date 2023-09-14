@@ -1,3 +1,5 @@
+/* Optmize css and order and remove duplicates */
+
 [data-aos^=fade][data-aos^=fade] {
     opacity: 0;
     transition-property: opacity, transform
@@ -221,7 +223,7 @@
 }
 
 .collection-slideshow .slider-content .slider-content-card .slider-content-title svg {
-    height: 48px;
+    height: 32px;
     width: unset;
 }
 
