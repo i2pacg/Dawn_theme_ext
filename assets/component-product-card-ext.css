@@ -14,13 +14,9 @@
  }
 
 
- .product-card .product-title {
-   margin-top: 2px;
- }
+ .product-card .product-title {}
 
- .product-card .product-vendor {
-   margin-top: 4px;
- }
+ .product-card .product-vendor {}
 
  .product-card .product-picture {
    position: relative;
