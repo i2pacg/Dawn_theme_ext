@@ -224,6 +224,7 @@ async function init() {
                     translateX: [-100, 0],
                     easing: 'easeInOutSine',
                     duration: 400,
+                    delay: 400,
                 })
 
                 anime({
