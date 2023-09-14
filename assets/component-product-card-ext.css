@@ -33,6 +33,8 @@
    overflow: hidden;
    border-radius: 16px;
    width: 100%;
+   height: 100%;
+   object-fit: cover;
  }
 
  .product-card .product-picture img:nth-child(2) {
