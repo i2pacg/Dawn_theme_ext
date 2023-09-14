@@ -170,13 +170,39 @@
               <div
                 class="product-description"
               >
-                {%- if product.metafields.description.short != blank -%}
-                  {{ product.metafields.description.short | truncate: 175, '. . . ' }}
-                {%- elsif product.description != blank -%}
-                  {{ product.description | truncate: 175, '. . . ' }}
-                {% endif %}
-                {%- if product.description != blank and product.description.size > 175 -%}
-                {% endif %}
+                <span>
+                  {%- if product.metafields.description.short != blank -%}
+                    {{ product.metafields.description.short | truncate: 175, '. . . ' }}
+                  {%- elsif product.description != blank -%}
+                    {{ product.description | truncate: 175, '. . . ' }}
+                  {% endif %}
+                  {%- if product.description != blank and product.description.size > 175 -%}
+                    <modal-opener
+                      class="product-popup-modal__opener no-js-hidden quick-add-hidden"
+                      data-modal="#PopupModal-{{ product.id }}"
+                      {{ shopify_attributes }}
+                    >
+                      <button
+                        id="ProductPopup-{{ product.id }}"
+                        class="product-popup-modal__button link"
+                        type="button"
+                        style="text-decoration: unset;display: inline-block;"
+                        aria-haspopup="dialog"
+                      >
+                        ... read more
+                      </button>
+                    </modal-opener>
+                  {% endif %}
+                </span>
+                {% comment %}
+                  {%- if product.metafields.description.short != blank -%}
+                    {{ product.metafields.description.short | truncate: 175, '. . . ' }}
+                  {%- elsif product.description != blank -%}
+                    {{ product.description | truncate: 175, '. . . ' }}
+                  {% endif %}
+                  {%- if product.description != blank and product.description.size > 175 -%}
+                  {% endif %}
+                {% endcomment %}
               </div>
             </div>
             <div class="quick-add no-js-hidden slider-buttons">
