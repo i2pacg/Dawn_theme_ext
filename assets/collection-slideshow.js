@@ -268,8 +268,10 @@ async function init() {
         console.log("error", error);
     }
 
-    tl.play();
 
+    setTimeout(() => {
+        tl.play();
+    }, 300);
 }
 /* 
 initSlick();
