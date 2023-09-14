@@ -1,6 +1,7 @@
 .footer {
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
   z-index: 1;
+  position: relative;
 }
 
 .footer:not(.color-background-1) {
