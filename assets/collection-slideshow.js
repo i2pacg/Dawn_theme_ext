@@ -182,15 +182,26 @@ async function init() {
     $(infoSlide).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         console.log('beforeChange', slick.$slides[nextSlide]);
         const nextSlideElement = slick.$slides[nextSlide];
-        if (nextSlideElement.querySelector(".product-title svg"))
+        if (nextSlideElement.querySelector(".product-title svg")) {
+            const shuffle = (array) => {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            };
+            console.log(JSON.parse(JSON.stringify(nextSlideElement.querySelector(".product-title svg path"))))
+            let paths = shuffle(infoSlide.querySelectorAll("[data-slick-index='0'] .product-title svg path"));
+            console.log(JSON.parse(JSON.stringify(paths)))
             anime({
-                targets: nextSlideElement.querySelectorAll(".product-title svg path"),
+                targets: paths,
                 fillOpacity: [0, 1],
                 strokeDashoffset: [anime.setDashoffset, 0],
                 easing: 'easeInOutSine',
                 delay: function (el, i) { return i * 75 },
                 duration: 400,
             });
+        }
         else anime({
             targets: nextSlideElement.querySelector(".product-title"),
             opacity: [0, 1],
