@@ -226,16 +226,9 @@ async function init() {
 
     });
     if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg")) {
-        const shuffle = (array) => {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        };
-        let paths = shuffle(infoSlide.querySelectorAll("[data-slick-index='0'] .product-title svg path"));
+
         tl.add({
-            targets: paths,
+            targets: shuffle(infoSlide.querySelectorAll("[data-slick-index='0'] .product-title svg path")),
             fillOpacity: [0, 1],
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: 'easeInOutSine',
