@@ -117,7 +117,9 @@ console.log("animObjects", animObjects);
 
 
 //init slick slider
-
+const shuffle = (array) => {
+    return array.sort(() => Math.random() - 0.5);
+};
 let initVideoSlickPromise = new Promise(resolve => {
     $('.slider-for').on('init', function (event, slick, currentSlide, nextSlide) {
         resolve("for I am done");
@@ -183,9 +185,7 @@ async function init() {
         const nextSlideElement = slick.$slides[nextSlide];
         try {
             if (nextSlideElement.querySelector(".product-title svg")) {
-                const shuffle = (array) => {
-                    return array.sort(() => Math.random() - 0.5);
-                };
+
 
                 anime({
                     targets: shuffle(Array.from(nextSlideElement.querySelectorAll(".product-title svg path"))),
