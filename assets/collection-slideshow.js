@@ -228,7 +228,6 @@ async function init() {
 
         tl.add({
             targets: shuffle(infoSlide.querySelectorAll("[data-slick-index='0'] .product-title svg path")),
-            targets: paths,
             fillOpacity: [0, 1],
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: 'easeInOutSine',
