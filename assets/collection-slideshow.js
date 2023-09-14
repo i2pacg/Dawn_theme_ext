@@ -186,6 +186,8 @@ async function init() {
         const nextSlideElement = slick.$slides[nextSlide];
         try {
             if (nextSlideElement.querySelector(".product-title svg")) {
+
+
                 anime({
                     targets: shuffle(Array.from(nextSlideElement.querySelectorAll(".product-title svg path"))),
                     fillOpacity: [0, 1],
@@ -224,13 +226,20 @@ async function init() {
 
     });
     if (infoSlide.querySelector("[data-slick-index='0'] .product-title svg")) {
-
+        const shuffle = (array) => {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        };
+        let paths = ;
         tl.add({
             targets: shuffle(infoSlide.querySelectorAll("[data-slick-index='0'] .product-title svg path")),
             fillOpacity: [0, 1],
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: 'easeInOutSine',
-            delay: function (el, i) { return i * 75 + 200 },
+            delay: function (el, i) { return i * 150 },
             duration: 400,
         }, 2600);
     }
@@ -249,14 +258,14 @@ async function init() {
         translateX: [100, 0],
         easing: 'easeInOutSine',
         duration: 400,
-    }, 2900)
+    }, 2600)
     tl.add({
         targets: infoSlide.querySelector("[data-slick-index='0'] .product-description"),
         opacity: [0, 1],
         translateY: [100, 0],
         easing: 'easeInOutSine',
         duration: 400,
-    }, 2900)
+    }, 2600)
 
     setTimeout(() => {
         tl.play();
