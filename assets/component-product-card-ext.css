@@ -19,7 +19,8 @@
  }
 
  .product-card .product-vendor {
-   margin: 0px;
+   margin: 0;
+   text-align: center;
  }
 
  .product-card .product-picture {
