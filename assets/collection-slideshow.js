@@ -191,9 +191,8 @@ async function init() {
                 return array;
             };
             let paths = shuffle(nextSlideElement.querySelectorAll(".product-title svg path"));
-            paths = shuffle(paths);
             anime({
-                targets: nextSlideElement.querySelectorAll(".product-title svg path"),
+                targets: paths,
                 fillOpacity: [0, 1],
                 strokeDashoffset: [anime.setDashoffset, 0],
                 easing: 'easeInOutSine',
