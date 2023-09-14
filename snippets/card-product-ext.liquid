@@ -65,32 +65,16 @@
           savings_option: savings_option
         %}
       </div>
-
-      <img
-        src="{{ product.featured_media | image_url: width: 240 }}"
+      <div
+        class="product-picture"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-        class="product-picture shape--{{ image_shape }}"
-        srcset="
-          {{ product.featured_media | image_url: width: 240 }},
-          {{ product.featured_media | image_url: width: 220 }},
-          {{ product.featured_media | image_url: width: 180 }}
-        "
-        sizes="
-          (max-width: 375) 180px,
-          (max-width: 500) 220px,
-          240px
-        "
-        loading="lazy"
-        height="320"
       >
-      {%- if product.media[1] != null and show_secondary_image -%}
         <img
           src="{{ product.featured_media | image_url: width: 240 }}"
-          class="product-picture product-picture-secondary shape--{{ image_shape }}"
           srcset="
-            {{ product.media[1] | image_url: width: 240 }},
-            {{ product.media[1] | image_url: width: 220 }},
-            {{ product.media[1] | image_url: width: 180 }}
+            {{ product.featured_media | image_url: width: 240 }},
+            {{ product.featured_media | image_url: width: 220 }},
+            {{ product.featured_media | image_url: width: 180 }}
           "
           sizes="
             (max-width: 375) 180px,
@@ -98,8 +82,25 @@
             240px
           "
           loading="lazy"
+          height="320"
         >
-      {%- endif -%}
+        {%- if product.media[1] != null and show_secondary_image -%}
+          <img
+            src="{{ product.featured_media | image_url: width: 240 }}"
+            srcset="
+              {{ product.media[1] | image_url: width: 240 }},
+              {{ product.media[1] | image_url: width: 220 }},
+              {{ product.media[1] | image_url: width: 180 }}
+            "
+            sizes="
+              (max-width: 375) 180px,
+              (max-width: 500) 220px,
+              240px
+            "
+            loading="lazy"
+          >
+        {%- endif -%}
+      </div>
       {% comment %}
         srcset=”{{ product.featured_media | image_url: width: 1200 }},
         {{ product.featured_media | image_url: width: 1200 }} ”
