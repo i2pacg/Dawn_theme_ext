@@ -175,12 +175,8 @@
 
 .collection-slideshow .slider-content .slider-content-card:before {
     background: #ffefba;
-    /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #ffffff, #ffefba);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,
-            #ffffff,
-            #ffefba);
+    background: linear-gradient(to bottom, #ffffff, #ffefba);
     content: '';
     position: absolute;
     top: 0;
