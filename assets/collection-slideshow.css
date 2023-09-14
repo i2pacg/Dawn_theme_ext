@@ -69,7 +69,9 @@
     overflow: hidden;
 }
 
-.collection-slideshow .slider-for {}
+.collection-slideshow .slider-for {
+    position: fixed;
+}
 
 .collection-slideshow .slider-for .slide-full {
     margin: 0 auto;
