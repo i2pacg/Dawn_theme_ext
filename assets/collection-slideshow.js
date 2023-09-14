@@ -182,14 +182,6 @@ async function init() {
     $(infoSlide).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         console.log('beforeChange', slick.$slides[nextSlide]);
         const nextSlideElement = slick.$slides[nextSlide];
-        const shuffle = (array) => {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        };
-        let paths = shuffle(infoSlide.querySelectorAll("[data-slick-index='0'] .product-title svg path"));
         if (nextSlideElement.querySelector(".product-title svg"))
             anime({
                 targets: nextSlideElement.querySelectorAll(".product-title svg path"),
