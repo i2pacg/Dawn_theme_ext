@@ -35,7 +35,10 @@
   <a
     href="{{ product.url }}"
   >
-    <div class="product-content">
+    <div
+      class="product-content"
+      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+    >
       {% if savings != '0%' %}
         <div class="product-card-savings">
           <span
@@ -58,6 +61,7 @@
       </div>
       <div
         class="product-picture"
+        style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
         <img
           src="{{ product.featured_media | image_url: width: 240 }}"
