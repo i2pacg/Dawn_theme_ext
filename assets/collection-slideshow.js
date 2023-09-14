@@ -189,16 +189,17 @@ async function init() {
                 }
                 return array;
             };
+            console.log(nextSlideElement.querySelectorAll(".product-title svg path"));
             let paths = shuffle(nextSlideElement.querySelectorAll(".product-title svg path"));
+            console.log(paths);
             anime({
                 targets: paths,
                 fillOpacity: [0, 1],
                 strokeDashoffset: [anime.setDashoffset, 0],
                 easing: 'easeInOutSine',
-                delay: function (el, i) { return i * 75 },
+                delay: function (el, i) { return i * 75 + 400 },
                 duration: 400,
             });
-            console.log('beforeChange');
         }
         else anime({
             targets: nextSlideElement.querySelector(".product-title"),
