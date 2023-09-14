@@ -445,7 +445,28 @@
     </div>
   </div>
 </div>
-
+<modal-dialog id="PopupModal-{{ product.id }}" class="product-popup-modal">
+  <div
+    role="dialog"
+    aria-label="{{ product.title }}"
+    aria-modal="true"
+    class="product-popup-modal__content"
+    tabindex="-1"
+  >
+    <button
+      id="ModalClose-{{ product.id }}"
+      type="button"
+      class="product-popup-modal__toggle"
+      aria-label="{{ 'accessibility.close' | t }}"
+    >
+      {% render 'icon-close' %}
+    </button>
+    <div class="product-popup-modal__content-info">
+      <h1 class="h2">{{ product.title }}</h1>
+      {{ product.description }}
+    </div>
+  </div>
+</modal-dialog>
 <script src="{{ 'collection-slideshow.js' | asset_url }}" defer="defer"></script>
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
