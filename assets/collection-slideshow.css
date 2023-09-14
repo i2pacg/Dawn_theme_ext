@@ -181,7 +181,7 @@
     background: -webkit-linear-gradient(to bottom, #ffffff, #ffefba);
     background: linear-gradient(to bottom, #ffffff, #ffefba);
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
