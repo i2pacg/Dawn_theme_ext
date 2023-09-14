@@ -232,7 +232,11 @@ async function init() {
              }
              return array;
          }; */
-        let paths = shuffle(infoSlide.querySelectorAll("[data-slick-index='0'] .product-title svg path"));
+        try {
+            let paths = shuffle(infoSlide.querySelectorAll("[data-slick-index='0'] .product-title svg path"));
+        } catch (error) {
+            console.log("error", error)
+        }
         tl.add({
             targets: paths,
             fillOpacity: [0, 1],
