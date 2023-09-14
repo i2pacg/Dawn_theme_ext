@@ -85,24 +85,26 @@
           width="{{ product.featured_media.width }}"
           height="{{ product.featured_media.height }}"
         >
-        {%- if product.media[1] != null and show_secondary_image -%}
-          <img
-            src="{{ product.featured_media | image_url: width: 240 }}"
-            srcset="
-              {{ product.media[1] | image_url: width: 240 }},
-              {{ product.media[1] | image_url: width: 220 }},
-              {{ product.media[1] | image_url: width: 180 }}
-            "
-            sizes="
-              (max-width: 375) 180px,
-              (max-width: 500) 220px,
-              240px
-            "
-            loading="lazy"
-            width="{{ product.media[1].width }}"
-            height="{{ product.media[1].height }}"
-          >
-        {%- endif -%}
+        {% comment %}
+          {%- if product.media[1] != null and show_secondary_image -%}
+            <img
+              src="{{ product.featured_media | image_url: width: 240 }}"
+              srcset="
+                {{ product.media[1] | image_url: width: 240 }},
+                {{ product.media[1] | image_url: width: 220 }},
+                {{ product.media[1] | image_url: width: 180 }}
+              "
+              sizes="
+                (max-width: 375) 180px,
+                (max-width: 500) 220px,
+                240px
+              "
+              loading="lazy"
+              width="{{ product.media[1].width }}"
+              height="{{ product.media[1].height }}"
+            >
+          {%- endif -%}
+        {% endcomment %}
       </div>
       {% comment %}
         srcset=”{{ product.featured_media | image_url: width: 1200 }},
