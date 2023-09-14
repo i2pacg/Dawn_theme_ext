@@ -186,8 +186,6 @@ async function init() {
         const nextSlideElement = slick.$slides[nextSlide];
         try {
             if (nextSlideElement.querySelector(".product-title svg")) {
-
-
                 anime({
                     targets: shuffle(Array.from(nextSlideElement.querySelectorAll(".product-title svg path"))),
                     fillOpacity: [0, 1],
@@ -243,7 +241,7 @@ async function init() {
             translateX: [-50, 0],
             easing: 'easeInOutSine',
             duration: 400,
-        }, 2900);
+        }, 2600);
 
     tl.add({
         targets: infoSlide.querySelector("[data-slick-index='0'] .slider-buttons"),
@@ -251,14 +249,14 @@ async function init() {
         translateX: [100, 0],
         easing: 'easeInOutSine',
         duration: 400,
-    }, 2600)
+    }, 2900)
     tl.add({
         targets: infoSlide.querySelector("[data-slick-index='0'] .product-description"),
         opacity: [0, 1],
         translateY: [100, 0],
         easing: 'easeInOutSine',
         duration: 400,
-    }, 2600)
+    }, 2900)
 
     setTimeout(() => {
         tl.play();
