@@ -30,16 +30,16 @@
 <style></style>
 <div class="product-card {{card_class}} title-option-{{ title_option }} savings-option-{{ savings_option }}">
   {%- liquid
+    assign savings = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round | append: '%'
     assign ratio = 1
-    if card_product.featured_media and media_aspect_ratio == 'portrait'
+    if product.featured_media and media_aspect_ratio == 'portrait'
       assign ratio = 0.8
-    elsif card_product.featured_media and media_aspect_ratio == 'adapt'
+    elsif product.featured_media and media_aspect_ratio == 'adapt'
       assign ratio = card_product.featured_media.aspect_ratio
     endif
     if ratio == 0 or ratio == null
       assign ratio = 1
     endif
-    assign savings = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round | append: '%'
   -%}
   <a
     href="{{ product.url }}"
@@ -65,15 +65,10 @@
           savings_option: savings_option
         %}
       </div>
-      {% comment %}
-        {{-
-          product.featured_media
-          | image_url: width: 240, height: 320
-          | image_tag: alt: product.featured_media.alt, widths: '240px, 200px', sizes: '(min-width: 750px) 240px, 200px'
-        -}}
-      {% endcomment %}
+
       <img
         src="{{ product.featured_media | image_url: width: 240 }}"
+        style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
         class="product-picture shape--{{ image_shape }}"
         srcset="
           {{ product.featured_media | image_url: width: 240 }},
@@ -91,6 +86,7 @@
       {%- if product.media[1] != null and show_secondary_image -%}
         <img
           src="{{ product.featured_media | image_url: width: 240 }}"
+          style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
           class="product-picture product-picture-secondary shape--{{ image_shape }}"
           srcset="
             {{ product.media[1] | image_url: width: 240 }},
