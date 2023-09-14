@@ -22,7 +22,6 @@
  }
 
  .product-card .product-picture {
-
    width: 100%;
  }
 
@@ -30,6 +29,7 @@
    position: relative;
    overflow: hidden;
    border-radius: 16px;
+   width: 100%;
  }
 
  .product-card .product-picture img:nth-child(2) {
