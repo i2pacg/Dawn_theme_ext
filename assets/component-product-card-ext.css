@@ -91,7 +91,7 @@
 
  .product-card:hover .product-content {
    box-shadow: 1px 1px 16px #00000080;
-   margin-bottom: 16px;
+   margin-bottom: 8px;
    transform: translateY(-8px);
  }
 
