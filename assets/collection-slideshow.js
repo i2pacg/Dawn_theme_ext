@@ -157,6 +157,9 @@ let initInfoSlickPromise = new Promise(resolve => {
     });
 })
 init();
+const shuffle = (array) => {
+    return array.sort(() => Math.random() - 0.5);
+};
 async function init() {
     console.log("init");
     const s = await initVideoSlickPromise;
@@ -183,16 +186,10 @@ async function init() {
         const nextSlideElement = slick.$slides[nextSlide];
         try {
             if (nextSlideElement.querySelector(".product-title svg")) {
-                const shuffle = (array) => {
-                    return array.sort(() => Math.random() - 0.5);
-                };
-                console.log(nextSlideElement.querySelectorAll(".product-title svg path"));
-                let paths = shuffle(Array.from(nextSlideElement.querySelectorAll(".product-title svg path")));
-                console.log(paths);
 
 
                 anime({
-                    targets: paths,
+                    targets: shuffle(Array.from(nextSlideElement.querySelectorAll(".product-title svg path"))),
                     fillOpacity: [0, 1],
                     strokeDashoffset: [anime.setDashoffset, 0],
                     easing: 'easeInOutSine',
