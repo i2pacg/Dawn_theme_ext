@@ -4,12 +4,24 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "bcd2604e-b698-4f28-b21e-6dc6154504e8": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "main-menu"
+          }
+        }
+      },
+      "block_order": [
+        "bcd2604e-b698-4f28-b21e-6dc6154504e8"
+      ],
       "custom_css": [
 
       ],
       "settings": {
         "color_scheme": "scheme-91669cbb-597f-4ef7-bd49-362ea6f57818",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
         "show_social": true,
@@ -18,8 +30,8 @@
         "payment_enable": false,
         "show_policy": true,
         "margin_top": 0,
-        "padding_top": 16,
-        "padding_bottom": 16
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
