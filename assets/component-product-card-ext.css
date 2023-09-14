@@ -21,14 +21,14 @@
    text-align: center;
  }
 
- .product-card .product-picture {
+ .product-card .product-picture img {
    position: relative;
    overflow: hidden;
    border-radius: 16px;
    width: 100%;
  }
 
- .product-card .product-picture.product-picture-secondary {
+ .product-card .product-picture img:nth-child(1) {
    position: absolute;
    left: 0;
    top: 0;
@@ -40,7 +40,7 @@
    transition: all 0.3s ease-in-out;
  }
 
- .product-card a:hover .product-picture.product-picture-secondary {
+ .product-card a:hover .product-picture img:nth-child(1) {
    opacity: 1;
  }
 
