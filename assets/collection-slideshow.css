@@ -150,7 +150,7 @@
 }
 
 .collection-slideshow .slider-content {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -304,7 +304,7 @@ hr.half-divider {
 
 .slider-info .slider-text .product-title svg {
     width: unset;
-    height: 24px;
+    height: 20px;
 }
 
 @media screen and (max-width: 540px) {
