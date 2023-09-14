@@ -166,7 +166,6 @@ async function init() {
     const navSlide = await initNavSlickPromise;
     const infoSlide = await initInfoSlickPromise;
     try {
-        vidSlide.querySelector("[data-slick-index='0'] video").play();
         tl.add({
             targets: navSlide.querySelector("[data-slick-index='0']"),
             opacity: [0, 1],
