@@ -170,7 +170,7 @@
     border-radius: 32px;
     pointer-events: all;
     overflow: hidden;
-
+    margin-top: 122px;
 }
 
 .collection-slideshow .slider-content .slider-content-card:before {
@@ -189,13 +189,14 @@
 @media screen and (min-width: 576px) {
     .collection-slideshow .slider-content .slider-content-card {
         max-width: 90vw;
+        margin-top: unset;
     }
 }
 
 @media screen and (min-width: 768px) {
     .collection-slideshow .slider-content .slider-content-card {
         max-width: 75vw;
-        margin-top: 122px;
+        margin-top: unset;
     }
 }
 
