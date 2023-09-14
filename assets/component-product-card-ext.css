@@ -44,6 +44,11 @@
    opacity: 1;
  }
 
+ .product-card.product-card-hover:hover .product-content {
+   box-shadow: 1px 1px 16px #00000080;
+   margin-bottom: 8px;
+   transform: translateY(-8px);
+ }
 
 
  @media screen and (max-width: 540px) {
@@ -87,11 +92,6 @@
    margin-bottom: 4px;
  }
 
- .product-card.product-card-hover:hover .product-content {
-   box-shadow: 1px 1px 16px #00000080;
-   margin-bottom: 8px;
-   transform: translateY(-8px);
- }
 
  .product-card.title-option-top.savings-option-top .product-content .product-card-savings {
    top: 47px;
