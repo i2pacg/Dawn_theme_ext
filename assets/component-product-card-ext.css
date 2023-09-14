@@ -28,7 +28,7 @@
    width: 100%;
  }
 
- .product-card .product-picture img:nth-child(1) {
+ .product-card .product-picture img:nth-child(2) {
    position: absolute;
    left: 0;
    top: 0;
@@ -40,7 +40,7 @@
    transition: all 0.3s ease-in-out;
  }
 
- .product-card a:hover .product-picture img:nth-child(1) {
+ .product-card a:hover .product-picture img:nth-child(2) {
    opacity: 1;
  }
 
