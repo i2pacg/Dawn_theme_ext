@@ -73,16 +73,14 @@
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
         <img
-          src="{{ product.featured_media | image_url: width: 240 }}"
+          src="{{ product.featured_media | image_url: width: 220 }}"
           srcset="
-            {{ product.featured_media | image_url: width: 240 }},
             {{ product.featured_media | image_url: width: 220 }},
             {{ product.featured_media | image_url: width: 180 }}
           "
           sizes="
             (max-width: 375) 180px,
-            (max-width: 500) 220px,
-            240px
+            220px
           "
           loading="lazy"
         >
