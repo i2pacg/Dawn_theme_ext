@@ -405,7 +405,8 @@
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price-ext',
                   product: product,
-                  use_variant: true,
+                  show_compare_at_price: true,
+                      use_variant: true,
                   show_badges: true,
                   savings_option: 'bottom',
                   quantity: 1,
