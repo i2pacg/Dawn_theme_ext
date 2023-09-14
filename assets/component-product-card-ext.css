@@ -14,9 +14,13 @@
  }
 
 
- .product-card .product-title {}
+ .product-card .product-title {
+   margin: 0px;
+ }
 
- .product-card .product-vendor {}
+ .product-card .product-vendor {
+   margin: 0px;
+ }
 
  .product-card .product-picture {
    position: relative;
