@@ -243,7 +243,7 @@ async function init() {
             translateX: [-50, 0],
             easing: 'easeInOutSine',
             duration: 400,
-        }, 2600);
+        }, 2900);
 
     tl.add({
         targets: infoSlide.querySelector("[data-slick-index='0'] .slider-buttons"),
