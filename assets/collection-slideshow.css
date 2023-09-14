@@ -170,7 +170,6 @@
     border-radius: 32px;
     pointer-events: all;
     overflow: hidden;
-    padding-top: 120px;
 }
 
 .collection-slideshow .slider-content .slider-content-card:before {
