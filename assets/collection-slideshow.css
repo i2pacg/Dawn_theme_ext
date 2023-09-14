@@ -171,9 +171,7 @@
     pointer-events: all;
     margin-top: 122px;
     overflow: hidden;
-    background: #ffefba;
-    background: -webkit-linear-gradient(to bottom, #ffffff, #ffefba);
-    background: linear-gradient(to bottom, #ffffff, #ffefba50, #ffefba50);
+
 }
 
 .collection-slideshow .slider-content .slider-content-card:before {
