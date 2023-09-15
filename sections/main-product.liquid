@@ -1,10 +1,17 @@
 <style> 
- .grad-pat  {
+.grad-pat  {
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
-  left: 0;}
+  left: 0;}.grad-pat:after  {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  background:red;
+opacity:0.5}
   .grad-pat svg path {
     stroke-dasharray: 6;
     stroke-dashoffset: 6;
