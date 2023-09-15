@@ -263,6 +263,14 @@
                 </details>
               </div>
             {%- when 'quantity_selector' -%}
+              <style>
+                .quantity-price-container{
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+                }
+              </style>
             <div class="quantity-price-container">
               <div
                 id="Quantity-Form-{{ section.id }}"
