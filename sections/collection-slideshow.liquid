@@ -40,8 +40,16 @@
   assign sizes = '100vw'
   assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
 -%}
-
-<collection-slideshow> </collection-slideshow>
+<style>
+  .full-page {
+    height: 100vh;
+  }
+</style>
+<style>
+  collection-slideshow {
+  }
+</style>
+<collection-slideshow class="full-page"> </collection-slideshow>
 
 {% comment %}
   <script src="{{ 'collection-slideshow.js' | asset_url }}" defer="defer"></script>
