@@ -69,7 +69,6 @@
     overflow: hidden;
 }
 
-/* 
 .collection-slideshow .slider-for {
     position: fixed;
     top: 0;
@@ -85,7 +84,7 @@
     overflow: hidden;
     position: relative;
     height: 100vh;
-} */
+}
 
 .collection-slideshow .slider-for:after {
     content: '';
