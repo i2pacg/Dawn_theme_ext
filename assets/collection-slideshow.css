@@ -11,8 +11,6 @@
 .slick-next,
 .slick-prev {
     right: -8px;
-    background: #60450894;
-    border-radius: 50%;
     height: 32px;
     width: 32px;
     font-weight: 900;
@@ -54,24 +52,11 @@
         font-weight: 900;
         z-index: 5;
         right: -8px;
-        background: linear-gradient(90deg, #eadeba, transparent);
         /* border-radius: 50%; */
-        height: 100%;
         font-weight: 900;
         z-index: 5;
     }
 
-    .slick-prev {
-        left: -8px;
-        right: unset;
-    }
-
-    .slick-next:before,
-    .slick-prev:before {
-        content: '›';
-        font-family: unset;
-        pointer-events: none;
-    }
 }
 
 @media screen and (min-width: 768px) {}
