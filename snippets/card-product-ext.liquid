@@ -72,6 +72,11 @@
         class="product-picture"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
+        {{
+          product.featured_media
+          | image_url
+          | image_tag: loading: 'lazy', height: '100vh', sizes: sizes, widths: widths
+        -}}
         {% comment %}
           <img
             src="{{ product.featured_media | image_url: width: 420 }}"
