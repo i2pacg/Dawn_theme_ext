@@ -449,7 +449,11 @@
         style: 'object-fit: cover;'
     }}
   {%- elsif product.featured_media -%}
-    {{ product.featured_media | image_url | image_tag: loading: 'lazy', height: '100vh', sizes: sizes, widths: widths }}
+    {{
+      product.featured_media
+      | image_url
+      | image_tag: loading: 'lazy', height: '100%', width: '100%', sizes: sizes, widths: widths
+    }}
   {%- else -%}
     {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
   {%- endif -%}
