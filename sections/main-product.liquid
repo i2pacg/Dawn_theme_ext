@@ -8,19 +8,23 @@
 }
 
 .grad-pat:after {
-    content:"";
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: #eadeba;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0), #eadeba);
-    background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0), #eadeba);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0), #eadeba);
-    opacity: 0.85
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #eadeba;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), #eadeba);
+  background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0), #eadeba);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), #dededeb8);
+  opacity: .95;
 }
-
+.grad-pat svg  {
+  stroke-dasharray: 6;
+  stroke-dashoffset: 6;
+  animation: svgDraw 3s ease forwards;
+}
 .grad-pat svg path {
     stroke-dasharray: 6;
     stroke-dashoffset: 6;
