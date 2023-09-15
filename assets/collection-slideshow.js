@@ -269,7 +269,7 @@ async function init() {
 
     setTimeout(() => {
         tl.play();
-    }, 300); setTimeout(async () => {
+    }, 150); setTimeout(async () => {
         tl.play();
         await initVideoSlickPromise;
     }, 600);
