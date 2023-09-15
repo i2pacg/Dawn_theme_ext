@@ -43,7 +43,7 @@
 <style>
   .full-page {
     display: flex;
-    height: 100vh;
+    height: calc(100vh - var(--header-height));
     width: 100vw;
   }
 </style>
@@ -54,7 +54,7 @@
     flex-direction: column;
     flex-grow: 1;
     width: 100%;
-    height: calc(100% - (-1 * var(--header-height)));
+    height: 100%;
   }
 </style>
 <collection-slideshow class="full-page">
