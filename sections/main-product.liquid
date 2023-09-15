@@ -265,7 +265,7 @@
             {%- when 'quantity_selector' -%}
               <style>
              
-         {% comment %} 
+         
 .quantity-price-container {
   display: flex;
   flex-direction: column;
@@ -296,7 +296,7 @@
 
   .quantity-price-container .price-saving {
    }
-} {% endcomment %}
+}
 
               </style>
             <div class="quantity-price-container">
@@ -488,17 +488,7 @@
                 {%- endif -%}
 
               </div>
-              <div class="price-saving">
-                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                {%- render 'price-ext',
-                  product: product,
-                  show_compare_at_price: true,
-                  use_variant: true,
-                  show_badges: true,
-                  savings_option: 'bottom',
-                  price_class: 'price-ext price--large'
-                -%}
-              </div>
+          
               {%- if product.quantity_price_breaks_configured? -%}
                 <div class="volume-pricing-note">
                   <span>{{ 'products.product.volume_pricing.note' | t }}</span>
@@ -520,6 +510,17 @@
                 {%- endform -%}
               </div>
             </div>
+            <div class="price-saving" >
+              <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+             {%- render 'price-ext',
+               product: product,
+               show_compare_at_price: true,
+               use_variant: true,
+               show_badges: true,
+               savings_option: 'bottom',
+               price_class: 'price-ext price--large'
+             -%}
+           </div>
             </div>
             {%- when 'popup' -%}
               <modal-opener
