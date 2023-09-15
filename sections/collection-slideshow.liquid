@@ -56,6 +56,9 @@
     width: 100%;
     height: 100%;
   }
+  collection-slideshow video {
+    position: absolute;
+  }
   collection-slideshow .collection-title {
     display: flex;
     position: relative;
@@ -97,6 +100,7 @@
   {%- else -%}
     {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
   {%- endif -%}
+
   <h1>{{ section.settings.header }}</h1>
   <div class="collection-title" data-aos="svg-draw-fade" data-aos-duration="1200" data-aos-delay="0">
     <hr data-aos="fade-scaleX" data-aos-duration="400" data-aos-delay="1200">
