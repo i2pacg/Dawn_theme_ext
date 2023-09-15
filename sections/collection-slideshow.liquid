@@ -163,7 +163,11 @@
     </div>
   </div>
 </collection-slideshow>
-
+<script>
+  window.addEventListener('load', (event) => {
+    console.log('page is fully loaded');
+  });
+</script>
 {% comment %}
   <script src="{{ 'collection-slideshow.js' | asset_url }}" defer="defer"></script>
 {% endcomment %}
