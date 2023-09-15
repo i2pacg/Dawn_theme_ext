@@ -43,7 +43,7 @@
   class="page-width section-{{ section.id }}-padding"
   data-section="{{ section.id }}"
 >
-  <div class="grad-pat">
+ {% comment %}  <div class="grad-pat">
     <svg id="patternId" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <pattern id='a' patternUnits='userSpaceOnUse' width='32' height='32' patternTransform='scale(2) rotate(0)'>
@@ -54,7 +54,7 @@
       </defs>
       <rect width='800%' height='800%' transform='translate(-16,0)' fill='url(#a)'/>
     </svg>
-  </div>
+  </div> {% endcomment %}
   {% assign shopify_attributes = shopify_attributes | default: '' %}
 
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
