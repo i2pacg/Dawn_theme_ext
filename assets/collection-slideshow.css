@@ -21,7 +21,6 @@
     background: linear-gradient(90deg, #eadeba, transparent);
     /* border-radius: 50%; */
     height: 100%;
-    width: 32px;
     font-weight: 900;
     z-index: 5;
 }
@@ -40,6 +39,20 @@
 
 .slick-prev:before {
     content: '‹';
+}
+
+@media screen and (min-width: 576px) {
+    .collection-slideshow .slider-content .slider-content-card {
+        max-width: 90vw;
+        border: 3px #462a4d solid;
+        border-radius: 32px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .collection-slideshow .slider-content .slider-content-card {
+        max-width: 75vw;
+    }
 }
 
 .collection-slideshow {
