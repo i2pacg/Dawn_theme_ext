@@ -265,11 +265,18 @@
             {%- when 'quantity_selector' -%}
               <style>
              
-.quantity-price-container {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
+                .quantity-price-container {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: stretch;
+                }             
+                .quantity-price-container .quantity-form {
+                }             
+                .quantity-price-container .price-saving{
+                  display: flex;
+                  flex-direction: column;
+                  align-items: stretch;
+                }
 
 @media (min-width: 576px) {
   .quantity-price-container {
