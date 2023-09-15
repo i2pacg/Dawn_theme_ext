@@ -435,6 +435,20 @@
   }
   collection-slideshow .content-container {
   }
+
+  collection-slideshow .content-container .collection-title {
+    display: flex;
+    position: relative;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 16px;
+  }
+
+  collection-slideshow .content-container .collection-title svg {
+    height: 32px;
+    width: unset;
+  }
 </style>
 {%- liquid
   assign product = section.settings.collection.products | first
