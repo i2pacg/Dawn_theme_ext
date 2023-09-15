@@ -431,7 +431,9 @@
 {%- assign product = section.settings.collection.products | first -%}
 
 <collection-slideshow class="full-page">
-  <video></video>
+  <video>
+    {{ product }}
+  </video>
 </collection-slideshow>
 {% comment %}
   <script src="{{ 'collection-slideshow.js' | asset_url }}" defer="defer"></script>
