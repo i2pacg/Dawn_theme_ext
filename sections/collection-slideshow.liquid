@@ -145,7 +145,22 @@
     <p class="collection-description" data-ba="fade-slideUp" data-ba-duration="300" data-ba-delay="1800">
       {{ section.settings.collection.description }}
     </p>
-    <div class="products-slider"></div>
+    <div class="products-slider">
+      {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+        <div
+          class="slider-thumb"
+        >
+          {%
+            render 'card-product-ext',
+            product: product,
+            savings_option: section.settings.card_savings_option,
+            title_option: section.settings.card_title_option,
+            show_quick_add: section.settings.card_buy_option,
+            show_secondary_image: true,
+          %}
+        </div>
+      {%- endfor -%}
+    </div>
   </div>
 </collection-slideshow>
 
