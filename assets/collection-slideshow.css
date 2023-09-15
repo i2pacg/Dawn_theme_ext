@@ -17,6 +17,13 @@
     width: 32px;
     font-weight: 900;
     z-index: 5;
+    right: -8px;
+    background: linear-gradient(90deg, #eadeba, transparent);
+    /* border-radius: 50%; */
+    height: 100%;
+    width: 32px;
+    font-weight: 900;
+    z-index: 5;
 }
 
 .slick-prev {
