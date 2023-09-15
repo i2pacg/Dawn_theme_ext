@@ -435,7 +435,14 @@
   {% if productVideo %}
     {{
       productVideo
-      | video_tag: loop: true, height: '100%', width: '100%', playsinline: true, autoplay: true, muted: true
+      | video_tag:
+        loop: true,
+        height: '100%',
+        width: '100%',
+        playsinline: true,
+        autoplay: true,
+        muted: true,
+        style: 'object-fit: cover;'
     }}
   {%- elsif product.featured_media -%}
     {%- liquid
