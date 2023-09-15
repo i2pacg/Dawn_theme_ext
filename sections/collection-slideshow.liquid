@@ -421,7 +421,14 @@
   </div>
 {% endcomment %}
 <collection-slideshow> </collection-slideshow>
-<script src="{{ 'collection-slideshow.js' | asset_url }}" defer="defer"></script>
+{% comment %}
+  <script src="{{ 'collection-slideshow.js' | asset_url }}" defer="defer"></script>
+{% endcomment %}
+<script>
+  window.addEventListener('load', (event) => {
+    console.log('page is fully loaded');
+  });
+</script>
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
