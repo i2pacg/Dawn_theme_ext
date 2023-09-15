@@ -1,5 +1,3 @@
-/* Optmize css and order and remove duplicates */
-
 [data-aos^=fade][data-aos^=fade] {
     opacity: 0;
     transition-property: opacity, transform
@@ -7,6 +5,34 @@
 
 [data-aos=fade-right] {
     transform: translate3d(-100px, 0, 0)
+}
+
+
+
+@keyframes lds-heart {
+    0% {
+        transform: scale(0.95);
+    }
+
+    5% {
+        transform: scale(1.1);
+    }
+
+    39% {
+        transform: scale(0.85);
+    }
+
+    45% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
 }
 
 .slick-next,
@@ -41,15 +67,7 @@
     overflow: hidden;
 }
 
-.collection-slideshow .slider-for {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 0;
-}
+.collection-slideshow .slider-for {}
 
 .collection-slideshow .slider-for .slide-full {
     margin: 0 auto;
@@ -130,7 +148,7 @@
 }
 
 .collection-slideshow .slider-content {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -148,17 +166,23 @@
     width: 100%;
     max-width: 100vw;
     padding: 16px;
-
+    border: 3px #462a4d solid;
+    border-radius: 32px;
     pointer-events: all;
+    margin-top: 122px;
     overflow: hidden;
 }
 
 .collection-slideshow .slider-content .slider-content-card:before {
     background: #ffefba;
+    /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #ffffff, #ffefba);
-    background: linear-gradient(to bottom, #ffffff, #ffefba);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,
+            #ffffff,
+            #ffefba);
     content: '';
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -169,8 +193,6 @@
 @media screen and (min-width: 576px) {
     .collection-slideshow .slider-content .slider-content-card {
         max-width: 90vw;
-        border: 3px #462a4d solid;
-        border-radius: 32px;
     }
 }
 
@@ -203,7 +225,7 @@
 }
 
 .collection-slideshow .slider-content .slider-content-card .slider-content-title svg {
-    height: 32px;
+    height: 48px;
     width: unset;
 }
 
@@ -284,7 +306,7 @@ hr.half-divider {
 
 .slider-info .slider-text .product-title svg {
     width: unset;
-    height: 20px;
+    height: 24px;
 }
 
 @media screen and (max-width: 540px) {
