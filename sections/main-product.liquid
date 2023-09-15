@@ -266,6 +266,36 @@
               <style>
              
          
+.quantity-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.quantity-price-container .quantity-form {}
+
+.quantity-price-container .quantity-form quantity-input {
+  width: 100%;
+}
+
+.quantity-price-container .price-saving {}
+
+@media (min-width: 576px) {
+  .quantity-price-container {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+  }
+
+  .quantity-price-container .price-form {
+      flex: 1;
+  }
+
+  .quantity-price-container .price-saving {
+      flex: 2;
+  }
+}
+
               </style>
             <div class="quantity-price-container">
               <div
