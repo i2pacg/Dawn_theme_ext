@@ -206,16 +206,6 @@
     .collection-slideshow .slider-content .slider-content-card {
         max-width: 75vw;
     }
-
-    .slider-info-content .slider-text {
-        padding: 0;
-        text-align: left;
-        margin: 0;
-        font-size: 14px;
-        letter-spacing: 1px;
-        flex: 2;
-    }
-
 }
 
 .collection-slideshow .slider-content .slider-content-card hr {
@@ -303,6 +293,7 @@ hr.half-divider {
     font-size: 14px;
     letter-spacing: 1px;
     flex: 2;
+    margin-bottom: auto;
 }
 
 
@@ -325,6 +316,10 @@ hr.half-divider {
 }
 
 @media screen and (max-width: 540px) {
+    .slider-info-content .slider-text {
+        margin-bottom: 8px;
+    }
+
     .slider-info-content {
         flex-direction: column;
     }
