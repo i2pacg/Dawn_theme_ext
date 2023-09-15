@@ -8,10 +8,14 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 
+{{ 'slick.min.css' | asset_url | stylesheet_tag }}
+{{ 'slick-theme.min.css' | asset_url | stylesheet_tag }}
 {% comment %}
   {{ 'aos.css' | asset_url | stylesheet_tag }}
 {% endcomment %}
-
+{{ 'jquery.min.js' | asset_url | script_tag }}
+{{ 'slick.min.js' | asset_url | script_tag }}
+{{ 'anime.min.js' | asset_url | script_tag }}
 {% comment %}
   {{ 'aos.js' | asset_url | script_tag }}
 {% endcomment %}
@@ -30,37 +34,6 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 {{ 'collection-slideshow.css' | asset_url | stylesheet_tag }}
 
-<style>
-  .slider-thumb:not(.slick-current.slick-active) .product-card .product-title,
-  .slider-thumb:not(.slick-current.slick-active) .product-card .product-price,
-  .slider-thumb:not(.slick-current.slick-active) .product-card .product-card-savings,
-  .slider-thumb:not(.slick-current.slick-active) .product-card .product-buttons {
-    opacity: 0;
-  }
-
-  .product-card .product-title,
-  .product-card .product-price,
-  .product-card .product-buttons,
-  .product-card .product-content {
-    transition: all 1s ease;
-  }
-  .slider-thumb.slick-current.slick-active .product-card .product-content {
-    box-shadow: 1px 1px 16px #00000080;
-  }
-
-  .slider-thumb:not(.slick-current.slick-active) .product-card .product-content {
-    filter: grayscale(1);
-    transform: scale(0.9);
-    opacity: 0.5;
-    border-radius: 4px;
-    box-shadow: unset;
-  }
-
-  .slider-thumb:not(.slick-current.slick-active) .product-card a {
-    pointer-events: none;
-  }
-</style>
-<style></style>
 {%- if section.settings.slide_height == 'adapt_image'
   and section.settings.collection.products.first.settings.image != blank
 -%}
