@@ -162,7 +162,6 @@ let initInfoSlickPromise = new Promise(resolve => {
 init();
 async function init() {
     console.log("init");
-    const vidSlide = await initVideoSlickPromise;
     const navSlide = await initNavSlickPromise;
     const infoSlide = await initInfoSlickPromise;
     try {
@@ -270,7 +269,10 @@ async function init() {
 
     setTimeout(() => {
         tl.play();
-    }, 300);
+    }, 300); setTimeout(async () => {
+        tl.play();
+        await initVideoSlickPromise;
+    }, 600);
 }
 /* 
 initSlick();
