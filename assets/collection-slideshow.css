@@ -17,9 +17,9 @@
     z-index: 5;
     right: -8px;
     background: #eadeba;
-    background: linear-gradient(90deg, transparent, #eadeba);
-    background: -webkit-linear-gradient(90deg, transparent, #eadeba);
-    background: linear-gradient(90deg, transparent, #eadeba);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), #eadeba);
+    background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0), #eadeba);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), #eadeba);
     height: 100%;
     font-weight: 900;
     z-index: 5;
@@ -28,9 +28,9 @@
 .slick-prev {
     left: -16px;
     right: unset;
-    background: linear-gradient(90deg, #eadeba, transparent);
-    background: -webkit-linear-gradient(90deg, #eadeba, transparent);
-    background: linear-gradient(90deg, #eadeba, transparent);
+    background: linear-gradient(90deg, #eadeba, rgba(255, 255, 255, 0));
+    background: -webkit-linear-gradient(90deg, #eadeba, rgba(255, 255, 255, 0));
+    background: linear-gradient(90deg, #eadeba, rgba(255, 255, 255, 0));
 }
 
 .slick-next:before,
