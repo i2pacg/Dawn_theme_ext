@@ -72,29 +72,21 @@
         class="product-picture"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
-        {%- liquid
-          assign productVideo = product.media | where: 'media_type', 'video' | first
-          assign sizes = '100vw'
-          assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-        -%}
-        {{ product.featured_media | image_url: 'large' -}}
-
+        <img
+          src="{{ product.featured_media | image_url: width: 420 }}"
+          srcset="
+            {{ product.featured_media | image_url: width: 320 }},
+            {{ product.featured_media | image_url: width: 220 }},
+            {{ product.featured_media | image_url: width: 180 }}
+          "
+          sizes="
+            (max-width: 375) 180px,
+            (max-width: 500) 220px,
+            420px
+          "
+          loading="lazy"
+        >
         {% comment %}
-          <img
-            src="{{ product.featured_media | image_url: width: 420 }}"
-            srcset="
-              {{ product.featured_media | image_url: width: 320 }},
-              {{ product.featured_media | image_url: width: 220 }},
-              {{ product.featured_media | image_url: width: 180 }}
-            "
-            sizes="
-              (max-width: 375) 180px,
-              (max-width: 500) 220px,
-              420px
-            "
-            loading="lazy"
-          >
-
           {%- if product.media[1] != null and show_secondary_image -%}
             <img
               src="{{ product.featured_media | image_url: width: 420 }}"
