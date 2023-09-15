@@ -428,7 +428,11 @@
     height: 100vh;
   }
 </style>
-<collection-slideshow class="full-page"> </collection-slideshow>
+{%- assign product = section.settings.collection.products | first -%}
+
+<collection-slideshow class="full-page">
+  <video></video>
+</collection-slideshow>
 {% comment %}
   <script src="{{ 'collection-slideshow.js' | asset_url }}" defer="defer"></script>
 {% endcomment %}
