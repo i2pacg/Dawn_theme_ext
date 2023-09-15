@@ -34,172 +34,274 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+{{ 'collection-slideshow.css' | asset_url | stylesheet_tag }}
 
-{% comment %}
-  <div class="collection-slideshow">
-    <div class="slider-for">
-      {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-        <div class="slide-full">
-          {% assign productVideo = product.media | where: 'media_type', 'video' | first %}
-          {% if productVideo %}
-            {{
-              productVideo
-              | video_tag: loop: true, height: '100%', width: '300px', playsinline: true, autoplay: true, muted: true
-            }}
-          {%- elsif product.featured_media -%}
-            {%- liquid
-              if section.settings.image_behavior == 'ambient'
-                assign sizes = '120vw'
-                assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
-              else
-                assign sizes = '100vw'
-                assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-              endif
-            -%}
-            {{
-              product.featured_media
-              | image_url
-              | image_tag: loading: 'lazy', height: '100vh', sizes: sizes, widths: widths
-            }}
+<style>
+  .slider-thumb:not(.slick-current.slick-active) .product-card .product-title,
+  .slider-thumb:not(.slick-current.slick-active) .product-card .product-price,
+  .slider-thumb:not(.slick-current.slick-active) .product-card .product-card-savings,
+  .slider-thumb:not(.slick-current.slick-active) .product-card .product-buttons {
+    opacity: 0;
+  }
+
+  .product-card .product-title,
+  .product-card .product-price,
+  .product-card .product-buttons,
+  .product-card .product-content {
+    transition: all 1s ease;
+  }
+  .slider-thumb.slick-current.slick-active .product-card .product-content {
+    box-shadow: 1px 1px 16px #00000080;
+  }
+
+  .slider-thumb:not(.slick-current.slick-active) .product-card .product-content {
+    filter: grayscale(1);
+    transform: scale(0.9);
+    opacity: 0.5;
+    border-radius: 4px;
+    box-shadow: unset;
+  }
+
+  .slider-thumb:not(.slick-current.slick-active) .product-card a {
+    pointer-events: none;
+  }
+</style>
+
+<div class="collection-slideshow">
+  <div class="slider-for">
+    {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+      <div class="slide-full">
+        {% assign productVideo = product.media | where: 'media_type', 'video' | first %}
+        {% if productVideo %}
+          {{
+            productVideo
+            | video_tag: loop: true, height: '100%', width: '300px', playsinline: true, autoplay: true, muted: true
+          }}
+        {%- elsif product.featured_media -%}
+          {%- liquid
+            if section.settings.image_behavior == 'ambient'
+              assign sizes = '120vw'
+              assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
+            else
+              assign sizes = '100vw'
+              assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+            endif
+          -%}
+          {{
+            product.featured_media
+            | image_url
+            | image_tag: loading: 'lazy', height: '100vh', sizes: sizes, widths: widths
+          }}
+        {%- else -%}
+          {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
+          {%- if placeholder_slide == 1 -%}
+            {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- else -%}
-            {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
-            {%- if placeholder_slide == 1 -%}
-              {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
-            {%- else -%}
-              {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-            {%- endif -%}
+            {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
-        </div>
-      {%- endfor -%}
-    </div>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
 
-    <div class="slider-content">
-      <div class="slider-content-card" data-aos="fade" data-aos-duration="600">
-        <h2 class="slider-content-header">
-          {{ section.settings.header }}
-        </h2>
-        <h1 class="slider-content-title" data-aos="svg-draw-fade" data-aos-duration="1200" data-aos-delay="0">
-          <hr class="half-divider" data-aos="fade-scaleX" data-aos-duration="400" data-aos-delay="1200">
-          {% if section.settings.collection.metafields.svg.title != blank %}
-            {{ section.settings.collection.metafields.svg.title }}
-          {% else %}
-            {{ section.settings.collection.title | escape }}
-          {% endif %}
-          <hr class="half-divider" data-aos="fade-scaleX" data-aos-duration="400" data-aos-delay="1200">
-        </h1>
-        <p class="slider-content-description" data-aos="fade-slideUp" data-aos-duration="300" data-aos-delay="1800">
-          {{ section.settings.collection.description }}
-        </p>
-        <div class="slider-nav">
-          {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-            <div
-              class="slider-thumb"
-            >
-              {%
-                render 'card-product-ext',
-                product: product,
-                savings_option: section.settings.card_savings_option,
-                title_option: section.settings.card_title_option,
-                show_quick_add: section.settings.card_buy_option,
-                show_secondary_image: true,
-              %}
-            </div>
-          {%- endfor -%}
-        </div>
-        <div class="slider-info slider-buy-{{ section.settings.slider_buy_option}} slider-title-{{ section.settings.slider_title_option }}">
-          {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-            <div
-              class="slider-info-content"
-            >
-              <div class="slider-text">
-                <h1 class="product-title">
-                  {% if product.metafields.svg.title != blank %}
-                    {{ product.metafields.svg.title }}
-                  {% else %}
-                    {{ product.title | escape }}
+  <div class="slider-content">
+    <div class="slider-content-card" data-aos="fade" data-aos-duration="600">
+      <h2 class="slider-content-header">
+        {{ section.settings.header }}
+      </h2>
+      <h1 class="slider-content-title" data-aos="svg-draw-fade" data-aos-duration="1200" data-aos-delay="0">
+        <hr class="half-divider" data-aos="fade-scaleX" data-aos-duration="400" data-aos-delay="1200">
+        {% if section.settings.collection.metafields.svg.title != blank %}
+          {{ section.settings.collection.metafields.svg.title }}
+        {% else %}
+          {{ section.settings.collection.title | escape }}
+        {% endif %}
+        <hr class="half-divider" data-aos="fade-scaleX" data-aos-duration="400" data-aos-delay="1200">
+      </h1>
+      <p class="slider-content-description" data-aos="fade-slideUp" data-aos-duration="300" data-aos-delay="1800">
+        {{ section.settings.collection.description }}
+      </p>
+      <div class="slider-nav">
+        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+          <div
+            class="slider-thumb"
+          >
+            {%
+              render 'card-product-ext',
+              product: product,
+              savings_option: section.settings.card_savings_option,
+              title_option: section.settings.card_title_option,
+              show_quick_add: section.settings.card_buy_option,
+              show_secondary_image: true,
+            %}
+          </div>
+        {%- endfor -%}
+      </div>
+      <div class="slider-info slider-buy-{{ section.settings.slider_buy_option}} slider-title-{{ section.settings.slider_title_option }}">
+        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+          <div
+            class="slider-info-content"
+          >
+            <div class="slider-text">
+              <h1 class="product-title">
+                {% if product.metafields.svg.title != blank %}
+                  {{ product.metafields.svg.title }}
+                {% else %}
+                  {{ product.title | escape }}
+                {% endif %}
+              </h1>
+              <div
+                class="product-description"
+              >
+                <span>
+                  {%- if product.metafields.description.short != blank -%}
+                    {{ product.metafields.description.short | truncate: 175, '. . . ' }}
+                  {%- elsif product.description != blank -%}
+                    {{ product.description | truncate: 175, '. . . ' }}
                   {% endif %}
-                </h1>
-                <div
-                  class="product-description"
-                >
-                  <span>
-                    {%- if product.metafields.description.short != blank -%}
-                      {{ product.metafields.description.short | truncate: 175, '. . . ' }}
-                    {%- elsif product.description != blank -%}
-                      {{ product.description | truncate: 175, '. . . ' }}
-                    {% endif %}
-                    {%- if product.description != blank and product.description.size > 175 -%}
-                      <modal-opener
-                        class="product-popup-modal__opener no-js-hidden quick-add-hidden"
-                        data-modal="#PopupModal-{{ product.id }}"
-                        {{ shopify_attributes }}
+                  {%- if product.description != blank and product.description.size > 175 -%}
+                    <modal-opener
+                      class="product-popup-modal__opener no-js-hidden quick-add-hidden"
+                      data-modal="#PopupModal-{{ product.id }}"
+                      {{ shopify_attributes }}
+                    >
+                      <button
+                        id="ProductPopup-{{ product.id }}"
+                        class="product-popup-modal__button link"
+                        type="button"
+                        style="text-decoration: unset;display: inline-block;"
+                        aria-haspopup="dialog"
+                      >
+                        read more
+                      </button>
+                    </modal-opener>
+                    <modal-dialog id="PopupModal-{{ product.id }}" class="product-popup-modal">
+                      <div
+                        role="dialog"
+                        aria-label="{{ product.title }}"
+                        aria-modal="true"
+                        class="product-popup-modal__content"
+                        tabindex="-1"
                       >
                         <button
-                          id="ProductPopup-{{ product.id }}"
-                          class="product-popup-modal__button link"
+                          id="ModalClose-{{ product.id }}"
                           type="button"
-                          style="text-decoration: unset;display: inline-block;"
-                          aria-haspopup="dialog"
+                          class="product-popup-modal__toggle"
+                          aria-label="{{ 'accessibility.close' | t }}"
                         >
-                          read more
+                          {% render 'icon-close' %}
                         </button>
-                      </modal-opener>
-                      <modal-dialog id="PopupModal-{{ product.id }}" class="product-popup-modal">
-                        <div
-                          role="dialog"
-                          aria-label="{{ product.title }}"
-                          aria-modal="true"
-                          class="product-popup-modal__content"
-                          tabindex="-1"
-                        >
-                          <button
-                            id="ModalClose-{{ product.id }}"
-                            type="button"
-                            class="product-popup-modal__toggle"
-                            aria-label="{{ 'accessibility.close' | t }}"
-                          >
-                            {% render 'icon-close' %}
-                          </button>
-                          <div class="product-popup-modal__content-info">
-                            <h1 class="h2">{{ product.title }}</h1>
-                            {{ product.description }}
-                          </div>
+                        <div class="product-popup-modal__content-info">
+                          <h1 class="h2">{{ product.title }}</h1>
+                          {{ product.description }}
                         </div>
-                      </modal-dialog>
-                    {% endif %}
-                  </span>
-                  {% comment %}
-                    {%- if product.metafields.description.short != blank -%}
-                      {{ product.metafields.description.short | truncate: 175, '. . . ' }}
-                    {%- elsif product.description != blank -%}
-                      {{ product.description | truncate: 175, '. . . ' }}
-                    {% endif %}
-                    {%- if product.description != blank and product.description.size > 175 -%}
-                    {% endif %}
-                  {% endcomment %}
-                </div>
+                      </div>
+                    </modal-dialog>
+                  {% endif %}
+                </span>
+                {% comment %}
+                  {%- if product.metafields.description.short != blank -%}
+                    {{ product.metafields.description.short | truncate: 175, '. . . ' }}
+                  {%- elsif product.description != blank -%}
+                    {{ product.description | truncate: 175, '. . . ' }}
+                  {% endif %}
+                  {%- if product.description != blank and product.description.size > 175 -%}
+                  {% endif %}
+                {% endcomment %}
               </div>
-              <div class="quick-add no-js-hidden slider-buttons">
-                {%- liquid
-                  assign product_form_id = 'quick-add-' | append: section.id | append: product.id
-                  assign qty_rules = false
-                  if product.selected_or_first_available_variant.quantity_rule.min > 1 or product.selected_or_first_available_variant.quantity_rule.max != null or product.selected_or_first_available_variant.quantity_rule.increment > 1
-                    assign qty_rules = true
-                  endif
-                -%}
-                {%- if product.variants.size > 1 or qty_rules -%}
-                  <modal-opener data-modal="#QuickAdd-{{ product.id }}">
+            </div>
+            <div class="quick-add no-js-hidden slider-buttons">
+              {%- liquid
+                assign product_form_id = 'quick-add-' | append: section.id | append: product.id
+                assign qty_rules = false
+                if product.selected_or_first_available_variant.quantity_rule.min > 1 or product.selected_or_first_available_variant.quantity_rule.max != null or product.selected_or_first_available_variant.quantity_rule.increment > 1
+                  assign qty_rules = true
+                endif
+              -%}
+              {%- if product.variants.size > 1 or qty_rules -%}
+                <modal-opener data-modal="#QuickAdd-{{ product.id }}">
+                  <button
+                    id="{{ product_form_id }}-submit"
+                    type="submit"
+                    name="add"
+                    class="quick-add__submit button-36"
+                    aria-haspopup="dialog"
+                    aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
+                    data-product-url="{{ product.url }}"
+                  >
+                    {{ 'products.product.buy_now' | t }}
+
+                    <div class="loading-overlay__spinner hidden">
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        class="spinner"
+                        viewBox="0 0 66 66"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                      </svg>
+                    </div>
+                  </button>
+                </modal-opener>
+                <quick-add-modal id="QuickAdd-{{ product.id }}" class="quick-add-modal">
+                  <div
+                    role="dialog"
+                    aria-label="{{ 'products.product.choose_product_options' | t: product_name: product.title | escape }}"
+                    aria-modal="true"
+                    class="quick-add-modal__content global-settings-popup"
+                    tabindex="-1"
+                  >
+                    <button
+                      id="ModalClose-{{ product.id }}"
+                      type="button"
+                      class="quick-add-modal__toggle"
+                      aria-label="{{ 'accessibility.close' | t }}"
+                    >
+                      {% render 'icon-close' %}
+                    </button>
+                    <div id="QuickAddInfo-{{ product.id }}" class="quick-add-modal__content-info"></div>
+                  </div>
+                </quick-add-modal>
+              {%- else -%}
+                <product-form data-section-id="{{ section.id }}">
+                  {%- form 'product',
+                    product,
+                    id: product_form_id,
+                    class: 'form',
+                    novalidate: 'novalidate',
+                    data-type: 'add-to-cart-form'
+                  -%}
+                    <input
+                      type="hidden"
+                      name="id"
+                      value="{{ product.selected_or_first_available_variant.id }}"
+                      class="product-variant-id"
+                      disabled
+                    >
                     <button
                       id="{{ product_form_id }}-submit"
                       type="submit"
                       name="add"
-                      class="quick-add__submit button-36"
+                      class="button-36"
                       aria-haspopup="dialog"
                       aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
-                      data-product-url="{{ product.url }}"
+                      aria-live="polite"
+                      data-sold-out-message="true"
+                      {% if product.selected_or_first_available_variant.available == false %}
+                        disabled
+                      {% endif %}
                     >
-                      {{ 'products.product.buy_now' | t }}
-
+                      <span>
+                        {%- if product.selected_or_first_available_variant.available -%}
+                          {{ 'products.product.buy_now' | t }}
+                        {%- else -%}
+                          {{ 'products.product.sold_out' | t }}
+                        {%- endif -%}
+                      </span>
+                      <span class="sold-out-message hidden">
+                        {{ 'products.product.sold_out' | t }}
+                      </span>
                       <div class="loading-overlay__spinner hidden">
                         <svg
                           aria-hidden="true"
@@ -212,297 +314,144 @@
                         </svg>
                       </div>
                     </button>
-                  </modal-opener>
-                  <quick-add-modal id="QuickAdd-{{ product.id }}" class="quick-add-modal">
-                    <div
-                      role="dialog"
-                      aria-label="{{ 'products.product.choose_product_options' | t: product_name: product.title | escape }}"
-                      aria-modal="true"
-                      class="quick-add-modal__content global-settings-popup"
-                      tabindex="-1"
-                    >
-                      <button
-                        id="ModalClose-{{ product.id }}"
-                        type="button"
-                        class="quick-add-modal__toggle"
-                        aria-label="{{ 'accessibility.close' | t }}"
-                      >
-                        {% render 'icon-close' %}
-                      </button>
-                      <div id="QuickAddInfo-{{ product.id }}" class="quick-add-modal__content-info"></div>
-                    </div>
-                  </quick-add-modal>
-                {%- else -%}
-                  <product-form data-section-id="{{ section.id }}">
-                    {%- form 'product',
-                      product,
-                      id: product_form_id,
-                      class: 'form',
-                      novalidate: 'novalidate',
-                      data-type: 'add-to-cart-form'
-                    -%}
-                      <input
-                        type="hidden"
-                        name="id"
-                        value="{{ product.selected_or_first_available_variant.id }}"
-                        class="product-variant-id"
-                        disabled
-                      >
-                      <button
-                        id="{{ product_form_id }}-submit"
-                        type="submit"
-                        name="add"
-                        class="button-36"
-                        aria-haspopup="dialog"
-                        aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
-                        aria-live="polite"
-                        data-sold-out-message="true"
-                        {% if product.selected_or_first_available_variant.available == false %}
-                          disabled
-                        {% endif %}
-                      >
-                        <span>
-                          {%- if product.selected_or_first_available_variant.available -%}
-                            {{ 'products.product.buy_now' | t }}
-                          {%- else -%}
-                            {{ 'products.product.sold_out' | t }}
-                          {%- endif -%}
-                        </span>
-                        <span class="sold-out-message hidden">
-                          {{ 'products.product.sold_out' | t }}
-                        </span>
-                        <div class="loading-overlay__spinner hidden">
-                          <svg
-                            aria-hidden="true"
-                            focusable="false"
-                            class="spinner"
-                            viewBox="0 0 66 66"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                          </svg>
-                        </div>
-                      </button>
-                    {%- endform -%}
-                  </product-form>
-                {%- endif -%}
-                <!-- HTML ! -->
+                  {%- endform -%}
+                </product-form>
+              {%- endif -%}
+              <!-- HTML ! -->
 
-                <a
-                  style="margin:8px 0px"
-                  href="{{ section.settings.collection.url }}"
+              <a
+                style="margin:8px 0px"
+                href="{{ section.settings.collection.url }}"
+              >
+                <button
+                  style="width:100%"
+                  class="button-6"
+                  role="button"
                 >
-                  <button
-                    style="width:100%"
-                    class="button-6"
-                    role="button"
-                  >
-                    Show More
-                  </button>
-                </a>
-                <style>
-                  /* CSS */
-                  .button-6 {
-                    align-items: center;
-                    background-color: #ffffff;
-                    border: 1px solid rgba(0, 0, 0, 0.1);
-                    border-radius: 0.25rem;
-                    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-                    box-sizing: border-box;
-                    color: rgba(0, 0, 0, 0.85);
-                    cursor: pointer;
-                    display: inline-flex;
-                    font-family: system-ui, -apple-system, system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-                    font-size: 16px;
-                    font-weight: 600;
-                    justify-content: center;
-                    line-height: 1.25;
-                    margin: 0;
-                    min-height: 3rem;
-                    padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
-                    position: relative;
-                    text-decoration: none;
-                    transition: all 250ms;
-                    user-select: none;
-                    -webkit-user-select: none;
-                    touch-action: manipulation;
-                    vertical-align: baseline;
-                    width: auto;
-                  }
+                  Show More
+                </button>
+              </a>
+              <style>
+                /* CSS */
+                .button-6 {
+                  align-items: center;
+                  background-color: #ffffff;
+                  border: 1px solid rgba(0, 0, 0, 0.1);
+                  border-radius: 0.25rem;
+                  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+                  box-sizing: border-box;
+                  color: rgba(0, 0, 0, 0.85);
+                  cursor: pointer;
+                  display: inline-flex;
+                  font-family: system-ui, -apple-system, system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                  font-size: 16px;
+                  font-weight: 600;
+                  justify-content: center;
+                  line-height: 1.25;
+                  margin: 0;
+                  min-height: 3rem;
+                  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+                  position: relative;
+                  text-decoration: none;
+                  transition: all 250ms;
+                  user-select: none;
+                  -webkit-user-select: none;
+                  touch-action: manipulation;
+                  vertical-align: baseline;
+                  width: auto;
+                }
 
-                  .button-6:hover,
-                  .button-6:focus {
-                    border-color: rgba(0, 0, 0, 0.15);
-                    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-                    color: rgba(0, 0, 0, 0.65);
-                  }
+                .button-6:hover,
+                .button-6:focus {
+                  border-color: rgba(0, 0, 0, 0.15);
+                  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+                  color: rgba(0, 0, 0, 0.65);
+                }
 
-                  .button-6:hover {
-                    transform: translateY(-1px);
-                  }
+                .button-6:hover {
+                  transform: translateY(-1px);
+                }
 
-                  .button-6:active {
-                    background-color: #f0f0f1;
-                    border-color: rgba(0, 0, 0, 0.15);
-                    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-                    color: rgba(0, 0, 0, 0.65);
-                    transform: translateY(0);
-                  } /* CSS */
+                .button-6:active {
+                  background-color: #f0f0f1;
+                  border-color: rgba(0, 0, 0, 0.15);
+                  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+                  color: rgba(0, 0, 0, 0.65);
+                  transform: translateY(0);
+                } /* CSS */
 
+                .button-36.loading {
+                  color: transparent;
+                  position: relative;
+                }
+
+                @media screen and (forced-colors: active) {
                   .button-36.loading {
-                    color: transparent;
-                    position: relative;
+                    color: rgb(var(--color-foreground));
                   }
+                }
 
-                  @media screen and (forced-colors: active) {
-                    .button-36.loading {
-                      color: rgb(var(--color-foreground));
-                    }
-                  }
+                .button-36.loading > .loading-overlay__spinner {
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  position: absolute;
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                }
 
-                  .button-36.loading > .loading-overlay__spinner {
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    position: absolute;
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                  }
+                .button-36.loading > .loading-overlay__spinner .spinner {
+                  width: fit-content;
+                }
 
-                  .button-36.loading > .loading-overlay__spinner .spinner {
-                    width: fit-content;
-                  }
+                .button-36.loading > .loading-overlay__spinner .path {
+                  stroke: rgb(var(--color-button-text));
+                }
+                .button-36 {
+                  background-image: linear-gradient(92.88deg, #455eb5 9.16%, #5643cc 43.89%, #673fd7 64.72%);
+                  border-radius: 8px;
+                  border-style: none;
+                  box-sizing: border-box;
+                  color: #ffffff;
+                  cursor: pointer;
+                  width: 100%;
+                  flex-shrink: 0;
 
-                  .button-36.loading > .loading-overlay__spinner .path {
-                    stroke: rgb(var(--color-button-text));
-                  }
+                  font-family: 'Inter UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                  font-size: 16px;
+                  font-weight: 500;
+                  height: 4rem;
+                  padding: 0 1.6rem;
+                  text-align: center;
+                  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+                  transition: all 0.5s;
+                  user-select: none;
+                  -webkit-user-select: none;
+                  touch-action: manipulation;
+                }
+
+                .button-36:hover {
+                  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+                  transition-duration: 0.1s;
+                }
+
+                @media (min-width: 768px) {
                   .button-36 {
-                    background-image: linear-gradient(92.88deg, #455eb5 9.16%, #5643cc 43.89%, #673fd7 64.72%);
-                    border-radius: 8px;
-                    border-style: none;
-                    box-sizing: border-box;
-                    color: #ffffff;
-                    cursor: pointer;
-                    width: 100%;
-                    flex-shrink: 0;
-
-                    font-family: 'Inter UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-                      Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                    font-size: 16px;
-                    font-weight: 500;
-                    height: 4rem;
-                    padding: 0 1.6rem;
-                    text-align: center;
-                    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-                    transition: all 0.5s;
-                    user-select: none;
-                    -webkit-user-select: none;
-                    touch-action: manipulation;
+                    padding: 0 2.6rem;
                   }
-
-                  .button-36:hover {
-                    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
-                    transition-duration: 0.1s;
-                  }
-
-                  @media (min-width: 768px) {
-                    .button-36 {
-                      padding: 0 2.6rem;
-                    }
-                  }
-                </style>
-              </div>
+                }
+              </style>
             </div>
-          {% endfor %}
-        </div>
+          </div>
+        {% endfor %}
       </div>
     </div>
   </div>
-{% endcomment %}
-<style>
-  .full-page {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100vh;
-  }
-</style>
-<style>
-  collection-slideshow {
-    position: relative;
-    display: flex;
-  }
-  collection-slideshow .collection-container {
-    position: relative;
-  }
+</div>
 
-  collection-slideshow .collection-container .collection-title {
-    display: flex;
-    position: relative;
-    align-items: center;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 16px;
-  }
-
-  collection-slideshow .collection-container .collection-title svg {
-    height: 32px;
-    width: unset;
-  }
-</style>
-{%- liquid
-  assign product = section.settings.collection.products | first
-  assign productVideo = product.media | where: 'media_type', 'video' | first
-  assign sizes = '100vw'
-  assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
--%}
-<collection-slideshow class="full-page">
-  {% if productVideo %}
-    {{
-      productVideo
-      | video_tag:
-        loop: true,
-        height: '100%',
-        width: '100%',
-        playsinline: true,
-        autoplay: true,
-        muted: true,
-        style: 'object-fit: cover;',
-        id: 'bg-video'
-    }}
-  {%- elsif product.featured_media -%}
-    {{
-      product.featured_media
-      | image_url
-      | image_tag: loading: 'lazy', height: '100%', width: '100%', sizes: sizes, widths: widths
-    }}
-  {%- else -%}
-    {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-  {%- endif -%}
-  <div class="collection-container">
-    <h2 class="collection-header">
-      {{ section.settings.header }}
-    </h2>
-    <h1 class="collection-title" data-aos="svg-draw-fade" data-aos-duration="1200" data-aos-delay="0">
-      <hr class="half-divider" data-aos="fade-scaleX" data-aos-duration="400" data-aos-delay="1200">
-      {% if section.settings.collection.metafields.svg.title != blank %}
-        {{ section.settings.collection.metafields.svg.title }}
-      {% else %}
-        {{ section.settings.collection.title | escape }}
-      {% endif %}
-      <hr class="half-divider" data-aos="fade-scaleX" data-aos-duration="400" data-aos-delay="1200">
-    </h1>
-  </div>
-</collection-slideshow>
-{% comment %}
-  <script src="{{ 'collection-slideshow.js' | asset_url }}" defer="defer"></script>
-{% endcomment %}
-<script>
-  window.addEventListener('load', (event) => {
-    console.log('page is fully loaded');
-  });
-</script>
+<script src="{{ 'collection-slideshow.js' | asset_url }}" defer="defer"></script>
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
@@ -642,7 +591,6 @@
   ]
 }
 {% endschema %}
-
 {% comment %}
   {
     "type": "select",
