@@ -166,6 +166,22 @@
 <script>
   window.addEventListener('load', (event) => {
     console.log('page is fully loaded');
+    let initNavSlickPromise = new Promise((resolve) => {
+      $('.products-slider').on('init', function (event, slick, currentSlide, nextSlide) {
+        resolve(this);
+      });
+      $('.products-slider').slick({
+        centerPadding: '0px',
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        infinite: true,
+        variableWidth: true,
+        centerMode: true,
+        asNavFor: '.slider-for , .slider-info',
+      });
+    });
   });
 </script>
 {% comment %}
