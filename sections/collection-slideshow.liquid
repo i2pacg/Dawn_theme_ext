@@ -420,7 +420,7 @@
     </div>
   </div>
 {% endcomment %}
-
+<collection-slideshow> </collection-slideshow>
 <script src="{{ 'collection-slideshow.js' | asset_url }}" defer="defer"></script>
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
@@ -561,9 +561,7 @@
   ]
 }
 {% endschema %}
-<collection-slideshow>
-  {% comment %} 3 Slick Slide Shows one for videos as fixed background with gardient overlay and one for thumbs  {% endcomment %}
-</collection-slideshow>
+
 {% comment %}
   {
     "type": "select",
