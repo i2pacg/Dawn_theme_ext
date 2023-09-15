@@ -77,11 +77,7 @@
           assign sizes = '100vw'
           assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
         -%}
-        {{
-          product.featured_media
-          | image_url: 'large'
-          | image_tag: loading: 'lazy', height: '100vh', sizes: sizes, widths: widths
-        -}}
+        {{ product.featured_media | image_url: 'large' -}}
 
         {% comment %}
           <img
