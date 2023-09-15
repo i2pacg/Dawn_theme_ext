@@ -282,14 +282,16 @@
 
 @media (min-width: 576px) {
   .quantity-price-container {
-      display: flex;
-      flex-direction: row;
-      align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    column-gap: 16px;
   }
 
-  .quantity-price-container .price-form {
-      flex: 1;
-  }
+  .quantity-price-container .quantity-form {
+    flex: 1;
+    margin-bottom: 0; 
+   }
 
   .quantity-price-container .price-saving {
       flex: 2;
