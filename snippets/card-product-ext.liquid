@@ -79,7 +79,7 @@
         -%}
         {{
           product.featured_media
-          | image_url: width: 1200
+          | image_url: width: 'original'
           | image_tag: loading: 'lazy', height: '100vh', sizes: sizes, widths: widths
         -}}
 
