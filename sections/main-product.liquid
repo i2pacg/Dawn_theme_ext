@@ -1,13 +1,17 @@
-<style>
+<style>  .grad-pat svg path {
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: dash 5s ease forwards;
+}
   .grad-pat svg path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
     animation: dash 5s ease forwards;
   }
 
   @keyframes dash {
     from {
-      stroke-dashoffset: 1000;
+      stroke-dashoffset: 48;
     }
     to {
       stroke-dashoffset: 0;
