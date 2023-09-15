@@ -265,7 +265,7 @@
             {%- when 'quantity_selector' -%}
               <style>
              
-         
+         {% comment %} 
 .quantity-price-container {
   display: flex;
   flex-direction: column;
@@ -296,7 +296,7 @@
 
   .quantity-price-container .price-saving {
    }
-}
+} {% endcomment %}
 
               </style>
             <div class="quantity-price-container">
@@ -488,7 +488,7 @@
                 {%- endif -%}
 
               </div>
-              <div class="price-saving" >
+              <div class="price-saving">
                  <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price-ext',
                   product: product,
