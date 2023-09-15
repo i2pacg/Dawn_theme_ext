@@ -16,7 +16,7 @@
     font-weight: 900;
     z-index: 5;
     right: -8px;
-    background: linear-gradient(90deg, #eadeba, transparent);
+    background: linear-gradient(90deg, transparent, #eadeba);
     /* border-radius: 50%; */
     height: 100%;
     font-weight: 900;
@@ -26,6 +26,7 @@
 .slick-prev {
     left: -8px;
     right: unset;
+    background: linear-gradient(90deg, #eadeba, transparent);
 }
 
 .slick-next:before,
