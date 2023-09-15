@@ -428,7 +428,10 @@
     height: 100vh;
   }
 </style>
-
+<style>
+  collection-slideshow .content-container {
+  }
+</style>
 {%- liquid
   assign product = section.settings.collection.products | first
   assign productVideo = product.media | where: 'media_type', 'video' | first
