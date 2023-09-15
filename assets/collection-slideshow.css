@@ -9,34 +9,6 @@
     transform: translate3d(-100px, 0, 0)
 }
 
-
-
-@keyframes lds-heart {
-    0% {
-        transform: scale(0.95);
-    }
-
-    5% {
-        transform: scale(1.1);
-    }
-
-    39% {
-        transform: scale(0.85);
-    }
-
-    45% {
-        transform: scale(1);
-    }
-
-    60% {
-        transform: scale(0.95);
-    }
-
-    100% {
-        transform: scale(0.9);
-    }
-}
-
 .slick-next,
 .slick-prev {
     right: -8px;
@@ -69,7 +41,6 @@
     overflow: hidden;
 }
 
-/* 
 .collection-slideshow .slider-for {
     position: fixed;
     top: 0;
@@ -85,7 +56,7 @@
     overflow: hidden;
     position: relative;
     height: 100vh;
-} */
+}
 
 .collection-slideshow .slider-for:after {
     content: '';
