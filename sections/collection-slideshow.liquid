@@ -428,9 +428,13 @@
     height: 100vh;
   }
 </style>
-{%- assign product = section.settings.collection.products | first -%}
-{% assign productVideo = product.media | where: 'media_type', 'video' | first %}
 
+{%- liquid
+  assign product = section.settings.collection.products | first
+  assign productVideo = product.media | where: 'media_type', 'video' | first
+  assign sizes = '100vw'
+  assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+-%}
 <collection-slideshow class="full-page">
   {% if productVideo %}
     {{
@@ -445,10 +449,6 @@
         style: 'object-fit: cover;'
     }}
   {%- elsif product.featured_media -%}
-    {%- liquid
-      assign sizes = '100vw'
-      assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-    -%}
     {{ product.featured_media | image_url | image_tag: loading: 'lazy', height: '100vh', sizes: sizes, widths: widths }}
   {%- else -%}
     {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
