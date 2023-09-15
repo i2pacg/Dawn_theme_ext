@@ -430,37 +430,32 @@
 </style>
 {%- assign product = section.settings.collection.products | first -%}
 {% assign productVideo = product.media | where: 'media_type', 'video' | first %}
-{% if productVideo %}
-  {{
-    productVideo
-    | video_tag: loop: true, height: '100%', width: '300px', playsinline: true, autoplay: true, muted: true
-  }}
-{%- elsif product.featured_media -%}
-  {%- liquid
-    if section.settings.image_behavior == 'ambient'
-      assign sizes = '120vw'
-      assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
-    else
-      assign sizes = '100vw'
-      assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-    endif
-  -%}
-  {{ product.featured_media | image_url | image_tag: loading: 'lazy', height: '100vh', sizes: sizes, widths: widths }}
-{%- else -%}
-  {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
-  {%- if placeholder_slide == 1 -%}
-    {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
-  {%- else -%}
-    {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-  {%- endif -%}
-{%- endif -%}
+
 <collection-slideshow class="full-page">
-  <video></video>
-  {% if section.settings.collection.metafields.svg.title != blank %}
-    {{ section.settings.collection.metafields.svg.title }}
-  {% else %}
-    {{ section.settings.collection.title | escape }}
-  {% endif %}
+  {% if productVideo %}
+    {{
+      productVideo
+      | video_tag: loop: true, height: '100%', width: '300px', playsinline: true, autoplay: true, muted: true
+    }}
+  {%- elsif product.featured_media -%}
+    {%- liquid
+      if section.settings.image_behavior == 'ambient'
+        assign sizes = '120vw'
+        assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
+      else
+        assign sizes = '100vw'
+        assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+      endif
+    -%}
+    {{ product.featured_media | image_url | image_tag: loading: 'lazy', height: '100vh', sizes: sizes, widths: widths }}
+  {%- else -%}
+    {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
+    {%- if placeholder_slide == 1 -%}
+      {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- else -%}
+      {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+  {%- endif -%}
 </collection-slideshow>
 {% comment %}
   <script src="{{ 'collection-slideshow.js' | asset_url }}" defer="defer"></script>
