@@ -16,7 +16,14 @@
     font-weight: 900;
     z-index: 5;
     right: -8px;
+    background: #eadeba;
     background: linear-gradient(90deg, transparent, #eadeba);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(90deg, transparent, #eadeba);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(90deg, transparent, #eadeba);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     /* border-radius: 50%; */
     height: 100%;
     font-weight: 900;
@@ -27,6 +34,9 @@
     left: -8px;
     right: unset;
     background: linear-gradient(90deg, #eadeba, transparent);
+    background: -webkit-linear-gradient(90deg, transparent, #eadeba);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(90deg, transparent, #eadeba);
 }
 
 .slick-next:before,
