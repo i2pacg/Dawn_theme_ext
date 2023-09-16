@@ -17,6 +17,7 @@ if (!customElements.get('media-gallery-ext')) {
                 Swal.fire({
                   imageUrl: this.querySelector('img').getAttribute('bigmedia'),
                   showConfirmButton: false,
+                  width: 'auto',
                 });
               } catch (error) {
                 console.log(error);
