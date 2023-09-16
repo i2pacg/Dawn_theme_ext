@@ -8,7 +8,6 @@ if (!customElements.get('media-gallery-ext')) {
         const gallery = this.querySelector('.media-gallery');
         try {
           $(gallery).slick({
-            arrows: true,
           });
         } catch (error) {
           console.log(error);
