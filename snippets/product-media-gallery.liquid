@@ -47,9 +47,10 @@
   function openMediaInDialog(media) {
     console.log('openMediaInDialog');
     console.log(media);
-    try {
+
+     try {
       Swal.fire({
-        imageUrl: 'https://placeholder.pics/svg/300x1500',
+        imageUrl: {{ media.preview_image | image_url: width: 1946 }},
         imageHeight: 1500,
         imageAlt: 'A tall image',
       });
