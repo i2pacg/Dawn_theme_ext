@@ -1433,6 +1433,10 @@ a.product__text {
 }
 
 @media screen and (max-width: 749px) {
+  .product-media-container .media {
+    padding-top: 320px;
+  }
+
   .product-media-container.media-fit-cover {
     display: flex;
     align-self: stretch;
