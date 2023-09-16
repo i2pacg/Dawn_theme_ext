@@ -46,9 +46,9 @@
 <script>
   function openMediaInDialog(media) {
     console.log('openMediaInDialog');
-  {% comment %}   console.log({{ media.preview_image | image_url: width: 1946 }});
+    console.log('{{ media.preview_image | image_url: width: 1946 }}');
 
-     try {
+     {% comment %} try {
       Swal.fire({
         imageUrl: {{ media.preview_image | image_url: width: 1946 }},
         imageHeight: 1500,
