@@ -85,7 +85,6 @@ for (const anim in animObjects) {
                 case 'svg-draw-fade':
                     try {
                         elements.forEach(function (element, index) {
-                            console.log("element delay", delay, element.querySelectorAll('svg path'));
                             tl.add({
                                 targets: element.querySelectorAll('svg path'),
                                 fillOpacity: [0, 1],
@@ -108,7 +107,6 @@ for (const anim in animObjects) {
     }
 }
 
-console.log("animObjects", animObjects);
 //loop through animObjects and add the right animation to the timeline
 
 //play the timeline
@@ -159,7 +157,6 @@ let initInfoSlickPromise = new Promise(resolve => {
 })
 init();
 async function init() {
-    console.log("init");
     const navSlide = await initNavSlickPromise;
     const infoSlide = await initInfoSlickPromise;
     try {
