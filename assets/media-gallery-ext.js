@@ -10,13 +10,7 @@ if (!customElements.get('media-gallery-ext')) {
         const gallery = this.querySelector('.media-gallery');
         const galleryThumbs = this.querySelector('.media-gallery-thumbs');
         try {
-          $(gallery).on('init', function (event, slick, currentSlide, nextSlide) {
-            $('.slick-slide', $(this)).on('click', function (event) {
-              /*    Swal.fire({
-                   imageUrl: this.querySelector('img').getAttribute('src'),
-                 }); */
-            });
-          });
+
           $(gallery).slick({
             autoplay: true,
             autoplaySpeed: 10000,
