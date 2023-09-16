@@ -56,7 +56,7 @@
     {% for media in product.media %}
       {% if media.media_type == 'video' %}
         {{
-          productVideo
+          media
           | video_tag: loop: true, height: '100%', width: '100%', playsinline: true, autoplay: true, muted: true
         }}
       {%- else -%}
