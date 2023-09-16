@@ -305,7 +305,7 @@
                           | image_url: width: '1920'
                           | image_tag: loading: 'lazy', height: '100%'
                         -}}
-                        <button
+                  {% comment %}       <button
                           class="product__media-toggle quick-add-hidden product__media-zoom-{{ section.settings.image_zoom }}"
                           type="button"
                           aria-haspopup="dialog"
@@ -314,7 +314,7 @@
                           <span class="visually-hidden">
                             {{ 'products.product.media.open_media' | t: index: 0 }}
                           </span>
-                        </button>
+                        </button> {% endcomment %}
                       </modal-opener>
                     {% endif %}
                     {{ block.settings.page.content }}
@@ -708,7 +708,7 @@
                     {% endif %}
                   >
                     <div class="complementary-products__container">
-                      {% comment %}
+                      
                         {%- if block.settings.make_collapsible_row -%}
                           <details id="Details-{{ block.id }}-{{ section.id }}" open>
                             <summary>
@@ -725,7 +725,7 @@
                             {% render 'icon-caret' %}
                           </summary>
                         {%- endif -%}
-                      {% endcomment %}
+                     
                       <slideshow-component class="slider-mobile-gutter">
                         {%- assign number_of_slides = recommendations.products_count
                           | plus: 0.0
