@@ -266,13 +266,15 @@ async function init() {
         console.log("error", error);
     }
 
-
-    setTimeout(() => {
-        tl.play();
-    }, 150); setTimeout(async () => {
-        tl.play();
-        await initVideoSlickPromise;
-    }, 600);
+    tl.play();
+    await initVideoSlickPromise;
+    /* 
+        setTimeout(() => {
+            tl.play();
+        }, 150);
+        setTimeout(async () => {
+            await initVideoSlickPromise;
+        }, 600); */
 }
 /* 
 initSlick();
