@@ -328,35 +328,27 @@
                           max-height: 100vh;
                         }
                       </style>
-                      <modal-dialog id="ProductMediaModal-{{ product.id }}" class="product-popup-modal sizing-modal">
-                        <div
-                          role="dialog"
-                          aria-label="{{ product.title }}"
-                          aria-modal="true"
-                          class="product-popup-modal__content product-popup-modal__toggle"
-                          id="ModalClose-{{ product.id }}"
-                          aria-label="{{ 'accessibility.close' | t }}"
-                          tabindex="-1"
-                        >
-                          {% comment %}
-                            <button
-                              id="ModalClose-{{ product.id }}"
-                              type="button"
-                              class="product-popup-modal__toggle"
-                              aria-label="{{ 'accessibility.close' | t }}"
-                            >
-                              {% render 'icon-close' %}
-                            </button>
-                          {% endcomment %}
-                          <div class="product-popup-modal__content-info">
-                            {{
-                              block.settings.image_4
-                              | image_url: width: '1920'
-                              | image_tag: loading: 'lazy', height: '100%'
-                            -}}
+                      {% comment %}
+                        <modal-dialog id="ProductMediaModal-{{ product.id }}" class="product-popup-modal sizing-modal">
+                          <div
+                            role="dialog"
+                            aria-label="{{ product.title }}"
+                            aria-modal="true"
+                            class="product-popup-modal__content product-popup-modal__toggle"
+                            id="ModalClose-{{ product.id }}"
+                            aria-label="{{ 'accessibility.close' | t }}"
+                            tabindex="-1"
+                          >
+                            <div class="product-popup-modal__content-info">
+                              {{
+                                block.settings.image_4
+                                | image_url: width: '1920'
+                                | image_tag: loading: 'lazy', height: '100%'
+                              -}}
+                            </div>
                           </div>
-                        </div>
-                      </modal-dialog>
+                        </modal-dialog>
+                      {% endcomment %}
                     {% endif %}
                     {{ block.settings.page.content }}
                   </div>
