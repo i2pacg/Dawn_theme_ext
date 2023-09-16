@@ -128,7 +128,7 @@
       </div>
     {%- endfor -%}
   </div>
-  {% if settings.background_video_only != true %}
+  {% if section.settings.background_video_only != true %}
     <div class="slider-content">
       <div class="slider-content-card" data-aos="fade" data-aos-duration="600">
         <h2 class="slider-content-header">
@@ -476,7 +476,7 @@
     </div>
   {% endif %}
 </div>
-{% if settings.background_video_only != true %}
+{% if section.settings.background_video_only != true %}
   <script src="{{ 'collection-slideshow.js' | asset_url }}" defer="defer"></script>
 {% endif %}
 {%- if request.design_mode -%}
