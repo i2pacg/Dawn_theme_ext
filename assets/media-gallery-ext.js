@@ -14,7 +14,7 @@ if (!customElements.get('media-gallery-ext')) {
             asNavFor: galleryThumbs,
           });
           $(galleryThumbs).on('init', function (event, slick, currentSlide, nextSlide) {
-
+            console.log(this.querySelectorAll('.slick-slide'));
           });
           $(galleryThumbs).slick({
             centerPadding: '16px',
