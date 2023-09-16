@@ -293,8 +293,12 @@
                           style="text-decoration: unset;display: inline-block;"
                           aria-haspopup="dialog"
                         >
-                          read more
-                        </button>  {% comment %}   <div
+                          {{
+                            block.settings.image_4
+                            | image_url: width: '1920'
+                            | image_tag: loading: 'lazy', height: '100%'
+                          -}}
+                                                </button>  {% comment %}   <div
                           id="ProductMedia-{{ product.id }}"
                           aria-haspopup="dialog">
                           {{
