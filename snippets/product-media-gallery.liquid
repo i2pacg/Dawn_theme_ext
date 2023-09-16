@@ -42,7 +42,12 @@
     assign id_append = '-duplicate'
   endif
 -%}
-
+<script>
+  function openMediaInDialog(media) {
+    console.log('openMediaInDialog');
+    console.log(media);
+  }
+</script>
 <media-gallery
   id="MediaGallery-{{ section.id }}{{ id_append }}"
   role="region"
