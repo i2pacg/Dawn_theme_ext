@@ -271,7 +271,7 @@
                     {{ block.settings.content }}
                     {% if block.settings.image %}
                       {{
-                        product.featured_media
+                        block.settings.image
                         | image_url: width: '375px'
                         | image_tag: loading: 'lazy', height: '100%', sizes: sizes, widths: widths
                       -}}
