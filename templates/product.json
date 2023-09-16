@@ -82,6 +82,15 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "5e30f747-134b-45bb-ac6d-407cd43d9a49": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Sizing Chart",
+            "icon": "snowflake",
+            "content": "<h5>Unlock the Perfect Fit with Our Detailed Sizing Chart.<\/h5>",
+            "page": "sizing-chart"
+          }
         }
       },
       "block_order": [
@@ -95,7 +104,8 @@
         "price",
         "f9fca452-c63a-4426-a6c7-c46378d03566",
         "buy_buttons",
-        "share"
+        "share",
+        "5e30f747-134b-45bb-ac6d-407cd43d9a49"
       ],
       "custom_css": [
 
