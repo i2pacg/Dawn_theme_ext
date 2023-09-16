@@ -31,7 +31,12 @@
         {{ section.settings.heading }}
       </h2>
       <ul
-        class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-mobile-down"
+        class="
+          grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop
+          grid--{{ section.settings.columns_mobile }}-col-tablet-down
+          grid--{{ section.settings.columns_tablet }}-col-tablet
+        "
+
         role="list"
       >
         {% for recommendation in recommendations.products %}
