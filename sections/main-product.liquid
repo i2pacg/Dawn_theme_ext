@@ -286,7 +286,15 @@
                             <circle class="path" fill="none" stroke-width="4" cx="33" cy="33" r="30"></circle>
                           </svg>
                         </div>
-                        <div
+                        <button
+                          id="ProductPopup-{{ product.id }}"
+                          class="product-popup-modal__button link"
+                          type="button"
+                          style="text-decoration: unset;display: inline-block;"
+                          aria-haspopup="dialog"
+                        >
+                          read more
+                        </button>    <div
                           aria-haspopup="dialog">
                           {{
                             block.settings.image_4
