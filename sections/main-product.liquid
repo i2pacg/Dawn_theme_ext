@@ -287,21 +287,22 @@
                           </svg>
                         </div>
                         <button
-                          id="ProductPopup-{{ product.id }}"
+                          id="ProductMedia-{{ product.id }}"
                           class="product-popup-modal__button link"
                           type="button"
                           style="text-decoration: unset;display: inline-block;"
                           aria-haspopup="dialog"
                         >
                           read more
-                        </button>    <div
+                        </button>  {% comment %}   <div
+                          id="ProductMedia-{{ product.id }}"
                           aria-haspopup="dialog">
                           {{
                             block.settings.image_4
                             | image_url: width: '1920'
                             | image_tag: loading: 'lazy', height: '100%'
                           -}}
-                        </div>
+                        </div> {% endcomment %}
                         
                   {% comment %}       <button
                           class="product__media-toggle quick-add-hidden product__media-zoom-{{ section.settings.image_zoom }}"
