@@ -15,8 +15,7 @@ if (!customElements.get('media-gallery-ext')) {
             asNavFor: galleryThumbs,
           });
           $(galleryThumbs).on('init', function (event, slick, currentSlide, nextSlide) {
-            console.log(this.querySelectorAll('.slick-slide'));
-            $(galleryThumbs, '.slick-slide').on('click', function (event) {
+            $('.slick-slide', $(this)).on('click', function (event) {
               console.log('slick-slide');
               console.log(event);
             });
