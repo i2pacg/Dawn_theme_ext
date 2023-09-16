@@ -69,6 +69,12 @@
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
   {%- endif -%}
 
+  {{ 'slick.min.css' | asset_url | stylesheet_tag }}
+  {{ 'slick-theme.min.css' | asset_url | stylesheet_tag }}
+  {{ 'jquery.min.js' | asset_url | script_tag }}
+  {{ 'slick.min.js' | asset_url | script_tag }}
+  {{ 'anime.min.js' | asset_url | script_tag }}
+
   {%- style -%}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
