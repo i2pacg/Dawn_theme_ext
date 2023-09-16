@@ -16,6 +16,10 @@ if (!customElements.get('media-gallery-ext')) {
           });
           $(galleryThumbs).on('init', function (event, slick, currentSlide, nextSlide) {
             console.log(this.querySelectorAll('.slick-slide'));
+            $(galleryThumbs, '.slick-slide').on('click', function (event) {
+              console.log('slick-slide');
+              console.log(event);
+            });
           });
           $(galleryThumbs).slick({
             centerPadding: '16px',
