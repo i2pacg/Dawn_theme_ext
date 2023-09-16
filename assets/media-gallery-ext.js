@@ -5,11 +5,21 @@ if (!customElements.get('media-gallery-ext')) {
       constructor() {
         super();
         console.log('media-gallery-ext');
-        /*   this.elements = {
-            liveRegion: this.querySelector('[id^="GalleryStatus"]'),
-            viewer: this.querySelector('[id^="GalleryViewer"]'),
-            thumbnails: this.querySelector('[id^="GalleryThumbnails"]'),
-          }; */
+        const gallery = this.querySelector('media-gallery');
+        $(gallery).slick({
+          accessibility: false,
+          adaptiveHeight: true,
+          arrows: false,
+          dots: true,
+          draggable: false,
+          fade: true,
+          infinite: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          swipe: false,
+          touchMove: false,
+          useTransform: true,
+        });
       }
     }
   );
