@@ -17,9 +17,9 @@ if (!customElements.get('media-gallery-ext')) {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 10000,
-            infinite: true,
+            infinite: false,
             variableWidth: true,
-            centerMode: true,
+            centerMode: false,
             asNavFor: gallery,
           });
         } catch (error) {
