@@ -9,15 +9,16 @@ if (!customElements.get('media-gallery-ext')) {
         const galleryThumbs = this.querySelector('.media-gallery-thumbs');
         try {
           $(gallery).slick({
+            autoplay: true,
+            autoplaySpeed: 10000,
             asNavFor: galleryThumbs,
           });
           $(galleryThumbs).on('init', function (event, slick, currentSlide, nextSlide) {
+
           });
           $(galleryThumbs).slick({
             centerPadding: '16px',
             slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 10000,
             infinite: true,
             variableWidth: true,
             asNavFor: gallery,
