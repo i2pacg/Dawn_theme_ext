@@ -44,7 +44,7 @@
   }
 }
 
-.collection__description > * {
+.collection__description>* {
   margin: 0;
 }
 
@@ -61,7 +61,7 @@
     margin-bottom: 2.5rem;
   }
 
-  .collection__title.title-wrapper--self-padded-tablet-down {
+  .collection__title.title-wrapper--self-padded-mobile-down {
     padding: 0 5rem;
   }
 
