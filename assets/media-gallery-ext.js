@@ -16,7 +16,7 @@ if (!customElements.get('media-gallery-ext')) {
               try {
                 Swal.fire({
                   imageUrl: this.querySelector('img').getAttribute('bigmedia'),
-                  imageHeight: '90%',
+                  imageHeight: '90vh',
                   showConfirmButton: false,
                   width: 'auto',
                 });
