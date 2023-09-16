@@ -47,6 +47,10 @@
   .swal2-image {
     object-fit: contain;
   }
+  .swal2-popup {
+    background: transparent;
+    pointer-events: none;
+  }
 </style>
 <script>
   function openMediaInDialog(media) {
@@ -58,7 +62,7 @@
         grow: 'fullscreen',
         heightAuto: false,
         imageUrl: media,
-        imageHeight: '100%',
+        imageHeight: '100vh',
         imageWidth: '100%',
         imageAlt: '',
         backdrop: `
