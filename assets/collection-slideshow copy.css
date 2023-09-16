@@ -239,6 +239,11 @@
     .collection-slideshow .slider-content .slider-content-card .slider-content-title svg {
         height: 24px;
     }
+
+    .collection-slideshow .slider-content .slider-nav .slider-thumb {
+        margin: 8px;
+    }
+
 }
 
 .collection-slideshow .slider-content .slider-content-card .slider-content-title svg path {
