@@ -13,6 +13,7 @@ if (!customElements.get('media-gallery-ext')) {
             $('.slick-slide', $(this)).on('click', function (event) {
               console.log(this);
               console.log(this.querySelector('img').getAttribute('bigmedia'));
+              if (!this.querySelector('img').getAttribute('bigmedia')) return;
               try {
                 Swal.fire({
                   imageUrl: this.querySelector('img').getAttribute('bigmedia'),
