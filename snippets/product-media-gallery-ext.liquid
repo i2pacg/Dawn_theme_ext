@@ -62,6 +62,12 @@
   .media-gallery-thumbs .media-thumb:not(.slick-active) {
     filter: grayscale(0.5);
   }
+  @media screen and (max-width: 749px) {
+    .media-gallery .media-item {
+      height: 320px;
+      max-height: 320px;
+    }
+  }
 </style>
 <media-gallery-ext
   id="MediaGallery-{{ section.id }}{{ id_append }}"
