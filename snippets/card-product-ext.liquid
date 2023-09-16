@@ -74,7 +74,6 @@
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
         {%- liquid
-          assign productVideo = product.media | where: 'media_type', 'video' | first
           assign sizes = '100vw'
           assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
         -%}
