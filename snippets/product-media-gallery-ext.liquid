@@ -53,6 +53,17 @@
   data-desktop-layout="{{ section.settings.gallery_layout }}"
 >
   <div class="media-gallery">
+    {{
+      product.featured_media
+      | image_url: height: '420px'
+      | image_tag:
+        loading: 'lazy',
+        width: '100%',
+        height: '420px',
+        sizes: sizes,
+        widths: widths,
+        style: 'object-fit: contain;'
+    }}
     {% for media in product.media %}
       {% if media.media_type == 'video' %}
         {{
