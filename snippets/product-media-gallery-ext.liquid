@@ -107,8 +107,9 @@
       {% endunless %}
     {% endfor %}
   </div>
-  {% comment %}
-    <div class="media-gallery-thumbs">
+
+  <div class="media-gallery-thumbs">
+    <div class="media-thumb">
       {{
         product.featured_media
         | image_url: height: '120px'
@@ -120,8 +121,10 @@
           widths: widths,
           style: 'object-fit: contain;'
       }}
-      {% for media in product.media %}
-        {% unless media.id == product.selected_or_first_available_variant.featured_media.id %}
+    </div>
+    {% for media in product.media %}
+      {% unless media.id == product.selected_or_first_available_variant.featured_media.id %}
+        <div class="media-thumb">
           {% if media.media_type == 'video' %}
             {%- liquid
               assign sizes = '100vw'
@@ -139,8 +142,8 @@
                 style: 'object-fit: contain;'
             }}
           {%- endif -%}
-        {% endunless %}
-      {% endfor %}
-    </div>
-  {% endcomment %}
+        </div>
+      {% endunless %}
+    {% endfor %}
+  </div>
 </media-gallery-ext>
