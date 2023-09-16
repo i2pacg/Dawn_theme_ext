@@ -127,7 +127,7 @@
       }}
     </div>
     {% for media in product.media %}
-      {% unless media.id != product.selected_or_first_available_variant.featured_media.id %}
+      {% unless media.id == product.selected_or_first_available_variant.featured_media.id %}
         <div class="media-thumb">
           {% if media.media_type == 'video' %}
             {%- liquid
@@ -140,6 +140,22 @@
               | image_tag:
                 loading: 'lazy',
                 width: '100px',
+                height: '420px',
+                sizes: sizes,
+                widths: widths,
+                style: 'object-fit: contain;'
+            }}
+          {%- else -%}
+            {%- liquid
+              assign sizes = '100vw'
+              assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+            -%}
+            {{
+              media
+              | image_url: height: '420px'
+              | image_tag:
+                loading: 'lazy',
+                width: '100%',
                 height: '420px',
                 sizes: sizes,
                 widths: widths,
