@@ -274,21 +274,6 @@
                 class="product-popup-modal__opener no-js-hidden"
                         data-modal="#ProductMediaModal-{{ product.id }}"
                       >
-                        <span
-                          class="product__media-icon motion-reduce quick-add-hidden{% if block.settings.image_4.media_type == 'image' %} product__media-icon--{{ section.settings.image_zoom }}{% endif %}"
-                          aria-hidden="true"
-                        >
-                          {%- liquid
-                            case media.media_type
-                              when 'video', 'external_video'
-                                render 'icon-play'
-                              when 'model'
-                                render 'icon-3d-model'
-                              else
-                                render 'icon-zoom'
-                            endcase
-                          -%}
-                        </span>
                         <div class="loading-overlay__spinner hidden">
                           <svg
                             aria-hidden="true"
