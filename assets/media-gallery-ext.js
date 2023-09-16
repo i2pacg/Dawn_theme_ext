@@ -9,7 +9,7 @@ if (!customElements.get('media-gallery-ext')) {
         const galleryThumbs = this.querySelector('.media-gallery-thumbs');
         try {
           $(gallery).slick({
-            asNavFor: galleryThumbs,
+            asNavFor: '.media-gallery-thumbs',
           });
           $(galleryThumbs).slick({
             centerPadding: '16px',
@@ -20,7 +20,7 @@ if (!customElements.get('media-gallery-ext')) {
             infinite: false,
             variableWidth: true,
             centerMode: false,
-            asNavFor: gallery,
+            asNavFor: 'media-gallery',
           });
         } catch (error) {
           console.log(error);
