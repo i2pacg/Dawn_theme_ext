@@ -7,18 +7,11 @@ if (!customElements.get('media-gallery-ext')) {
         console.log('media-gallery-ext');
         const gallery = this.querySelector('media-gallery');
         $(gallery).slick({
-          accessibility: false,
-          adaptiveHeight: true,
-          arrows: false,
-          dots: true,
-          draggable: false,
-          fade: true,
-          infinite: false,
           slidesToShow: 1,
           slidesToScroll: 1,
-          swipe: false,
-          touchMove: false,
-          useTransform: true,
+          arrows: false,
+          fade: true,
+          asNavFor: '.slider-nav'
         });
       }
     }
