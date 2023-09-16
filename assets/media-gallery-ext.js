@@ -13,6 +13,7 @@ if (!customElements.get('media-gallery-ext')) {
             autoplaySpeed: 10000,
             infinite: true,
             asNavFor: galleryThumbs,
+            arrows: true
           });
           $(galleryThumbs).on('init', function (event, slick, currentSlide, nextSlide) {
             $('.slick-slide', $(this)).on('click', function (event) {
