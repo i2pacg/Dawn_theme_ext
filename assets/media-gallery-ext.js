@@ -12,10 +12,10 @@ if (!customElements.get('media-gallery-ext')) {
           $(gallery).on('init', function (event, slick, currentSlide, nextSlide) {
             $('.slick-slide', $(this)).on('click', function (event) {
               console.log(this);
-              console.log(this.getAttribute('data-big-media'));
+              console.log(this.querySelector('img').getAttribute('bigmedia'));
               try {
                 Swal.fire({
-                  imageUrl: this.getAttribute('data-big-media'),
+                  imageUrl: this.querySelector('img').getAttribute('bigmedia'),
                 });
               } catch (error) {
                 console.log(error);
