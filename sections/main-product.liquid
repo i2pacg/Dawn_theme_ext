@@ -270,7 +270,7 @@
                   <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                     {{ block.settings.content }}
                     {% if block.settings.image_4 %}
-  <modal-opener class="product__modal-opener product__modal-opener--{{ block.settings.image_4.media_type }} no-js-hidden" data-modal="#ProductModal-{{ product.id }}">
+  <modal-opener class="product__modal-opener product__modal-opener--{{ block.settings.image_4.media_type }} no-js-hidden" data-modal="#ProductMediaModal-{{ product.id }}">
     <span class="product__media-icon motion-reduce quick-add-hidden{% if block.settings.image_4.media_type == 'image' %} product__media-icon--{{ section.settings.image_zoom }}{% endif %}" aria-hidden="true">
       {%- liquid
         case media.media_type
