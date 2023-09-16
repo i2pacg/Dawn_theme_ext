@@ -6,6 +6,8 @@ if (!customElements.get('media-gallery-ext')) {
         super();
         console.log('media-gallery-ext');
         const gallery = this.querySelector('.media-gallery');
+        console.log(this);
+        console.log(gallery);
         $(gallery).slick({
           slidesToShow: 1,
           slidesToScroll: 1,
