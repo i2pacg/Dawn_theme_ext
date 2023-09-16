@@ -130,6 +130,7 @@
             {%- liquid
               assign sizes = '100vw'
               assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+              assign bigUrl = media | image_url: height: '420px'
             -%}
             {{
               media
@@ -140,6 +141,7 @@
               height: '100%',
               sizes: sizes,
               widths: widths,
+              style: 'object-fit: contain;',
             }}
           {%- endif -%}
         </div>
