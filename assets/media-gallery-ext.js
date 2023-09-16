@@ -6,9 +6,9 @@ if (!customElements.get('media-gallery-ext')) {
         super();
         console.log('media-gallery-ext');
         const gallery = this.querySelector('.media-gallery');
+        const galleryThumbs = this.querySelector('.media-gallery-thumbs');
         try {
-          $(gallery).slick({
-          });
+          $(gallery).slick({});
         } catch (error) {
           console.log(error);
         }
