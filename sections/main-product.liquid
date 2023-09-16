@@ -270,7 +270,11 @@
                   <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                     {{ block.settings.content }}
                     {% if block.settings.image %}
-
+                      {{
+                        product.featured_media
+                        | image_url: width: '375px'
+                        | image_tag: loading: 'lazy', height: '100%', sizes: sizes, widths: widths
+                      -}}
                     {% endif %}
                     {{ block.settings.page.content }}
                   </div>
@@ -678,7 +682,7 @@
                             <ul class="list-unstyled" role="list">
                               {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
                                 <li>
-                                  {% render 'card-product',
+                                  {% render 'card-product-ext',
                                     card_product: product,
                                     media_aspect_ratio: block.settings.image_ratio,
                                     show_secondary_image: false,
