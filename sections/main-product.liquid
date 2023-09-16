@@ -876,32 +876,7 @@
       </div>
     </div>
   </modal-dialog>
-  <modal-dialog id="ProductMediaModal-{{ product.id }}" class="product-popup-modal">
-    <div
-      role="dialog"
-      aria-label="{{ product.title }}"
-      aria-modal="true"
-      class="product-popup-modal__content"
-      tabindex="-1"
-    >
-      <button
-        id="ModalClose-{{ product.id }}"
-        type="button"
-        class="product-popup-modal__toggle"
-        aria-label="{{ 'accessibility.close' | t }}"
-      >
-        {% render 'icon-close' %}
-      </button>
-      <div class="product-popup-modal__content-info">
-        <h1 class="h2">{{ product.title }}</h1>
-        <h1 class="h2">{{ product.title }}</h1>
-        <h1 class="h2">{{ product.title }}</h1>
-        {{ product.description }}
-        {{ product.description }}
-        {{ product.description }}
-      </div>
-    </div>
-  </modal-dialog>
+
   {% render 'product-media-modal', variant_images: variant_images %}
 
   {% assign popups = section.blocks | where: 'type', 'popup' %}
