@@ -48,15 +48,15 @@
     console.log('openMediaInDialog');
     console.log(media);
 
-     {% comment %} try {
+    try {
       Swal.fire({
-        imageUrl: {{ media.preview_image | image_url: width: 1946 }},
+        imageUrl: media,
         imageHeight: 1500,
         imageAlt: 'A tall image',
       });
     } catch (e) {
       console.log(e);
-    } {% endcomment %}
+    }
   }
 </script>
 <media-gallery
