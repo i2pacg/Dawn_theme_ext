@@ -12,9 +12,13 @@ if (!customElements.get('media-gallery-ext')) {
           $(gallery).on('init', function (event, slick, currentSlide, nextSlide) {
             $('.slick-slide', $(this)).on('click', function (event) {
               console.log(this.querySelector('img').getAttribute('src'));
-              Swal.fire({
-                imageUrl: this.querySelector('img').getAttribute('src'),
-              });
+              try {
+                Swal.fire({
+                  imageUrl: this.querySelector('img').getAttribute('src'),
+                });
+              } catch (error) {
+                console.log(error);
+              }
             });
           });
           $(gallery).slick({
