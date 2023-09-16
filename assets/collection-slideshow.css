@@ -232,6 +232,11 @@
     width: unset;
 }
 
+.collection-slideshow .slider-content .slider-nav .slider-thumb {
+    margin: 8px;
+    height: 420px;
+}
+
 @media screen and (max-width: 749px) {
 
     .collection-slideshow .slider-content .slider-nav .slider-thumb {
@@ -251,11 +256,6 @@
 .collection-slideshow .slider-content .slider-content-card .slider-content-description {
     margin: 0;
     position: relative;
-}
-
-.collection-slideshow .slider-content .slider-nav .slider-thumb {
-    margin: 8px;
-    height: 420px;
 }
 
 .collection-slideshow .slider-content .slider-nav .slider-thumb .slider-thumb-title {
