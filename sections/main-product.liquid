@@ -298,26 +298,7 @@
                             | image_url: width: '1920'
                             | image_tag: loading: 'lazy', height: '100%'
                           -}}
-                                                </button>  {% comment %}   <div
-                          id="ProductMedia-{{ product.id }}"
-                          aria-haspopup="dialog">
-                          {{
-                            block.settings.image_4
-                            | image_url: width: '1920'
-                            | image_tag: loading: 'lazy', height: '100%'
-                          -}}
-                        </div> {% endcomment %}
-                        
-                  {% comment %}       <button
-                          class="product__media-toggle quick-add-hidden product__media-zoom-{{ section.settings.image_zoom }}"
-                          type="button"
-                          aria-haspopup="dialog"
-                          data-media-id="{{ block.settings.image_4.id }}"
-                        >
-                          <span class="visually-hidden">
-                            {{ 'products.product.media.open_media' | t: index: 0 }}
-                          </span>
-                        </button> {% endcomment %}
+                        </button> 
                       </modal-opener>
                       <modal-dialog id="ProductMediaModal-{{ product.id }}" class="product-popup-modal">
                         <div
