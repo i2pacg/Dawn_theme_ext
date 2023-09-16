@@ -42,7 +42,11 @@
     assign id_append = '-duplicate'
   endif
 -%}
-
+<style>
+  .media-gallery .media-item {
+    height: 420px;
+  }
+</style>
 <media-gallery-ext
   id="MediaGallery-{{ section.id }}{{ id_append }}"
   role="region"
