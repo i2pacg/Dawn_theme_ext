@@ -9,18 +9,17 @@ if (!customElements.get('media-gallery-ext')) {
         const galleryThumbs = this.querySelector('.media-gallery-thumbs');
         try {
           $(gallery).slick({
-            asNavFor: '.media-gallery-thumbs',
+            asNavFor: galleryThumbs,
           });
           $(galleryThumbs).slick({
             centerPadding: '16px',
-            slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 10000,
             infinite: false,
             variableWidth: true,
             centerMode: false,
-            asNavFor: '.media-gallery',
+            asNavFor: gallery,
           });
         } catch (error) {
           console.log(error);
