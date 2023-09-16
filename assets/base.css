@@ -1103,8 +1103,8 @@ summary::-webkit-details-marker {
     margin-left: calc(-1 * var(--grid-mobile-horizontal-spacing));
   }
 
-  .grid--2-col-tablet-down .grid__item {
-    width: calc(33.33% - var(--grid-mobile-horizontal-spacing) / 2);
+  .grid--3-col-tablet-down .grid__item {
+    width: calc(33.33% - var(--grid-mobile-horizontal-spacing) / 3);
   }
 
   .slider--tablet.grid--peek.grid--2-col-mobile-down .grid__item,
