@@ -1423,8 +1423,7 @@ a.product__text {
 }
 
 .product-media-container .media {
-  /* padding-top: var(--ratio-percent);
-   */
+  /* padding-top: var(--ratio-percent);*/
   padding-top: 420px;
 }
 
