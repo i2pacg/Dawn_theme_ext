@@ -5,11 +5,11 @@ if (!customElements.get('media-gallery-ext')) {
       constructor() {
         super();
         console.log('media-gallery-ext');
-        this.elements = {
-          liveRegion: this.querySelector('[id^="GalleryStatus"]'),
-          viewer: this.querySelector('[id^="GalleryViewer"]'),
-          thumbnails: this.querySelector('[id^="GalleryThumbnails"]'),
-        };
+        /*   this.elements = {
+            liveRegion: this.querySelector('[id^="GalleryStatus"]'),
+            viewer: this.querySelector('[id^="GalleryViewer"]'),
+            thumbnails: this.querySelector('[id^="GalleryThumbnails"]'),
+          }; */
       }
     }
   );
