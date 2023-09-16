@@ -5,7 +5,7 @@ if (!customElements.get('media-gallery-ext')) {
       constructor() {
         super();
         console.log('media-gallery-ext');
-        const gallery = this.querySelector('media-gallery');
+        const gallery = this.querySelector('.media-gallery');
         $(gallery).slick({
           slidesToShow: 1,
           slidesToScroll: 1,
