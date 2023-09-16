@@ -311,7 +311,7 @@
                           height: 100%;
                           background: transparent;
                           text-align: center;
-                          align-items:center;
+                          align-items: center;
                         }
                         .sizing-modal .product-popup-modal__toggle {
                           position: absolute;
@@ -331,17 +331,21 @@
                           role="dialog"
                           aria-label="{{ product.title }}"
                           aria-modal="true"
-                          class="product-popup-modal__content"
+                          class="product-popup-modal__content product-popup-modal__toggle"
+                          id="ModalClose-{{ product.id }}"
+                          aria-label="{{ 'accessibility.close' | t }}"
                           tabindex="-1"
                         >
-                          <button
-                            id="ModalClose-{{ product.id }}"
-                            type="button"
-                            class="product-popup-modal__toggle"
-                            aria-label="{{ 'accessibility.close' | t }}"
-                          >
-                            {% render 'icon-close' %}
-                          </button>
+                          {% comment %}
+                            <button
+                              id="ModalClose-{{ product.id }}"
+                              type="button"
+                              class="product-popup-modal__toggle"
+                              aria-label="{{ 'accessibility.close' | t }}"
+                            >
+                              {% render 'icon-close' %}
+                            </button>
+                          {% endcomment %}
                           <div class="product-popup-modal__content-info">
                             {{
                               block.settings.image_4
