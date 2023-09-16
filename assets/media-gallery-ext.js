@@ -11,6 +11,7 @@ if (!customElements.get('media-gallery-ext')) {
         try {
           $(gallery).on('init', function (event, slick, currentSlide, nextSlide) {
             $('.slick-slide', $(this)).on('click', function (event) {
+              console.log(this.querySelector('img').getAttribute('src'));
               Swal.fire({
                 imageUrl: this.querySelector('img').getAttribute('src'),
               });
