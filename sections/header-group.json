@@ -16,7 +16,6 @@
       "block_order": [
         "announcement-bar-0"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "background-1",
         "show_line_separator": true,
@@ -30,7 +29,7 @@
     "header": {
       "type": "header",
       "custom_css": [
-        "header{padding:0px 16px; padding-right:24px}"
+        "header {padding: 0px 16px; padding-right: 24px;}"
       ],
       "settings": {
         "logo_position": "middle-center",
