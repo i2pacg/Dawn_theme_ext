@@ -14,7 +14,7 @@ if (!customElements.get('media-gallery-ext')) {
               console.log(this.querySelector('img').getAttribute('src'));
               try {
                 Swal.fire({
-                  imageUrl: this.querySelector('img').getAttribute('src'),
+                  imageUrl: this.getAttribute('data-big-media'),
                 });
               } catch (error) {
                 console.log(error);
