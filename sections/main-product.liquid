@@ -300,7 +300,11 @@
                           -}}
                         </button> 
                       </modal-opener>
-                      <modal-dialog id="ProductMediaModal-{{ product.id }}" class="product-popup-modal">
+                      <style>
+.sizing-modal{
+}
+                      </style>
+                      <modal-dialog id="ProductMediaModal-{{ product.id }}" class="product-popup-modal sizing-modal">
                         <div
                           role="dialog"
                           aria-label="{{ product.title }}"
