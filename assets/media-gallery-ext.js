@@ -9,11 +9,11 @@ if (!customElements.get('media-gallery-ext')) {
         const galleryThumbs = this.querySelector('.media-gallery-thumbs');
         try {
           $(gallery).slick({
-            asNavFor: galleryThumbs,
+            /* asNavFor: galleryThumbs, */
           });
-          $(gallery).slick({
-            asNavFor: gallery,
-          });
+          /*   $(gallery).slick({
+              asNavFor: gallery,
+            }); */
         } catch (error) {
           console.log(error);
         }
