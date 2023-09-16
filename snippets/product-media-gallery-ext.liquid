@@ -135,13 +135,14 @@
               media
               | image_url: height: '420px'
               | image_tag:
-                loading: 'lazy',
-                width: '100%',
-                height: '100%',
-                sizes: sizes,
-                widths: widths,
-                style: 'object-fit: contain;'
-            }}
+              loading: 'lazy',
+              width: '100%',
+              height: '100%',
+              sizes: sizes,
+              widths: widths,
+              data-big-media="{{ media | image_url: width: 1920
+            -}}
+            ", style: 'object-fit: contain;' }}
           {%- endif -%}
         </div>
       {% endunless %}
@@ -164,7 +165,7 @@
     </div>
     {% for media in product.media %}
       {% unless media.id == product.selected_or_first_available_variant.featured_media.id %}
-        <div class="media-thumb" data-big-media="{{ media | image_url: width: 1920 }}">
+        <div class="media-thumb">
           {% if media.media_type == 'video' %}
             {%- liquid
               assign sizes = '100vw'
