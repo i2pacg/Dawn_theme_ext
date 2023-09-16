@@ -9,8 +9,8 @@ if (!customElements.get('media-gallery-ext')) {
         const galleryThumbs = this.querySelector('.media-gallery-thumbs');
         try {
           $(gallery).slick({
-/*             asNavFor: galleryThumbs,
- */          });
+            asNavFor: galleryThumbs,
+          });
           $(galleryThumbs).slick({
             centerPadding: '16px',
             slidesToShow: 5,
