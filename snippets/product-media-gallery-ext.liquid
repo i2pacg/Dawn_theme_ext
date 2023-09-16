@@ -54,6 +54,27 @@
 >
   <div class="media-gallery">
     {% for media in product.media %}
+      {% if media.media_type == 'video' %}
+        {{
+          productVideo
+          | video_tag: loop: true, height: '100%', width: '100%', playsinline: true, autoplay: true, muted: true
+        }}
+      {%- else -%}
+        {%- liquid
+          if section.settings.image_behavior == 'ambient'
+            assign sizes = '120vw'
+            assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
+          else
+            assign sizes = '100vw'
+            assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+          endif
+        -%}
+        {{
+          product.featured_media
+          | image_url
+          | image_tag: loading: 'lazy', height: '100vh', sizes: sizes, widths: widths
+        }}
+      {%- endif -%}
     {% endfor %}
   </div>
   <div class="media-gallery-thumbs"></div>
