@@ -76,32 +76,33 @@
   {{ 'anime.min.js' | asset_url | script_tag }}
 
   {%- style -%}
-        .section-{{ section.id }}-padding {
-          padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-          padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-        }
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
 
-        @media screen and (min-width: 750px) {
-          .section-{{ section.id }}-padding {
-            padding-top: {{ section.settings.padding_top }}px;
-            padding-bottom: {{ section.settings.padding_bottom }}px;
-          }
-        }
-        .product__title svg{
-          height: 56px;
-          width: 100%;
-        }
-        .slick-slider > div {
-    	 display: none;
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
     }
-     .slick-slider > div:first-child {
-    	 display: block;
-    }
-     .slick-slider.slick-initialized > div {
-    	 display: block;
+    .product__title svg{
+      height: 56px;
+      width: 100%;
     }
   {%- endstyle -%}
-
+  <style>
+    .slick-slider > div {
+      display: none;
+    }
+    .slick-slider > div:first-child {
+      display: block;
+    }
+    .slick-slider.slick-initialized > div {
+      display: block;
+    }
+  </style>
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   {%- if product.quantity_price_breaks_configured? -%}
