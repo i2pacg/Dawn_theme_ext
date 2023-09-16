@@ -113,7 +113,7 @@
     </div>
     {% for media in product.media %}
       {% unless media.id == product.selected_or_first_available_variant.featured_media.id %}
-        <div class="media-item">
+        <div class="media-item" data-big-media="{{ media | image_url: width: 1920 }}">
           {% if media.media_type == 'video' %}
             {{
               media
@@ -140,8 +140,7 @@
                 height: '100%',
                 sizes: sizes,
                 widths: widths,
-                data-big-media: media
-              | image_url: width: 1920, style: 'object-fit: contain;'
+                style: 'object-fit: contain;'
             }}
           {%- endif -%}
         </div>
