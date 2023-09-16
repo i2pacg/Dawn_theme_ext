@@ -131,6 +131,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "columns_tablet": "3",
         "columns_mobile": "1",
         "padding_top": 36,
         "padding_bottom": 28
