@@ -16,8 +16,7 @@ if (!customElements.get('media-gallery-ext')) {
           });
           $(galleryThumbs).on('init', function (event, slick, currentSlide, nextSlide) {
             $('.slick-slide', $(this)).on('click', function (event) {
-              console.log('slick-slide');
-              console.log(event);
+              console.log(this.getAttribute('data-slick-index'));
             });
           });
           $(galleryThumbs).slick({
