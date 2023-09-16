@@ -269,9 +269,9 @@
                   </summary>
                   <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                     {{ block.settings.content }}
-                    {% if block.settings.image %}
+                    {% if block.settings.image_4 %}
                       {{
-                        block.settings.image
+                        block.settings.image_4
                         | image_url: width: '100%'
                         | image_tag: loading: 'lazy', height: '100%'
                       -}}
