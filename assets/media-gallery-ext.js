@@ -12,13 +12,13 @@ if (!customElements.get('media-gallery-ext')) {
 /*             asNavFor: galleryThumbs,
  */          });
           $(galleryThumbs).slick({
-            centerPadding: '0px',
+            centerPadding: '16px',
             slidesToShow: 5,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 10000,
             infinite: true,
-            variableWidth: false,
+            variableWidth: true,
             centerMode: true,
             asNavFor: gallery,
           });
