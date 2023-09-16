@@ -267,101 +267,99 @@
                     </div>
                     {% render 'icon-caret' %}
                   </summary>
-                  {% comment %}
-                    <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                      {{ block.settings.content }}
-                      {% if block.settings.image_4 %}
-                        <modal-opener
-                          class="product-popup-modal__opener no-js-hidden"
-                          data-modal="#ProductMediaModal-{{ product.id }}"
-                          {{ shopify_attributes }}
-                        >
-                          <div class="loading-overlay__spinner hidden">
-                            <svg
-                              aria-hidden="true"
-                              focusable="false"
-                              class="spinner"
-                              viewBox="0 0 66 66"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <circle class="path" fill="none" stroke-width="4" cx="33" cy="33" r="30"></circle>
-                            </svg>
-                          </div>
-                          <button
-                            id="ProductMedia-{{ product.id }}"
-                            class="product-popup-modal__button link"
-                            type="button"
-                            style="text-decoration: unset;display: inline-block;"
-                            aria-haspopup="dialog"
+                  <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                    {{ block.settings.content }}
+                    {% if block.settings.image_4 %}
+                      <modal-opener
+                        class="product-popup-modal__opener no-js-hidden"
+                        data-modal="#ProductMediaModal-{{ product.id }}"
+                        {{ shopify_attributes }}
+                      >
+                        <div class="loading-overlay__spinner hidden">
+                          <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            class="spinner"
+                            viewBox="0 0 66 66"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
+                            <circle class="path" fill="none" stroke-width="4" cx="33" cy="33" r="30"></circle>
+                          </svg>
+                        </div>
+                        <button
+                          id="ProductMedia-{{ product.id }}"
+                          class="product-popup-modal__button link"
+                          type="button"
+                          style="text-decoration: unset;display: inline-block;"
+                          aria-haspopup="dialog"
+                        >
+                          {{
+                            block.settings.image_4
+                            | image_url: width: '1920'
+                            | image_tag: loading: 'lazy', height: '100%'
+                          -}}
+                        </button>
+                      </modal-opener>
+                      <style>
+                        .sizing-modal {
+                        }
+                        .sizing-modal .product-popup-modal__content {
+                          display: flex;
+                          margin: auto;
+                          padding: 0px;
+                          padding-bottom: 0;
+                          height: 100%;
+                          background: transparent;
+                          text-align: center;
+                          align-items: center;
+                          width: 100%;
+                          position: relative;
+                          border: unset;
+                          border-radius: unset;
+                          top: 0;
+                        }
+
+                        .sizing-modal .product-popup-modal__content .product-popup-modal__content-info {
+                          padding: 0;
+                        }
+                        .sizing-modal .product-popup-modal__content img {
+                          max-width: 100%;
+                          object-fit: contain;
+                          max-height: 100vh;
+                        }
+                      </style>
+                      <modal-dialog id="ProductMediaModal-{{ product.id }}" class="product-popup-modal sizing-modal">
+                        <div
+                          role="dialog"
+                          aria-label="{{ product.title }}"
+                          aria-modal="true"
+                          class="product-popup-modal__content product-popup-modal__toggle"
+                          id="ModalClose-{{ product.id }}"
+                          aria-label="{{ 'accessibility.close' | t }}"
+                          tabindex="-1"
+                        >
+                          {% comment %}
+                            <button
+                              id="ModalClose-{{ product.id }}"
+                              type="button"
+                              class="product-popup-modal__toggle"
+                              aria-label="{{ 'accessibility.close' | t }}"
+                            >
+                              {% render 'icon-close' %}
+                            </button>
+                          {% endcomment %}
+                          <div class="product-popup-modal__content-info">
                             {{
                               block.settings.image_4
                               | image_url: width: '1920'
                               | image_tag: loading: 'lazy', height: '100%'
                             -}}
-                          </button>
-                        </modal-opener>
-                        <style>
-                          .sizing-modal {
-                          }
-                          .sizing-modal .product-popup-modal__content {
-                            display: flex;
-                            margin: auto;
-                            padding: 0px;
-                            padding-bottom: 0;
-                            height: 100%;
-                            background: transparent;
-                            text-align: center;
-                            align-items: center;
-                            width: 100%;
-                            position: relative;
-                            border: unset;
-                            border-radius: unset;
-                            top: 0;
-                          }
-
-                          .sizing-modal .product-popup-modal__content .product-popup-modal__content-info {
-                            padding: 0;
-                          }
-                          .sizing-modal .product-popup-modal__content img {
-                            max-width: 100%;
-                            object-fit: contain;
-                            max-height: 100vh;
-                          }
-                        </style>
-                        <modal-dialog id="ProductMediaModal-{{ product.id }}" class="product-popup-modal sizing-modal">
-                          <div
-                            role="dialog"
-                            aria-label="{{ product.title }}"
-                            aria-modal="true"
-                            class="product-popup-modal__content product-popup-modal__toggle"
-                            id="ModalClose-{{ product.id }}"
-                            aria-label="{{ 'accessibility.close' | t }}"
-                            tabindex="-1"
-                          >
-                            {% comment %}
-                              <button
-                                id="ModalClose-{{ product.id }}"
-                                type="button"
-                                class="product-popup-modal__toggle"
-                                aria-label="{{ 'accessibility.close' | t }}"
-                              >
-                                {% render 'icon-close' %}
-                              </button>
-                            {% endcomment %}
-                            <div class="product-popup-modal__content-info">
-                              {{
-                                block.settings.image_4
-                                | image_url: width: '1920'
-                                | image_tag: loading: 'lazy', height: '100%'
-                              -}}
-                            </div>
                           </div>
-                        </modal-dialog>
-                      {% endif %}
-                      {{ block.settings.page.content }}
-                    </div>
-                  {% endcomment %}
+                        </div>
+                      </modal-dialog>
+                    {% endif %}
+                    {{ block.settings.page.content }}
+                  </div>
                 </details>
               </div>
             {%- when 'quantity_selector' -%}
