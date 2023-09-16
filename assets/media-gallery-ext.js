@@ -11,6 +11,8 @@ if (!customElements.get('media-gallery-ext')) {
           $(gallery).slick({
             asNavFor: galleryThumbs,
           });
+          $(galleryThumbs).on('init', function (event, slick, currentSlide, nextSlide) {
+          });
           $(galleryThumbs).slick({
             centerPadding: '16px',
             slidesToScroll: 1,
