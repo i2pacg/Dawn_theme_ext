@@ -77,7 +77,7 @@
     {%- endif -%}
   </noscript>
 
-  <div onclick="openMediaInDialog({{media}})" class="product__modal-opener product__modal-opener--{{ media.media_type }} no-js-hidden" data-modal="#ProductModal-{{ modal_id }}">
+  <div onclick="openMediaInDialog({{ media.preview_image | image_url: width: 1946 }})" class="product__modal-opener product__modal-opener--{{ media.media_type }} no-js-hidden" data-modal="#ProductModal-{{ modal_id }}">
     <span class="product__media-icon motion-reduce quick-add-hidden{% if media.media_type == 'image' %} product__media-icon--{{ section.settings.image_zoom }}{% endif %}" aria-hidden="true">
       {%- liquid
         case media.media_type
