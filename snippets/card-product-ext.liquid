@@ -80,13 +80,13 @@
         -%}
         {{
           product.featured_media
-          | image_url: width: '100%'
+          | image_url: width: '375px'
           | image_tag: loading: 'lazy', height: '100%', sizes: sizes, widths: widths
         -}}
         {%- if product.media[1] != null and show_secondary_image -%}
           {{
             product.media[1]
-            | image_url: width: '100%'
+            | image_url: width: '375px'
             | image_tag: loading: 'lazy', height: '100%', sizes: sizes, widths: widths
           -}}
         {%- endif -%}
