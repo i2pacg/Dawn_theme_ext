@@ -92,17 +92,6 @@
       width: 100%;
     }
   {%- endstyle -%}
-  <style>
-    .slick-slider > div {
-      display: none;
-    }
-    .slick-slider > div:first-child {
-      display: block;
-    }
-    .slick-slider.slick-initialized > div {
-      display: block;
-    }
-  </style>
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   {%- if product.quantity_price_breaks_configured? -%}
