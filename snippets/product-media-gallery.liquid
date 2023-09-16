@@ -42,17 +42,21 @@
     assign id_append = '-duplicate'
   endif
 -%}
-{{ 'sweetalert2.min.js' | asset_url | script_tag }}
+{{ 'sweetalert2.all.min.js' | asset_url | script_tag }}
 <script>
   function openMediaInDialog(media) {
     console.log('openMediaInDialog');
     console.log(media);
-    Swal.fire({
-      title: 'Error!',
-      text: 'Do you want to continue',
-      icon: 'error',
-      confirmButtonText: 'Cool',
-    });
+    try {
+      Swal.fire({
+        title: 'Error!',
+        text: 'Do you want to continue',
+        icon: 'error',
+        confirmButtonText: 'Cool',
+      });
+    } catch (e) {
+      console.log(e);
+    }
   }
 </script>
 <media-gallery
