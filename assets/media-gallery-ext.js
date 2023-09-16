@@ -8,7 +8,12 @@ if (!customElements.get('media-gallery-ext')) {
         const gallery = this.querySelector('.media-gallery');
         const galleryThumbs = this.querySelector('.media-gallery-thumbs');
         try {
-          $(gallery).slick({});
+          $(gallery).slick({
+            asNavFor: galleryThumbs,
+          });
+          $(gallery).slick({
+            asNavFor: gallery,
+          });
         } catch (error) {
           console.log(error);
         }
