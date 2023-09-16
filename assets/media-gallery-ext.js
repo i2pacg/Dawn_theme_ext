@@ -8,7 +8,12 @@ if (!customElements.get('media-gallery-ext')) {
         const gallery = this.querySelector('.media-gallery');
         const galleryThumbs = this.querySelector('.media-gallery-thumbs');
         try {
-          $(gallery).slick({
+
+          $(galleryThumbs).on('init', function (event, slick, currentSlide, nextSlide) {
+            $('.slick-slide', $(this)).on('click', function (event) {
+              $(gallery).slick('slickGoTo', this.getAttribute('data-slick-index'));
+            });
+          }); $(gallery).slick({
             autoplay: true,
             autoplaySpeed: 10000,
             infinite: true,
