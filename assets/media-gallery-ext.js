@@ -20,7 +20,7 @@ if (!customElements.get('media-gallery-ext')) {
             infinite: false,
             variableWidth: true,
             centerMode: false,
-            asNavFor: 'media-gallery',
+            asNavFor: '.media-gallery',
           });
         } catch (error) {
           console.log(error);
