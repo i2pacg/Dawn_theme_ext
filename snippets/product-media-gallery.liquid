@@ -43,6 +43,11 @@
   endif
 -%}
 {{ 'sweetalert2.all.min.js' | asset_url | script_tag }}
+<style>
+  .swal2-image {
+    object-fit: contain;
+  }
+</style>
 <script>
   function openMediaInDialog(media) {
     console.log('openMediaInDialog');
