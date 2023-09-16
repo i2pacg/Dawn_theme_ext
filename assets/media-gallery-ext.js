@@ -16,6 +16,7 @@ if (!customElements.get('media-gallery-ext')) {
               try {
                 Swal.fire({
                   imageUrl: this.querySelector('img').getAttribute('bigmedia'),
+                  showConfirmButton: false,
                 });
               } catch (error) {
                 console.log(error);
