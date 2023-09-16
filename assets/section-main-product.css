@@ -1425,7 +1425,7 @@ a.product__text {
 .product-media-container .media {
   /* padding-top: var(--ratio-percent);
    */
-  padding-top: 320px;
+  padding-top: 420px;
 }
 
 .product-media-container.constrain-height .media {
