@@ -25,6 +25,7 @@ if (!customElements.get('media-gallery-ext')) {
             infinite: true,
             variableWidth: true,
             asNavFor: gallery,
+            centerMode: true,
           });
         } catch (error) {
           console.log(error);
