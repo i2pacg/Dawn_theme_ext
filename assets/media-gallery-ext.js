@@ -9,11 +9,19 @@ if (!customElements.get('media-gallery-ext')) {
         const galleryThumbs = this.querySelector('.media-gallery-thumbs');
         try {
           $(gallery).slick({
-            /* asNavFor: galleryThumbs, */
+            asNavFor: galleryThumbs,
           });
-          /*   $(gallery).slick({
-              asNavFor: gallery,
-            }); */
+          $(galleryThumbs).slick({
+            centerPadding: '0px',
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 10000,
+            infinite: true,
+            variableWidth: true,
+            centerMode: true,
+            asNavFor: gallery,
+          });
         } catch (error) {
           console.log(error);
         }
