@@ -57,7 +57,14 @@
       {% if media.media_type == 'video' %}
         {{
           media
-          | video_tag: loop: true, height: '100%', width: '100%', playsinline: true, autoplay: true, muted: true
+          | video_tag:
+            loop: true,
+            height: '420px',
+            width: '100%',
+            style: 'object-fit: contain;',
+            playsinline: true,
+            autoplay: true,
+            muted: true
         }}
       {%- else -%}
         {%- liquid
