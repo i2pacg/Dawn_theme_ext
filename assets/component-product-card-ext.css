@@ -5,9 +5,7 @@
    font-weight: 700;
  }
 
- .product-card {
-   max-width: 240px;
- }
+ .product-card {}
 
  .product-card a {
    text-decoration: unset;
