@@ -10,8 +10,7 @@ if (!customElements.get('media-gallery-ext')) {
           $(gallery).slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: false,
-            fade: true,
+            arrows: true,
             asNavFor: '.slider-nav'
           });
         } catch (error) {
