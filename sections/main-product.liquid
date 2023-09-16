@@ -68,6 +68,11 @@
   {%- if product.quantity_price_breaks_configured? -%}
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
   {%- endif -%}
+  {{ 'slick.min.css' | asset_url | stylesheet_tag }}
+  {{ 'slick-theme.min.css' | asset_url | stylesheet_tag }}
+
+  {{ 'jquery.min.js' | asset_url | script_tag }}
+  {{ 'slick.min.js' | asset_url | script_tag }}
   <script src="{{ 'sweetalert2.min.js' | asset_url }}" defer="defer"></script>
 
   {%- style -%}
