@@ -136,7 +136,7 @@ let initNavSlickPromise = new Promise(resolve => {
         centerPadding: '0px',
         slidesToShow: 2,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 10000,
         infinite: true,
         variableWidth: true,
