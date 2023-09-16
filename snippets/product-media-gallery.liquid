@@ -46,6 +46,12 @@
   function openMediaInDialog(media) {
     console.log('openMediaInDialog');
     console.log(media);
+    Swal.fire({
+      title: 'Error!',
+      text: 'Do you want to continue',
+      icon: 'error',
+      confirmButtonText: 'Cool',
+    });
   }
 </script>
 <media-gallery
