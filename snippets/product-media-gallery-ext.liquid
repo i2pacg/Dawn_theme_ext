@@ -10,6 +10,7 @@
   Usage:
   {% render 'product-media-gallery-ext', is_duplicate: true %}
 {% endcomment %}
+{{ 'sweetalert2.all.min.js' | asset_url | script_tag }}
 
 {%- liquid
   if section.settings.hide_variants and variant_images.size == product.media.size
