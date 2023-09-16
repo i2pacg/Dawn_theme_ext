@@ -233,6 +233,12 @@
 }
 
 @media screen and (max-width: 749px) {
+
+    .collection-slideshow .slider-content .slider-nav .slider-thumb {
+        margin: 8px;
+        height: 420px;
+    }
+
     .collection-slideshow .slider-content .slider-content-card .slider-content-title svg {
         height: 24px;
     }
