@@ -26,6 +26,10 @@
    width: 100%;
  }
 
+ .product-card.product-media-square {
+   width: 240px;
+ }
+
  .product-card.product-media-square .product-picture {
    height: 240px;
    width: 240px;
