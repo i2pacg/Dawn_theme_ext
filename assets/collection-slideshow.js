@@ -32,7 +32,6 @@ document.querySelectorAll("[data-aos]").forEach(element => {
         console.log("error", anim, delay, duration);
     }
 });
-console.log("animObjects", animObjects);
 //loop through animObjects and push elements to the right array
 for (const anim in animObjects) {
     //sort by delay
@@ -44,7 +43,6 @@ for (const anim in animObjects) {
         return b[0] - a[0];
     });
     animObjects[anim] = Object.fromEntries(sortable);
-    console.log("animObjects", animObjects[anim]);
     for (const delay in animObjects[anim]) {
         for (const duration in animObjects[anim][delay]) {
             const elements = animObjects[anim][delay][duration];
