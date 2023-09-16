@@ -13,7 +13,7 @@ if (!customElements.get('media-gallery-ext')) {
           });
           $(galleryThumbs).slick({
             centerPadding: '0px',
-            slidesToShow: 2,
+            slidesToShow: 5,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 10000,
