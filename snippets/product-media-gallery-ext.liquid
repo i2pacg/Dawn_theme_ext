@@ -52,7 +52,7 @@
   aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
   data-desktop-layout="{{ section.settings.gallery_layout }}"
 >
-  <div class="media-gallery">
+  <div class="media-gallery" style="max-height:420px">
     {{
       product.featured_media
       | image_url: height: '420px'
