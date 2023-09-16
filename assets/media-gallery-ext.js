@@ -8,13 +8,18 @@ if (!customElements.get('media-gallery-ext')) {
         const gallery = this.querySelector('.media-gallery');
         console.log(this);
         console.log(gallery);
-        $(gallery).slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          fade: true,
-          asNavFor: '.slider-nav'
-        });
+        try {
+          $(gallery).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+          });
+        } catch (error) {
+          console.log(error);
+        }
+
       }
     }
   );
