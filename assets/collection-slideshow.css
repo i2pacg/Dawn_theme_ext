@@ -89,13 +89,12 @@
     right: 0;
     bottom: 0;
     opacity: 0.5;
-    background: #ffefba;
-    /* fallback for old browsers */
+    /*     background: #ffefba;
     background: -webkit-linear-gradient(to bottom, #ffffff, #ffefba);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right,
             #ffffff,
             #ffefba);
+    */
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
