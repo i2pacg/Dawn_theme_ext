@@ -22,6 +22,7 @@
         },
         "6ee76b9f-2067-44f9-82d6-625200b1998a": {
           "type": "popup",
+          "disabled": true,
           "settings": {
             "text": "Sizing chart",
             "page": "",
