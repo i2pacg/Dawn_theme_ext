@@ -69,6 +69,10 @@
     overflow: hidden;
 }
 
+slideshow-component:before {
+    content: unset;
+}
+
 .collection-slideshow .slider-for {}
 
 .collection-slideshow .slider-for .slide-full {
