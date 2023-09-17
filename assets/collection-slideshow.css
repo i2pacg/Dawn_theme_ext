@@ -65,7 +65,7 @@
 @media screen and (min-width: 768px) {}
 
 .collection-slideshow {
-    height: 100vh;
+    height: calc(100vh - 107px);
     overflow: hidden;
 }
 
