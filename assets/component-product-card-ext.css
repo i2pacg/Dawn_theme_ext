@@ -11,6 +11,7 @@
 
  .product-card a {
    display: flex;
+   flex-direction: column;
    text-decoration: unset;
    height: 100%;
  }
