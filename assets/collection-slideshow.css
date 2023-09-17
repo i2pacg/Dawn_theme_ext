@@ -168,7 +168,7 @@
     width: 100%;
     max-width: 100vw;
     padding: 16px;
-
+    background: #ffffff70;
     pointer-events: all;
     margin-top: 122px;
     overflow: hidden;
@@ -194,7 +194,7 @@
 @media screen and (min-width: 576px) {
     .collection-slideshow .slider-content .slider-content-card {
         max-width: 90vw;
-        border: 3px #462a4d solid;
+        border: 3px white solid;
         border-radius: 32px;
     }
 }
