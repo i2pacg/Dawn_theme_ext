@@ -24,6 +24,7 @@
         "announcement-bar-0",
         "faa88158-212e-4403-96ac-eb9f7c713b97"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "background-1",
         "show_line_separator": true,
