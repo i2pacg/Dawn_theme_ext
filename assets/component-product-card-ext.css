@@ -10,7 +10,9 @@
  }
 
  .product-card a {
+   display: flex;
    text-decoration: unset;
+   height: 100%;
  }
 
 
