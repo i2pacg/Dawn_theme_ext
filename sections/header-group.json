@@ -7,7 +7,6 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Welcome to our store",
             "link": ""
@@ -15,9 +14,8 @@
         },
         "faa88158-212e-4403-96ac-eb9f7c713b97": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Something else",
             "link": ""
           }
         }
