@@ -194,7 +194,7 @@
 @media screen and (min-width: 576px) {
     .collection-slideshow .slider-content .slider-content-card {
         max-width: 90vw;
-        border: 3px white solid;
+        border: 3px #ffffff90 solid;
         border-radius: 32px;
     }
 }
