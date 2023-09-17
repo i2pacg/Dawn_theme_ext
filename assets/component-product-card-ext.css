@@ -5,7 +5,9 @@
    font-weight: 700;
  }
 
- .product-card {}
+ .product-card {
+   height: 100%;
+ }
 
  .product-card a {
    text-decoration: unset;
