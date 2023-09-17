@@ -7,6 +7,15 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
+        },
+        "faa88158-212e-4403-96ac-eb9f7c713b97": {
+          "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Welcome to our store",
             "link": ""
@@ -14,9 +23,9 @@
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "faa88158-212e-4403-96ac-eb9f7c713b97"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "background-1",
         "show_line_separator": true,
@@ -36,7 +45,7 @@
         "logo_position": "middle-center",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
-        "sticky_header_type": "reduce-logo-size",
+        "sticky_header_type": "always",
         "show_line_separator": true,
         "color_scheme": "scheme-91669cbb-597f-4ef7-bd49-362ea6f57818",
         "menu_color_scheme": "background-1",
