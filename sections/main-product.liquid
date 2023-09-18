@@ -146,6 +146,9 @@
             {%- when '@app' -%}
               {{- block.name -}}
               {{- block.settings.type -}}
+              {% for set in block.settings %}
+                {{ set }}
+              {% endfor %}
               {% render block %}
             {%- when 'text' -%}
               <p
