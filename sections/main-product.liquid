@@ -144,10 +144,6 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
-              {{ block.settings }}
-let bloc = {{block}};
-console.log(bloc);
-              </script>
               {% render block %}
             {%- when 'text' -%}
               <p
