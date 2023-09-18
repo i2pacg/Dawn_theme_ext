@@ -69,6 +69,8 @@
   {%- if product.quantity_price_breaks_configured? -%}
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
   {%- endif -%}
+  <noscript>{{ 'slick.min.css' | asset_url | stylesheet_tag }}</noscript>
+  <noscript>{{ 'slick-theme.min.css' | asset_url | stylesheet_tag }}</noscript>
   <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
   <script src="{{ 'slick.min.js' | asset_url }}" defer></script>
   <script src="{{ 'anime.min.js' | asset_url }}" defer></script>
