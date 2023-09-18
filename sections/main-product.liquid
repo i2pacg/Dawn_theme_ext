@@ -642,9 +642,7 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
-              </div>
-              <div class="price-saving">
-                <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                <div class="price-saving">
                   {%- render 'price-ext',
                     product: product,
                     show_compare_at_price: true,
@@ -655,6 +653,7 @@
                   -%}
                 </div>
               </div>
+
             {%- when 'popup' -%}
               <modal-opener
                 class="product-popup-modal__opener no-js-hidden quick-add-hidden"
