@@ -145,10 +145,7 @@
           {%- case block.type -%}
             {%- when '@app' -%}
               {{- block.type -}}
-              {{- block.name -}}
-              {{- block.settings.name -}}
-              {{- block.settings.id -}}
-              {{- block.settings.type -}}
+              {{- block['blocks-'] }}
               {% for set in block.settings %}
                 {{ set }}
               {% endfor %}
