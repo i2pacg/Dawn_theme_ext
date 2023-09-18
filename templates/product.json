@@ -13,27 +13,6 @@
           "settings": {
           }
         },
-        "58d146aa-b8ea-4cad-ba11-20e849c9afed": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "with_divider": false
-          }
-        },
-        "6ee76b9f-2067-44f9-82d6-625200b1998a": {
-          "type": "popup",
-          "disabled": true,
-          "settings": {
-            "text": "Sizing chart",
-            "page": "",
-            "image": "shopify:\/\/shop_images\/IMG_1118_bc655a04-3bb1-4598-85db-0f0d031313f4.png",
-            "with_divider": true,
-            "label_margin_top": 0,
-            "label_margin_bottom": 0,
-            "label_padding_top": 0,
-            "label_padding_bottom": 0
-          }
-        },
         "5e30f747-134b-45bb-ac6d-407cd43d9a49": {
           "type": "collapsible_tab",
           "settings": {
@@ -42,6 +21,13 @@
             "content": "<h5>Unlock the Perfect Fit with Our Detailed Sizing Chart.<\/h5>",
             "page": "",
             "image_4": "shopify:\/\/shop_images\/WhiteandBlackAestheticSizeChartInstagramPost.png"
+          }
+        },
+        "58d146aa-b8ea-4cad-ba11-20e849c9afed": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "with_divider": false
           }
         },
         "28d3cf48-f336-46c8-8f7d-ec5bd99564a9": {
@@ -91,9 +77,8 @@
       "block_order": [
         "title",
         "description",
-        "58d146aa-b8ea-4cad-ba11-20e849c9afed",
-        "6ee76b9f-2067-44f9-82d6-625200b1998a",
         "5e30f747-134b-45bb-ac6d-407cd43d9a49",
+        "58d146aa-b8ea-4cad-ba11-20e849c9afed",
         "28d3cf48-f336-46c8-8f7d-ec5bd99564a9",
         "quantity_selector",
         "price",
