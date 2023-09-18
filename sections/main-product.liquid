@@ -1056,10 +1056,9 @@
 
   <script>
     try {
-      let blocks = {{section.blocks}};
-      console.log("wee" ,blocks);
-       }
-       catch (error) {
+      let blocks = JSON.parse(`{{section.blocks}}`);
+      console.log('wee', blocks);
+    } catch (error) {
       console.log(error);
     }
 
