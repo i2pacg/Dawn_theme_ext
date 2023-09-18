@@ -8,7 +8,9 @@ if (!customElements.get('media-gallery-ext')) {
         console.log('media-gallery-ext');
         const gallery = this.querySelector('.media-gallery');
         const galleryThumbs = this.querySelector('.media-gallery-thumbs');
+
         try {
+          if (gallery.children.length < 2) return;
           $(gallery).on('init', function (event, slick, currentSlide, nextSlide) {
             $('.slick-slide', $(this)).on('click', function (event) {
               console.log(this);
