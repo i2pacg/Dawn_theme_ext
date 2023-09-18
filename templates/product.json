@@ -1,5 +1,22 @@
 {
   "sections": {
+    "169506011574a5b529": {
+      "type": "apps",
+      "blocks": {
+        "18968f7a-928c-422e-9820-7ccaa60c1a74": {
+          "type": "shopify:\/\/apps\/tib-product-options\/blocks\/product-app-block\/906ef57c-14e4-45d8-8b53-3ba7349d56a6",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "18968f7a-928c-422e-9820-7ccaa60c1a74"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -125,6 +142,7 @@
     }
   },
   "order": [
+    "169506011574a5b529",
     "main",
     "related-products"
   ]
