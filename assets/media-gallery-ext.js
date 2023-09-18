@@ -31,7 +31,7 @@ if (!customElements.get('media-gallery-ext')) {
           $(gallery).slick({
             autoplay: true,
             autoplaySpeed: 10000,
-            infinite: true,
+            infinite: galleryThumbs ? true : false,
             asNavFor: galleryThumbs ? galleryThumbs : '',
             arrows: galleryThumbs ? true : false,
           });
