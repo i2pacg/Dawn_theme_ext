@@ -1040,7 +1040,7 @@
     </modal-dialog>
   {%- endfor -%}
 
-  {%- if product.media.size > 0 -%}
+  {%- if product.media.size > 1 -%}
     <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'media-gallery-ext.js' | asset_url }}" defer="defer"></script>
@@ -1052,6 +1052,7 @@
     </script>
     <script src="{{ 'product-model.js' | asset_url }}" defer></script>
   {%- endif -%}
+  {{- block.name -}}
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
