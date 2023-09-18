@@ -77,21 +77,30 @@
   <script src="{{ 'anime.min.js' | asset_url }}" async></script>
 
   {%- style -%}
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-    }
+    .product__info-container > span{
 
-    @media screen and (min-width: 750px) {
+      max-width: 44rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+    }
       .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
       }
-    }
-    .product__title svg{
-      height: 56px;
-      width: 100%;
-    }
+
+      @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+      }
+      .product__title svg{
+        height: 56px;
+        width: 100%;
+      }
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -197,7 +206,6 @@
                   </modal-opener>
                 {% endif %}
               </span>
-              <hr>
 
             {%- when 'inventory' -%}
               <p
