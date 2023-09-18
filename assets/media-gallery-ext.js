@@ -11,31 +11,32 @@ if (!customElements.get('media-gallery-ext')) {
 
         try {
           console.log(gallery.querySelectorAll('.media-item').length);
-          $(gallery).on('init', function (event, slick, currentSlide, nextSlide) {
-            $('.slick-slide', $(this)).on('click', function (event) {
-              console.log(this);
-              console.log(this.querySelector('img').getAttribute('bigmedia'));
-              if (!this.querySelector('img').getAttribute('bigmedia')) return;
-              try {
-                Swal.fire({
-                  imageUrl: this.querySelector('img').getAttribute('bigmedia'),
-                  imageHeight: '90vh',
-                  showConfirmButton: false,
-                  width: 'auto',
-                });
-              } catch (error) {
-                console.log(error);
-              }
+          if (gallery) {
+            $(gallery).on('init', function (event, slick, currentSlide, nextSlide) {
+              $('.slick-slide', $(this)).on('click', function (event) {
+                console.log(this);
+                console.log(this.querySelector('img').getAttribute('bigmedia'));
+                if (!this.querySelector('img').getAttribute('bigmedia')) return;
+                try {
+                  Swal.fire({
+                    imageUrl: this.querySelector('img').getAttribute('bigmedia'),
+                    imageHeight: '90vh',
+                    showConfirmButton: false,
+                    width: 'auto',
+                  });
+                } catch (error) {
+                  console.log(error);
+                }
+              });
             });
-          });
-
-          $(gallery).slick({
-            autoplay: true,
-            autoplaySpeed: 10000,
-            infinite: true,
-            asNavFor: galleryThumbs,
-            arrows: true
-          });
+            $(gallery).slick({
+              autoplay: true,
+              autoplaySpeed: 10000,
+              infinite: true,
+              asNavFor: galleryThumbs,
+              arrows: true
+            });
+          }
           if (galleryThumbs) {
             $(galleryThumbs).on('init', function (event, slick, currentSlide, nextSlide) {
               $('.slick-slide', $(this)).on('click', function (event) {
