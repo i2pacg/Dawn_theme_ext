@@ -1055,8 +1055,15 @@
   {{- block.name -}}
 
   <script>
-    let blocks = {{section.blocks}};
-    console.log(blocks);
+    try {
+      let blocks = {{section.blocks}};
+      console.log(blocks);
+      console.error(error);
+       }
+       catch (error) {
+      console.error(error);
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
       function isIE() {
         const ua = window.navigator.userAgent;
