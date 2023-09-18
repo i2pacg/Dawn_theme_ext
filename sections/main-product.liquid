@@ -144,7 +144,10 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
+              {{- block.type -}}
               {{- block.name -}}
+              {{- block.settings.name -}}
+              {{- block.settings.id -}}
               {{- block.settings.type -}}
               {% for set in block.settings %}
                 {{ set }}
