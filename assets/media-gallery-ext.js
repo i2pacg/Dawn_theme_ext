@@ -8,10 +8,9 @@ if (!customElements.get('media-gallery-ext')) {
         console.log('media-gallery-ext');
         const gallery = this.querySelector('.media-gallery');
         const galleryThumbs = this.querySelector('.media-gallery-thumbs');
-        console.log(gallery);
-        console.log(galleryThumbs);
 
         try {
+          console.log(gallery.querySelectorAll('.media-item').length);
           $(gallery).on('init', function (event, slick, currentSlide, nextSlide) {
             $('.slick-slide', $(this)).on('click', function (event) {
               console.log(this);
@@ -29,12 +28,13 @@ if (!customElements.get('media-gallery-ext')) {
               }
             });
           });
+
           $(gallery).slick({
             autoplay: true,
             autoplaySpeed: 10000,
-            infinite: galleryThumbs ? true : false,
-            asNavFor: galleryThumbs ? galleryThumbs : '',
-            arrows: galleryThumbs ? true : false,
+            infinite: true,
+            asNavFor: galleryThumbs,
+            arrows: true
           });
           if (galleryThumbs) {
             $(galleryThumbs).on('init', function (event, slick, currentSlide, nextSlide) {

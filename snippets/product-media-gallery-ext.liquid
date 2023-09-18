@@ -108,9 +108,9 @@
 >
   <div class="media-gallery">
     <div class="media-item">
-      {%- assign bigMedia = product.featured_media | image_url: width: 1920 -%}
+      {%- assign bigMedia = product.selected_or_first_available_variant.featured_media | image_url: width: 1920 -%}
       {{
-        product.featured_media
+        product.selected_or_first_available_variant.featured_media
         | image_url: height: '420px'
         | image_tag:
           loading: 'lazy',
