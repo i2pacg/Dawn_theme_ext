@@ -86,6 +86,28 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "4f6af49f-6795-4a45-8161-ef3a917e8cbf": {
+          "type": "shopify:\/\/apps\/easy-quote\/blocks\/easy-quote-sealapps\/414e3c56-ba13-45bb-9f54-87077e6b11d9",
+          "settings": {
+            "eq_quote_button_color": "#FFFFFF",
+            "eq_quote_button_color_hover": "#333333",
+            "eq_quote_button_background": "#333333",
+            "eq_quote_button_background_hover": "#FFFFFF",
+            "eq_quote_border_color": "#333333",
+            "eq_quote_border_color_hover": "#333333",
+            "eq_quote_border_width": 2,
+            "eq_quote_border_radius": 2,
+            "eq_quote_button_margin_top": 10,
+            "eq_quote_button_content": "Request for quote",
+            "eq_quote_button_text_align": "center",
+            "eq_quote_font_size": 14,
+            "eq_quote_button_height": 44,
+            "eq_quote_button_width_customizable": false,
+            "eq_quote_button_width": 344,
+            "eq_quote_button_font_family": "inherit",
+            "eq_quote_button_font_weight": "inherit"
+          }
         }
       },
       "block_order": [
@@ -99,7 +121,8 @@
         "price",
         "f9fca452-c63a-4426-a6c7-c46378d03566",
         "buy_buttons",
-        "share"
+        "share",
+        "4f6af49f-6795-4a45-8161-ef3a917e8cbf"
       ],
       "custom_css": [
 
