@@ -145,7 +145,10 @@
           {%- case block.type -%}
             {%- when '@app' -%}
               <div>shopify_attributes</div>
-              {% comment %} {{ block.shopify_attributes }} {% endcomment %}
+              <div>{{ block.shopify_attributes }}</div>
+              <div>{{ shopify_attributes }}</div>
+              <div>{{ shopify_attributes }}</div>
+              {% comment %} } {% endcomment %}
 
               {% render block %}
             {%- when 'text' -%}
