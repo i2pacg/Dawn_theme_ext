@@ -10,6 +10,7 @@ if (!customElements.get('media-gallery-ext')) {
         const galleryThumbs = this.querySelector('.media-gallery-thumbs');
 
         try {
+          console.log(gallery.querySelectorAll('.media-item').length);
           if (gallery.querySelectorAll('.media-item').length < 2) return;
           $(gallery).on('init', function (event, slick, currentSlide, nextSlide) {
             $('.slick-slide', $(this)).on('click', function (event) {
@@ -28,6 +29,7 @@ if (!customElements.get('media-gallery-ext')) {
               }
             });
           });
+
           $(gallery).slick({
             autoplay: true,
             autoplaySpeed: 10000,
