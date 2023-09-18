@@ -107,7 +107,7 @@
   data-desktop-layout="{{ section.settings.gallery_layout }}"
 >
   <div class="media-gallery">
-    {{ product.selected_or_first_available_variant }}
+    {{ product.selected_or_first_available_variant.featured_media }}
     <div class="media-item">
       {%- assign bigMedia = product.featured_media | image_url: width: 1920 -%}
       {{
