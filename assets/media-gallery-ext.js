@@ -28,13 +28,12 @@ if (!customElements.get('media-gallery-ext')) {
               }
             });
           });
-
           $(gallery).slick({
             autoplay: true,
             autoplaySpeed: 10000,
             infinite: true,
-            asNavFor: galleryThumbs,
-            arrows: true
+            asNavFor: galleryThumbs ? galleryThumbs : '',
+            arrows: galleryThumbs ? true : false,
           });
           if (galleryThumbs) {
             $(galleryThumbs).on('init', function (event, slick, currentSlide, nextSlide) {
