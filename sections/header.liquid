@@ -26,6 +26,9 @@
 <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
+{{ 'slick.min.css' | asset_url | stylesheet_tag }}
+{{ 'slick-theme.min.css' | asset_url | stylesheet_tag }}
+
 {% if template.name == "index" %} 
 <style>
   .header {
@@ -117,6 +120,9 @@
   }
 {%- endstyle -%}
 <script src="{{ 'jquery.min.js' | asset_url }}" async></script>
+<script src="{{ 'slick.min.js' | asset_url }}" async></script>
+<script src="{{ 'anime.min.js' | asset_url }}" async></script>
+
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
