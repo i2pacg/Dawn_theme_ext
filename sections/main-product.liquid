@@ -71,9 +71,9 @@
 
   {{ 'slick.min.css' | asset_url | stylesheet_tag }}
   {{ 'slick-theme.min.css' | asset_url | stylesheet_tag }}
-  {{ 'jquery.min.js' | asset_url | script_tag }}
+  <script src="{{ 'jquery.min.js' | asset_url }}" async></script>
   <script src="{{ 'slick.min.js' | asset_url }}" async></script>
-  {{ 'anime.min.js' | asset_url | script_tag }}
+  <script src="{{ 'anime.min.js' | asset_url }}" async></script>
 
   {%- style -%}
     .section-{{ section.id }}-padding {
@@ -144,6 +144,7 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
+              This is app
               {% render block %}
             {%- when 'text' -%}
               <p
