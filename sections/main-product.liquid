@@ -144,8 +144,8 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
-              {{- block.settings.id -}}
-              {{- block.settings.title -}}
+              {{- block.name -}}
+              {{- block.settings.type -}}
               {% render block %}
             {%- when 'text' -%}
               <p
