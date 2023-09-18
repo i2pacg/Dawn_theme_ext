@@ -1055,6 +1055,7 @@
   {{- block.name -}}
 
   <script>
+    let blocks = {{section.settings.blocks}};
     document.addEventListener('DOMContentLoaded', function () {
       function isIE() {
         const ua = window.navigator.userAgent;
