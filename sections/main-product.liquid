@@ -144,11 +144,7 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
-              <div>shopify_attributes</div>
-              <div>{{ block.shopify_attributes }}</div>
-              <div>{{ shopify_attributes }}</div>
               <div>{{ block.type }}</div>
-              <div>{{ block.id }}</div>
               {% comment %} } {% endcomment %}
 
               {% render block %}
