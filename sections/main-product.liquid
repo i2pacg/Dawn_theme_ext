@@ -144,7 +144,7 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
-              {{ block | json }}
+              {{ block | String }}
               {% render block %}
             {%- when 'text' -%}
               <p
