@@ -8,18 +8,6 @@ if (!customElements.get('product-info')) {
         this.currentVariant = this.querySelector('.product-variant-id');
         this.variantSelects = this.querySelector('variant-radios');
         this.submitButton = this.querySelector('[type="submit"]');
-        /* this.input.addEventListener('input', (e) => {
-          console.log("quantity Change");
-          console.log(JSON.parse(this.getAttribute('data-product')));
-          const product = JSON.parse(this.getAttribute('data-product'));
-          const urlParams = new URLSearchParams(window.location.search);
-          const variantId = urlParams.get('variant')
-          if (!variantId) return;
-          const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
-          console.log(this.querySelector('.price.price-ext .price-item--regular'));
-          this.querySelector('.price.price-ext .price-item--regular').innerHTML = `${(variant.price / 100 * parseInt(e.target.value)).toFixed(2)} ${Shopify.currency.active}`;
-        }); */
-
       }
 
       cartUpdateUnsubscriber = undefined;
