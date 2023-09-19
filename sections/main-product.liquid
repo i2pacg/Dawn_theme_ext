@@ -183,11 +183,11 @@
             {%- when 'description' -%}
               <span>
                 {%- if product.metafields.description.short != blank -%}
-                  {{ product.metafields.description.short | truncate: 175, '...' }}
+                  {{ product.metafields.description.short | truncate: 250, '...' }}
                 {%- elsif product.description != blank -%}
-                  {{ product.description | truncate: 175, '...' }}
+                  {{ product.description | truncate: 250, '...' }}
                 {% endif %}
-                {%- if product.description != blank and product.description.size > 175 -%}
+                {%- if product.description != blank and product.description.size > 250 -%}
                   <modal-opener
                     class="product-popup-modal__opener no-js-hidden quick-add-hidden"
                     data-modal="#PopupModal-{{ product.id }}"
