@@ -1046,6 +1046,15 @@ class VariantSelects extends HTMLElement {
     });
   }
   updatePrice() {
+    console.log("updatePrice");
+    console.log(JSON.parse(this.getAttribute('data-product')));
+    const product = JSON.parse(this.getAttribute('data-product'));
+    const urlParams = new URLSearchParams(window.location.search);
+    const variantId = urlParams.get('variant')
+    if (!variantId) return;
+    const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
+    console.log(this.querySelector('.price.price-ext .price-item--regular'));
+    this.querySelector('.price.price-ext .price-item--regular').innerHTML = `${(variant.price / 100 * parseInt(e.target.value)).toFixed(2)} ${Shopify.currency.active}`;
 
   }
 
