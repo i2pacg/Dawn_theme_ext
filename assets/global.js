@@ -972,7 +972,6 @@ class VariantSelects extends HTMLElement {
     } else {
       this.updateMedia();
       this.updateURL();
-      this.updatePrice();
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
