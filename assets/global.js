@@ -1068,26 +1068,6 @@ class VariantSelects extends HTMLElement {
       this.setInputAvailability(optionInputs, availableOptionInputsValue);
     });
   }
-  updatePrice() {
-    try {
-      const productInfo = document.querySelector('product-info');
-      const quantityInput = productInfo.querySelector('.quantity__input');
-      console.log(JSON.parse(productInfo.getAttribute('data-product')));
-      const product = JSON.parse(productInfo.getAttribute('data-product'));
-      const urlParams = new URLSearchParams(window.location.search);
-      const variantId = urlParams.get('variant')
-
-
-      if (!variantId) return;
-      const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
-      console.log(productInfo.querySelector('.price.price-ext .price-item--regular'));
-      productInfo.querySelector('.price.price-ext .price-item--regular').innerHTML = `${(variant.price / 100 /* * parseInt(quantityInput.value) */).toFixed(2)} ${Shopify.currency.active}`;
-
-    } catch (error) {
-      console.log(error);
-    }
-
-  }
 
   setInputAvailability(listOfOptions, listOfAvailableOptions) {
     listOfOptions.forEach((input) => {
@@ -1124,8 +1104,8 @@ class VariantSelects extends HTMLElement {
     const sectionId = this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section;
 
     fetch(
-      `${this.dataset.url}?variant=${requestedVariantId}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
-      }`
+      `${this.dataset.url}?variant = ${requestedVariantId}& section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
+      } `
     )
       .then((response) => response.text())
       .then((responseText) => {
@@ -1133,27 +1113,27 @@ class VariantSelects extends HTMLElement {
         if (this.currentVariant.id !== requestedVariantId) return;
 
         const html = new DOMParser().parseFromString(responseText, 'text/html');
-        const destination = document.getElementById(`price-${this.dataset.section}`);
+        const destination = document.getElementById(`price - ${this.dataset.section} `);
         const source = html.getElementById(
-          `price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
+          `price - ${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section} `
         );
         const skuSource = html.getElementById(
-          `Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
+          `Sku - ${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section} `
         );
-        const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
+        const skuDestination = document.getElementById(`Sku - ${this.dataset.section} `);
         const inventorySource = html.getElementById(
-          `Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
+          `Inventory - ${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section} `
         );
-        const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
+        const inventoryDestination = document.getElementById(`Inventory - ${this.dataset.section} `);
 
         const volumePricingSource = html.getElementById(
-          `Volume-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
+          `Volume - ${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section} `
         );
 
-        const pricePerItemDestination = document.getElementById(`Price-Per-Item-${this.dataset.section}`);
-        const pricePerItemSource = html.getElementById(`Price-Per-Item-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        const pricePerItemDestination = document.getElementById(`Price - Per - Item - ${this.dataset.section} `);
+        const pricePerItemSource = html.getElementById(`Price - Per - Item - ${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section} `);
 
-        const volumePricingDestination = document.getElementById(`Volume-${this.dataset.section}`);
+        const volumePricingDestination = document.getElementById(`Volume - ${this.dataset.section} `);
 
         if (source && destination) destination.innerHTML = source.innerHTML;
         if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
@@ -1171,14 +1151,14 @@ class VariantSelects extends HTMLElement {
           pricePerItemDestination.classList.toggle('visibility-hidden', pricePerItemSource.classList.contains('visibility-hidden'));
         }
 
-        const price = document.getElementById(`price-${this.dataset.section}`);
+        const price = document.getElementById(`price - ${this.dataset.section} `);
 
         if (price) price.classList.remove('visibility-hidden');
 
         if (inventoryDestination)
           inventoryDestination.classList.toggle('visibility-hidden', inventorySource.innerText === '');
 
-        const addButtonUpdated = html.getElementById(`ProductSubmitButton-${sectionId}`);
+        const addButtonUpdated = html.getElementById(`ProductSubmitButton - ${sectionId} `);
         this.toggleAddButton(
           addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true,
           window.variantStrings.soldOut
@@ -1195,7 +1175,7 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(disable = true, text, modifyClass = true) {
-    const productForm = document.getElementById(`product-form-${this.dataset.section}`);
+    const productForm = document.getElementById(`product - form - ${this.dataset.section} `);
     if (!productForm) return;
     const addButton = productForm.querySelector('[name="add"]');
     const addButtonText = productForm.querySelector('[name="add"] > span');
@@ -1213,13 +1193,13 @@ class VariantSelects extends HTMLElement {
   }
 
   setUnavailable() {
-    const button = document.getElementById(`product-form-${this.dataset.section}`);
+    const button = document.getElementById(`product - form - ${this.dataset.section} `);
     const addButton = button.querySelector('[name="add"]');
     const addButtonText = button.querySelector('[name="add"] > span');
-    const price = document.getElementById(`price-${this.dataset.section}`);
-    const inventory = document.getElementById(`Inventory-${this.dataset.section}`);
-    const sku = document.getElementById(`Sku-${this.dataset.section}`);
-    const pricePerItem = document.getElementById(`Price-Per-Item-${this.dataset.section}`);
+    const price = document.getElementById(`price - ${this.dataset.section} `);
+    const inventory = document.getElementById(`Inventory - ${this.dataset.section} `);
+    const sku = document.getElementById(`Sku - ${this.dataset.section} `);
+    const pricePerItem = document.getElementById(`Price - Per - Item - ${this.dataset.section} `);
 
     if (!addButton) return;
     addButtonText.textContent = window.variantStrings.unavailable;
