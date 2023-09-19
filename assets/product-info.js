@@ -18,7 +18,9 @@ if (!customElements.get('product-info')) {
           console.log(variantId);
           const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
           console.log(variant);
-
+          /*      '.price.price-ext .price-item--regular',
+               '.price.price-ext .price-item--last' */
+          this.querySelector('.price.price-ext .price-item--regular').innerHTML = Shopify.formatMoney(variant.price * e.target.value, window.money_format);
           // blue
         });
 
