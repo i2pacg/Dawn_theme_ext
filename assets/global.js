@@ -1048,7 +1048,6 @@ class VariantSelects extends HTMLElement {
     });
   }
   updatePrice() {
-    console.log("updatePrice");
     try {
       const productInfo = document.querySelector('product-info');
       const quantityInput = productInfo.querySelector('.quantity__input');
