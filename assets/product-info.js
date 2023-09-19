@@ -12,6 +12,7 @@ if (!customElements.get('product-info')) {
           console.log("quantity Change");
           console.log(this.getAttribute('data-product'));
           console.log(JSON.parse(this.getAttribute('data-product')));
+          console.log(this.variantSelects);
         });
 
       }
