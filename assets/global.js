@@ -215,7 +215,7 @@ class QuantityInput extends HTMLElement {
       if (!variantId) return;
       const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
       productInfo.querySelector('.price.price-ext .price__regular .price-item--regular').innerHTML = `${(variant.price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
-      productInfo.querySelector('.price.price-ext .price__sale .price-item--regular').innerHTML = `${(variant.compareAtPrice / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
+      productInfo.querySelector('.price.price-ext .price__sale .price-item--regular').innerHTML = `${(variant.compare_at_price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
       productInfo.querySelector('.price.price-ext .price__sale .price-item--last').innerHTML = `${(variant.price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
 
     } catch (error) {
