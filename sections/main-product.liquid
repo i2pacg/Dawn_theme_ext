@@ -153,12 +153,6 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
-              <div
-                data-product="{{ block  }}"
-              >
-                {{ block.type }}
-              </div>
-
               {% render block %}
             {%- when 'text' -%}
               <p
