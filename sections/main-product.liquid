@@ -154,7 +154,7 @@
           {%- case block.type -%}
             {%- when '@app' -%}
               <div
-                data-product="{{ block | json | escape }}"
+                data-product="{{ block  }}"
               >
                 {{ block.type }}
               </div>
