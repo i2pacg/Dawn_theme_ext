@@ -217,7 +217,7 @@ class QuantityInput extends HTMLElement {
       if (!variantId) return;
       const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
       console.log(productInfo.querySelector('.price.price-ext .price-item--regular'));
-      productInfo.querySelector('.price.price-ext .price-item--regular').innerHTML = `${(variant.price / 100 * this.input).toFixed(2)} ${Shopify.currency.active}`;
+      productInfo.querySelector('.price.price-ext .price-item--regular').innerHTML = `${(variant.price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
 
     } catch (error) {
       console.log(error);
