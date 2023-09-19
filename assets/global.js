@@ -1048,20 +1048,19 @@ class VariantSelects extends HTMLElement {
   updatePrice() {
     console.log("updatePrice");
     try {
-      const productForm = document.querySelector('product-form');
-      console.log(productForm);
-      const quantityInput = productForm.querySelector('.quantity__input');
-      /*   console.log(JSON.parse(productForm.getAttribute('data-product')));
-        const product = JSON.parse(productForm.getAttribute('data-product'));
-        const urlParams = new URLSearchParams(window.location.search);
-        const variantId = urlParams.get('variant')
-  
-  
-        if (!variantId) return;
-        const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
-        console.log(productForm.querySelector('.price.price-ext .price-item--regular'));
-        productForm.querySelector('.price.price-ext .price-item--regular').innerHTML = `${(variant.price / 100 * parseInt(quantityInput.value)).toFixed(2)} ${Shopify.currency.active}`;
-   */
+      const productInfo = document.querySelector('product-info');
+      const quantityInput = productInfo.querySelector('.quantity__input');
+      console.log(JSON.parse(productInfo.getAttribute('data-product')));
+      const product = JSON.parse(productInfo.getAttribute('data-product'));
+      const urlParams = new URLSearchParams(window.location.search);
+      const variantId = urlParams.get('variant')
+
+
+      if (!variantId) return;
+      const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
+      console.log(prodproductInfouctForm.querySelector('.price.price-ext .price-item--regular'));
+      productInfo.querySelector('.price.price-ext .price-item--regular').innerHTML = `${(variant.price / 100 * parseInt(quantityInput.value)).toFixed(2)} ${Shopify.currency.active}`;
+
     } catch (error) {
       console.log(error);
     }
