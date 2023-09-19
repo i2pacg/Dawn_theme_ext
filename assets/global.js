@@ -1048,8 +1048,7 @@ class VariantSelects extends HTMLElement {
   updatePrice() {
     console.log("updatePrice");
     try {
-      console.log(document.getElementById(`product-form-${this.dataset.section}`));
-      const productForm = this.querySelector('product-form');
+      const productForm = document.querySelector('product-form');
       const quantityInput = productForm.querySelector('.quantity__input');
       console.log(productForm.parse(productForm.getAttribute('data-product')));
       const product = productForm.parse(productForm.getAttribute('data-product'));
