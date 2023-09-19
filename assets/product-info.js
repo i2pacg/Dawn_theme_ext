@@ -14,6 +14,7 @@ if (!customElements.get('product-info')) {
       cartUpdateUnsubscriber = undefined;
       variantChangeUnsubscriber = undefined;
       quantityUpdated(event) {
+        console.log(this);
         console.log(event.target.value);
         console.log("quantity Change");
         console.log(JSON.parse(this.getAttribute('data-product')));
