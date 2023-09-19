@@ -21,7 +21,7 @@ if (!customElements.get('product-info')) {
           /*      '.price.price-ext .price-item--regular',
                '.price.price-ext .price-item--last' */
           console.log(this.querySelector('.price.price-ext .price-item--regular'));
-          this.querySelector('.price.price-ext .price-item--regular').innerHTML = `${parseFloat(variant.price / 100 * parseInt(e.target.value))} ${Shopify.currency.active}`;
+          this.querySelector('.price.price-ext .price-item--regular').innerHTML = `${(variant.price / 100 * parseInt(e.target.value)).toFixed(2)} ${Shopify.currency.active}`;
           // blue
         });
 
