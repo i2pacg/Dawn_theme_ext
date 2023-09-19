@@ -10,8 +10,7 @@ if (!customElements.get('product-info')) {
         this.submitButton = this.querySelector('[type="submit"]');
         this.input.addEventListener('change', (e) => {
           console.log("quantity Change");
-          const product = document.querySelector('.price.price-ext').getAttribute('data-product');
-          console.log(product.price);
+          console.log(this.getAttribute('data-product'));
         });
 
       }
