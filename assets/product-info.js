@@ -9,6 +9,7 @@ if (!customElements.get('product-info')) {
         this.variantSelects = this.querySelector('variant-radios');
         this.submitButton = this.querySelector('[type="submit"]');
         this.input.addEventListener('change', (e) => {
+          console.log("quantity Change");
           const product = document.querySelector('.price.price-ext').getAttribute('data-product');
           console.log(product.price);
         });
