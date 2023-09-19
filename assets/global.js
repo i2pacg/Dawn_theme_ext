@@ -1045,6 +1045,9 @@ class VariantSelects extends HTMLElement {
       this.setInputAvailability(optionInputs, availableOptionInputsValue);
     });
   }
+  updatePrice() {
+
+  }
 
   setInputAvailability(listOfOptions, listOfAvailableOptions) {
     listOfOptions.forEach((input) => {
