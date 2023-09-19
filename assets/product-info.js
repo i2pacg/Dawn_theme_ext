@@ -9,7 +9,8 @@ if (!customElements.get('product-info')) {
         this.variantSelects = this.querySelector('variant-radios');
         this.submitButton = this.querySelector('[type="submit"]');
         this.input.addEventListener('change', (e) => {
-          console.log("FORN", e.target.value);
+          document.querySelector('.price.price-ext').getAttribute('data-product');
+
         });
 
       }
