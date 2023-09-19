@@ -154,10 +154,10 @@
           {%- case block.type -%}
             {%- when '@app' -%}
               <div
-        data-product="{{ block | json | escape }}"
-      >{{ block.size }}</div>
-              <div>{{ block.length }}</div>
-              {% comment %} } {% endcomment %}
+                data-product="{{ block | json | escape }}"
+              >
+                {{ block.type }}
+              </div>
 
               {% render block %}
             {%- when 'text' -%}
