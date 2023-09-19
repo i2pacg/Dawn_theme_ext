@@ -965,7 +965,6 @@ class VariantSelects extends HTMLElement {
     this.updatePickupAvailability();
     this.removeErrorMessage();
     this.updateVariantStatuses();
-    this.updatePrice();
 
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
@@ -977,6 +976,8 @@ class VariantSelects extends HTMLElement {
       this.renderProductInfo();
       this.updateShareUrl();
     }
+    this.updatePrice();
+
   }
 
   updateOptions() {
