@@ -8,7 +8,7 @@ if (!customElements.get('product-info')) {
         this.currentVariant = this.querySelector('.product-variant-id');
         this.variantSelects = this.querySelector('variant-radios');
         this.submitButton = this.querySelector('[type="submit"]');
-        this.input.addEventListener('update', (e) => {
+        this.input.addEventListener('change', (e) => {
           console.log("quantity Change");
           console.log(JSON.parse(this.getAttribute('data-product')));
           const product = JSON.parse(this.getAttribute('data-product'));
