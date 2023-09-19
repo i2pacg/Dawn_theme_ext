@@ -11,9 +11,7 @@ if (!customElements.get('product-info')) {
         this.input.addEventListener('change', (e) => {
           console.log("quantity Change");
           console.log(JSON.parse(this.getAttribute('data-product')));
-          console.log(this.variantSelects);
-          const queryString = window.location.search;
-          console.log(queryString);
+          const urlParams = new URLSearchParams(window.location.search);
           const variant = urlParams.get('variant')
           console.log(variant);
 
