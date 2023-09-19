@@ -10,10 +10,9 @@ if (!customElements.get('product-form')) {
 
         console.log("THEYT THE FORN", this.form);
         console.log("THEYT THE FORN", this.form.querySelector('[name=quantity]'));
-        console.log("THEYT THE FORN", this.form.querySelector('input.quantity__input'));
-        /* this.form.querySelector('[name=quantity]').addEventListener('change', (e) => {
+        this.form.querySelector('[name=quantity]').addEventListener('change', (e) => {
           console.log("FORN", e.target.value);
-        }); */
+        });
         this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
         this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
         this.submitButton = this.querySelector('[type="submit"]');
