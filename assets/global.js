@@ -168,7 +168,6 @@ class QuantityInput extends HTMLElement {
   connectedCallback() {
     this.validateQtyRules();
     this.quantityUpdateUnsubscriber = subscribe(PUB_SUB_EVENTS.quantityUpdate, this.validateQtyRules.bind(this));
-    this.updatePrice();
 
   }
 
@@ -202,6 +201,7 @@ class QuantityInput extends HTMLElement {
       const buttonPlus = this.querySelector(".quantity__button[name='plus']");
       buttonPlus.classList.toggle('disabled', value >= max);
     }
+    this.updatePrice();
   }
 }
 
