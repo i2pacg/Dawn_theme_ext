@@ -6,8 +6,10 @@ if (!customElements.get('product-form')) {
         super();
 
         this.form = this.querySelector('form');
-        console.log("THEYT THE FORN", this.form)
         this.form.querySelector('[name=id]').disabled = false;
+
+        console.log("THEYT THE FORN", this.form.querySelector('[name=quantity]'));
+
         this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
         this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
         this.submitButton = this.querySelector('[type="submit"]');
