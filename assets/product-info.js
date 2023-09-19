@@ -9,16 +9,18 @@ if (!customElements.get('product-info')) {
         this.variantSelects = this.querySelector('variant-radios');
         this.submitButton = this.querySelector('[type="submit"]');
         this.input.addEventListener('change', (e) => {
-          console.log("quantity Change");
-          console.log(JSON.parse(this.getAttribute('data-product')));
-          console.log(this.variantSelects);
+
         });
 
       }
 
       cartUpdateUnsubscriber = undefined;
       variantChangeUnsubscriber = undefined;
-
+      quantityUpdated(event) {
+        console.log("quantity Change");
+        console.log(JSON.parse(this.getAttribute('data-product')));
+        console.log(this.variantSelects);
+      }
       connectedCallback() {
         if (!this.input) return;
         this.quantityForm = this.querySelector('.product-form__quantity');
