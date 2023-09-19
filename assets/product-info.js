@@ -10,6 +10,7 @@ if (!customElements.get('product-info')) {
         this.submitButton = this.querySelector('[type="submit"]');
         this.input.addEventListener('change', (e) => {
           console.log("quantity Change");
+          console.log(this.getAttribute('data-product'));
           console.log(JSON.parse(this.getAttribute('data-product')));
         });
 
