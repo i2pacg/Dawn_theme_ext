@@ -1047,18 +1047,23 @@ class VariantSelects extends HTMLElement {
   }
   updatePrice() {
     console.log("updatePrice");
-    const productForm = section.querySelector('product-form');
-    const quantityInput = productForm.querySelector('.quantity__input');
-    console.log(productForm.parse(productForm.getAttribute('data-product')));
-    const product = productForm.parse(productForm.getAttribute('data-product'));
-    const urlParams = new URLSearchParams(window.location.search);
-    const variantId = urlParams.get('variant')
+    try {
+      const productForm = section.querySelector('product-form');
+      const quantityInput = productForm.querySelector('.quantity__input');
+      console.log(productForm.parse(productForm.getAttribute('data-product')));
+      const product = productForm.parse(productForm.getAttribute('data-product'));
+      const urlParams = new URLSearchParams(window.location.search);
+      const variantId = urlParams.get('variant')
 
 
-    if (!variantId) return;
-    const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
-    console.log(productForm.querySelector('.price.price-ext .price-item--regular'));
-    productForm.querySelector('.price.price-ext .price-item--regular').innerHTML = `${(variant.price / 100 * parseInt(quantityInput.value)).toFixed(2)} ${Shopify.currency.active}`;
+      if (!variantId) return;
+      const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
+      console.log(productForm.querySelector('.price.price-ext .price-item--regular'));
+      productForm.querySelector('.price.price-ext .price-item--regular').innerHTML = `${(variant.price / 100 * parseInt(quantityInput.value)).toFixed(2)} ${Shopify.currency.active}`;
+
+    } catch (error) {
+      console.log(error);
+    }
 
   }
 
