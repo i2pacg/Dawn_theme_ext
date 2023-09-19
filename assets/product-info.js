@@ -21,7 +21,7 @@ if (!customElements.get('product-info')) {
           /*      '.price.price-ext .price-item--regular',
                '.price.price-ext .price-item--last' */
           console.log(this.querySelector('.price.price-ext .price-item--regular'));
-          this.querySelector('.price.price-ext .price-item--regular').innerHTML = Shopify.formatMoney(variant.price * e.target.value, window.money_format);
+          this.querySelector('.price.price-ext .price-item--regular').innerHTML = `${variant.price * parseInt(e.target.value)} ${Shopify.currency.active}`;
           // blue
         });
 
