@@ -1050,8 +1050,8 @@ class VariantSelects extends HTMLElement {
     try {
       const productForm = document.querySelector('product-form');
       const quantityInput = productForm.querySelector('.quantity__input');
-      console.log(productForm.parse(productForm.getAttribute('data-product')));
-      const product = productForm.parse(productForm.getAttribute('data-product'));
+      console.log(JSON.parse(productForm.getAttribute('data-product')));
+      const product = JSON.parse(productForm.getAttribute('data-product'));
       const urlParams = new URLSearchParams(window.location.search);
       const variantId = urlParams.get('variant')
 
