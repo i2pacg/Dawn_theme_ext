@@ -15,14 +15,9 @@ if (!customElements.get('product-info')) {
           const urlParams = new URLSearchParams(window.location.search);
           const variantId = urlParams.get('variant')
           if (!variantId) return;
-          console.log(variantId);
           const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
-          console.log(variant);
-          /*      '.price.price-ext .price-item--regular',
-               '.price.price-ext .price-item--last' */
           console.log(this.querySelector('.price.price-ext .price-item--regular'));
           this.querySelector('.price.price-ext .price-item--regular').innerHTML = `${(variant.price / 100 * parseInt(e.target.value)).toFixed(2)} ${Shopify.currency.active}`;
-          // blue
         });
 
       }
