@@ -203,6 +203,26 @@ class QuantityInput extends HTMLElement {
     }
 
   }
+  updatePrice() {
+    try {
+      const productInfo = document.querySelector('product-info');
+      const quantityInput = productInfo.querySelector('.quantity__input');
+      console.log(JSON.parse(productInfo.getAttribute('data-product')));
+      const product = JSON.parse(productInfo.getAttribute('data-product'));
+      const urlParams = new URLSearchParams(window.location.search);
+      const variantId = urlParams.get('variant')
+
+
+      if (!variantId) return;
+      const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
+      console.log(productInfo.querySelector('.price.price-ext .price-item--regular'));
+      productInfo.querySelector('.price.price-ext .price-item--regular').innerHTML = `${(variant.price / 100 /* * parseInt(quantityInput.value) */).toFixed(2)} ${Shopify.currency.active}`;
+
+    } catch (error) {
+      console.log(error);
+    }
+
+  }
 }
 
 customElements.define('quantity-input', QuantityInput);
