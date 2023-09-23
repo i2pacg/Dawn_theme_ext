@@ -138,9 +138,8 @@ let initNavSlickPromise = new Promise(resolve => {
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 10000,
-        infinite: false,
-        variableWidth: false,
-        centerMode: true,
+        infinite: true,
+        variableWidth: true,
         asNavFor: '.slider-for , .slider-info',
     });
 })
