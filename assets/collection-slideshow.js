@@ -134,11 +134,9 @@ let initNavSlickPromise = new Promise(resolve => {
     });
     $('.slider-nav').slick({
         centerPadding: '0px',
-        slidesToShow: 3,
-        slidesToScroll: 1,
+
         autoplay: false,
         autoplaySpeed: 10000,
-        infinite: true,
         variableWidth: true,
         centerMode: true,
         asNavFor: '.slider-for , .slider-info',
