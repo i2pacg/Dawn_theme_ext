@@ -308,7 +308,7 @@ hr.half-divider {
 
 .slider-info .slider-text .product-title svg {
     width: unset;
-    height: 48px;
+    height: 36px;
 }
 
 @media screen and (max-width: 540px) {
