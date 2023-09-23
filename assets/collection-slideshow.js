@@ -143,8 +143,8 @@ let initNavSlickPromise = new Promise(resolve => {
         asNavFor: '.slider-for , .slider-info',
     });
     $('.slider-nav').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        $(".slick-slide").removeClass('works');
-        $('.slick-current').addClass('works');
+        $(".slick-slide").removeClass('slick-active');
+        $('.slick-current').addClass('slick-active');
     });
 })
 let initInfoSlickPromise = new Promise(resolve => {
