@@ -45,6 +45,7 @@
 
  .slider-content-card .product-card .product-picture img {
    height: 420px;
+   max-height: 420px;
  }
 
  .product-card .product-picture img {
