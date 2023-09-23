@@ -140,6 +140,7 @@ let initNavSlickPromise = new Promise(resolve => {
         autoplaySpeed: 10000,
         infinite: true,
         variableWidth: true,
+        centerMode: true,
         asNavFor: '.slider-for , .slider-info',
     });
 })
