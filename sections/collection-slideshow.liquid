@@ -166,6 +166,38 @@
           {%- endfor -%}
           <div class="slider-thumb">
             {% comment %} View More box Button {% endcomment %}
+            <div
+              class="product-card"
+              style="border-radius: 4px;box-shadow: unset;"
+            >
+              <div
+                class="product-card__image-wrapper"
+                style="padding-bottom: 100%;"
+              >
+                <div
+                  class="product-card__image"
+                >
+                  <a
+                    href="{{ section.settings.collection.url }}"
+                  >
+                    <img
+                      src="{{ 'view-more.png' | asset_url }}"
+                      alt="View More"
+                      style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"
+                    >
+                  </a>
+                </div>
+              </div>
+              <div class="product-card__info">
+                <div class="product-card__title">
+                  <a
+                    href="{{ section.settings.collection.url }}"
+                  >
+                    View More
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="slider-info slider-buy-{{ section.settings.slider_buy_option}} slider-title-{{ section.settings.slider_title_option }}">
