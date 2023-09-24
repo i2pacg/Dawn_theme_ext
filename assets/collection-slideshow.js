@@ -132,6 +132,7 @@ let initNavSlickPromise = new Promise(resolve => {
     $('.slider-nav').on('init', function (event, slick, currentSlide, nextSlide) {
         resolve(this);
     });
+
     $('.slider-nav').slick({
         centerPadding: '0px',
 
