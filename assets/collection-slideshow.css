@@ -79,7 +79,8 @@ slideshow-component:before {
     height: 100%;
 }
 
-.collection-slideshow .slider-for .slick-list {
+.collection-slideshow .slider-for .slick-list,
+.collection-slideshow .slider-for .slick-track {
     height: 100%;
 }
 
