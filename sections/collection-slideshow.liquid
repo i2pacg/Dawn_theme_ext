@@ -166,17 +166,15 @@
           {%- endfor -%}
           <div class="slider-thumb">
             {% comment %} View More box Button {% endcomment %}
-            <div
-              class="product-card"
-              style=""
-            >
-              <a href="https://nailsbywaad.com/collections/all">
+            <div class="product-card">
+              <a
+                href="https://nailsbywaad.com/collections/all"
+              >
                 <div
-                  class="product-card__image-wrapper"
-                  style="padding-bottom: 100%;"
+                  class="product-content"
                 >
                   <div
-                    class="product-card__image"
+                    class="product-picture"
                   >
                     <img
                       src="{{ 'more-products.jpg' | asset_url }}"
@@ -187,6 +185,25 @@
                 </div>
               </a>
             </div>
+            {% comment %}
+              <div
+                class="product-card"
+                style=""
+              >
+                <a >
+                  <div
+                    class="product-card__image-wrapper"
+                    style="padding-bottom: 100%;"
+                  >
+                    <div
+                      class="product-card__image"
+                    >
+
+                    </div>
+                  </div>
+                </a>
+              </div>
+            {% endcomment %}
           </div>
         </div>
         <div class="slider-info slider-buy-{{ section.settings.slider_buy_option}} slider-title-{{ section.settings.slider_title_option }}">
