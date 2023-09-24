@@ -73,14 +73,14 @@ slideshow-component:before {
     content: unset;
 }
 
-.collection-slideshow .slider-for {}
+/* .collection-slideshow .slider-for {}
 
 .collection-slideshow .slider-for .slide-full {
     margin: 0 auto;
     overflow: hidden;
     position: relative;
     height: calc(100vh - 107px);
-}
+} */
 
 
 .collection-slideshow .slider-for .slide-full video,
