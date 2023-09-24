@@ -79,9 +79,12 @@ slideshow-component:before {
     height: 100%;
 }
 
-.collection-slideshow .slider-for .slide-full video,
-.collection-slideshow .slider-for .slide-full img,
 .collection-slideshow .slider-for .slick-list {
+    height: 100%;
+}
+
+.collection-slideshow .slider-for .slide-full video,
+.collection-slideshow .slider-for .slide-full img {
     width: 100%;
     object-fit: cover;
     animation: move 40s ease;
