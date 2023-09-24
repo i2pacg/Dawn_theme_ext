@@ -73,7 +73,13 @@ slideshow-component:before {
     content: unset;
 }
 
-/* .collection-slideshow .slider-for {}
+.collection-slideshow .slider-for {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/*
 
 .collection-slideshow .slider-for .slide-full {
     margin: 0 auto;
