@@ -76,20 +76,7 @@ slideshow-component:before {
 .collection-slideshow .slider-for {
     position: absolute;
     width: 100%;
-    height: calc(100vh - 107px);
-}
-
-.collection-slideshow .slider-for .slide-full video,
-.collection-slideshow .slider-for .slide-full img {
-    width: 100vw;
-    height: calc(100vh - 107px);
-    object-fit: cover;
-    animation: move 40s ease;
-
-    -ms-animation: move 40s ease;
-    -webkit-animation: move 40s ease;
-    -moz-animation: move 40s ease;
-    position: absolute;
+    height: 100%;
 }
 
 /*
