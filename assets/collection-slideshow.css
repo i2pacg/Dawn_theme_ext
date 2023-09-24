@@ -79,6 +79,18 @@ slideshow-component:before {
     height: 100%;
 }
 
+.collection-slideshow .slider-for .slide-full video,
+.collection-slideshow .slider-for .slide-full img {
+    width: 100%;
+    object-fit: cover;
+    animation: move 40s ease;
+
+    -ms-animation: move 40s ease;
+    -webkit-animation: move 40s ease;
+    -moz-animation: move 40s ease;
+    position: absolute;
+}
+
 /*
 
 .collection-slideshow .slider-for .slide-full {
