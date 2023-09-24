@@ -208,7 +208,7 @@ async function init() {
             console.log("nextSlide", nextSlide)
             console.log("hide", nextSlide === infoSlide.querySelectorAll(".slick-slide").length - 1)
             anime({
-                targets: document.querySelector('.slider-content .slider-content-title'),
+                targets: [document.querySelector('.slider-content .slider-content-title'), document.querySelector('.slider-content .slider-content-description')],
                 opacity: nextSlide === infoSlide.querySelectorAll(".slick-slide").length - 1 ? 0 : 1,
                 easing: 'easeInOutSine',
                 duration: 400,
