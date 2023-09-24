@@ -142,10 +142,10 @@ let initNavSlickPromise = new Promise(resolve => {
         centerMode: true,
         asNavFor: '.slider-for , .slider-info',
     });
-    $('.slider-nav').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        $(".slick-slide").removeClass('slick-active');
-        $('.slick-current').addClass('slick-active');
-    });
+    /*    $('.slider-nav').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+           $(".slick-slide").removeClass('slick-active');
+           $('.slick-current').addClass('slick-active');
+       }); */
 })
 let initInfoSlickPromise = new Promise(resolve => {
     $('.slider-info').on('init', function (event, slick, currentSlide, nextSlide) {
