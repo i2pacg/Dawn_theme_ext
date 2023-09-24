@@ -209,7 +209,7 @@ async function init() {
             console.log("hide", nextSlide === infoSlide.querySelectorAll(".slick-slide").length - 1)
             anime({
                 targets: document.querySelector('.slider-content .slider-content-title'),
-                opacity: [0, 1],
+                opacity: nextSlide === infoSlide.querySelectorAll(".slick-slide").length - 1 ? 0 : 1,
                 easing: 'easeInOutSine',
                 duration: 400,
             });
