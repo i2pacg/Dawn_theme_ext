@@ -85,7 +85,8 @@ slideshow-component:before {
 
 .collection-slideshow .slider-for .slide-full video,
 .collection-slideshow .slider-for .slide-full img {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     animation: move 40s ease;
     /* Add infinite to loop. */
