@@ -206,6 +206,7 @@ async function init() {
         $(infoSlide).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             const nextSlideElement = slick.$slides[nextSlide];
             console.log("nextSlide", nextSlide)
+            console.log("hide", nextSlide === infoSlide.querySelectorAll(".slick-slide").length - 1)
             try {
                 if (nextSlideElement.querySelector(".product-title svg")) {
                     anime({
