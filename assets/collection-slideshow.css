@@ -133,6 +133,7 @@ slideshow-component:before {
     }
 }
 
+/* 
 .collection-slideshow .slider-for {
     position: absolute;
     top: 0;
@@ -146,7 +147,7 @@ slideshow-component:before {
     height: 100%;
     width: 100%;
 }
-
+ */
 .collection-slideshow .slider-content {
     position: relative;
     display: flex;
