@@ -207,6 +207,12 @@ async function init() {
             const nextSlideElement = slick.$slides[nextSlide];
             console.log("nextSlide", nextSlide)
             console.log("hide", nextSlide === infoSlide.querySelectorAll(".slick-slide").length - 1)
+            anime({
+                targets: document.querySelector('.slider-content .slider-content-title'),
+                opacity: [0, 1],
+                easing: 'easeInOutSine',
+                duration: 400,
+            });
             try {
                 if (nextSlideElement.querySelector(".product-title svg")) {
                     anime({
