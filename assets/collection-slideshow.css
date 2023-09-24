@@ -82,13 +82,12 @@ slideshow-component:before {
     height: calc(100vh - 107px);
 } */
 
-
+/* 
 .collection-slideshow .slider-for .slide-full video,
 .collection-slideshow .slider-for .slide-full img {
     width: 100%;
     object-fit: cover;
     animation: move 40s ease;
-    /* Add infinite to loop. */
 
     -ms-animation: move 40s ease;
     -webkit-animation: move 40s ease;
@@ -105,34 +104,26 @@ slideshow-component:before {
         transform-origin: bottom left;
         transform: scale(1);
         -ms-transform: scale(1);
-        /* IE 9 */
 
         -webkit-transform: scale(1);
-        /* Safari and Chrome */
 
         -o-transform: scale(1);
-        /* Opera */
 
         -moz-transform: scale(1);
-        /* Firefox */
     }
 
     100% {
         transform: scale(1.2);
         -ms-transform: scale(1.2);
-        /* IE 9 */
 
         -webkit-transform: scale(1.2);
-        /* Safari and Chrome */
 
         -o-transform: scale(1.2);
-        /* Opera */
 
         -moz-transform: scale(1.2);
-        /* Firefox */
     }
 }
-
+ */
 /* 
 .collection-slideshow .slider-for {
     position: absolute;
