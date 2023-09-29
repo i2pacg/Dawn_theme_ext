@@ -48,7 +48,7 @@
         "show_line_separator": true,
         "color_scheme": "scheme-91669cbb-597f-4ef7-bd49-362ea6f57818",
         "menu_color_scheme": "background-1",
-        "enable_country_selector": true,
+        "enable_country_selector": false,
         "enable_language_selector": true,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
