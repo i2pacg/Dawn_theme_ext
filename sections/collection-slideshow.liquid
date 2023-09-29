@@ -65,7 +65,7 @@
       box-shadow: unset;
     }
 
-    .slider-thumb.slick-current:last-child  {
+    .slider-thumb.slick-current:last-child .product-card  {
       transform: scale(1.25);
     }
     .slider-thumb:not(.slick-current) .product-card a {
@@ -106,7 +106,7 @@
         {% if productVideo %}
           {{
             productVideo
-            | video_tag: loop: true, height: '100%', width: '300px', playsinline: true, autoplay: true, muted: true
+            | video_tag: loop: true, height: '100%', width: '300px', playsinline, autoplay: true, muted: true
           }}
         {%- elsif product.featured_media -%}
           {%- liquid
