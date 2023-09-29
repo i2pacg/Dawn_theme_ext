@@ -104,16 +104,19 @@
       <div class="slide-full">
         {% assign productVideo = product.media | where: 'media_type', 'video' | first %}
         {% if productVideo %}
-          {{
-            productVideo
-            | video_tag:
-              loop: true,
-              height: '100%',
-              width: '300px',
-              playsinline: playsinline,
-              autoplay: true,
-              muted: true
-          }}
+          <video src="{{productVideo.sources[1].url}}" loop muted playsinline autoplay></video>
+          {% comment %}
+            {{
+              productVideo
+              | video_tag:
+                loop: true,
+                height: '100%',
+                width: '300px',
+                playsinline: playsinline,
+                autoplay: true,
+                muted: true
+            }}
+          {% endcomment %}
         {%- elsif product.featured_media -%}
           {%- liquid
             if section.settings.image_behavior == 'ambient'
