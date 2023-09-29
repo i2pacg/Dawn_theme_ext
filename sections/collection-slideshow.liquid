@@ -106,7 +106,13 @@
         {% if productVideo %}
           {{
             productVideo
-            | video_tag: loop: true, height: '100%', width: '300px', playsinline, autoplay: true, muted: true
+            | video_tag:
+              loop: true,
+              height: '100%',
+              width: '300px',
+              playsinline: playsinline,
+              autoplay: true,
+              muted: true
           }}
         {%- elsif product.featured_media -%}
           {%- liquid
