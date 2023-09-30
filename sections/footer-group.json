@@ -33,7 +33,8 @@
         "bcd2604e-b698-4f28-b21e-6dc6154504e8"
       ],
       "custom_css": [
-        ".footer-block__image-wrapper{margin:auto}"
+        ".footer-block__image-wrapper {margin: auto;}",
+        ".footer-block__image-wrapper img{width: 175px; aspect-ratio: auto 175 \/ 175;}"
       ],
       "settings": {
         "color_scheme": "background-1",
