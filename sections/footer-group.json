@@ -7,34 +7,33 @@
       "blocks": {
         "4e4945fc-d0f6-4d81-b3bd-0468dcf8d691": {
           "type": "brand_information",
-          "disabled": true,
           "settings": {
-            "show_social": true
-          }
-        },
-        "bcd2604e-b698-4f28-b21e-6dc6154504e8": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "main-menu"
+            "show_social": false
           }
         },
         "5e39d73f-b721-47b0-b34d-fd1b6bee21f1": {
           "type": "link_list",
-          "disabled": true,
           "settings": {
             "heading": "",
-            "menu": ""
+            "menu": "main-menu"
+          }
+        },
+        "bcd2604e-b698-4f28-b21e-6dc6154504e8": {
+          "type": "link_list",
+          "disabled": true,
+          "settings": {
+            "heading": "Quick links",
+            "menu": "main-menu"
           }
         }
       },
       "block_order": [
         "4e4945fc-d0f6-4d81-b3bd-0468dcf8d691",
-        "bcd2604e-b698-4f28-b21e-6dc6154504e8",
-        "5e39d73f-b721-47b0-b34d-fd1b6bee21f1"
+        "5e39d73f-b721-47b0-b34d-fd1b6bee21f1",
+        "bcd2604e-b698-4f28-b21e-6dc6154504e8"
       ],
       "custom_css": [
-
+        ".footer-block__image-wrapper{margin:auto}"
       ],
       "settings": {
         "color_scheme": "background-1",
