@@ -336,6 +336,10 @@ hr.half-divider {
         text-align: center !important;
     }
 
+    .slider-info .slider-text .product-description {
+        display: none;
+    }
+
     .slider-info .slider-info-content .slider-buttons {
         width: 100%;
     }
