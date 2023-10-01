@@ -340,6 +340,11 @@ hr.half-divider {
         display: flex;
     }
 
+    .slider-nav .product-card a {
+        height: auto;
+        align-self: center;
+    }
+
     .slider-info .slider-text .product-description {
         display: none;
     }
