@@ -333,6 +333,7 @@ hr.half-divider {
 
     .slider-info .slider-text .product-title {
         font-size: 18px;
+        text-align: center !important;
     }
 
     .slider-info .slider-info-content .slider-buttons {
