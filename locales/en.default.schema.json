@@ -1419,6 +1419,9 @@
         "show_text_box": {
           "label": "Show container on desktop"
         },
+        "show_svg_logo": {
+          "label": "Show SVG Logo"
+        },
         "desktop_content_alignment": {
           "options__1": {
             "label": "Left"
