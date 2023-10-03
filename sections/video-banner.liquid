@@ -143,7 +143,7 @@
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- if section.settings.show_svg_logo -%}
         <div
-          style="position: relative;width: 384px;height: 256px;display: flex;align-items: center;justify-content: center;z-index:1"
+          style="position: relative;width: 384px;height: 256px;display: flex;z-index:1"
           class="banner__svg_logo"
         >
           <img
@@ -166,6 +166,9 @@
               height: 194px;
               position: relative;
               align-self: end;
+              margin-left: 64px;
+              z-index: 1;
+              justify-self: self-start;
             "
             id="Layer_1"
             data-name="Layer 1"
@@ -217,6 +220,7 @@
               /* display: flex; */
               z-index: 0;
               object-position: right;
+              transform:rotate(45deg)
             "
           >
         </div>
