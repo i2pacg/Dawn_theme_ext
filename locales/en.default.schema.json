@@ -1361,13 +1361,13 @@
     "video-banner": {
       "name": "Video banner",
       "settings": {
-        "image": {
-          "label": "First image"
+        "video": {
+          "label": "First video"
         },
-        "image_2": {
-          "label": "Second image"
+        "video_2": {
+          "label": "Second video"
         },
-        "image_overlay_opacity": {
+        "video_overlay_opacity": {
           "label": "Image overlay opacity"
         },
         "image_height": {
