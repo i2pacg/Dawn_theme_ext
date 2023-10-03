@@ -68,16 +68,22 @@
       -%}
       {{
         section.settings.video
-        | video_tag:
-          loop: true,
-          autoplay: false,
-          muted: true,
-          width: section.settings.image.width,
-          height: image_height,
-          class: image_class,
-          sizes: sizes,
-          widths: widths
+        | video_tag: image_size: '1100x', loop: section.settings.enable_video_looping, controls: true, muted: false
       }}
+      {% comment %}
+        {{
+          section.settings.video
+          | video_tag:
+            loop: true,
+            autoplay: false,
+            muted: true,
+            width: section.settings.image.width,
+            height: image_height,
+            class: image_class,
+            sizes: sizes,
+            widths: widths
+        }}
+      {% endcomment %}
       {% comment %}
         {{
           section.settings.image
