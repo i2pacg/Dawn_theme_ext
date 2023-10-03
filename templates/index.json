@@ -81,6 +81,12 @@
     "f65567e7-9bef-4025-933a-a4042baf765d": {
       "type": "video-banner",
       "blocks": {
+        "26ee82fb-7bea-412a-856f-4edef9e3363c": {
+          "type": "image",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/Waad.svg"
+          }
+        },
         "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-heading-1": {
           "type": "heading",
           "settings": {
@@ -105,19 +111,13 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
-        },
-        "26ee82fb-7bea-412a-856f-4edef9e3363c": {
-          "type": "image",
-          "settings": {
-            "logo_image": "shopify:\/\/shop_images\/Waad.svg"
-          }
         }
       },
       "block_order": [
+        "26ee82fb-7bea-412a-856f-4edef9e3363c",
         "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-heading-1",
         "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-text-1",
-        "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-buttons-1",
-        "26ee82fb-7bea-412a-856f-4edef9e3363c"
+        "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-buttons-1"
       ],
       "disabled": true,
       "settings": {
