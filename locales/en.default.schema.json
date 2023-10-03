@@ -140,6 +140,7 @@
     },
     "logo": {
       "name": "Logo",
+      "svg": "",
       "settings": {
         "logo_image": {
           "label": "Logo"
