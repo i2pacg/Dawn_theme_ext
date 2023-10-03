@@ -120,6 +120,7 @@
     "show_cart_note": true,
     "cart_drawer_collection": "",
     "checkout_logo_image": "shopify:\/\/shop_images\/Waad.svg",
+    "checkout_logo_position": "center",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -143,12 +144,6 @@
     "blocks": {
       "2187360915322861293": {
         "type": "shopify:\/\/apps\/uploadly-file-upload\/blocks\/app-embed\/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "13669795325273674392": {
-        "type": "shopify:\/\/apps\/releasit-cod-form-upsells\/blocks\/app-embed\/72faf214-4174-4fec-886b-0d0e8d3af9a2",
         "disabled": false,
         "settings": {
         }
