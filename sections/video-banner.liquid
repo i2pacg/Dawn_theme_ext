@@ -68,7 +68,13 @@
       -%}
       {{
         section.settings.video
-        | video_tag: image_size: '1100x', loop: true, autoplay: true, controls: false, muted: true
+        | video_tag:
+          image_size: '1100x',
+          width: section.settings.image.width,
+          loop: true,
+          autoplay: true,
+          controls: false,
+          muted: true
       }}
       {% comment %}
         {{
