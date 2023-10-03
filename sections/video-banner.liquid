@@ -421,6 +421,18 @@
       ]
     },
     {
+      "type": "image",
+      "name": "Image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Logo Image"
+        }
+      ]
+    },
+    {
       "type": "text",
       "name": "t:sections.image-banner.blocks.text.name",
       "limit": 1,
@@ -499,10 +511,13 @@
   ],
   "presets": [
     {
-      "name": "t:sections.image-banner.presets.name",
+      "name": "t:sections.video-banner.presets.name",
       "blocks": [
         {
           "type": "heading"
+        },
+        {
+          "type": "image"
         },
         {
           "type": "text"
