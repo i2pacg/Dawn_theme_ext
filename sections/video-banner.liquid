@@ -150,7 +150,15 @@
               {{ block.settings.heading }}
             </h2>
           {%- when 'image' -%}
-            {{ block.settings.image | image_url | image_tag: block.settings.image.alt }}
+            {{
+              block.settings.image
+              | image_url: width: 3200
+              | image_tag:
+                loading: 'lazy',
+                widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                sizes: sizes
+            }}
+            {% comment %}     {{ block.settings.image | image_url | image_tag: block.settings.image.alt }} {% endcomment %}
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
               <p>{{ block.settings.text }}</p>
