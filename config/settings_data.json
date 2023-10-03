@@ -230,8 +230,8 @@
       "scheme-eecc9f83-e793-41cd-8929-f4fa6fae1164": {
         "settings": {
           "background": "#ffffff",
-          "background_gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) 100%)",
-          "text": "#ffffff",
+          "background_gradient": "",
+          "text": "#000000",
           "button": "#121212",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",
