@@ -206,12 +206,16 @@
 
 @media screen and (max-width: 749px) {
 
+  .banner--stacked .animate--fixed:first-child>video,
   .banner--stacked .animate--fixed:first-child>img,
+  .banner--stacked .animate--zoom-in:first-child>video,
   .banner--stacked .animate--zoom-in:first-child>img {
     width: 100%;
   }
 
+  .banner--stacked .banner__media-half.animate--fixed:nth-child(2)>video,
   .banner--stacked .banner__media-half.animate--fixed:nth-child(2)>img,
+  .banner--stacked .banner__media-half.animate--zoom-in:nth-child(2)>video,
   .banner--stacked .banner__media-half.animate--zoom-in:nth-child(2)>img {
     left: 0;
     width: 100%;
