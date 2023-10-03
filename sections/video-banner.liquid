@@ -150,7 +150,7 @@
               {{ block.settings.heading }}
             </h2>
           {%- when 'image' -%}
-            {{ block.settings.image | image_url | image_tag: block.settings.image.alt, 'banner__image' }}
+            {{ block.settings.image | image_url | image_tag: block.settings.image.alt }}
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
               <p>{{ block.settings.text }}</p>
