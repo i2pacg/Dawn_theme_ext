@@ -14,3 +14,12 @@
     overflow: hidden;
     height: auto;
 }
+
+.product-card-adv .product-card-adv-title {}
+
+.product-card-adv .product-card-adv-title svg {
+    width: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    height: auto;
+}
