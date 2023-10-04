@@ -90,6 +90,7 @@
         },
         "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-text-1": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template.",
             "text_style": "body"
@@ -102,7 +103,7 @@
             "button_link_1": "",
             "button_style_secondary_1": true,
             "button_label_2": "Custom Design",
-            "button_link_2": "",
+            "button_link_2": "shopify:\/\/products\/custom-nail-set",
             "button_style_secondary_2": false
           }
         }
@@ -112,7 +113,6 @@
         "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-text-1",
         "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-buttons-1"
       ],
-      "disabled": true,
       "settings": {
         "video": "shopify:\/\/files\/videos\/IMG_0879.mov",
         "image_overlay_opacity": 90,
