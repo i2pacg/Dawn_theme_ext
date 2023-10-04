@@ -15,13 +15,7 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
-    
-
-  <!-- Air Reviews Script -->
- {% include 'air-reviews-setting' %}
-  <!-- /Air Reviews Script -->
-
-<title>
+    <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
