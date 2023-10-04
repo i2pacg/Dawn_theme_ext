@@ -57,7 +57,7 @@
         </h1>
       {%- endif -%}
       {%- if section.settings.title != blank -%}
-        <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <h2 class="title rte {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           {{ section.settings.title }}
         </h2>
       {%- endif -%}
@@ -199,9 +199,8 @@
       "label": "t:sections.featured-collection-slick.settings.heading.label"
     },
     {
-      "type": "inline_richtext",
+      "type": "richtext",
       "id": "title",
-      "default": "Featured collection",
       "label": "t:sections.featured-collection-slick.settings.title.label"
     },
     {
