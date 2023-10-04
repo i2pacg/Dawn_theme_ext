@@ -58,6 +58,13 @@
         height="{{ product.featured_media.height }}"
       >
     </div>
+    <h1 class="product-card-adv-title">
+      {% if product.metafields.svg.title != blank %}
+        {{ product.metafields.svg.title }}
+      {% else %}
+        {{ product.title | escape }}
+      {% endif %}
+    </h1>
   </div>
 
   {% comment %}
