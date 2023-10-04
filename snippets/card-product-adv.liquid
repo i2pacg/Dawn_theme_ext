@@ -60,7 +60,11 @@
     </div>
     <div class="product-info">
       <h1 class="product-title">
-        {{ product.title }}
+        {% if product.metafields.svg.title != blank %}
+          {{ product.metafields.svg.title }}
+        {% else %}
+          {{ product.title | escape }}
+        {% endif %}
       </h1>
     </div>
   </a>
