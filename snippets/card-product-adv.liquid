@@ -59,12 +59,10 @@
       >
     </div>
     <div class="product-card-adv-info">
-      <div class="product-card-adv-vendor">
-        {%- if show_vendor -%}
-          <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-          <div class="caption-with-letter-spacing light">{{ product.vendor }}</div>
-        {%- endif -%}
-      </div>
+      {%- if show_vendor -%}
+        <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+        <div class="caption-with-letter-spacing light">{{ product.vendor }}</div>
+      {%- endif -%}
       <div class="product-card-adv-title-container">
         <h1 class="product-card-adv-title">
           {% if product.metafields.svg.title != blank %}
