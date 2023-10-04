@@ -96,10 +96,16 @@
         min-width: {{ 100 | divided_by: section.settings.columns_desktop }}%;
       }
     </style>
-    <div class="featured-slick-slider">
+    <div
+      class="featured-slick-slider {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+      {% if settings.animations_reveal_on_scroll %}
+        data-cascade
+        style="--animation-order: {{ forloop.index }};"
+      {% endif %}
+    >
       {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
         <div
-          class="slick-item {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="slick-item"
         >
           {% render 'card-product-adv',
             product: product,
