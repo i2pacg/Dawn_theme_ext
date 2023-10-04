@@ -107,32 +107,20 @@
         "template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "heading": "<em><strong>Hey lovely !<\/strong><\/em>",
+            "heading_size": "h2"
           }
         },
         "template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        },
-        "template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<h5><em>I'm Waad , a nail stylist & artist. I specialize in handmade luxury press on nails. With easy to apply press on nails, you can enjoy an at-home professional manicure , just as your saloon result’s . Wear your sets for up to 2 weeks with our application kit or just be a \"slay for a Day\"<\/em><\/h5>"
           }
         }
       },
       "block_order": [
         "template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-heading-1",
-        "template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-text-1",
-        "template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-button-1"
+        "template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-text-1"
       ],
       "settings": {
         "desktop_content_position": "center",
