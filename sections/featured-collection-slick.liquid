@@ -81,7 +81,7 @@
       {%- endif -%}
     </div>
     <style>
-      {% comment %}    .featured-slick-slider {
+         .featured-slick-slider {
            position: relative;
            display: flex;
            padding: 0px 48px;
@@ -101,7 +101,7 @@
            flex: 1 1 {{ 100 | divided_by: section.settings.columns_desktop }}%;
            min-width: {{ 100 | divided_by: section.settings.columns_desktop }}%;
        }
-       .featured-slick-slider .slick-item:not(.slick-current){
+      {% comment %}  .featured-slick-slider .slick-item:not(.slick-current){
          opacity: 0.5;
          transform-origin:center;
          transform:scale(.9) perspective(800px) rotateY(50deg);
