@@ -99,6 +99,7 @@
         "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-buttons-1": {
           "type": "buttons",
           "settings": {
+            "button_content_1": "Express Yourself with Custom Designs - Just a Button Away!",
             "button_label_1": "Check it",
             "button_link_1": "",
             "button_style_secondary_1": true,
