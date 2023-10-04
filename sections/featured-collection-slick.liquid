@@ -6,7 +6,6 @@
 {{ 'anime.min.js' | asset_url | script_tag -}}
 
 {{- 'component-price.css' | asset_url | stylesheet_tag }}
-{{- 'featured-collection-slick.css' | asset_url | stylesheet_tag }}
 
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-product-card-adv.css' | asset_url | stylesheet_tag }}
@@ -81,7 +80,21 @@
         </div>
       {%- endif -%}
     </div>
-    <style></style>
+    <style>
+      .featured-slick-slider {
+        position: relative;
+        display: flex;
+        padding: 0px 48px;  }
+        .featured-slick-slider.slick-slider{
+          display: block;
+            }
+
+      .featured-slick-slider:not(.slick-initialized) .slick-item {
+        padding: 0 10px;
+        flex: 1 1 {{ 100 | divided_by: section.settings.columns_desktop }}%;
+        min-width: {{ 100 | divided_by: section.settings.columns_desktop }}%;
+      }
+    </style>
     <div class="featured-slick-slider">
       {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
         <div
