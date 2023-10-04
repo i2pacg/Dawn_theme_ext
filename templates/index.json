@@ -112,6 +112,7 @@
         "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-text-1",
         "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-buttons-1"
       ],
+      "disabled": true,
       "settings": {
         "video": "shopify:\/\/files\/videos\/IMG_0879.mov",
         "image_overlay_opacity": 90,
