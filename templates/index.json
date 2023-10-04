@@ -117,14 +117,14 @@
       ],
       "settings": {
         "video": "shopify:\/\/files\/videos\/IMG_0879.mov",
-        "image_overlay_opacity": 90,
+        "image_overlay_opacity": 80,
         "image_height": "large",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "show_svg_logo": true,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-eecc9f83-e793-41cd-8929-f4fa6fae1164",
-        "image_behavior": "ambient",
+        "image_behavior": "zoom-in",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": false
