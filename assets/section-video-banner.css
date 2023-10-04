@@ -472,6 +472,10 @@
   text-align: left;
 }
 
+.banner__buttons button {
+  width: 100%;
+}
+
 @media screen and (max-width: 749px) {
   .banner--content-align-mobile-right .banner__buttons--multiple {
     justify-content: flex-end;
