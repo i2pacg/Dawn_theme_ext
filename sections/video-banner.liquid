@@ -4,15 +4,24 @@
     width: 64px;
     height: 64px;
   }
+  .banner__box .banner__svg_logo img:first-of-type {
+    left: 0;
+    top: 0;
+    object-fit: contain;
+    position: absolute;
+    z-index: 0;
+    object-position: left;
+  }
   .banner__box .banner__svg_logo img:last-of-type {
     transform: rotate(135deg);
     right: 0;
-    bottom: 16px;
+    bottom: 0;
     object-fit: contain;
     position: absolute;
     z-index: 0;
     object-position: right;
   }
+
   .banner__box .banner__svg_logo svg {
     position: relative;
     align-self: end;
@@ -189,14 +198,6 @@
             width="128"
             height="128"
             loading="eager"
-            style="
-              left: 0;
-              top: 0;
-              object-fit: contain;
-              position: absolute;
-              z-index: 0;
-              object-position: left;
-            "
           >
           <svg
             style=""
