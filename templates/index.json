@@ -114,7 +114,7 @@
       ],
       "settings": {
         "video": "shopify:\/\/files\/videos\/IMG_0879.mov",
-        "image_overlay_opacity": 80,
+        "image_overlay_opacity": 90,
         "image_height": "large",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
