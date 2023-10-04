@@ -458,6 +458,7 @@
 }
 
 .banner__buttons {
+  min-width: 100%;
   display: inline-flex;
   flex-wrap: wrap;
   gap: 1rem;
