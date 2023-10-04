@@ -84,7 +84,6 @@
       .featured-slick-slider {
         position: relative;
         display: flex;
-        overflow-x: auto;
         }
         .featured-slick-slider.slick-slider{
           display: block;
@@ -217,7 +216,7 @@
 </div>
 <script>
   $('.featured-slick-slider').slick({
-    infinite: false,
+    infinite: true,
     centerMode: true,
     slidesToShow:  {{ section.settings.columns_desktop }},
     slidesToScroll: 1,
