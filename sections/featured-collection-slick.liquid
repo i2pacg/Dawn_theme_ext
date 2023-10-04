@@ -93,6 +93,7 @@
 
       .featured-slick-slider .slick-item {
           transition: all .4s ease-in-out;
+
       }
 
       .featured-slick-slider:not(.slick-initialized) .slick-item {
@@ -102,6 +103,8 @@
       }
       .featured-slick-slider .slick-item:not(.slick-current){
         opacity: 0.5;
+        transform-origin:center;
+        transform:perspective(800px) rotateY(25deg);
       }
     </style>
     <div
