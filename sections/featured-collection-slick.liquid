@@ -225,6 +225,9 @@
   });
 </script>
 
+{%- if request.design_mode -%}
+  <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
 {% schema %}
 {
   "name": "t:sections.featured-collection-slick.name",
