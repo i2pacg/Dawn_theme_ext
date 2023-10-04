@@ -1,3 +1,7 @@
 .product-card-adv {
     background: red;
 }
+
+.product-card-adv .product-card-adv-image {}
+
+.product-card-adv .product-card-adv-image img {}
