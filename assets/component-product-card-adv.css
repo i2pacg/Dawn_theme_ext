@@ -104,3 +104,9 @@
 .product-card-adv .product-card-adv-info .product-card-adv-footer>div {
     flex: 1;
 }
+
+@media screen and (max-width: 749px) {
+    .featured-slick-slider:not(.slick-initialized) .slick-item {
+        padding: 16px;
+    }
+}
