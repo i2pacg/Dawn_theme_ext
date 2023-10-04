@@ -9,7 +9,14 @@
 }
 
 .product-card-adv .product-card-adv-image {
-    width: 98%;
+    width: calc(100% - 16px);
+    margin-top: 16px;
+    box-sizing: unset;
+    margin: 0 auto;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    overflow: hidden;
+    margin-top: 8px;
 }
 
 .product-card-adv .product-card-adv-image img {
@@ -20,11 +27,19 @@
     height: auto;
 }
 
-.product-card-adv .product-card-adv-title {
+.product-card-adv .product-card-adv-title-container {
     margin: 0;
+    margin-top: -32px;
+    text-align: center;
 }
 
-.product-card-adv .product-card-adv-title svg {
+.product-card-adv .product-card-adv-title-container .product-card-adv-title svg {
+
+    background: #fff4d3;
+    padding: 4px;
+}
+
+.product-card-adv .product-card-adv-title-container svg {
     width: auto;
     object-fit: contain;
     overflow: hidden;
