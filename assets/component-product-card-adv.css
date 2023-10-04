@@ -1,7 +1,16 @@
 .product-card-adv {
     background: red;
+    position: relative;
+    overflow: hidden;
+    display: flex;
 }
 
 .product-card-adv .product-card-adv-image {}
 
-.product-card-adv .product-card-adv-image img {}
+.product-card-adv .product-card-adv-image img {
+    width: 100%;
+    object-fit: contain;
+    object-position: top;
+    overflow: hidden;
+    height: auto;
+}
