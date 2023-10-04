@@ -106,6 +106,9 @@
         transform-origin:center;
         transform:perspective(800px) rotateY(25deg);
       }
+      .featured-slice-slider .slick-item:not([data-slick-index="-1"]){
+        transform:perspective(800px) rotateY(-25deg);
+      }
     </style>
     <div
       class="featured-slick-slider {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
