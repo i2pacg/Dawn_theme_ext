@@ -44,9 +44,13 @@
       >
     </div>
     <div class="wsk-cp-text">
-      <div class="category">
-        <span>Ethnic</span>
-      </div>
+      <h1 class="product-title">
+        {% if product.metafields.svg.title != blank %}
+          {{ product.metafields.svg.title }}
+        {% else %}
+          {{ product.title | escape }}
+        {% endif %}
+      </h1>
       <div class="title-product">
         <h3>My face not my heart</h3>
       </div>
