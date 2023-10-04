@@ -1,10 +1,11 @@
 .product-card-adv {
-    background: red;
+    background: white;
     position: relative;
     overflow: hidden;
     flex-direction: column;
-    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 8px #00000050;
     display: flex;
+    border-radius: 32px;
 }
 
 .product-card-adv .product-card-adv-image {}
