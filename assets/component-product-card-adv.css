@@ -9,14 +9,7 @@
 }
 
 .product-card-adv .product-card-adv-image {
-    width: calc(100% - 16px);
-    margin-top: 16px;
-    box-sizing: unset;
-    margin: 0 auto;
-    border-top-right-radius: 24px;
-    border-top-left-radius: 24px;
-    overflow: hidden;
-    margin-top: 8px;
+    width: 98%;
 }
 
 .product-card-adv .product-card-adv-image img {
