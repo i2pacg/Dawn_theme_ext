@@ -65,6 +65,15 @@
           <div class="caption-with-letter-spacing light">{{ product.vendor }}</div>
         </div>
       {%- endif -%}
+
+      {%- if show_rating -%}
+        <div
+          class="AirReviews-Widget AirReviews-Widget--Stars"
+          style="margin-top:0.7rem"
+          data-review-avg="{{ product.metafields.air_reviews_product.review_avg }}"
+          data-review-count="{{ product.metafields.air_reviews_product.review_count }}"
+        ></div>
+      {%- endif -%}
       <div class="product-card-adv-title-container">
         <h1 class="product-card-adv-title">
           {% if product.metafields.svg.title != blank %}
@@ -74,14 +83,6 @@
           {% endif %}
         </h1>
       </div>
-      {%- if show_rating -%}
-        <div
-          class="AirReviews-Widget AirReviews-Widget--Stars"
-          style="margin-top:0.7rem"
-          data-review-avg="{{ product.metafields.air_reviews_product.review_avg }}"
-          data-review-count="{{ product.metafields.air_reviews_product.review_count }}"
-        ></div>
-      {%- endif -%}
     </div>
   </div>
 
