@@ -75,7 +75,11 @@
         </h1>
       </div>
       {%- if show_rating -%}
-        <div class="AirReviews-Widget AirReviews-Widget--Stars"></div>
+        <div
+          class="AirReviews-Widget AirReviews-Widget--Stars"
+          data-review-avg="{{ product.metafields.air_reviews_product.review_avg }}"
+          data-review-count="{{ product.metafields.air_reviews_product.review_count }}"
+        ></div>
       {%- endif -%}
     </div>
   </div>
