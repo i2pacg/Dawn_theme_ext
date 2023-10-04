@@ -8,7 +8,9 @@
     border-radius: 32px;
 }
 
-.product-card-adv .product-card-adv-image {}
+.product-card-adv .product-card-adv-image {
+    width: 98%;
+}
 
 .product-card-adv .product-card-adv-image img {
     width: 100%;
