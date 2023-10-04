@@ -117,6 +117,7 @@
     },
     "e3ec21c2-1733-4072-8578-2a8700c90020": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured collection",
         "heading_size": "h1",
@@ -135,7 +136,7 @@
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": true,
-        "show_rating": true,
+        "show_rating": false,
         "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
