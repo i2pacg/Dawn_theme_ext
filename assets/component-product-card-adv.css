@@ -39,9 +39,7 @@
     margin: 0;
 }
 
-.product-card-adv .product-card-adv-title-container .product-card-adv-title svg {
-    border-radius: 8px;
-}
+.product-card-adv .product-card-adv-title-container .product-card-adv-title svg {}
 
 .product-card-adv .product-card-adv-title-container .product-card-adv-title svg path {}
 
