@@ -468,6 +468,8 @@
 
 .banner__buttons .banner__button_content {
   margin-bottom: 8px;
+  font-size: 14px;
+  text-align: left;
 }
 
 @media screen and (max-width: 749px) {
