@@ -929,8 +929,8 @@
     "featured-collection-slick": {
       "name": "Featured collection slick",
       "settings": {
-        "header": {
-          "content": "Product card"
+        "heading": {
+          "label": "Top Header"
         },
         "title": {
           "label": "Heading"
@@ -982,6 +982,9 @@
         },
         "full_width": {
           "label": "Make products full width"
+        },
+        "header": {
+          "content": "Product card"
         },
         "image_ratio": {
           "label": "Image ratio",
