@@ -60,8 +60,10 @@
     </div>
     <div class="product-card-adv-info">
       {%- if show_vendor -%}
-        <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-        <div class="caption-with-letter-spacing light">{{ product.vendor }}</div>
+        <div class="product-card-adv-vendor">
+          <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+          <div class="caption-with-letter-spacing light">{{ product.vendor }}</div>
+        </div>
       {%- endif -%}
       <div class="product-card-adv-title-container">
         <h1 class="product-card-adv-title">
