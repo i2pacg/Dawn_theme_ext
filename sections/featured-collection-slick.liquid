@@ -83,10 +83,10 @@
     <style>
       .featured-slick-slider {
         display: flex;
-      }
+        overflow-x: auto;      }
       .featured-slick-slider .slick-item {
         padding: 0 10px;
-        width: {{ 100 | divided_by: section.settings.columns_desktop | round: 0 }}% ;
+        width: {{ 100 | divided_by: section.settings.columns_desktop }}% ;
       }
     </style>
     <div class="featured-slick-slider">
