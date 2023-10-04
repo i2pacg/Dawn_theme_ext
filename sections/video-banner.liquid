@@ -142,6 +142,21 @@
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- if section.settings.show_svg_logo -%}
+        <img
+          src="{{ 'logo.png' | asset_url }}"
+          width="384"
+          height="256"
+          loading="eager"
+          style="
+            left: 0;
+            top: 0;
+            object-fit: contain;
+            position: absolute;
+            /* display: flex; */
+            z-index: 0;
+            object-position: left;
+          "
+        >
         <div
           style="position: relative;width: 384px;height: 256px;display: flex;z-index:1"
           class="banner__svg_logo"
