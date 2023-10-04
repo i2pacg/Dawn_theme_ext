@@ -66,12 +66,12 @@
         </div>
       {%- endif -%}
 
-      {%- if show_rating and product.metafields.reviews.rating.value != blank -%}
+      {%- if show_rating -%}
         <div
           class="AirReviews-Widget AirReviews-Widget--Stars"
           style="margin-top:0.7rem"
-          data-review-avg="{{ card_product.metafields.air_reviews_product.review_avg }}"
-          data-review-count="{{ card_product.metafields.air_reviews_product.review_count }}"
+          data-review-avg="{{ product.metafields.air_reviews_product.review_avg }}"
+          data-review-count="{{ product.metafields.air_reviews_product.review_count }}"
         ></div>
       {%- endif -%}
       <div class="product-card-adv-title-container">
