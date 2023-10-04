@@ -58,18 +58,20 @@
         height="{{ product.featured_media.height }}"
       >
     </div>
-    {%- if show_vendor -%}
-      <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-      <div class="caption-with-letter-spacing light">{{ product.vendor }}</div>
-    {%- endif -%}
-    <div class="product-card-adv-title-container">
-      <h1 class="product-card-adv-title">
-        {% if product.metafields.svg.title != blank %}
-          {{ product.metafields.svg.title }}
-        {% else %}
-          {{ product.title | escape }}
-        {% endif %}
-      </h1>
+    <div class="product-card-adv-info">
+      {%- if show_vendor -%}
+        <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+        <div class="caption-with-letter-spacing light">{{ product.vendor }}</div>
+      {%- endif -%}
+      <div class="product-card-adv-title-container">
+        <h1 class="product-card-adv-title">
+          {% if product.metafields.svg.title != blank %}
+            {{ product.metafields.svg.title }}
+          {% else %}
+            {{ product.title | escape }}
+          {% endif %}
+        </h1>
+      </div>
     </div>
   </div>
 
