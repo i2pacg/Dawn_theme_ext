@@ -1,5 +1,21 @@
 {{ 'section-video-banner.css' | asset_url | stylesheet_tag }}
-
+<style>
+  .banner__box .banner__svg_logo {
+    position: relative;
+    width: 416px;
+    height: 256px;
+    display: flex;
+    margin: auto;
+    z-index: 1;
+    justify-content: center;
+  }
+  @media screen and (min-width: 750px) {
+    .banner__box .banner__svg_logo {
+      width: 416px;
+      height: 256px;
+    }
+  }
+</style>
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
     @media screen and (max-width: 749px) {
@@ -24,18 +40,9 @@
 {%- endif -%}
 
 {%- style -%}
-  @media screen and (max-width: 749px) {
-        #Banner-{{ section.id }}::before,
-        #Banner-{{ section.id }} .banner__media::before,
-        #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-          padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
-          content: '';
-          display: block;
-        }
+  #Banner-{{ section.id }}::after {
+    opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
-    #Banner-{{ section.id }}::after {
-      opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
-    }
 {%- endstyle -%}
 
 {%- liquid
@@ -152,15 +159,6 @@
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- if section.settings.show_svg_logo -%}
         <div
-          style="
-            position: relative;
-            width: 416px;
-            height: 256px;
-            display: flex;
-            margin: auto;
-            z-index: 1;
-            justify-content: center;
-          "
           class="banner__svg_logo"
         >
           <img
