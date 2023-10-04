@@ -82,6 +82,7 @@
     </div>
     <style>
       .featured-slick-slider {
+        position: relative;
         display: flex;
         overflow-x: auto;      }
       .featured-slick-slider .slick-item {
@@ -109,19 +110,6 @@
             show_quick_add: section.settings.enable_quick_add,
             section_id: section.id
           %}
-          {% comment %}
-            {% render 'card-product-ext',
-              product: product,
-              card_class: 'product-card-hover',
-              savings_option: 'top',
-              show_vendor: section.settings.show_vendor,
-              show_rating: section.settings.show_rating,
-              show_secondary_image: section.settings.show_secondary_image,
-              title_option: 'bottom',
-              show_quick_add: section.settings.enable_quick_add,
-              section_id: section.id
-            %}
-          {% endcomment %}
         </div>
       {%- endfor -%}
     </div>
