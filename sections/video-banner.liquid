@@ -6,6 +6,12 @@
   }
   .banner__box .banner__svg_logo img:last-of-type {
     transform: rotate(135deg);
+    right: 0;
+    bottom: 16px;
+    object-fit: contain;
+    position: absolute;
+    z-index: 0;
+    object-position: right;
   }
   .banner__box .banner__svg_logo svg {
     position: relative;
@@ -236,16 +242,7 @@
             width="128"
             height="128"
             loading="eager"
-            style="
-              right: 0;
-              bottom: 16px;
-              object-fit: contain;
-              position: absolute;
-              /* display: flex; */
-              z-index: 0;
-              object-position: right;
-              transform: rotate(-45deg);
-            "
+            style=""
           >
         </div>
       {%- endif -%}
