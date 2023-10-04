@@ -37,6 +37,7 @@
         "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-text-1",
         "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-buttons-1"
       ],
+      "disabled": true,
       "settings": {
         "video": "shopify:\/\/files\/videos\/IMG_0879.mov",
         "image_overlay_opacity": 80,
@@ -50,50 +51,6 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": false
-      }
-    },
-    "4a12d39a-8643-4bef-9b8d-5a974bf1a662": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--20816435773737__4a12d39a-8643-4bef-9b8d-5a974bf1a662-column-1": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Hey Lovely!<\/strong>",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--20816435773737__4a12d39a-8643-4bef-9b8d-5a974bf1a662-column-2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--20816435773737__4a12d39a-8643-4bef-9b8d-5a974bf1a662-column-1",
-        "template--20816435773737__4a12d39a-8643-4bef-9b8d-5a974bf1a662-column-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00": {
@@ -117,6 +74,7 @@
         "template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-heading-1",
         "template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-text-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -130,6 +88,7 @@
     },
     "a1ab313a-69cd-4f11-91b1-f235322e33b3": {
       "type": "featured-collection-slick",
+      "disabled": true,
       "settings": {
         "header_top": "<p>Check our latest collection<\/p>",
         "title": "<p>{{ section.settings.collection.title }}<\/p>",
@@ -160,7 +119,6 @@
   },
   "order": [
     "f65567e7-9bef-4025-933a-a4042baf765d",
-    "4a12d39a-8643-4bef-9b8d-5a974bf1a662",
     "bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00",
     "a1ab313a-69cd-4f11-91b1-f235322e33b3"
   ]
