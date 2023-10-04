@@ -87,7 +87,8 @@
         overflow-x: auto;
         }
         .featured-slick-slider.slick-slider{
-          display: block;    }
+          display: block;
+            }
       .featured-slick-slider .slick-item {
         padding: 0 10px;
         flex: 1 1 {{ 100 | divided_by: section.settings.columns_desktop }}%;
@@ -216,7 +217,7 @@
 <script>
   $('.featured-slick-slider').slick({
     infinite: false,
-    centerMode: true,
+    centerMode: false,
     slidesToShow:  {{ section.settings.columns_desktop }},
     slidesToScroll: 1,
     {% comment %}  centerPadding: '0px',
