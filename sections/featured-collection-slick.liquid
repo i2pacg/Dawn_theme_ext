@@ -73,6 +73,14 @@
         </div>
       {%- endif -%}
     </div>
+    <style>
+      .featured-slick-slider {
+        display: inline-flex;
+      }
+      .featured-slick-slider .slick-item {
+        padding: 0 10px;
+      }
+    </style>
     <div class="featured-slick-slider">
       {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
         <div
