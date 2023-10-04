@@ -82,8 +82,14 @@
           data-review-count="{{ product.metafields.air_reviews_product.review_count }}"
         ></div>
       {% endif %}
-      {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
-      {%- if card_product.quantity_price_breaks_configured? -%}
+      {% render 'price', product: product, price_class: '', show_compare_at_price: true %}
+      {%- if product.quantity_price_breaks_configured? -%}
+        <div class="card__information-volume-pricing-note">
+          <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
+        </div>
+      {%- endif -%}
+      {% render 'price-adv', product: product, price_class: '', show_compare_at_price: true %}
+      {%- if product.quantity_price_breaks_configured? -%}
         <div class="card__information-volume-pricing-note">
           <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
         </div>
