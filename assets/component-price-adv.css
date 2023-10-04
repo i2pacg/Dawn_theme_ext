@@ -1,0 +1,176 @@
+.price {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  line-height: calc(1 + 0.5 / var(--font-body-scale));
+  color: rgb(var(--color-foreground));
+}
+
+.price.price-ext {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px -2px 2px #fefefe;
+  font-size: 22px;
+  border-top-left-radius: 16px;
+  background: #540978;
+  color: white;
+  font-weight: bold;
+  padding: 2px 24px;
+}
+
+.price.price-ext .price__container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.price.price-ext.price--on-sale {
+  box-shadow: unset;
+  padding: 0px;
+}
+
+.price.price-ext.price--on-sale .price__sale {
+  padding: 4px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.price.price-ext .product-card-savings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  padding: 4px 8px;
+  font-weight: 600;
+  font-size: 24px;
+  border-bottom-right-radius: 16px;
+  border-top-left-radius: 16px;
+  background-color: #da2828;
+  line-height: 100%;
+}
+
+.price.price-ext .product-card-savings {
+  position: relative;
+  font-size: 16px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 749px) {
+  .price.price-ext.price--on-sale .price__sale {
+    padding: 4px 8px;
+  }
+}
+
+.price.price-ext.price--on-sale .price-item--regular {
+  text-decoration: line-through;
+  color: white;
+  font-size: 1.0rem;
+}
+
+.price>* {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.price.price--unavailable {
+  visibility: hidden;
+}
+
+.price--end {
+  text-align: right;
+}
+
+.price .price-item {
+  display: inline-block;
+  margin: 0 1rem 0 0;
+}
+
+.price.price-ext .price-item {
+  margin: 0;
+  line-height: 100%;
+  font-size: 20px;
+}
+
+.price__regular .price-item--regular {
+  margin-right: 0;
+}
+
+.price:not(.price--show-badge) .price-item--last:last-of-type {
+  margin: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .price {
+    margin-bottom: 0;
+  }
+}
+
+.price.price-ext.price--large .product-card-savings {
+  font-size: 20px;
+}
+
+.price--large {
+  font-size: 1.6rem;
+  line-height: calc(1 + 0.5 / var(--font-body-scale));
+  letter-spacing: 0.13rem;
+}
+
+@media screen and (min-width: 750px) {
+  .price--large {
+    font-size: 1.8rem;
+  }
+}
+
+.price--sold-out .price__availability,
+.price__regular {
+  display: block;
+}
+
+.price__sale,
+.price__availability,
+.price .price__badge-sale,
+.price .price__badge-sold-out,
+.price--on-sale .price__regular,
+.price--on-sale .price__availability {
+  display: none;
+}
+
+.price--sold-out .price__badge-sold-out,
+.price--on-sale .price__badge-sale,
+.volume-pricing--sale-badge .price__badge-sale {
+  display: inline-block;
+}
+
+.volume-pricing--sale-badge .price__badge-sale {
+  margin-left: 0.5rem;
+}
+
+.price--on-sale .price__sale {
+  display: initial;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.price--center {
+  display: initial;
+  justify-content: center;
+}
+
+.price--on-sale .price-item--regular {
+  text-decoration: line-through;
+  color: rgba(var(--color-foreground), 0.75);
+  font-size: 1.3rem;
+}
+
+.unit-price {
+  display: block;
+  font-size: 1.1rem;
+  letter-spacing: 0.04rem;
+  line-height: calc(1 + 0.2 / var(--font-body-scale));
+  margin-top: 0.2rem;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.7);
+}
