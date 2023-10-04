@@ -41,6 +41,8 @@
 
 .product-card-adv .product-card-adv-info .product-card-adv-title-container .product-card-adv-title {
     margin: 0;
+    display: flex;
+    padding: 4px 0px;
 }
 
 .product-card-adv .product-card-adv-info .product-card-adv-title-container .product-card-adv-title svg {
