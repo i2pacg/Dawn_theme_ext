@@ -26,6 +26,11 @@
     margin: 8px 0px 0px 0px;
 }
 
+.product-info .product-title svg {
+    width: 100%;
+    height: 24px;
+}
+
 .card__overlay {
     position: absolute;
     bottom: 0;
