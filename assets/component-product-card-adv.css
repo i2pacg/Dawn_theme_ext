@@ -56,3 +56,10 @@
 }
 
 .product-card-adv .product-card-adv-info .product-card-adv-title-container .product-card-adv-title svg path {}
+
+.product-card-adv .product-card-adv-info .product-card-adv-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0px;
+}
