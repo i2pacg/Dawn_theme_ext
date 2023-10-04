@@ -84,7 +84,10 @@
       .featured-slick-slider {
         position: relative;
         display: flex;
-        overflow-x: auto;      }
+        overflow-x: auto;
+        }
+        .featured-slick-slider.slick-slider{
+          display: block;    }
       .featured-slick-slider .slick-item {
         padding: 0 10px;
         flex: 1 1 {{ 100 | divided_by: section.settings.columns_desktop }}%;
