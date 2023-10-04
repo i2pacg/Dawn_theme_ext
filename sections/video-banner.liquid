@@ -249,7 +249,7 @@
               {{ block.shopify_attributes }}
             >
               {%- if block.settings.button_label_1 != blank -%}
-                <div>
+                <div style="flex:1">
                   {%- if block.settings.button_content_1 != blank -%}
                     <div>{{ block.settings.button_content_1 }}</div>
                   {%- endif -%}
@@ -266,7 +266,7 @@
                 </div>
               {%- endif -%}
               {%- if block.settings.button_label_2 != blank -%}
-                <div>
+                <div style="flex:1">
                   {%- if block.settings.button_content_2 != blank -%}
                     <div>{{ block.settings.button_content_2 }}</div>
                   {%- endif -%}
