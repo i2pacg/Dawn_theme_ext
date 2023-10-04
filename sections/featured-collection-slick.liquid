@@ -81,6 +81,13 @@
       {%- endif -%}
     </div>
     <style>
+      @media screen and (max-width: 749px) {
+        .featured-slick-slider:not(.slick-initialized) .slick-item {
+          padding: 16px;
+          flex: 1 1 {{ 100 | divided_by: section.settings.columns_desktop }}%;
+          min-width: {{ 100 | divided_by: section.settings.columns_desktop }}%;
+        }
+      }
       .featured-slick-slider-container {
         position: relative;
         display: flex;
