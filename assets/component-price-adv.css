@@ -150,7 +150,7 @@
 
 .price--on-sale .price__sale {
   display: initial;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
