@@ -91,7 +91,7 @@
         min-width: {{ 100 | divided_by: section.settings.columns_desktop }}%;
       }
     </style>
-    <div class="featured-slick-slider">
+    <div class="featured-slick-slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
       {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
         <div
           class="slick-item {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
