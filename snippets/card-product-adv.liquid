@@ -36,7 +36,7 @@
     endif
   -%}
   <a class="card" href="{{ product.url }}">
-    <div class="card__image">
+    <div class="product-image">
       <img
         srcset="
           {%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
@@ -58,6 +58,7 @@
         height="{{ product.featured_media.height }}"
       >
     </div>
+    <div class="card">
   </a>
 
 {%- else -%}
