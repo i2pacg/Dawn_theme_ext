@@ -22,6 +22,10 @@
     border: 2px solid #707070;
 }
 
+.quick-add {
+    margin-bottom: 0;
+}
+
 .button-flat-empty:hover {
     background: #707070;
     color: white;
