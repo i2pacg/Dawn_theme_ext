@@ -14,14 +14,13 @@
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    
+    <!-- Air Reviews Script -->
+    {% include 'air-reviews-setting' %}
+    <!-- /Air Reviews Script -->
 
-  <!-- Air Reviews Script -->
- {% include 'air-reviews-setting' %}
-  <!-- /Air Reviews Script -->
-
-<title>
+    <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
