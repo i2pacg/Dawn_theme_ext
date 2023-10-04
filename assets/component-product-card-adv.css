@@ -22,6 +22,10 @@
     object-fit: contain;
 }
 
+.product-info .product-title {
+    margin: 8px 0px 0px 0px;
+}
+
 .card__overlay {
     position: absolute;
     bottom: 0;
