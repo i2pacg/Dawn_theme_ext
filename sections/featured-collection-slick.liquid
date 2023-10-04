@@ -255,6 +255,17 @@
     centerMode: true,
     slidesToShow:  {{ section.settings.columns_desktop }},
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 749,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+    ]
   });
 </script>
 
