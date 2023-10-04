@@ -1,8 +1,8 @@
 {{ 'section-video-banner.css' | asset_url | stylesheet_tag }}
 <style>
-  .banner__box img {
-    width: 33%;
-    height: 33%;
+  .banner__box .banner__svg_logo img {
+    width: 64px;
+    height: 64px;
   }
   .banner__box .banner__svg_logo {
     position: relative;
@@ -17,6 +17,10 @@
     .banner__box .banner__svg_logo {
       width: 416px;
       height: 256px;
+    }
+    .banner__box .banner__svg_logo img {
+      width: 128px;
+      height: 128px;
     }
   }
 </style>
