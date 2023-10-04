@@ -58,6 +58,10 @@
         height="{{ product.featured_media.height }}"
       >
     </div>
+    {%- if show_vendor -%}
+      <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+      <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
+    {%- endif -%}
     <div class="product-card-adv-title-container">
       <h1 class="product-card-adv-title">
         {% if product.metafields.svg.title != blank %}
