@@ -15,11 +15,14 @@
     height: auto;
 }
 
-.product-card-adv .product-card-adv-title {}
+.product-card-adv .product-card-adv-title {
+    margin: 0;
+}
 
 .product-card-adv .product-card-adv-title svg {
-    width: 100%;
+    width: auto;
     object-fit: contain;
     overflow: hidden;
-    height: auto;
+    height: 36px;
+    object-position: center;
 }
