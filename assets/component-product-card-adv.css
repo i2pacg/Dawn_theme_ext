@@ -35,6 +35,10 @@
     text-align: left;
 }
 
+.product-card-adv .product-card-adv-title-container .product-card-adv-vendor {
+    margin-bottom: 2px;
+}
+
 .product-card-adv .product-card-adv-title-container .product-card-adv-title {
     margin: 0;
 }
