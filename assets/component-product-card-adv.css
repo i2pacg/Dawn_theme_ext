@@ -27,6 +27,10 @@
     height: auto;
 }
 
+.product-card-adv .product-card-adv-info {
+    padding: 8px;
+}
+
 .product-card-adv .product-card-adv-title-container {
     text-align: left;
 }
@@ -36,7 +40,6 @@
 }
 
 .product-card-adv .product-card-adv-title-container .product-card-adv-title svg {
-    padding: 8px;
     border-radius: 8px;
 }
 
