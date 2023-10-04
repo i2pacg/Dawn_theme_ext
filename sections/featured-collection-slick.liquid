@@ -80,10 +80,8 @@
         {% endif %}
         >
         {%- assign placeholder_image = 'product-apparel-' | append: forloop.rindex -%}
-        {% comment %}
-        {% endcomment %}
-
         {% render 'card-product', show_vendor: section.settings.show_vendor, placeholder_image: placeholder_image %}
+
         {% comment %}
           {% render 'card-product-ext',
             product: product,
