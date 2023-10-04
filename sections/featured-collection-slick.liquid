@@ -1,4 +1,10 @@
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'slick.min.css' | asset_url | stylesheet_tag }}
+{{ 'slick-theme.min.css' | asset_url | stylesheet_tag }}
+{{ 'jquery.min.js' | asset_url | script_tag }}
+{{ 'slick.min.js' | asset_url | script_tag }}
+{{ 'anime.min.js' | asset_url | script_tag -}}
+
+{{- 'component-price.css' | asset_url | stylesheet_tag }}
 
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-product-card-adv.css' | asset_url | stylesheet_tag }}
@@ -215,7 +221,7 @@
   </div>
 </div>
 <script>
-  $('.slider-nav').slick({
+  $('.featured-slick-slider').slick({
     centerPadding: '0px',
     autoplay: false,
     autoplaySpeed: 10000,
