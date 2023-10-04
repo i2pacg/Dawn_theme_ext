@@ -75,26 +75,30 @@
     </div>
     <div class="featured-slick-slider">
       {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-        {% if settings.animations_reveal_on_scroll %}
-          data-cascade style="--animation-order: {{ forloop.index }};"
-        {% endif %}
+        <div
+          class="slick-item {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+            style="--animation-order: {{ forloop.index }};"
+          {% endif %}
         >
-        {%- assign placeholder_image = 'product-apparel-' | append: forloop.rindex -%}
-        {% render 'card-product', show_vendor: section.settings.show_vendor, placeholder_image: placeholder_image %}
+          {%- assign placeholder_image = 'product-apparel-' | append: forloop.rindex -%}
+          {% render 'card-product', show_vendor: section.settings.show_vendor, placeholder_image: placeholder_image %}
 
-        {% comment %}
-          {% render 'card-product-ext',
-            product: product,
-            card_class: 'product-card-hover',
-            savings_option: 'top',
-            show_vendor: section.settings.show_vendor,
-            show_rating: section.settings.show_rating,
-            show_secondary_image: section.settings.show_secondary_image,
-            title_option: 'bottom',
-            show_quick_add: section.settings.enable_quick_add,
-            section_id: section.id
-          %}
-        {% endcomment %}
+          {% comment %}
+            {% render 'card-product-ext',
+              product: product,
+              card_class: 'product-card-hover',
+              savings_option: 'top',
+              show_vendor: section.settings.show_vendor,
+              show_rating: section.settings.show_rating,
+              show_secondary_image: section.settings.show_secondary_image,
+              title_option: 'bottom',
+              show_quick_add: section.settings.enable_quick_add,
+              section_id: section.id
+            %}
+          {% endcomment %}
+        </div>
       {%- endfor -%}
     </div>
     {% comment %}
