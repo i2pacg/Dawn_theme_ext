@@ -93,10 +93,10 @@
       "settings": {
         "full_width": false,
         "header_top": "",
-        "title": "<p><strong>Latest additions<br\/> <\/strong><\/p>",
+        "title": "<p><strong>Latest additions<\/strong><\/p>",
         "heading_size": "h2",
-        "description": "",
-        "show_description": true,
+        "description": "<p>Experience the latest nailset designs that will make your nails stand out. <\/p>",
+        "show_description": false,
         "description_style": "body",
         "collection": "new-arrivals",
         "products_to_show": 5,
@@ -212,7 +212,6 @@
         "template--20816435773737__a01e9429-46ab-48f0-ab67-0de5b8b4c44d-featured_collection-1",
         "template--20816435773737__a01e9429-46ab-48f0-ab67-0de5b8b4c44d-featured_collection-2"
       ],
-      "disabled": true,
       "settings": {
         "title": "Our Collections",
         "heading_size": "h1",
@@ -220,7 +219,7 @@
         "columns_desktop": 2,
         "color_scheme": "scheme-eecc9f83-e793-41cd-8929-f4fa6fae1164",
         "show_view_all": true,
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
