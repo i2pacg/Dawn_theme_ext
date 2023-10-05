@@ -1,16 +1,5 @@
 @charset 'UTF-8';
 
-.slick-loading .slick-list {
-    background: #fff url(ajax-loader.gif) center center no-repeat
-}
-
-@font-face {
-    font-family: slick;
-    font-weight: 400;
-    font-style: normal;
-    src: url(slick.eot);
-    src: url(slick.eot?#iefix) format('embedded-opentype'), url(slick.woff) format('woff'), url(slick.ttf) format('truetype'), url(slick.svg#slick) format('svg')
-}
 
 .slick-next,
 .slick-prev {
