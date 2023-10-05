@@ -227,6 +227,19 @@
           >
         </div>
       {%- endif -%}
+      <script>
+        function scrollToTargetAdjusted() {
+          var element = document.querySelectorAll('.shopify-section.section')[1];
+          var headerOffset = 45;
+          var elementPosition = element.getBoundingClientRect().top;
+          var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth',
+          });
+        }
+      </script>
       <style>
         .scrolldown-btn {
           width: 100%;
@@ -354,7 +367,7 @@
                     <div class="banner__button_content">{{ block.settings.button_content_1 }}</div>
                   {%- endif -%}
                   <button
-                    onclick="document.querySelectorAll('.shopify-section.section')[1].scrollIntoView({behavior: 'smooth'});"
+                    onclick="scrollToTargetAdjusted()"
                     class="button-flat-empty scrolldown-btn"
                     {% if block.settings.button_link_1 == blank %}
                       role="link" aria-disabled="true"
