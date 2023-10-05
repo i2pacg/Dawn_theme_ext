@@ -54,17 +54,17 @@
             "enable_quick_add": true
           }
         },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "with_divider": false
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-            "with_divider": false
           }
         },
         "share": {
@@ -82,8 +82,8 @@
         "58d146aa-b8ea-4cad-ba11-20e849c9afed",
         "28d3cf48-f336-46c8-8f7d-ec5bd99564a9",
         "f9fca452-c63a-4426-a6c7-c46378d03566",
-        "buy_buttons",
         "quantity_selector",
+        "buy_buttons",
         "share"
       ],
       "custom_css": [
