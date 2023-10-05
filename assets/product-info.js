@@ -9,8 +9,10 @@ if (!customElements.get('product-info')) {
         this.variantSelects = this.querySelector('variant-radios');
         this.submitButton = this.querySelector('[type="submit"]');
         const product = JSON.parse(this.getAttribute('data-product'));
+        const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
         console.log("productInfo", product)
         console.log("currentVariant", this.currentVariant)
+        console.log("variant", variant)
 
       }
 
