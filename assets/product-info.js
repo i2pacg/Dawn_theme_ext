@@ -8,7 +8,10 @@ if (!customElements.get('product-info')) {
         this.currentVariant = this.querySelector('.product-variant-id');
         this.variantSelects = this.querySelector('variant-radios');
         this.submitButton = this.querySelector('[type="submit"]');
+        const product = JSON.parse(productInfo.getAttribute('data-product'));
+        console.log("productInfo", product)
         console.log("currentVariant", this.currentVariant)
+
       }
 
       cartUpdateUnsubscriber = undefined;
