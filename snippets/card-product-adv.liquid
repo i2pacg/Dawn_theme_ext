@@ -86,7 +86,11 @@
       {%- if show_vendor -%}
         <div class="product-card-adv-vendor">
           <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-          <div class="caption-with-letter-spacing light">{{ product.collection }}</div>
+          {%- for collection in product.collections -%}
+            {%- unless collection.handle == 'new-arrivals' -%}
+              <div class="caption-with-letter-spacing light">{{ product.collections }}</div>
+            {%- endunless -%}
+          {%- endfor -%}
         </div>
       {%- endif -%}
       <div class="product-card-adv-footer">
