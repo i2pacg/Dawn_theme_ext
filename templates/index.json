@@ -219,7 +219,7 @@
         "columns_desktop": 2,
         "color_scheme": "scheme-eecc9f83-e793-41cd-8929-f4fa6fae1164",
         "show_view_all": true,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
