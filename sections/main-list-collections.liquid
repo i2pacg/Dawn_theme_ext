@@ -12,7 +12,7 @@
     {% endfor %}
   {% endcomment %}
   {%- liquid
-    assign tmpCollections = collections
+    assign tmpCollections = '' | split: ''
     for collection in collections
       unless collection.handle contains 'new-arrivals'
         assign tmpCollections = tmpCollections | push: collection
