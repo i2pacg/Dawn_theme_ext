@@ -9,13 +9,14 @@
     {% for operation in menuItems %}
       {% assign controllerName = operation.Title | split: '_' | first | split: '' %}
       {% assign controllers = controllers | concat: controllerName %}
-    {% endfor %} assign tmpCollections = '' | split: ''
-    for collection in collections
-      assign tmpCollections = tmpCollections | push: collection
-    endfor
-    assign collections = tmpCollections
+    {% endfor %}
   {% endcomment %}
   {%- liquid
+    assign tmpCollections = '' | split: ''
+    for collection in collections
+      assign tmpCollections = tmpCollections | concat: collection
+    endfor
+    assign collections = tmpCollections
     case section.settings.sort
       when 'products_high', 'products_low'
         assign collections = collections | sort: 'all_products_count'
