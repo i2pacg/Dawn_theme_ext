@@ -1059,13 +1059,6 @@
   {{- block.name -}}
 
   <script>
-    try {
-      let blocks = `{{ section.blocks[0].type }}`;
-      console.log('wee', blocks);
-    } catch (error) {
-      console.log(error);
-    }
-
     document.addEventListener('DOMContentLoaded', function () {
       function isIE() {
         const ua = window.navigator.userAgent;
