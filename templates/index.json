@@ -73,6 +73,9 @@
         "template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-heading-1",
         "template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-text-1"
       ],
+      "custom_css": [
+        ".section-template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-padding{max-width:50px; overflow:hidden;}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
