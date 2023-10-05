@@ -63,13 +63,11 @@
     <div class="product-card-adv-info">
       <div class="product-card-adv-title-container">
         <h1 class="product-card-adv-title">
-          <a href="{{ product.url }}">
-            {% if product.metafields.svg.title != blank %}
-              {{ product.metafields.svg.title }}
-            {% else %}
-              {{ product.title | escape }}
-            {% endif %}
-          </a>
+          {% if product.metafields.svg.title != blank %}
+            {{ product.metafields.svg.title }}
+          {% else %}
+            {{ product.title | escape }}
+          {% endif %}
         </h1>
       </div>
       {%- if show_vendor -%}
