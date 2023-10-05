@@ -66,6 +66,7 @@ if (!customElements.get('product-info')) {
             return response.text();
           })
           .then((responseText) => {
+            console.log("responseText", responseText)
             const html = new DOMParser().parseFromString(responseText, 'text/html');
             this.updateQuantityRules(this.dataset.section, html);
             this.setQuantityBoundries();
