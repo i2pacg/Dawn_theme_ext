@@ -20,7 +20,7 @@
     endfor
     assign position = position | minus: 1
 
-    assign becollections = collections | splice: 0, position
+    assign becollections = collections | slice: 0, position
 
     case section.settings.sort
       when 'products_high', 'products_low'
