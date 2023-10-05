@@ -224,6 +224,42 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "16909af5-af37-4113-8be5-27bfc3d6d950": {
+      "type": "slideshow",
+      "blocks": {
+        "template--20816435773737__16909af5-af37-4113-8be5-27bfc3d6d950-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/nail_artist_mak_0.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "This is your one-stop shop for everything related to press on nails, and we strive to be the best in the business. To us, being the best means offering a wide variety of high-quality saloon press on nail sets at an affordable price alongside other products that are essential for application, removal, and general care.",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 60,
+            "color_scheme": "inverse",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--20816435773737__16909af5-af37-4113-8be5-27bfc3d6d950-slide-1"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
     }
   },
   "order": [
@@ -232,6 +268,7 @@
     "a1ab313a-69cd-4f11-91b1-f235322e33b3",
     "65363b7a-86c9-43fb-829e-3927a73cf3d3",
     "e3998602-c96f-4108-9d3e-061df2345b9a",
-    "a01e9429-46ab-48f0-ab67-0de5b8b4c44d"
+    "a01e9429-46ab-48f0-ab67-0de5b8b4c44d",
+    "16909af5-af37-4113-8be5-27bfc3d6d950"
   ]
 }
