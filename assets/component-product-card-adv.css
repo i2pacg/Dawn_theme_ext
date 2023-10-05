@@ -106,6 +106,10 @@
 
 
 .product-card-adv .product-card-adv-info .product-card-adv-footer .product-card-adv-price {
+    flex: 2;
+}
+
+.product-card-adv .product-card-adv-info .product-card-adv-footer .product-card-adv-quick-add {
     flex: 1;
 }
 
