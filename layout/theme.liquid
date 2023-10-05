@@ -253,6 +253,17 @@
           max-width: 100%;
         }
       }
+      .slick-loading .slick-list {
+          background: #fff url(ajax-loader.gif) center center no-repeat
+      }
+
+      @font-face {
+        font-family: slick;
+        font-weight: 400;
+        font-style: normal;
+        src: url({{'slick.eot' | asset_url}});
+        src: url({{'slick.eot?#iefix' | asset_url}}) format('embedded-opentype'), url(slick.woff) format('woff'), url(slick.ttf) format('truetype'), url(slick.svg#slick) format('svg')
+      }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
