@@ -42,6 +42,7 @@
 .product-card-adv .product-card-adv-info .product-card-adv-title {
     margin: 0;
     display: flex;
+    justify-content: center;
     font-size: 18px;
     font-weight: bold;
 }
