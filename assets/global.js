@@ -215,17 +215,16 @@ class QuantityInput extends HTMLElement {
       const variantId = urlParams.get('variant')
       if (!variantId) {
         console.log("no variant",)
-        console.log("no variant", product.variants[0])
-        return;
+        console.log("no variant",)
+        variantId == product.variants[0].id;
       };
       console.log('variantId', variantId)
-
+      const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
+      productInfo.querySelector('.price.price-ext .price__regular .price-item--regular').innerHTML = `${(variant.price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
+      productInfo.querySelector('.price.price-ext .price__sale .price-item--regular').innerHTML = `${(variant.compare_at_price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
+      productInfo.querySelector('.price.price-ext .price__sale .price-item--last').innerHTML = `${(variant.price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
       /*  
-        const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
-        productInfo.querySelector('.price.price-ext .price__regular .price-item--regular').innerHTML = `${(variant.price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
-        productInfo.querySelector('.price.price-ext .price__sale .price-item--regular').innerHTML = `${(variant.compare_at_price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
-        productInfo.querySelector('.price.price-ext .price__sale .price-item--last').innerHTML = `${(variant.price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
-   */
+         */
     } catch (error) {
       console.log(error);
     }
