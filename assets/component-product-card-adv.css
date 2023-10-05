@@ -89,7 +89,9 @@
     object-position: center;
 }
 
-.product-card-adv .product-card-adv-info .product-card-adv-title-container .product-card-adv-title svg path {}
+.product-card-adv .product-card-adv-info .product-card-adv-title-container .product-card-adv-title svg path {
+    stroke-width: 1;
+}
 
 .product-card-adv .product-card-adv-info .product-card-adv-footer {
     display: flex;
