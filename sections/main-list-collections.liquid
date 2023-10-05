@@ -14,6 +14,7 @@
   {%- liquid
     assign tmpCollections = '' | split: ''
     for collection in collections
+      assign tmpCollection = collection | split: ''
       assign tmpCollections = tmpCollections | concat: collection
     endfor
     case section.settings.sort
