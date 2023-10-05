@@ -261,18 +261,15 @@
 </div>
 <script>
   $('.featured-slick-slider').slick({
-    centerPadding: '100px',
     infinite: true,
     centerMode: true,
     slidesToShow:  {{ section.settings.columns_desktop }},
     slidesToScroll: 1,
-    variableWidth: true,
     dots: false,
     responsive: [
       {
         breakpoint: 749,
         settings: {
-          centerPadding: '40px',
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: false,
