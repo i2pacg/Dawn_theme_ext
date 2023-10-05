@@ -212,6 +212,7 @@
         "template--20816435773737__a01e9429-46ab-48f0-ab67-0de5b8b4c44d-featured_collection-1",
         "template--20816435773737__a01e9429-46ab-48f0-ab67-0de5b8b4c44d-featured_collection-2"
       ],
+      "disabled": true,
       "settings": {
         "title": "Our Collections",
         "heading_size": "h1",
