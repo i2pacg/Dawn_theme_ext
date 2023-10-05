@@ -7,7 +7,6 @@ if (!customElements.get('product-form')) {
 
         this.form = this.querySelector('form');
         this.form.querySelector('[name=id]').disabled = false;
-
         /*         console.log("THEYT THE FORN", this.form.querySelector('[name=quantity]'));
                 console.log("THEYT THE FORN", this.form.querySelector('input.quantity__input')); */
         /* this.form.querySelector('[name=quantity]').addEventListener('change', (e) => {
@@ -21,6 +20,7 @@ if (!customElements.get('product-form')) {
 
         this.hideErrors = this.dataset.hideErrors === 'true';
 
+        console.log(this)
 
       }
 
