@@ -1,5 +1,8 @@
 {{ 'component-slickshow.css' | asset_url | stylesheet_tag }}
 
+<div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
+  <div id="Slick-{{ section.id }}"></div>
+</div>
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
