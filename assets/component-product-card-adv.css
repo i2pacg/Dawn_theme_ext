@@ -10,6 +10,10 @@
     border-bottom-right-radius: 0;
 }
 
+.product-card-adv .button-flat-empty i {
+    font-size: 24px;
+}
+
 .product-card-adv .product-card-adv-image {
     width: calc(100% - 16px);
     box-sizing: unset;
