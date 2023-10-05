@@ -33,7 +33,7 @@
         ".newsletter__wrapper h2 {font-size: 26px;}"
       ],
       "settings": {
-        "color_scheme": "background-2",
+        "color_scheme": "scheme-eecc9f83-e793-41cd-8929-f4fa6fae1164",
         "full_width": true,
         "padding_top": 24,
         "padding_bottom": 24
@@ -59,7 +59,7 @@
         ".footer-block {padding: 0px;}"
       ],
       "settings": {
-        "color_scheme": "background-2",
+        "color_scheme": "scheme-eecc9f83-e793-41cd-8929-f4fa6fae1164",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
