@@ -83,21 +83,30 @@
       {% endcomment %}
     </a>
     <div class="product-card-adv-info">
-      {%- if show_vendor -%}
-        <div class="product-card-adv-vendor">
-          <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-          {%- for collection in product.collections -%}
-            {%- unless collection.handle == 'new-arrivals' -%}
-              <div class="caption-with-letter-spacing light" style="display:block">{{ collection.title }}</div>
-            {%- endunless -%}
-          {%- endfor -%}
-        </div>
-      {%- endif -%}
       <div class="product-card-adv-footer">
         <div class="product-card-adv-price">
           <h1 class="product-card-adv-title">
             {{ product.title | escape }}
           </h1>
+          {%- if show_vendor -%}
+            <div class="product-card-adv-vendor">
+              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+              {%- for collection in product.collections -%}
+                {%- unless collection.handle == 'new-arrivals' -%}
+                  <div class="caption-with-letter-spacing light" style="display:block">{{ collection.title }}</div>
+                {%- endunless -%}
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+          {%- if show_rating -%}
+            <div
+              class="AirReviews-Widget AirReviews-Widget--Stars"
+              style="margin-top:0.7rem"
+              data-review-avg="{{ product.metafields.air_reviews_product.review_avg }}"
+              data-review-count="{{ product.metafields.air_reviews_product.review_count }}"
+            ></div>
+          {% endif %}
+          <div class="AirReviews-Widget AirReviews-Widget--Stars"></div>
           {% render 'price-adv', product: product, price_class: '', show_compare_at_price: true %}
           {%- if product.quantity_price_breaks_configured? -%}
             <div class="card__information-volume-pricing-note">
@@ -240,15 +249,6 @@
           </div>
         {%- endif -%}
       </div>
-      {%- if show_rating -%}
-        <div
-          class="AirReviews-Widget AirReviews-Widget--Stars"
-          style="margin-top:0.7rem"
-          data-review-avg="{{ product.metafields.air_reviews_product.review_avg }}"
-          data-review-count="{{ product.metafields.air_reviews_product.review_count }}"
-        ></div>
-      {% endif %}
-      <div class="AirReviews-Widget AirReviews-Widget--Stars"></div>
     </div>
   </div>
 
