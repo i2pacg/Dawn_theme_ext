@@ -93,8 +93,8 @@
       "settings": {
         "full_width": false,
         "header_top": "",
-        "title": "<p>Featured Sets<\/p>",
-        "heading_size": "h1",
+        "title": "<p><strong>Latest additions<\/strong><\/p>",
+        "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
