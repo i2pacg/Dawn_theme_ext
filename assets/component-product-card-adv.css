@@ -105,6 +105,12 @@
 
 .product-card-adv .product-card-adv-info .product-card-adv-footer .product-card-adv-quick-add:before {
     content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -4px;
+    width: 1px;
+    background: #8ea5bd;
 }
 
 .product-card-adv .product-card-adv-info .product-card-adv-footer .product-card-adv-quick-add .quick-add {
