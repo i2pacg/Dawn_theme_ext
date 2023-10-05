@@ -12,7 +12,7 @@
     {% endfor %}
   {% endcomment %}
   {%- liquid
-    assign tmpCollections = collections | where_exp: 'handle', "handle != 'new-arrivals'"
+    assign tmpCollections = collections | where_exp: 'collection', "collection.handle != 'new-arrivals'"
     case section.settings.sort
       when 'products_high', 'products_low'
         assign collections = collections | sort: 'all_products_count'
