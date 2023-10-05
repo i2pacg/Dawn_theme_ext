@@ -48,12 +48,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
         "ec7c181a-1824-4be3-83cb-8765fb039e31": {
           "type": "shopify:\/\/apps\/upload-lift-image-upload\/blocks\/app-block\/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca",
           "settings": {
@@ -70,7 +64,6 @@
         "58d146aa-b8ea-4cad-ba11-20e849c9afed",
         "quantity_selector",
         "buy_buttons",
-        "share",
         "ec7c181a-1824-4be3-83cb-8765fb039e31"
       ],
       "custom_css": [
@@ -93,7 +86,6 @@
     },
     "related-products": {
       "type": "related-products",
-      "disabled": true,
       "settings": {
         "heading": "<strong>Take a look at these<\/strong>",
         "heading_size": "h2",
