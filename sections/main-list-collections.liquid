@@ -13,12 +13,13 @@
   {% endcomment %}
   {%- liquid
     assign position = -1
+    assign tmpCollections = '' | split: ''
+
     for collection in collections
       if collection.handle == 'new-arrivals'
         assign position = forloop.index0
       endif
     endfor
-    assign collections[position] = ''
 
     case section.settings.sort
       when 'products_high', 'products_low'
