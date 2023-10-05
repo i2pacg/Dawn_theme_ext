@@ -227,6 +227,102 @@
           >
         </div>
       {%- endif -%}
+      <style>
+        .scrolldown-btn {
+          border: 1px solid black;
+        }
+        .scrolldown-btn svg {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+        }
+        .scrolldown-btn svg path.first-path {
+          animation: scrollanim 1s ease-in-out infinite;
+          animation-delay: 0.8s;
+        }
+        .scrolldown-btn svg path.second-path {
+          animation: scrollanim2 1s ease-in-out infinite;
+        }
+
+        @-webkit-keyframes scrollanim {
+          0% {
+            -webkit-transform: translate(0, -40px);
+            opacity: 0;
+          }
+          60% {
+            -webkit-transform: translate(0, 0);
+            opacity: 0.8;
+          }
+        }
+        @-moz-keyframes scrollanim {
+          0% {
+            -moz-transform: translate(0, -40px);
+            opacity: 0;
+          }
+          60% {
+            -moz-transform: translate(0, 0);
+            opacity: 0.8;
+          }
+        }
+        @keyframes scrollanim {
+          0% {
+            -webkit-transform: translate(0, -40px);
+            -moz-transform: translate(0, -40px);
+            -ms-transform: translate(0, -40px);
+            -o-transform: translate(0, -40px);
+            transform: translate(0, -40px);
+            opacity: 0;
+          }
+          60% {
+            -webkit-transform: translate(0, 0);
+            -moz-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            transform: translate(0, 0);
+            opacity: 0.8;
+          }
+        }
+        @-webkit-keyframes scrollanim2 {
+          0% {
+            -webkit-transform: translate(0, -40px);
+            opacity: 0;
+          }
+          60% {
+            -webkit-transform: translate(0, 0px);
+            opacity: 0.6;
+          }
+        }
+        @-moz-keyframes scrollanim2 {
+          0% {
+            -moz-transform: translate(0, -40px);
+            opacity: 0;
+          }
+          60% {
+            -moz-transform: translate(0, 0px);
+            opacity: 0.6;
+          }
+        }
+        @keyframes scrollanim2 {
+          0% {
+            -webkit-transform: translate(0, -40px);
+            -moz-transform: translate(0, -40px);
+            -ms-transform: translate(0, -40px);
+            -o-transform: translate(0, -40px);
+            transform: translate(0, -40px);
+            opacity: 0;
+          }
+          60% {
+            -webkit-transform: translate(0, 0px);
+            -moz-transform: translate(0, 0px);
+            -ms-transform: translate(0, 0px);
+            -o-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+            opacity: 0.6;
+          }
+        }
+      </style>
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
@@ -261,7 +357,7 @@
                     <div class="banner__button_content">{{ block.settings.button_content_1 }}</div>
                   {%- endif -%}
                   <a
-                    class="button-flat-empty "
+                    class="button-flat-empty scrolldown-btn"
                     {% if block.settings.button_link_1 == blank %}
                       role="link" aria-disabled="true"
                     {% else %}
