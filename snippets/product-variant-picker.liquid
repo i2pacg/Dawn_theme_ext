@@ -27,6 +27,9 @@
           <h2 style="margin:0;">{{ option.name }}</h2>
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
+        {%- if option.name == 'size' -%}
+          <div class="upload-size"></div>
+        {%- endif -%}
       {%- endfor -%}
       <script type="application/json">
         {{ product.variants | json }}
