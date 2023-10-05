@@ -13,7 +13,7 @@ if (!customElements.get('product-info')) {
         const product = JSON.parse(this.getAttribute('data-product'));
         console.log("productInfo", product)
         const variant = product.variants.find((variant) => variant.id === parseInt(this.currentVariant.value));
-        console.log("variant", variant)
+        console.log("real variant", variant)
       }
 
       cartUpdateUnsubscriber = undefined;
