@@ -18,7 +18,7 @@
         assign position = forloop.index0
       endif
     endfor
-    assign collections = collections | remove: collections[position]
+    assign collections = collections | splice: position, 2
     case section.settings.sort
       when 'products_high', 'products_low'
         assign collections = collections | sort: 'all_products_count'
