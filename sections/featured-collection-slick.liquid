@@ -55,7 +55,10 @@
 -%}
 
 <div
-  class="    color-{{ section.settings.color_scheme }} isolate gradient"
+  class="
+    {% unless section.settings.full_width %} page-width{% endunless %}
+    color-{{ section.settings.color_scheme }} isolate gradient
+  "
 >
   <div class="collection section-{{ section.id }}-padding">
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-mobile-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
@@ -289,6 +292,12 @@
   },
   "settings": [
     {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.featured-collection-slick.settings.full_width.label",
+      "default": false
+    },
+    {
       "type": "richtext",
       "id": "header_top",
       "label": "t:sections.featured-collection-slick.settings.heading.label"
@@ -371,12 +380,6 @@
       "step": 1,
       "default": 4,
       "label": "t:sections.featured-collection-slick.settings.columns_desktop.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "full_width",
-      "label": "t:sections.featured-collection-slick.settings.full_width.label",
-      "default": false
     },
     {
       "type": "checkbox",
