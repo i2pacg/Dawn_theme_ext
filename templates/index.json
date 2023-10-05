@@ -260,6 +260,43 @@
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
+    },
+    "390e1d99-e0a4-49bd-b94f-2bfbf180e336": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20816435773737__390e1d99-e0a4-49bd-b94f-2bfbf180e336-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Your nail box <\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "template--20816435773737__390e1d99-e0a4-49bd-b94f-2bfbf180e336-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Made with salon gel products for a long lasting & durable finish, your nails arrive beautifully packaged in their own storage box. So they can be stored and reused for as many as you want . You can also purchase extra tools  to prep & apply your nails.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--20816435773737__390e1d99-e0a4-49bd-b94f-2bfbf180e336-heading-1",
+        "template--20816435773737__390e1d99-e0a4-49bd-b94f-2bfbf180e336-text-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/small_cute_pink_1.png",
+        "height": "medium",
+        "desktop_image_width": "large",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -269,6 +306,7 @@
     "65363b7a-86c9-43fb-829e-3927a73cf3d3",
     "e3998602-c96f-4108-9d3e-061df2345b9a",
     "a01e9429-46ab-48f0-ab67-0de5b8b4c44d",
-    "16909af5-af37-4113-8be5-27bfc3d6d950"
+    "16909af5-af37-4113-8be5-27bfc3d6d950",
+    "390e1d99-e0a4-49bd-b94f-2bfbf180e336"
   ]
 }
