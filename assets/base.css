@@ -14,7 +14,7 @@
   color: #fff;
 }
  */
-.upload-size:not([display]) {
+.upload-size[display] {
   display: none;
 }
 
