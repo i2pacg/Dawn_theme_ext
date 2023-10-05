@@ -28,8 +28,13 @@
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
         {%- if option.name == 'Size' -%}
-          {{ option.selected_value }}
-          <div class="upload-size"></div>
+          {{  }}
+          <div
+            class="upload-size"
+            {%- if option.selected_value == 'Custom' -%}
+              display
+            {%- endif -%}
+          ></div>
         {%- endif -%}
       {%- endfor -%}
       <script type="application/json">
