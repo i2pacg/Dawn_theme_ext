@@ -12,7 +12,12 @@
     {% endfor %}
   {% endcomment %}
   {%- liquid
-    assign tmpCollections = '' | split: ''
+    assign position = -1
+    for collection in collections
+      if collection.handle == 'new-arrivals'
+        assign position = forloop.index0
+      endif
+    endfor
     case section.settings.sort
       when 'products_high', 'products_low'
         assign collections = collections | sort: 'all_products_count'
