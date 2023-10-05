@@ -274,7 +274,7 @@
         "template--20816435773737__390e1d99-e0a4-49bd-b94f-2bfbf180e336-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Made with salon gel products for a long lasting & durable finish, your nails arrive beautifully packaged in their own storage box. So they can be stored and reused for as many as you want . You can also purchase extra tools  to prep & apply your nails.<\/p>",
+            "text": "<p><em>Made with salon gel products for a long lasting & durable finish, your nails arrive beautifully packaged in their own storage box. So they can be stored and reused for as many as you want . You can also purchase extra tools  to prep & apply your nails.<\/em><\/p>",
             "text_style": "body"
           }
         }
@@ -288,8 +288,8 @@
         "height": "medium",
         "desktop_image_width": "large",
         "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
         "content_layout": "overlap",
         "color_scheme": "scheme-9d28a1ba-7101-4475-8e66-79d7f096f4d5",
         "image_behavior": "ambient",
