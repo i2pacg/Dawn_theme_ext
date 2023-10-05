@@ -92,11 +92,11 @@
       "type": "featured-collection-slick",
       "settings": {
         "full_width": false,
-        "header_top": "<p><em><strong>Check our latest collection<\/strong><\/em><\/p>",
-        "title": "<p>{{ section.settings.collection.title }}<\/p>",
+        "header_top": "",
+        "title": "<p>Featured Sets<\/p>",
         "heading_size": "h1",
-        "description": "<p>{{ shop.brand.short_description }}<\/p>",
-        "show_description": true,
+        "description": "",
+        "show_description": false,
         "description_style": "body",
         "collection": "frenchies",
         "products_to_show": 5,
@@ -191,6 +191,39 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "a01e9429-46ab-48f0-ab67-0de5b8b4c44d": {
+      "type": "collection-list",
+      "blocks": {
+        "template--20816435773737__a01e9429-46ab-48f0-ab67-0de5b8b4c44d-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "chrome"
+          }
+        },
+        "template--20816435773737__a01e9429-46ab-48f0-ab67-0de5b8b4c44d-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frenchies"
+          }
+        }
+      },
+      "block_order": [
+        "template--20816435773737__a01e9429-46ab-48f0-ab67-0de5b8b4c44d-featured_collection-1",
+        "template--20816435773737__a01e9429-46ab-48f0-ab67-0de5b8b4c44d-featured_collection-2"
+      ],
+      "settings": {
+        "title": "Our Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-eecc9f83-e793-41cd-8929-f4fa6fae1164",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -198,6 +231,7 @@
     "bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00",
     "a1ab313a-69cd-4f11-91b1-f235322e33b3",
     "65363b7a-86c9-43fb-829e-3927a73cf3d3",
-    "e3998602-c96f-4108-9d3e-061df2345b9a"
+    "e3998602-c96f-4108-9d3e-061df2345b9a",
+    "a01e9429-46ab-48f0-ab67-0de5b8b4c44d"
   ]
 }
