@@ -206,7 +206,6 @@ class QuantityInput extends HTMLElement {
   }
   updatePrice() {
     try {
-      console.log("updatePrice");
       const productInfo = document.querySelector('product-info');
       const product = JSON.parse(productInfo.getAttribute('data-product'));
       console.log(product);
