@@ -14,7 +14,7 @@
   {%- liquid
     assign tmpCollections = '' | split: ''
     for collection in collections
-      assign tmpCollections = tmpCollections | append: collection
+      assign tmpCollections = tmpCollections | concat: collection
     endfor
     case section.settings.sort
       when 'products_high', 'products_low'
