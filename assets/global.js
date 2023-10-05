@@ -978,6 +978,7 @@ class VariantSelects extends HTMLElement {
   constructor() {
     super();
     this.addEventListener('change', this.onVariantChange);
+
   }
 
   onVariantChange() {
@@ -997,7 +998,6 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
-      console.log(this.currentVariant.option1 == "Custom");
       document.querySelector('.upload-size').toggleAttribute('display', this.currentVariant.option1 == "Custom");
     }
   }
@@ -1220,6 +1220,7 @@ customElements.define('variant-selects', VariantSelects);
 class VariantRadios extends VariantSelects {
   constructor() {
     super();
+    console.log("We here ", this.currentVariant);
   }
 
   setInputAvailability(listOfOptions, listOfAvailableOptions) {
