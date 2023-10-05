@@ -6,7 +6,7 @@ slideshow-component {
 
 slideshow-component:before {
   content: "";
-  position: fixed;
+  position: absolute;
   z-index: 1;
   background: black;
   top: 0;
