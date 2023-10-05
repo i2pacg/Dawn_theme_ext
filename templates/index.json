@@ -90,7 +90,6 @@
     },
     "a1ab313a-69cd-4f11-91b1-f235322e33b3": {
       "type": "featured-collection-slick",
-      "disabled": true,
       "settings": {
         "full_width": false,
         "header_top": "<p>Check our latest collection<\/p>",
@@ -120,6 +119,7 @@
     },
     "65363b7a-86c9-43fb-829e-3927a73cf3d3": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured collection",
         "heading_size": "h1",
