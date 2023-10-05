@@ -76,15 +76,13 @@
       {% endcomment %}
     </a>
     <div class="product-card-adv-info">
-      <div class="product-card-adv-title-container">
-        <h1 class="product-card-adv-title">
-          {% if product.metafields.svg.title != blank %}
-            {{ product.metafields.svg.title }}
-          {% else %}
-            {{ product.title | escape }}
-          {% endif %}
-        </h1>
-      </div>
+      <h1 class="product-card-adv-title">
+        {% if product.metafields.svg.title != blank %}
+          {{ product.metafields.svg.title }}
+        {% else %}
+          {{ product.title | escape }}
+        {% endif %}
+      </h1>
       {%- if show_vendor -%}
         <div class="product-card-adv-vendor">
           <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
