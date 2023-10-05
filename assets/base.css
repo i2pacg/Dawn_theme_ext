@@ -467,6 +467,7 @@ blockquote {
 
 a.caption-with-letter-spacing {
   text-decoration: unset;
+  color: black;
 }
 
 .caption-with-letter-spacing {
