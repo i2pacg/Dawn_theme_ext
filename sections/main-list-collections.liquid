@@ -19,7 +19,7 @@
       if collection.handle == 'new-arrivals'
         assign position = forloop.index0
       else
-        assign tmpCollections = tmpCollections | push: forloop.index0
+        assign tmpCollections = tmpCollections | concat: forloop.index0
       endif
     endfor
 
