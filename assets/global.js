@@ -1220,6 +1220,8 @@ customElements.define('variant-selects', VariantSelects);
 class VariantRadios extends VariantSelects {
   constructor() {
     super();
+    console.log("We here ", this.currentVariant);
+    console.log("We currentVariant ", this.options);
   }
 
   setInputAvailability(listOfOptions, listOfAvailableOptions) {
@@ -1237,6 +1239,7 @@ class VariantRadios extends VariantSelects {
     this.options = fieldsets.map((fieldset) => {
       return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
     });
+    ;
   }
 }
 
