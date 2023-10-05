@@ -14,9 +14,7 @@ if (!customElements.get('product-info')) {
         console.log("productInfo", product)
         const variant = product.variants.find((variant) => variant.id === parseInt(this.currentVariant.value));
         console.log("real variant", variant)
-        if (variant && variant.option1 == 'Custom') {
-          document.querySelector('.upload-size').toggleAttribute('display', variant.option1 == "Custom");
-        }
+        document.querySelector('.upload-size').toggleAttribute('display', variant && variant.option1 == 'Custom');
       }
 
       cartUpdateUnsubscriber = undefined;
