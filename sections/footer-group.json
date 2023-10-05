@@ -29,7 +29,6 @@
         "sections--20816434823465__f394705c-087f-445c-bc33-b97e445be9c6-paragraph-1",
         "sections--20816434823465__f394705c-087f-445c-bc33-b97e445be9c6-email_form-1"
       ],
-      "disabled": true,
       "custom_css": [
         ".newsletter__wrapper h2 {font-size: 26px;}"
       ],
@@ -54,7 +53,6 @@
       "block_order": [
         "5e39d73f-b721-47b0-b34d-fd1b6bee21f1"
       ],
-      "disabled": true,
       "custom_css": [
         ".footer-block__image-wrapper {margin: auto;}",
         ".footer-block__image-wrapper img {width: 175px; aspect-ratio: auto 175 \/ 175;}",

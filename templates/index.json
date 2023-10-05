@@ -255,6 +255,9 @@
         "template--20816435773737__390e1d99-e0a4-49bd-b94f-2bfbf180e336-heading-1",
         "template--20816435773737__390e1d99-e0a4-49bd-b94f-2bfbf180e336-text-1"
       ],
+      "custom_css": [
+        "html > div{overflow-x:hidden;}"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/small_cute_pink_1.png",
         "height": "medium",
