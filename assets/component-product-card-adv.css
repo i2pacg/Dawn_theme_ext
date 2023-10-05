@@ -100,11 +100,14 @@
 }
 
 .product-card-adv .product-card-adv-info .product-card-adv-footer>div {
-    flex: 1;
     position: relative;
     min-height: 100%;
 }
 
+
+.product-card-adv .product-card-adv-info .product-card-adv-footer .product-card-adv-price {
+    flex: 1;
+}
 
 .product-card-adv .product-card-adv-info .product-card-adv-footer .product-card-adv-quick-add:before {
     content: "";
