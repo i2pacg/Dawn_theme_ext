@@ -3,7 +3,7 @@
     "main": {
       "type": "main-list-collections",
       "settings": {
-        "title": "Collections",
+        "title": "Curated Curiosities",
         "sort": "alphabetical",
         "image_ratio": "adapt",
         "columns_desktop": 4,
