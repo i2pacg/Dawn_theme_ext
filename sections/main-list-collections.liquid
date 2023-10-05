@@ -18,6 +18,7 @@
         assign position = forloop.index0
       endif
     endfor
+    assign collections = collections | remove: collections[position]
     case section.settings.sort
       when 'products_high', 'products_low'
         assign collections = collections | sort: 'all_products_count'
@@ -35,12 +36,6 @@
       assign paginate_by = 28
     endif
   -%}
-  {{ tmpCollections | size }}
-  {%- for collection in tmpCollections -%}
-    {%- unless collection.handle == 'new-arrivals' -%}
-      {{ collection.handle }}
-    {%- endunless -%}
-  {%- endfor -%}
   {%- paginate collections by paginate_by -%}
     <ul
       class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
