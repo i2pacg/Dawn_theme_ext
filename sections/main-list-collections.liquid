@@ -15,7 +15,7 @@
     assign tmpCollections = collections
     for collection in collections
       unless collection.handle == 'new-arrivals'
-        assign tmpCollections = tmpCollections | append: collection
+        assign tmpCollections = tmpCollections | push: collection
       endunless
     endfor
     case section.settings.sort
