@@ -14,7 +14,7 @@
   {%- liquid
     assign tmpCollections = collections
     for collection in collections
-      unless collection.handle == 'new-arrivals'
+      unless collection.handle contains 'new-arrivals'
         assign tmpCollections = tmpCollections | push: collection
       endunless
     endfor
