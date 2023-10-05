@@ -38,7 +38,10 @@
   <div
     class="product-card-adv"
   >
-    <div class="product-card-adv-image">
+    <a
+      href="{{ product.url }}"
+      class="product-card-adv-image"
+    >
       <img
         srcset="
           {%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
@@ -59,7 +62,7 @@
         width="{{ product.featured_media.width }}"
         height="{{ product.featured_media.height }}"
       >
-    </div>
+    </a>
     <div class="product-card-adv-info">
       <div class="product-card-adv-title-container">
         <h1 class="product-card-adv-title">
