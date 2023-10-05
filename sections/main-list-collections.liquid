@@ -12,13 +12,12 @@
     {% endfor %}
   {% endcomment %}
   {%- liquid
-    assign position = -1
     for collection in collections
       if collection.handle == 'new-arrivals'
-        assign position = forloop.index0
+        assign position = collection
       endif
     endfor
-    assign collections = collections | splice: position, 2
+    assign collections = collections | remove: position
     case section.settings.sort
       when 'products_high', 'products_low'
         assign collections = collections | sort: 'all_products_count'
