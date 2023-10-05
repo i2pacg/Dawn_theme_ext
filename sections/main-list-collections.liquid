@@ -13,6 +13,11 @@
   {% endcomment %}
   {%- liquid
     assign tmpCollections = collections
+    for collection in collections
+      unless collection.handle == 'new-arrivals'
+        assign tmpCollections = tmpCollections | append: collection
+      endunless
+    endfor
     case section.settings.sort
       when 'products_high', 'products_low'
         assign collections = collections | sort: 'all_products_count'
