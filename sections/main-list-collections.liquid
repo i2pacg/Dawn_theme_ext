@@ -39,7 +39,11 @@
       assign paginate_by = 28
     endif
   -%}
+  {{ position | size }}
   {{ becollections | size }}
+  {%- for collection in becollections -%}
+    {{ collection.handle }}
+  {%- endfor -%}
   {%- paginate collections by paginate_by -%}
     <ul
       class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
