@@ -88,7 +88,7 @@
           <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
           {%- for collection in product.collections -%}
             {%- unless collection.handle == 'new-arrivals' -%}
-              <div class="caption-with-letter-spacing light">{{ product.collections }}</div>
+              <div class="caption-with-letter-spacing light" style="display:block">{{ collection.title }}</div>
             {%- endunless -%}
           {%- endfor -%}
         </div>
