@@ -37,6 +37,7 @@
         "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-text-1",
         "template--20816435773737__f65567e7-9bef-4025-933a-a4042baf765d-buttons-1"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "video": "shopify:\/\/files\/videos\/IMG_0879.mov",
@@ -74,6 +75,7 @@
         "template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-heading-1",
         "template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-text-1"
       ],
+      "disabled": true,
       "custom_css": [
         ".section-template--20816435773737__bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00-padding {max-width: 50px; overflow: hidden;}"
       ],
@@ -90,6 +92,7 @@
     },
     "a1ab313a-69cd-4f11-91b1-f235322e33b3": {
       "type": "featured-collection-slick",
+      "disabled": true,
       "settings": {
         "full_width": false,
         "header_top": "",
@@ -149,6 +152,7 @@
         "template--20816435773737__e3998602-c96f-4108-9d3e-061df2345b9a-text-1",
         "template--20816435773737__e3998602-c96f-4108-9d3e-061df2345b9a-button-1"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/photo_2023-10-05_12-09-35.jpg",
         "height": "medium",
@@ -184,6 +188,7 @@
         "template--20816435773737__a01e9429-46ab-48f0-ab67-0de5b8b4c44d-featured_collection-1",
         "template--20816435773737__a01e9429-46ab-48f0-ab67-0de5b8b4c44d-featured_collection-2"
       ],
+      "disabled": true,
       "settings": {
         "title": "Our Collections",
         "heading_size": "h1",
@@ -222,6 +227,7 @@
       "block_order": [
         "template--20816435773737__16909af5-af37-4113-8be5-27bfc3d6d950-slide-1"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "small",
@@ -255,6 +261,7 @@
         "template--20816435773737__390e1d99-e0a4-49bd-b94f-2bfbf180e336-heading-1",
         "template--20816435773737__390e1d99-e0a4-49bd-b94f-2bfbf180e336-text-1"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/small_cute_pink_1.png",
         "height": "medium",
