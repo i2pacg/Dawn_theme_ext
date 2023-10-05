@@ -35,9 +35,8 @@
       assign ratio = 1
     endif
   -%}
-  <a
+  <div
     class="product-card-adv"
-    href="{{ product.url }}"
   >
     <div class="product-card-adv-image">
       <img
@@ -62,7 +61,10 @@
       >
     </div>
     <div class="product-card-adv-info">
-      <div class="product-card-adv-title-container">
+      <a
+        href="{{ product.url }}"
+        class="product-card-adv-title-container"
+      >
         <h1 class="product-card-adv-title">
           {% if product.metafields.svg.title != blank %}
             {{ product.metafields.svg.title }}
@@ -70,7 +72,7 @@
             {{ product.title | escape }}
           {% endif %}
         </h1>
-      </div>
+      </a>
       {%- if show_vendor -%}
         <div class="product-card-adv-vendor">
           <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
@@ -230,7 +232,7 @@
         {%- endif -%}
       </div>
     </div>
-  </a>
+  </div>
 
 {%- else -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
