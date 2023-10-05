@@ -20,7 +20,6 @@
         },
         "5e30f747-134b-45bb-ac6d-407cd43d9a49": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
             "heading": "Sizing Chart",
             "icon": "snowflake",
@@ -29,19 +28,17 @@
             "image_4": "shopify:\/\/shop_images\/WhiteandBlackAestheticSizeChartInstagramPost.png"
           }
         },
+        "28d3cf48-f336-46c8-8f7d-ec5bd99564a9": {
+          "type": "shopify:\/\/apps\/uploadly-file-upload\/blocks\/app-block\/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
+          "settings": {
+            "featured_product": "{{product}}"
+          }
+        },
         "58d146aa-b8ea-4cad-ba11-20e849c9afed": {
           "type": "variant_picker",
-          "disabled": true,
           "settings": {
             "picker_type": "button",
             "with_divider": false
-          }
-        },
-        "28d3cf48-f336-46c8-8f7d-ec5bd99564a9": {
-          "type": "shopify:\/\/apps\/uploadly-file-upload\/blocks\/app-block\/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
-          "disabled": true,
-          "settings": {
-            "featured_product": "{{product}}"
           }
         },
         "f9fca452-c63a-4426-a6c7-c46378d03566": {
@@ -82,8 +79,8 @@
         "price",
         "description",
         "5e30f747-134b-45bb-ac6d-407cd43d9a49",
-        "58d146aa-b8ea-4cad-ba11-20e849c9afed",
         "28d3cf48-f336-46c8-8f7d-ec5bd99564a9",
+        "58d146aa-b8ea-4cad-ba11-20e849c9afed",
         "f9fca452-c63a-4426-a6c7-c46378d03566",
         "quantity_selector",
         "buy_buttons",
