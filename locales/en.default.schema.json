@@ -3591,6 +3591,22 @@
         "name": "Slideshow"
       }
     },
+    "slickshow": {
+      "name": "Slickshow",
+      "blocks": {
+        "slide": {
+          "name": "Slide",
+          "settings": {
+            "image": {
+              "label": "Image"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Slickshow"
+      }
+    },
     "collapsible_content": {
       "name": "Collapsible content",
       "settings": {
