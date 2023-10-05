@@ -110,7 +110,7 @@
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": true,
+        "show_rating": false,
         "enable_quick_add": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
@@ -256,7 +256,7 @@
         "template--20816435773737__390e1d99-e0a4-49bd-b94f-2bfbf180e336-text-1"
       ],
       "custom_css": [
-        "html > div{overflow-x:hidden;}"
+        "html > div {overflow-x: hidden;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/small_cute_pink_1.png",
