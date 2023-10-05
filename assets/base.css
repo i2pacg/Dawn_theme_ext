@@ -15,6 +15,36 @@
 }
  */
 
+.button-flat-empty {
+  position: relative;
+  display: inline-block;
+  border-radius: 3px;
+  font-family: sans-serif;
+  font-size: 24px;
+  line-height: 1.2em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  background: #707070;
+  color: #707070;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -moz-transition-duration: .2s;
+  -o-transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+  background: none;
+  border: unset;
+  height: 100%;
+  cursor: pointer;
+}
+
+.button-flat-empty:hover {
+  background: #707070;
+  color: white;
+}
 
 
 :root {
