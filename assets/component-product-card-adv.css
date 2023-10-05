@@ -53,8 +53,10 @@
     object-position: top;
     overflow: hidden;
     height: auto;
-    box-shadow: 0px 1px 8px black;
+    box-shadow: 0 1px 8px #000;
     margin-bottom: 8px;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
 }
 
 .product-card-adv .product-card-adv-info {
