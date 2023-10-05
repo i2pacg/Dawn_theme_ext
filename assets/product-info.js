@@ -8,13 +8,13 @@ if (!customElements.get('product-info')) {
         this.currentVariant = this.querySelector('.product-variant-id');
         this.variantSelects = this.querySelector('variant-radios');
         this.submitButton = this.querySelector('[type="submit"]');
+        console.log("connectedCallback", this.currentVariant)
       }
 
       cartUpdateUnsubscriber = undefined;
       variantChangeUnsubscriber = undefined;
 
       connectedCallback() {
-        console.log("connectedCallback", this)
         if (!this.input) return;
         this.quantityForm = this.querySelector('.product-form__quantity');
         if (!this.quantityForm) return;
