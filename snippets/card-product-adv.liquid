@@ -93,14 +93,6 @@
         </div>
       {%- endif -%}
       <div class="AirReviews-Widget AirReviews-Widget--Stars"></div>
-      {%- if show_rating -%}
-        <div
-          class="AirReviews-Widget AirReviews-Widget--Stars"
-          style="margin-top:0.7rem"
-          data-review-avg="{{ product.metafields.air_reviews_product.review_avg }}"
-          data-review-count="{{ product.metafields.air_reviews_product.review_count }}"
-        ></div>
-      {% endif %}
       <div class="product-card-adv-footer">
         <div class="product-card-adv-price">
           {% render 'price-adv', product: product, price_class: '', show_compare_at_price: true %}
@@ -245,6 +237,14 @@
           </div>
         {%- endif -%}
       </div>
+      {%- if show_rating -%}
+        <div
+          class="AirReviews-Widget AirReviews-Widget--Stars"
+          style="margin-top:0.7rem"
+          data-review-avg="{{ product.metafields.air_reviews_product.review_avg }}"
+          data-review-count="{{ product.metafields.air_reviews_product.review_count }}"
+        ></div>
+      {% endif %}
     </div>
   </div>
 
