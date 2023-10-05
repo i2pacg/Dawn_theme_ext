@@ -12,13 +12,7 @@
     {% endfor %}
   {% endcomment %}
   {%- liquid
-    assign tmpCollections = '' | split: ''
-    for collection in collections
-      unless collection.handle contains 'new-arrivals'
-        assign tmpCollections = tmpCollections | push: collection
-      endunless
-    endfor
-    assign tmpCollections = collections | where_exp: 'handle', "handle contains 'new-arrivals'"
+    assign tmpCollections = collections | where_exp: 'handle', "handle != 'new-arrivals'"
     case section.settings.sort
       when 'products_high', 'products_low'
         assign collections = collections | sort: 'all_products_count'
