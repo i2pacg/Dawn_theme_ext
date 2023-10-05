@@ -29,7 +29,7 @@ if (!customElements.get('media-gallery-ext')) {
             autoplaySpeed: 10000,
             infinite: galleryThumbs ? true : false,
             asNavFor: galleryThumbs ? galleryThumbs : '',
-            arrows: galleryThumbs ? true : false,
+            arrows: false,
           });
           if (galleryThumbs) {
             $(galleryThumbs).on('init', function (event, slick, currentSlide, nextSlide) {
@@ -44,6 +44,7 @@ if (!customElements.get('media-gallery-ext')) {
               variableWidth: true,
               asNavFor: gallery,
               centerMode: true,
+              arrows: false,
             });
           }
         } catch (error) {
