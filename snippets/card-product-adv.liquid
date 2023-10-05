@@ -74,22 +74,19 @@
           height="{{ product.featured_media.height }}"
         >
       {% endcomment %}
+      {% comment %}
+        {% if product.metafields.svg.title != blank %}
+          {{ product.metafields.svg.title }}
+        {% else %}
+          {{ product.title | escape }}
+        {% endif %}
+      {% endcomment %}
     </a>
     <div class="product-card-adv-info">
-      <h1 class="product-card-adv-title">
-        {{ product.title | escape }}
-        {% comment %}
-          {% if product.metafields.svg.title != blank %}
-            {{ product.metafields.svg.title }}
-          {% else %}
-            {{ product.title | escape }}
-          {% endif %}
-        {% endcomment %}
-      </h1>
       {%- if show_vendor -%}
         <div class="product-card-adv-vendor">
           <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-          <div class="caption-with-letter-spacing light">{{ product.vendor }}</div>
+          <div class="caption-with-letter-spacing light">{{ product.collection }}</div>
         </div>
       {%- endif -%}
       {%- if show_rating -%}
@@ -103,6 +100,9 @@
       <div class="AirReviews-Widget AirReviews-Widget--Stars"></div>
       <div class="product-card-adv-footer">
         <div class="product-card-adv-price">
+          <h1 class="product-card-adv-title">
+            {{ product.title | escape }}
+          </h1>
           {% render 'price-adv', product: product, price_class: '', show_compare_at_price: true %}
           {%- if product.quantity_price_breaks_configured? -%}
             <div class="card__information-volume-pricing-note">
