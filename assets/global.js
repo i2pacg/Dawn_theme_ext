@@ -987,6 +987,7 @@ class VariantSelects extends HTMLElement {
     this.updatePickupAvailability();
     this.removeErrorMessage();
     this.updateVariantStatuses();
+    console.log(this.currentVariant);
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
@@ -996,7 +997,7 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
-      document.querySelector('.upload-size').hidden = this.currentVariant.option1 == "custom";
+      document.querySelector('.upload-size').hidden = this.currentVariant.option1 != "Custom";
     }
   }
 
