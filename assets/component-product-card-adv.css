@@ -90,7 +90,8 @@
 }
 
 .product-card-adv .product-card-adv-info .product-card-adv-title-container .product-card-adv-title svg path {
-    stroke-width: 1;
+    stroke-width: .25px;
+    stroke: black;
 }
 
 .product-card-adv .product-card-adv-info .product-card-adv-footer {
