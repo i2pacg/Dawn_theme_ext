@@ -12,6 +12,7 @@
     {% endfor %}
   {% endcomment %}
   {%- liquid
+    assign tmpCollections = collections
     case section.settings.sort
       when 'products_high', 'products_low'
         assign collections = collections | sort: 'all_products_count'
