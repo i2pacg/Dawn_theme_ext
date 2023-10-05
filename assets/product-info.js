@@ -39,6 +39,7 @@ if (!customElements.get('product-info')) {
       }
 
       setQuantityBoundries() {
+        console.log("setQuantityBoundries", this.currentVariant)
         const data = {
           cartQuantity: this.input.dataset.cartQuantity ? parseInt(this.input.dataset.cartQuantity) : 0,
           min: this.input.dataset.min ? parseInt(this.input.dataset.min) : 1,
@@ -58,6 +59,7 @@ if (!customElements.get('product-info')) {
       }
 
       fetchQuantityRules() {
+        console.log("fetchQuantityRules", this.currentVariant)
         if (!this.currentVariant || !this.currentVariant.value) return;
         this.querySelector('.quantity__rules-cart .loading-overlay').classList.remove('hidden');
         fetch(`${this.dataset.url}?variant=${this.currentVariant.value}&section_id=${this.dataset.section}`)
