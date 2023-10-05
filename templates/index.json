@@ -90,6 +90,7 @@
     },
     "a1ab313a-69cd-4f11-91b1-f235322e33b3": {
       "type": "featured-collection-slick",
+      "disabled": true,
       "settings": {
         "full_width": false,
         "header_top": "<p>Check our latest collection<\/p>",
@@ -128,10 +129,10 @@
         "collection": "frenchies",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "full_width": false,
+        "full_width": true,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "",
         "image_ratio": "adapt",
         "image_shape": "default",
