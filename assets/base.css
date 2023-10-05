@@ -41,8 +41,13 @@
   cursor: pointer;
 }
 
+.button-flat-empty.outlined {
+  border: 1px solid #707070;
+}
+
 .button-flat-empty:hover {
-  background: #707070;
+  background: #00000010;
+  background: #70707010;
   color: white;
 }
 
