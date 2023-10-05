@@ -5,7 +5,14 @@
   <h1 class="title title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     {{ section.settings.title }}
   </h1>
+  {% comment %}
+    {% for operation in menuItems %}
+      {% assign controllerName = operation.Title | split: '_' | first | split: '' %}
+      {% assign controllers = controllers | concat: controllerName %}
+    {% endfor %}
+  {% endcomment %}
   {%- liquid
+    assign tmpCollections = '' | split: ''
     assign collections = collections | where: 'handle', 'new-arrivals'
     case section.settings.sort
       when 'products_high', 'products_low'
