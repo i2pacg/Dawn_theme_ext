@@ -202,22 +202,23 @@ class QuantityInput extends HTMLElement {
       const buttonPlus = this.querySelector(".quantity__button[name='plus']");
       buttonPlus.classList.toggle('disabled', value >= max);
     }
-    /*   this.updatePrice(); */
+    this.updatePrice();
 
   }
   updatePrice() {
     try {
-      const productInfo = document.querySelector('product-info');
-      const product = JSON.parse(productInfo.getAttribute('data-product'));
-      console.log(product);
-      const urlParams = new URLSearchParams(window.location.search);
-      const variantId = urlParams.get('variant')
-      if (!variantId) return;
-      const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
-      productInfo.querySelector('.price.price-ext .price__regular .price-item--regular').innerHTML = `${(variant.price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
-      productInfo.querySelector('.price.price-ext .price__sale .price-item--regular').innerHTML = `${(variant.compare_at_price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
-      productInfo.querySelector('.price.price-ext .price__sale .price-item--last').innerHTML = `${(variant.price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
-
+      console.log("this.currentVariant", this.currentVariant)
+      /*   const productInfo = document.querySelector('product-info');
+        const product = JSON.parse(productInfo.getAttribute('data-product'));
+        console.log(product);
+        const urlParams = new URLSearchParams(window.location.search);
+        const variantId = urlParams.get('variant')
+        if (!variantId) return;
+        const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
+        productInfo.querySelector('.price.price-ext .price__regular .price-item--regular').innerHTML = `${(variant.price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
+        productInfo.querySelector('.price.price-ext .price__sale .price-item--regular').innerHTML = `${(variant.compare_at_price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
+        productInfo.querySelector('.price.price-ext .price__sale .price-item--last').innerHTML = `${(variant.price / 100 * this.input.value).toFixed(2)} ${Shopify.currency.active}`;
+   */
     } catch (error) {
       console.log(error);
     }
@@ -988,7 +989,6 @@ class VariantSelects extends HTMLElement {
     this.updatePickupAvailability();
     this.removeErrorMessage();
     this.updateVariantStatuses();
-    console.log(this.currentVariant);
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
