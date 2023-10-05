@@ -1,5 +1,5 @@
 .price {
-  font-size: 1.8rem;
+  font-size: 14px;
   letter-spacing: .1rem;
   line-height: calc(1 + .5 / var(--font-body-scale));
   color: rgb(var(--color-foreground));
@@ -157,7 +157,7 @@
 
 .price--on-sale .price-item--regular {
   text-decoration: line-through;
-  font-size: 1.2rem;
+  font-size: 10px;
   color: red;
   font-weight: bold;
 }
