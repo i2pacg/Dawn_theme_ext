@@ -224,60 +224,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "66a0e91d-cb18-4dd4-8b24-5424b99ea620": {
-      "type": "slideshow",
-      "blocks": {
-        "template--20816435773737__66a0e91d-cb18-4dd4-8b24-5424b99ea620-slide-1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/nail_artist_mak_1.png",
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "template--20816435773737__66a0e91d-cb18-4dd4-8b24-5424b99ea620-slide-2": {
-          "type": "slide",
-          "settings": {
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "template--20816435773737__66a0e91d-cb18-4dd4-8b24-5424b99ea620-slide-1",
-        "template--20816435773737__66a0e91d-cb18-4dd4-8b24-5424b99ea620-slide-2"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
     }
   },
   "order": [
@@ -286,7 +232,6 @@
     "a1ab313a-69cd-4f11-91b1-f235322e33b3",
     "65363b7a-86c9-43fb-829e-3927a73cf3d3",
     "e3998602-c96f-4108-9d3e-061df2345b9a",
-    "a01e9429-46ab-48f0-ab67-0de5b8b4c44d",
-    "66a0e91d-cb18-4dd4-8b24-5424b99ea620"
+    "a01e9429-46ab-48f0-ab67-0de5b8b4c44d"
   ]
 }
