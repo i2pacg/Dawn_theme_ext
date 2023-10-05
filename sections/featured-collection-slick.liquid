@@ -162,7 +162,7 @@
       <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <a
           href="{{ section.settings.collection.url }}"
-          class="button-flat-empty outlined"
+          class="button-flat-empty filled"
           aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
         >
           {{ 'sections.featured_collection.view_all' | t }}
@@ -174,7 +174,6 @@
         <a
           href="/products"
           class="button-flat-empty outlined"
-          aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
         >
           Browse Products
         </a>
