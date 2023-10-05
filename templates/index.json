@@ -234,14 +234,14 @@
             "image": "shopify:\/\/shop_images\/nail_artist_mak_0.png",
             "heading": "",
             "heading_size": "h1",
-            "subheading": "<strong>This is your one-stop shop for everything related to press on nails, and we strive to be the best in the business. To us, being the best means offering a wide variety of high-quality saloon press on nail sets at an affordable price alongside other products that are essential for application, removal, and general care.<\/strong>",
+            "subheading": "<em>This is your one-stop shop for everything related to press on nails, and we strive to be the best in the business. To us, being the best means offering a wide variety of high-quality saloon press on nail sets at an affordable price alongside other products that are essential for application, removal, and general care.<\/em>",
             "button_label": "",
             "link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
             "text_alignment": "center",
-            "image_overlay_opacity": 70,
+            "image_overlay_opacity": 80,
             "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
