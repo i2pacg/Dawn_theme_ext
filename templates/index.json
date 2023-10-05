@@ -167,6 +167,52 @@
         "padding_bottom": 0
       }
     },
+    "9e9b27d0-c7d8-4b9f-a184-aff860864165": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20816435773737__9e9b27d0-c7d8-4b9f-a184-aff860864165-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Custom Designs",
+            "heading_size": "h1"
+          }
+        },
+        "template--20816435773737__9e9b27d0-c7d8-4b9f-a184-aff860864165-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Express yourself with our custom nailsets, designed just for you.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--20816435773737__9e9b27d0-c7d8-4b9f-a184-aff860864165-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "GET IT",
+            "button_link": "shopify:\/\/products\/custom-nail-set",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "template--20816435773737__9e9b27d0-c7d8-4b9f-a184-aff860864165-heading-1",
+        "template--20816435773737__9e9b27d0-c7d8-4b9f-a184-aff860864165-text-1",
+        "template--20816435773737__9e9b27d0-c7d8-4b9f-a184-aff860864165-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/photo_2023-10-05_12-09-35.jpg",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "overlap",
+        "color_scheme": "scheme-eecc9f83-e793-41cd-8929-f4fa6fae1164",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "b1876e9f-b32f-43a7-99ad-80f30f54f1f2": {
       "type": "slideshow",
       "blocks": {
@@ -338,6 +384,7 @@
     "bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00",
     "a1ab313a-69cd-4f11-91b1-f235322e33b3",
     "e3998602-c96f-4108-9d3e-061df2345b9a",
+    "9e9b27d0-c7d8-4b9f-a184-aff860864165",
     "b1876e9f-b32f-43a7-99ad-80f30f54f1f2",
     "a01e9429-46ab-48f0-ab67-0de5b8b4c44d",
     "16909af5-af37-4113-8be5-27bfc3d6d950",
