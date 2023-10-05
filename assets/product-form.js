@@ -20,7 +20,6 @@ if (!customElements.get('product-form')) {
 
         this.hideErrors = this.dataset.hideErrors === 'true';
 
-        console.log(this)
 
       }
 
