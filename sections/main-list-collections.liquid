@@ -12,7 +12,7 @@
     {% endfor %}
   {% endcomment %}
   {%- liquid
-    assign tmpCollections = '' | split: ''
+    assign tmpCollections = 's s' | split: ' '
     for collection in collections
       assign tmpCollections = tmpCollections | concat: collection
     endfor
