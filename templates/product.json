@@ -30,6 +30,7 @@
         },
         "28d3cf48-f336-46c8-8f7d-ec5bd99564a9": {
           "type": "shopify:\/\/apps\/uploadly-file-upload\/blocks\/app-block\/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
+          "disabled": true,
           "settings": {
             "featured_product": "{{product}}"
           }
