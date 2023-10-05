@@ -169,16 +169,7 @@
         </a>
       </div>
     {%- endif -%}
-    {%- if section.settings.show_browse_all -%}
-      <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-        <a
-          href="{{ routes.all_products_collection_url }}"
-          class="button-flat-empty outlined"
-        >
-          Browse Products
-        </a>
-      </div>
-    {%- endif -%}
+
     {% if section.settings.image_shape == 'arch' %}
       {% render 'mask-arch' %}
     {%- endif -%}
