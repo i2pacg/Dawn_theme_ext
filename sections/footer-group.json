@@ -2,66 +2,6 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "footer": {
-      "type": "footer",
-      "blocks": {
-        "4e4945fc-d0f6-4d81-b3bd-0468dcf8d691": {
-          "type": "brand_information",
-          "disabled": true,
-          "settings": {
-            "show_social": false
-          }
-        },
-        "5e39d73f-b721-47b0-b34d-fd1b6bee21f1": {
-          "type": "link_list",
-          "disabled": true,
-          "settings": {
-            "heading": "",
-            "menu": "main-menu"
-          }
-        },
-        "bcd2604e-b698-4f28-b21e-6dc6154504e8": {
-          "type": "link_list",
-          "disabled": true,
-          "settings": {
-            "heading": "Quick links",
-            "menu": "main-menu"
-          }
-        },
-        "ce24d0c7-1054-4b51-9565-1269a219acaf": {
-          "type": "text",
-          "settings": {
-            "heading": "Heading",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "4e4945fc-d0f6-4d81-b3bd-0468dcf8d691",
-        "5e39d73f-b721-47b0-b34d-fd1b6bee21f1",
-        "bcd2604e-b698-4f28-b21e-6dc6154504e8",
-        "ce24d0c7-1054-4b51-9565-1269a219acaf"
-      ],
-      "custom_css": [
-        ".footer-block__image-wrapper {margin: auto;}",
-        ".footer-block__image-wrapper img {width: 175px; aspect-ratio: auto 175 \/ 175;}",
-        ".footer-block {padding: 0px;}"
-      ],
-      "settings": {
-        "color_scheme": "background-1",
-        "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": false,
-        "show_social": false,
-        "enable_country_selector": false,
-        "enable_language_selector": false,
-        "payment_enable": false,
-        "show_policy": false,
-        "margin_top": 0,
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    },
     "f394705c-087f-445c-bc33-b97e445be9c6": {
       "type": "newsletter",
       "blocks": {
@@ -89,17 +29,53 @@
         "sections--20816434823465__f394705c-087f-445c-bc33-b97e445be9c6-paragraph-1",
         "sections--20816434823465__f394705c-087f-445c-bc33-b97e445be9c6-email_form-1"
       ],
-      "disabled": true,
+      "custom_css": [
+        ".newsletter__wrapper h2 {font-size: 26px;}"
+      ],
       "settings": {
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "5e39d73f-b721-47b0-b34d-fd1b6bee21f1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "main-menu"
+          }
+        }
+      },
+      "block_order": [
+        "5e39d73f-b721-47b0-b34d-fd1b6bee21f1"
+      ],
+      "custom_css": [
+        ".footer-block__image-wrapper {margin: auto;}",
+        ".footer-block__image-wrapper img {width: 175px; aspect-ratio: auto 175 \/ 175;}",
+        ".footer-block {padding: 0px;}"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     }
   },
   "order": [
-    "footer",
-    "f394705c-087f-445c-bc33-b97e445be9c6"
+    "f394705c-087f-445c-bc33-b97e445be9c6",
+    "footer"
   ]
 }
