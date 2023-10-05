@@ -42,7 +42,7 @@
   {{ position | size }}
   {{ becollections | size }}
   {%- for collection in becollections -%}
-    {{ collection.handle }}
+    {{ collection }}
   {%- endfor -%}
   {%- paginate collections by paginate_by -%}
     <ul
