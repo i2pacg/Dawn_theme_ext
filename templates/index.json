@@ -117,35 +117,6 @@
         "padding_bottom": 36
       }
     },
-    "65363b7a-86c9-43fb-829e-3927a73cf3d3": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Featured collection",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "frenchies",
-        "products_to_show": 8,
-        "columns_desktop": 2,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "e3998602-c96f-4108-9d3e-061df2345b9a": {
       "type": "image-with-text",
       "blocks": {
@@ -303,7 +274,6 @@
     "f65567e7-9bef-4025-933a-a4042baf765d",
     "bf76a4a7-b1a6-4468-a6d0-8cc4b558ce00",
     "a1ab313a-69cd-4f11-91b1-f235322e33b3",
-    "65363b7a-86c9-43fb-829e-3927a73cf3d3",
     "e3998602-c96f-4108-9d3e-061df2345b9a",
     "a01e9429-46ab-48f0-ab67-0de5b8b4c44d",
     "16909af5-af37-4113-8be5-27bfc3d6d950",
