@@ -64,6 +64,7 @@
     align-items: stretch;
     padding: 8px 0;
     gap: 4px;
+    padding-top: 0;
 }
 
 .product-card-adv .product-card-adv-info .product-card-adv-footer>div {
