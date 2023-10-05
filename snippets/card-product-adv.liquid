@@ -91,8 +91,14 @@
             </div>
           {%- endif -%}
         </div>
-        <div class="product-card-adv-quick-add">
-          {%- if show_quick_add -%}
+        {%- if show_quick_add -%}
+          <div class="product-card-adv-quick-add">
+            <div
+              class="mag_wishlist_manually btn_collection-grid"
+              pro_handle="{{ product.handle }}"
+              pro-url="{{ product.url }}"
+            ></div>
+
             <div class="quick-add no-js-hidden">
               {%- liquid
                 assign product_form_id = 'quick-add-' | append: section_id | append: product.id
@@ -217,8 +223,8 @@
                 </product-form>
               {%- endif -%}
             </div>
-          {%- endif -%}
-        </div>
+          </div>
+        {%- endif -%}
       </div>
     </div>
   </div>
