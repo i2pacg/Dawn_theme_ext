@@ -98,7 +98,7 @@
         "description": "<p>Experience the latest nailset designs that will make your nails stand out. <\/p>",
         "show_description": false,
         "description_style": "body",
-        "collection": "frenchies",
+        "collection": "new-arrivals",
         "products_to_show": 5,
         "columns_desktop": 3,
         "show_view_all": true,
