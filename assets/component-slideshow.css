@@ -4,17 +4,7 @@ slideshow-component {
   flex-direction: column;
 }
 
-slideshow-component:before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  background: black;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.3;
-}
+
 
 @media screen and (max-width: 989px) {
   .no-js slideshow-component .slider {
