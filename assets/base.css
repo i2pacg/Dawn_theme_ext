@@ -14,8 +14,15 @@
   color: #fff;
 }
  */
+.upload-size {
+  display: none;
+  height: 0;
+  transition: all .3s ease;
+}
+
 .upload-size[display] {
   display: none;
+  height: 100px;
 }
 
 .button-flat-empty {
