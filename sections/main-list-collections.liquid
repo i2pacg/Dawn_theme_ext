@@ -6,7 +6,7 @@
     {{ section.settings.title }}
   </h1>
   {%- liquid
-    assign collections = collections | where: 'title', 'new arrivals'
+    assign collections = collections | where: 'handle', 'new-arrivals'
     case section.settings.sort
       when 'products_high', 'products_low'
         assign collections = collections | sort: 'all_products_count'
