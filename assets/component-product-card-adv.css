@@ -75,10 +75,10 @@
 .product-card-adv .product-card-adv-info .product-card-adv-title-container .product-card-adv-title {
     margin: 0;
     display: flex;
-    background: #f8ffd7;
-    padding: 4px 16px;
-    box-shadow: 0 0 16px #00000050;
-    border-radius: 16px;
+    background: #fafafa;
+    padding: 8px 24px;
+    box-shadow: 0 0 8px #00000050;
+    border-radius: 8px;
 }
 
 .product-card-adv .product-card-adv-info .product-card-adv-title-container .product-card-adv-title svg {
@@ -90,7 +90,7 @@
 }
 
 .product-card-adv .product-card-adv-info .product-card-adv-title-container .product-card-adv-title svg path {
-    stroke-width: .25px;
+    stroke-width: .5px;
     stroke: black;
 }
 
