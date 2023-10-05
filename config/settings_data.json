@@ -142,12 +142,6 @@
 
     ],
     "blocks": {
-      "14710238943034738919": {
-        "type": "shopify:\/\/apps\/air-reviews-product-reviews\/blocks\/app-embed\/c4e1e9ca-4d46-4e76-bc39-7e42417cb327",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "15132424025755801183": {
         "type": "shopify:\/\/apps\/upload-lift-image-upload\/blocks\/app-embed\/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca",
         "disabled": false,
@@ -156,6 +150,12 @@
       },
       "2187360915322861293": {
         "type": "shopify:\/\/apps\/uploadly-file-upload\/blocks\/app-embed\/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "14710238943034738919": {
+        "type": "shopify:\/\/apps\/air-reviews-product-reviews\/blocks\/app-embed\/c4e1e9ca-4d46-4e76-bc39-7e42417cb327",
         "disabled": true,
         "settings": {
         }
