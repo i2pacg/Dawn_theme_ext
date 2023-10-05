@@ -37,7 +37,9 @@
   -%}
   {{ tmpCollections | size }}
   {%- for collection in tmpCollections -%}
-    {{ collection.handle }}
+    {%- unless collection.handle == 'new-arrivals' -%}
+      {{ collection.handle }}
+    {%- endunless -%}
   {%- endfor -%}
   {%- paginate collections by paginate_by -%}
     <ul
