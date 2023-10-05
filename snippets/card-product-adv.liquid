@@ -92,7 +92,7 @@
             <div class="product-card-adv-vendor">
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               {%- for collection in product.collections -%}
-                {%- unless collection.handle == 'new-arrivals' -%}
+                {%- unless collection.handle == 'new-arrivals' and product.collections.size > 1 -%}
                   <div class="caption-with-letter-spacing light" style="display:block">{{ collection.title }}</div>
                 {%- endunless -%}
               {%- endfor -%}
