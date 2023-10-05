@@ -89,7 +89,9 @@
       .featured-slick-slider-container {
         position: relative;
         display: flex;
-        padding: 16px 36px;
+        padding: 0px 36px;
+        border: 1px solid #d2d6db;
+        border-radius: 24px;
       }
       .featured-slick-slider {
         position: relative;
@@ -263,7 +265,7 @@
     centerMode: true,
     slidesToShow:  {{ section.settings.columns_desktop }},
     slidesToScroll: 1,
-    dots: true,
+    dots: false,
     responsive: [
       {
         breakpoint: 749,
