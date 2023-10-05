@@ -8,6 +8,7 @@ if (!customElements.get('product-info')) {
         this.currentVariant = this.querySelector('.product-variant-id');
         this.variantSelects = this.querySelector('variant-radios');
         this.submitButton = this.querySelector('[type="submit"]');
+        console.log("this.currentVariant", this.currentVariant)
       }
 
       cartUpdateUnsubscriber = undefined;
@@ -39,7 +40,6 @@ if (!customElements.get('product-info')) {
       }
 
       setQuantityBoundries() {
-        console.log("setQuantityBoundries", this.currentVariant)
         const data = {
           cartQuantity: this.input.dataset.cartQuantity ? parseInt(this.input.dataset.cartQuantity) : 0,
           min: this.input.dataset.min ? parseInt(this.input.dataset.min) : 1,
