@@ -17,11 +17,12 @@
 .upload-size {
   display: none;
   height: 0;
+  overflow: hidden;
   transition: all .3s ease;
 }
 
 .upload-size[display] {
-  display: none;
+  display: block;
   height: 100px;
 }
 
