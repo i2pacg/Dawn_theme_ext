@@ -58,6 +58,7 @@
     margin-bottom: 8px;
     border-top-right-radius: 16px;
     border-top-left-radius: 16px;
+    max-height: 320px;
 }
 
 .product-card-adv .product-card-adv-info {
