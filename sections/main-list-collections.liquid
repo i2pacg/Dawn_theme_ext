@@ -18,8 +18,7 @@
         assign position = forloop.index0
       endif
     endfor
-    assign position = position
-    assign collections[position] = null
+    assign collections[position] = ''
 
     case section.settings.sort
       when 'products_high', 'products_low'
@@ -38,7 +37,7 @@
       assign paginate_by = 28
     endif
   -%}
-  {%- for collection in becollections -%}
+  {%- for collection in collections -%}
     {{ collection }}
   {%- endfor -%}
   {%- paginate collections by paginate_by -%}
