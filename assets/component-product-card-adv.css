@@ -93,13 +93,15 @@
 .product-card-adv .product-card-adv-info .product-card-adv-footer {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 8px 0px;
+    align-items: stretch;
+    padding: 8px 0;
     gap: 4px;
 }
 
 .product-card-adv .product-card-adv-info .product-card-adv-footer>div {
     flex: 1;
+    position: relative;
+    min-height: 100%;
 }
 
 
