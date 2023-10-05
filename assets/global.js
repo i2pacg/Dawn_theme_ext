@@ -1220,8 +1220,6 @@ customElements.define('variant-selects', VariantSelects);
 class VariantRadios extends VariantSelects {
   constructor() {
     super();
-    console.log("We here ", this.currentVariant);
-    console.log("We currentVariant ", this.options);
   }
 
   setInputAvailability(listOfOptions, listOfAvailableOptions) {
