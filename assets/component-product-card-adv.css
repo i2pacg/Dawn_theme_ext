@@ -21,6 +21,7 @@
     background: none;
     border: unset;
     height: 100%;
+    cursor: pointer;
 }
 
 .button-flat-empty:hover {
