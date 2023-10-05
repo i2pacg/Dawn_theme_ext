@@ -38,6 +38,7 @@
       assign paginate_by = 28
     endif
   -%}
+  {{ tmpCollections | size }}
   {%- for collection in collections -%}
     {{ collection }}
   {%- endfor -%}
