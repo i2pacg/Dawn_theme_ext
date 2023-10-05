@@ -77,11 +77,14 @@
     </a>
     <div class="product-card-adv-info">
       <h1 class="product-card-adv-title">
-        {% if product.metafields.svg.title != blank %}
-          {{ product.metafields.svg.title }}
-        {% else %}
-          {{ product.title | escape }}
-        {% endif %}
+        {{ product.title | escape }}
+        {% comment %}
+          {% if product.metafields.svg.title != blank %}
+            {{ product.metafields.svg.title }}
+          {% else %}
+            {{ product.title | escape }}
+          {% endif %}
+        {% endcomment %}
       </h1>
       {%- if show_vendor -%}
         <div class="product-card-adv-vendor">
