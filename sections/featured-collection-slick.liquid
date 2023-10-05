@@ -68,7 +68,10 @@
         </div>
       {%- endif -%}
       {%- if section.settings.title != blank -%}
-        <h2 class="title rte {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <h2
+          style="margin-bottom:0px"
+          class="title rte {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        >
           {{ section.settings.title }}
         </h2>
       {%- endif -%}
