@@ -50,14 +50,12 @@
         },
         "share": {
           "type": "share",
-          "disabled": true,
           "settings": {
             "share_label": "Share"
           }
         },
         "ec7c181a-1824-4be3-83cb-8765fb039e31": {
           "type": "shopify:\/\/apps\/upload-lift-image-upload\/blocks\/app-block\/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca",
-          "disabled": true,
           "settings": {
             "product": "{{product}}",
             "field": "upload-size"
