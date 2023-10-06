@@ -192,6 +192,7 @@
   </div>
 </div>
 <script>
+  {% comment %}
   $('.featured-slick-slider').slick({
     infinite: false,
     centerMode: false,
@@ -214,7 +215,7 @@
         }
       },
     ]
-  });
+  }); {% endcomment %}
 </script>
 
 {%- if request.design_mode -%}
