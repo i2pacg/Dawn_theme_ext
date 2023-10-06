@@ -33,6 +33,16 @@
             >
               Sizing Chart
             </div>
+            <script>
+              swalImage(img) {
+                Swal.fire({
+                  imageUrl: img,
+                  imageHeight: '90vh',
+                  showConfirmButton: false,
+                  width: 'auto',
+                });
+              }
+            </script>
             {% comment %}   <div class="AirReviews-Widget AirReviews-Widget--Stars"></div> {% endcomment %}
             {% comment %} {{ 'WhiteandBlackAestheticSizeChartInstagramPost.png' | file_img_url: '1920*1080' }} {% endcomment %}
           {%- endif -%}
@@ -140,14 +150,3 @@
     </div>
   </div>
 </noscript>
-
-<script>
-  swalImage(img) {
-    Swal.fire({
-      imageUrl: img,
-      imageHeight: '90vh',
-      showConfirmButton: false,
-      width: 'auto',
-    });
-  }
-</script>
