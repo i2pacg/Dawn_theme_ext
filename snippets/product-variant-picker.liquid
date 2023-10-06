@@ -26,7 +26,13 @@
         <fieldset class="js product-form__input">
           <h2 style="margin:0;">{{ option.name }}</h2>
           {%- if option.name == 'Size' -%}
-            <div class="caption-with-letter-spacing light" style="display:block">Sizing Chart</div>
+            <div
+              class="caption-with-letter-spacing light"
+              onclick="swalImage('{{ 'WhiteandBlackAestheticSizeChartInstagramPost.png' | file_img_url: '1920*1080' }}')"
+              style="display:block"
+            >
+              Sizing Chart
+            </div>
             {% comment %}   <div class="AirReviews-Widget AirReviews-Widget--Stars"></div> {% endcomment %}
             {% comment %} {{ 'WhiteandBlackAestheticSizeChartInstagramPost.png' | file_img_url: '1920*1080' }} {% endcomment %}
           {%- endif -%}
