@@ -22,14 +22,6 @@ if (!customElements.get('product-form')) {
 
 
       }
-      swalImage(img) {
-        Swal.fire({
-          imageUrl: img,
-          imageHeight: '90vh',
-          showConfirmButton: false,
-          width: 'auto',
-        });
-      }
       onSubmitHandler(evt) {
         evt.preventDefault();
         if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
