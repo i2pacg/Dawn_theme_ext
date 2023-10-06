@@ -109,16 +109,16 @@
       .featured-slick-slider .slick-item {
         padding: 16px 8px;
       }
-      .featured-slick-slider .slick-item img {
-        max-height: 320px;
-      }
       .featured-slick-slider .slick-item:not(.slick-active) {
-        filter: grayscale(1);
+        filter:grayscale(1);
         opacity: 0.5;
       }
       .featured-slick-slider:not(.slick-initialized) .slick-item {
         padding: 16px;
+        flex: 1 1 {{ 100 | divided_by: section.settings.columns_desktop }}%;
+        min-width: {{ 100 | divided_by: section.settings.columns_desktop }}%;
       }
+
 
       @media screen and (max-width: 749px) {
         .featured-slick-slider-container {
