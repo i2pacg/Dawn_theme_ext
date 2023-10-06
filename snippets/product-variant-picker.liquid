@@ -28,19 +28,21 @@
           {%- if option.name == 'Size' -%}
             <div
               class="caption-with-letter-spacing light"
-              onclick="swalImage('{{ 'WhiteandBlackAestheticSizeChartInstagramPost.png' | file_img_url: '1920*1080' }}')"
+              onclick="
+                Swal.fire({
+                  imageUrl: {{ 'WhiteandBlackAestheticSizeChartInstagramPost.png' | file_img_url: '1920*1080' }},
+                  imageHeight: '90vh',
+                  showConfirmButton: false,
+                  width: 'auto',
+                })
+              "
               style="display:block"
             >
               Sizing Chart
             </div>
             <script>
               swalImage(img) {
-                Swal.fire({
-                  imageUrl: img,
-                  imageHeight: '90vh',
-                  showConfirmButton: false,
-                  width: 'auto',
-                });
+                ;
               }
             </script>
             {% comment %}   <div class="AirReviews-Widget AirReviews-Widget--Stars"></div> {% endcomment %}
