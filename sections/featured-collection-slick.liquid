@@ -195,7 +195,7 @@
 </style>
 
 <script>
-  {% comment %} $('.featured-slick-slider').slick({
+  $('.featured-slick-slider').slick({
     infinite: false,
     centerMode: false,
     slidesToShow:  {{ section.settings.columns_desktop }},
@@ -217,7 +217,7 @@
         }
       },
     ]
-  }); {% endcomment %}
+  });
 </script>
 
 {%- if request.design_mode -%}
