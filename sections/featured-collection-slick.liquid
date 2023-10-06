@@ -108,6 +108,8 @@
       }
       .featured-slick-slider .slick-item {
         padding: 16px 8px;
+        flex: 1 1 {{ 100 | divided_by: section.settings.columns_desktop }}%;
+        width: {{ 100 | divided_by: section.settings.columns_desktop }}%;
       }
       .featured-slick-slider .slick-item:not(.slick-active) {
         filter:grayscale(1);
