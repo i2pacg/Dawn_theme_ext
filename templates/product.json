@@ -20,6 +20,7 @@
         },
         "5e30f747-134b-45bb-ac6d-407cd43d9a49": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Sizing Chart",
             "icon": "snowflake",
