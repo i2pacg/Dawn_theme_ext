@@ -23,12 +23,19 @@
       {{ block.shopify_attributes }}
     >
       {%- for option in product.options_with_values -%}
+        {%- if option.name == 'Size' -%}
+          <div
+            class="upload-size"
+            {%- if option.selected_value == 'Custom' -%}
+              display
+            {%- endif -%}
+          ></div>
+        {%- endif -%}
         <fieldset class="js product-form__input">
           <h2 style="margin:0;">{{ option.name }}</h2>
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
         {%- if option.name == 'Size' -%}
-          {{  }}
           <div
             class="upload-size"
             {%- if option.selected_value == 'Custom' -%}
