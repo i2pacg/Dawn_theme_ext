@@ -109,7 +109,7 @@
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "color_scheme": "scheme-eecc9f83-e793-41cd-8929-f4fa6fae1164",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": true,
