@@ -153,15 +153,22 @@
     flex-direction: column;
     padding-bottom: 16px;
   }
+
   .featured-slick-slider {
     position: relative;
     display: flex;
     max-width: 100%;
     overflow: hidden;
   }
+
+  .featured-slick-slider:not(.slick-initialized) {
+    overflow: hidden;
+  }
+
   .featured-slick-slider.slick-slider {
     display: block;
   }
+
   .featured-slick-slider .slick-item {
     padding: 16px 8px;
   }
