@@ -55,6 +55,15 @@
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
+        },
+        "6085a01c-774b-40be-9b3d-c21a00c598bd": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -65,7 +74,8 @@
         "58d146aa-b8ea-4cad-ba11-20e849c9afed",
         "ec7c181a-1824-4be3-83cb-8765fb039e31",
         "quantity_selector",
-        "buy_buttons"
+        "buy_buttons",
+        "6085a01c-774b-40be-9b3d-c21a00c598bd"
       ],
       "custom_css": [
         ".product {box-shadow: 0px 0px 4px;}",
