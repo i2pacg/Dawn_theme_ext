@@ -49,11 +49,14 @@
     display: flex;
     font-size: 16px;
     font-weight: bold;
+}
+
+.product-card-adv .product-card-adv-info .product-card-adv-title a {
     text-decoration: unset;
 }
 
 .product-card-adv .product-card-adv-info .product-card-adv-title:hover {
-    color: cyan;
+    color: #005bd3;
 }
 
 .product-card-adv .product-card-adv-info .product-card-adv-title svg {
