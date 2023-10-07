@@ -39,8 +39,7 @@
     class="product-card-adv"
     style="--ratio: {{ ratio }};"
   >
-    <a
-      href="{{ product.url }}"
+    <div
       class="product-card-adv-image"
     >
       {%- liquid
@@ -82,13 +81,15 @@
           {{ product.title | escape }}
         {% endif %}
       {% endcomment %}
-    </a>
+    </div>
     <div class="product-card-adv-info">
       <div class="product-card-adv-footer">
         <div class="product-card-adv-price">
-          <h1 class="product-card-adv-title">
-            {{ product.title | escape }}
-          </h1>
+          <a href="{{ product.url }}">
+            <h1 class="product-card-adv-title">
+              {{ product.title | escape }}
+            </h1>
+          </a>
           {%- if show_vendor -%}
             <div class="product-card-adv-vendor">
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
