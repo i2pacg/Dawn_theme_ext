@@ -85,11 +85,11 @@
     <div class="product-card-adv-info">
       <div class="product-card-adv-footer">
         <div class="product-card-adv-price">
-          <a href="{{ product.url }}">
-            <h1 class="product-card-adv-title">
+          <h1 class="product-card-adv-title">
+            <a href="{{ product.url }}">
               {{ product.title | escape }}
-            </h1>
-          </a>
+            </a>
+          </h1>
           {%- if show_vendor -%}
             <div class="product-card-adv-vendor">
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
