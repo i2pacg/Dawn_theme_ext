@@ -53,9 +53,10 @@
 
 .product-card-adv .product-card-adv-info .product-card-adv-title a {
     text-decoration: unset;
+    color: #000;
 }
 
-.product-card-adv .product-card-adv-info .product-card-adv-title:hover {
+.product-card-adv .product-card-adv-info .product-card-adv-title:hover a {
     color: #005bd3;
 }
 
