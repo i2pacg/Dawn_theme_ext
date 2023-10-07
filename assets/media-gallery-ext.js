@@ -40,7 +40,7 @@ if (!customElements.get('media-gallery-ext')) {
             $(galleryThumbs).slick({
               centerPadding: '16px',
               slidesToScroll: 1,
-              infinite: true,
+              infinite: false,
               variableWidth: true,
               asNavFor: gallery,
               centerMode: true,
