@@ -13,8 +13,8 @@
           "settings": {
           }
         },
-        "d4cee983-326f-41c2-90f4-fe237a4387e5": {
-          "type": "shopify:\/\/apps\/air-reviews-product-reviews\/blocks\/app-summary-block\/c4e1e9ca-4d46-4e76-bc39-7e42417cb327",
+        "d5d81970-c4b8-4dfc-93e5-77208b8bcd9b": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         },
@@ -63,7 +63,7 @@
       "block_order": [
         "title",
         "price",
-        "d4cee983-326f-41c2-90f4-fe237a4387e5",
+        "d5d81970-c4b8-4dfc-93e5-77208b8bcd9b",
         "description",
         "58d146aa-b8ea-4cad-ba11-20e849c9afed",
         "6085a01c-774b-40be-9b3d-c21a00c598bd",
@@ -113,16 +113,6 @@
     },
     "1696804971102a327e": {
       "type": "apps",
-      "blocks": {
-        "b526fc45-89db-490e-9741-32f7e7555de1": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "b526fc45-89db-490e-9741-32f7e7555de1"
-      ],
       "settings": {
         "include_margins": true
       }
