@@ -66,7 +66,7 @@
           "settings": {
             "heading": "Package Details",
             "icon": "box",
-            "content": "<ul><li><h6><strong>10 pcs Press-on nails ( check nail chart )<\/strong><\/h6><\/li><li><h6><strong>1 pcs Sticky pads sheet<\/strong><\/h6><\/li><li><h6><strong>1 Nail glue<\/strong><\/h6><\/li><li><h6><strong>1 Nail file<\/strong><\/h6><\/li><li><h6><strong>1 Nail puffer<\/strong><\/h6><\/li><li><h6><strong>1 Cuticle pusher<\/strong><\/h6><\/li><\/ul>",
+            "content": "<ul><li>10 pcs Press-on nails ( check nail chart )<\/li><li>1 pcs Sticky pads sheet<\/li><li>1 Nail glue<\/li><li>1 Nail file<\/li><li>1 Nail puffer<\/li><li>1 Cuticle pusher<\/li><\/ul>",
             "page": ""
           }
         }
@@ -130,9 +130,9 @@
           "settings": {
             "air_blockreviews_summaryHeading": "Reviews",
             "air_blockreviews_layout": "list",
-            "air_blockreviews_singleStarColor": "#16A086",
+            "air_blockreviews_singleStarColor": "#16a086",
             "air_blockreviews_primaryColor": "#121212",
-            "air_blockreviews_buttonBackgroundColor": "#EDEDED",
+            "air_blockreviews_buttonBackgroundColor": "#ededed",
             "air_blockreviews_buttonTextColor": "#121212"
           }
         }
