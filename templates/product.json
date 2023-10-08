@@ -64,9 +64,9 @@
         "6085a01c-774b-40be-9b3d-c21a00c598bd": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "content": "",
+            "heading": "Package Details",
+            "icon": "box",
+            "content": "<ul><li><h6><strong>10 pcs Press-on nails ( check nail chart )<\/strong><\/h6><\/li><li><h6><strong>1 pcs Sticky pads sheet<\/strong><\/h6><\/li><li><h6><strong>1 Nail glue<\/strong><\/h6><\/li><li><h6><strong>1 Nail file<\/strong><\/h6><\/li><li><h6><strong>1 Nail puffer<\/strong><\/h6><\/li><li><h6><strong>1 Cuticle pusher<\/strong><\/h6><\/li><\/ul>",
             "page": ""
           }
         }
