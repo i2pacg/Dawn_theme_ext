@@ -29,7 +29,7 @@ if (!customElements.get('media-gallery-ext')) {
             autoplaySpeed: 10000,
             infinite: false,
             asNavFor: galleryThumbs ? galleryThumbs : '',
-            arrows: false,
+            arrows: true,
           });
           if (galleryThumbs) {
             $(galleryThumbs).on('init', function (event, slick, currentSlide, nextSlide) {
