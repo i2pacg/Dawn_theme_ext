@@ -28,7 +28,7 @@
           {%- if option.name == 'Size' -%}
             <div
               class="caption-with-letter-spacing light"
-              onclick="swalLargeImage"
+              onclick="swalImage('{{ 'sizing_chart.jpg' | file_img_url: 'large' }}')"
               style="display:block"
             >
               Sizing Chart
