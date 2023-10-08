@@ -119,10 +119,16 @@
           "settings": {
             "maxwidth": 1080
           }
+        },
+        "00b4af64-aea6-439a-910a-3672ea84eabb": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
         }
       },
       "block_order": [
-        "532c7935-bddd-457e-a999-9369ec301e9f"
+        "532c7935-bddd-457e-a999-9369ec301e9f",
+        "00b4af64-aea6-439a-910a-3672ea84eabb"
       ],
       "settings": {
         "include_margins": true
