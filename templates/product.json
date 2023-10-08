@@ -8,17 +8,6 @@
           "settings": {
           }
         },
-        "2ede1706-1608-4a9d-8487-54677ed670f4": {
-          "type": "shopify:\/\/apps\/wishlist\/blocks\/buttons\/1611f065-e251-4250-8609-2fa2f1877c57",
-          "settings": {
-            "text_color": "#121212",
-            "added_text_color": "#121212",
-            "text_size": 16,
-            "icon_color": "#EA3C53",
-            "added_icon_color": "#EA3C53",
-            "icon_width": 20
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -79,7 +68,6 @@
       },
       "block_order": [
         "title",
-        "2ede1706-1608-4a9d-8487-54677ed670f4",
         "price",
         "description",
         "5e30f747-134b-45bb-ac6d-407cd43d9a49",
@@ -127,10 +115,33 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "16968022565627397b": {
+      "type": "apps",
+      "blocks": {
+        "8a04a9c8-7536-4df4-9485-e8e5d4fd3bbb": {
+          "type": "shopify:\/\/apps\/air-reviews-product-reviews\/blocks\/app-block-review-list\/c4e1e9ca-4d46-4e76-bc39-7e42417cb327",
+          "settings": {
+            "air_blockreviews_summaryHeading": "Reviews",
+            "air_blockreviews_layout": "list",
+            "air_blockreviews_singleStarColor": "#16A086",
+            "air_blockreviews_primaryColor": "#121212",
+            "air_blockreviews_buttonBackgroundColor": "#EDEDED",
+            "air_blockreviews_buttonTextColor": "#121212"
+          }
+        }
+      },
+      "block_order": [
+        "8a04a9c8-7536-4df4-9485-e8e5d4fd3bbb"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "16968022565627397b"
   ]
 }
