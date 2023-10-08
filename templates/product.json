@@ -74,7 +74,8 @@
       "custom_css": [
         ".product {box-shadow: 0px 0px 4px;}",
         ".product__info-container {background: #fff5ef; padding: 16px;}",
-        ".product__info-wrapper {padding-left: 0px;}"
+        ".product__info-wrapper {padding-left: 0px;}",
+        "@media screen and (max-width: 749px) {.product {box-shadow: 0px 0px 0px;}}"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -115,6 +116,7 @@
       "blocks": {
         "8a04a9c8-7536-4df4-9485-e8e5d4fd3bbb": {
           "type": "shopify:\/\/apps\/air-reviews-product-reviews\/blocks\/app-block-review-list\/c4e1e9ca-4d46-4e76-bc39-7e42417cb327",
+          "disabled": true,
           "settings": {
             "air_blockreviews_summaryHeading": "Reviews",
             "air_blockreviews_layout": "list",
