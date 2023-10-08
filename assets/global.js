@@ -22,7 +22,16 @@ document.querySelectorAll('[id^="Details-"] summary').forEach((summary) => {
   summary.parentElement.addEventListener('keyup', onKeyUpEscape);
 });
 
+function swalImage(imgUrl) {
+  Swal.fire({
+    imageUrl: imgUrl,
+    imageHeight: '90vh',
+    showConfirmButton: false,
+    width: 'auto',
+  });
+}
 const trapFocusHandlers = {};
+
 
 function trapFocus(container, elementToFocus = container) {
   var elements = getFocusableElements(container);
