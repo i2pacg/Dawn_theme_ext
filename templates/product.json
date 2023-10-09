@@ -14,8 +14,8 @@
             "text_color": "#121212",
             "added_text_color": "#121212",
             "text_size": 16,
-            "icon_color": "#EA3C53",
-            "added_icon_color": "#EA3C53",
+            "icon_color": "#ea3c53",
+            "added_icon_color": "#ea3c53",
             "icon_width": 20
           }
         },
@@ -41,6 +41,13 @@
             "with_divider": false
           }
         },
+        "ec7c181a-1824-4be3-83cb-8765fb039e31": {
+          "type": "shopify:\/\/apps\/upload-lift-image-upload\/blocks\/app-block\/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca",
+          "settings": {
+            "product": "{{product}}",
+            "field": "upload-size"
+          }
+        },
         "6085a01c-774b-40be-9b3d-c21a00c598bd": {
           "type": "collapsible_tab",
           "settings": {
@@ -48,13 +55,6 @@
             "icon": "box",
             "content": "<ul><li>10 pcs Press-on nails (check nail chart)<\/li><li>1 pcs Sticky pads sheet<\/li><li>1 Nail glue<\/li><li>1 Nail file<\/li><li>1 Nail puffer<\/li><li>1 Cuticle pusher<\/li><\/ul>",
             "page": ""
-          }
-        },
-        "ec7c181a-1824-4be3-83cb-8765fb039e31": {
-          "type": "shopify:\/\/apps\/upload-lift-image-upload\/blocks\/app-block\/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca",
-          "settings": {
-            "product": "{{product}}",
-            "field": "upload-size"
           }
         },
         "quantity_selector": {
@@ -78,8 +78,8 @@
         "price",
         "description",
         "58d146aa-b8ea-4cad-ba11-20e849c9afed",
-        "6085a01c-774b-40be-9b3d-c21a00c598bd",
         "ec7c181a-1824-4be3-83cb-8765fb039e31",
+        "6085a01c-774b-40be-9b3d-c21a00c598bd",
         "quantity_selector",
         "buy_buttons"
       ],
