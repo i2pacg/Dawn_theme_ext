@@ -49,6 +49,7 @@
     display: flex;
     font-size: 16px;
     font-weight: bold;
+    text-transform: capitalize;
 }
 
 .product-card-adv .product-card-adv-info .product-card-adv-title a {
