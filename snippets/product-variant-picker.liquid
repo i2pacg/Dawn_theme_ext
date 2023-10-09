@@ -33,19 +33,21 @@
             >
               Sizing Chart
             </div>
-            {% comment %}   <div class="AirReviews-Widget AirReviews-Widget--Stars"></div> {% endcomment %}
-            {% comment %} {{ 'WhiteandBlackAestheticSizeChartInstagramPost.png' | file_img_url: '1920*1080' }} {% endcomment %}
           {%- endif -%}
           {% render 'product-variant-options', product: product, option: option, block: block %}
+          {%- if option.name == 'Size' -%}
+            <div
+              class="upload-size"
+              {%- if option.selected_value == 'Custom' -%}
+                display
+              {%- endif -%}
+            ></div>
+            <p class="product__text">
+              100% HANDMADE SET , created with passion and expertise. Take note of the process time and double-check
+              your nail size to guarantee a perfect fit.
+            </p>
+          {%- endif -%}
         </fieldset>
-        {%- if option.name == 'Size' -%}
-          <div
-            class="upload-size"
-            {%- if option.selected_value == 'Custom' -%}
-              display
-            {%- endif -%}
-          ></div>
-        {%- endif -%}
       {%- endfor -%}
       <script type="application/json">
         {{ product.variants | json }}
