@@ -177,31 +177,31 @@
                 </a>
               </div>
             {%- when 'description' -%}
+              {% comment %}
+                {%- if product.description != blank and product.description.size > 300 -%}
+                  <modal-opener
+                    class="product-popup-modal__opener no-js-hidden quick-add-hidden"
+                    data-modal="#PopupModal-{{ product.id }}"
+                    {{ shopify_attributes }}
+                  >
+                    <button
+                      id="ProductPopup-{{ product.id }}"
+                      class="product-popup-modal__button link"
+                      type="button"
+                      style="text-decoration: unset;display: inline-block;"
+                      aria-haspopup="dialog"
+                    >
+                      read more
+                    </button>
+                  </modal-opener>
+                {% endif %}
+              {% endcomment %}
               <span>
                 {%- if product.metafields.description.short != blank -%}
                   {{ product.metafields.description.short | truncate: 300, '...' }}
                 {%- elsif product.description != blank -%}
                   {{ product.description | truncate: 300, '...' }}
                 {% endif %}
-                {% comment %}
-                  {%- if product.description != blank and product.description.size > 300 -%}
-                    <modal-opener
-                      class="product-popup-modal__opener no-js-hidden quick-add-hidden"
-                      data-modal="#PopupModal-{{ product.id }}"
-                      {{ shopify_attributes }}
-                    >
-                      <button
-                        id="ProductPopup-{{ product.id }}"
-                        class="product-popup-modal__button link"
-                        type="button"
-                        style="text-decoration: unset;display: inline-block;"
-                        aria-haspopup="dialog"
-                      >
-                        read more
-                      </button>
-                    </modal-opener>
-                  {% endif %}
-                {% endcomment %}
               </span>
 
             {%- when 'inventory' -%}
