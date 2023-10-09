@@ -35,7 +35,7 @@
           "settings": {
             "heading": "Package Details",
             "icon": "box",
-            "content": "<ul><li><strong>10 pcs Press-on nails ( check nail chart )<\/strong><\/li><li><strong>1 pcs Sticky pads sheet<\/strong><\/li><li><strong>1 Nail glue<\/strong><\/li><li><strong>1 Nail file<\/strong><\/li><li><strong>1 Nail puffer<\/strong><\/li><li><strong>1 Cuticle pusher<\/strong><\/li><\/ul>",
+            "content": "<ul><li>10 pcs Press-on nails (check nail chart)<\/li><li>1 pcs Sticky pads sheet<\/li><li>1 Nail glue<\/li><li>1 Nail file<\/li><li>1 Nail puffer<\/li><li>1 Cuticle pusher<\/li><\/ul>",
             "page": ""
           }
         },
@@ -75,6 +75,7 @@
         ".product {box-shadow: 0px 0px 4px #00000050;}",
         ".product__info-container {background: #fff5ef; padding: 16px;}",
         ".product__info-wrapper {padding-left: 0px;}",
+        ".accordion__content li {line-height: 150%;}",
         "@media screen and (max-width: 749px) {.product {box-shadow: 0px 0px 0px; }}"
       ],
       "settings": {
