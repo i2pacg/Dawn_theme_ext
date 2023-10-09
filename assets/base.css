@@ -2672,9 +2672,9 @@ product-info .loading-overlay:not(.hidden)~*,
 
 .header__icon,
 .header__icon--cart .icon {
-  height: 4.4rem;
   width: 4.4rem;
   padding: 0;
+  fill: black;
 }
 
 .header__icon--cart {
