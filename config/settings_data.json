@@ -148,18 +148,6 @@
         "settings": {
         }
       },
-      "2187360915322861293": {
-        "type": "shopify:\/\/apps\/uploadly-file-upload\/blocks\/app-embed\/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
-        "disabled": true,
-        "settings": {
-        }
-      },
-      "14710238943034738919": {
-        "type": "shopify:\/\/apps\/air-reviews-product-reviews\/blocks\/app-embed\/c4e1e9ca-4d46-4e76-bc39-7e42417cb327",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "14060646107696862457": {
         "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,

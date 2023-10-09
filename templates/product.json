@@ -88,6 +88,7 @@
         ".product__info-container {background: #fff5ef; padding: 16px;}",
         ".product__info-wrapper {padding-left: 0px;}",
         ".accordion__content li {line-height: 150%;}",
+        ".caption-with-letter-spacing {font-size: 12px; color: black; font-weight: bold; margin: 4px 0px; text-decoration: underline; cursor: pointer;}",
         "@media screen and (max-width: 749px) {.product {box-shadow: 0px 0px 0px; }}"
       ],
       "settings": {
