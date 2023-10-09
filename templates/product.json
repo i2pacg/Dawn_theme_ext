@@ -8,6 +8,17 @@
           "settings": {
           }
         },
+        "f5c2a293-851c-49ca-99ce-feb6a1e5cebf": {
+          "type": "shopify:\/\/apps\/wishlist\/blocks\/buttons\/1611f065-e251-4250-8609-2fa2f1877c57",
+          "settings": {
+            "text_color": "#121212",
+            "added_text_color": "#121212",
+            "text_size": 16,
+            "icon_color": "#EA3C53",
+            "added_icon_color": "#EA3C53",
+            "icon_width": 20
+          }
+        },
         "d5d81970-c4b8-4dfc-93e5-77208b8bcd9b": {
           "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
@@ -62,6 +73,7 @@
       },
       "block_order": [
         "title",
+        "f5c2a293-851c-49ca-99ce-feb6a1e5cebf",
         "d5d81970-c4b8-4dfc-93e5-77208b8bcd9b",
         "price",
         "description",
