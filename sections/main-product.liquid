@@ -183,23 +183,25 @@
                 {%- elsif product.description != blank -%}
                   {{ product.description | truncate: 300, '...' }}
                 {% endif %}
-                {%- if product.description != blank and product.description.size > 300 -%}
-                  <modal-opener
-                    class="product-popup-modal__opener no-js-hidden quick-add-hidden"
-                    data-modal="#PopupModal-{{ product.id }}"
-                    {{ shopify_attributes }}
-                  >
-                    <button
-                      id="ProductPopup-{{ product.id }}"
-                      class="product-popup-modal__button link"
-                      type="button"
-                      style="text-decoration: unset;display: inline-block;"
-                      aria-haspopup="dialog"
+                {% comment %}
+                  {%- if product.description != blank and product.description.size > 300 -%}
+                    <modal-opener
+                      class="product-popup-modal__opener no-js-hidden quick-add-hidden"
+                      data-modal="#PopupModal-{{ product.id }}"
+                      {{ shopify_attributes }}
                     >
-                      read more
-                    </button>
-                  </modal-opener>
-                {% endif %}
+                      <button
+                        id="ProductPopup-{{ product.id }}"
+                        class="product-popup-modal__button link"
+                        type="button"
+                        style="text-decoration: unset;display: inline-block;"
+                        aria-haspopup="dialog"
+                      >
+                        read more
+                      </button>
+                    </modal-opener>
+                  {% endif %}
+                {% endcomment %}
               </span>
 
             {%- when 'inventory' -%}
