@@ -102,7 +102,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "new-arrivals",
-        "products_to_show": 5,
+        "products_to_show": 10,
         "columns_desktop": 3,
         "show_view_all": false,
         "show_browse_all": true,
