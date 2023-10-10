@@ -217,22 +217,21 @@ class QuantityInput extends HTMLElement {
   updatePrice() {
     try {
       console.log("this.currentVariant", this.currentVariant)
-      /*   const productInfo = document.querySelector('product-info');
-        const product = JSON.parse(productInfo.getAttribute('data-product'));
-        console.log(product);
-        const urlParams = new URLSearchParams(window.location.search);
-        const variantId = urlParams.get('variant')
-        if (!variantId) {
-          console.log("no variant",)
-          console.log("no variant",)
-          variantId == product.variants[0].id;
-        };
-        console.log('variantId', variantId)
-        const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
-        productInfo.querySelector('.price .price__regular .price-item--regular').innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active}`;
-        productInfo.querySelector('.price .price__sale .price-item--regular').innerHTML = `${(variant.compare_at_price / 100).toFixed(2)} ${Shopify.currency.active}`;
-        productInfo.querySelector('.price .price__sale .price-item--last').innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active}`;
-   */
+      const productInfo = document.querySelector('product-info');
+      const product = JSON.parse(productInfo.getAttribute('data-product'));
+      console.log(product);
+      const urlParams = new URLSearchParams(window.location.search);
+      const variantId = urlParams.get('variant')
+      if (!variantId) {
+        console.log("no variant", product)
+        variantId == product.variants[0].id;
+      };
+      console.log('variantId', variantId)
+      const variant = product.variants.find((variant) => variant.id === parseInt(variantId));
+      productInfo.querySelector('.price .price__regular .price-item--regular').innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active}`;
+      productInfo.querySelector('.price .price__sale .price-item--regular').innerHTML = `${(variant.compare_at_price / 100).toFixed(2)} ${Shopify.currency.active}`;
+      productInfo.querySelector('.price .price__sale .price-item--last').innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active}`;
+
     } catch (error) {
       console.log(error);
     }
