@@ -48,7 +48,7 @@
     content: " , ";
 }
 
-.product-card-adv .product-card-adv-info .product-card-adv-vendor:last-of-type(a)::after {
+.product-card-adv .product-card-adv-info .product-card-adv-vendor a:last-of-type::after {
     content: unset;
 }
 
