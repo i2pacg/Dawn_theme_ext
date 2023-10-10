@@ -42,10 +42,9 @@
     endif
   -%}
 
-  <ul
+  <div
     class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
     id="collection-slick-{{ section.id }}"
-    role="list"
   >
     {%- for collection in collections -%}
       {%- unless collection.handle == 'new-arrivals' %}
@@ -64,7 +63,7 @@
         </li>
       {%- endunless -%}
     {%- endfor -%}
-  </ul>
+  </div>
 </div>
 <script>
   $('#collection-slick-{{ section.id }}').slick({
