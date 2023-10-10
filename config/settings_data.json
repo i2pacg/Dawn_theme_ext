@@ -167,7 +167,7 @@
           "counter_offset": 4,
           "counter_color": "#ffffff",
           "counter_bg_color": "#ea3c53",
-          "sidebar_position": "centerleft",
+          "sidebar_position": "bottomleft",
           "sidebar_border_width": 2,
           "sidebar_border_radius": 64,
           "sidebar_padding": 8,
