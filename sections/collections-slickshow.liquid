@@ -2,59 +2,59 @@
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 <style>
   .collections-lists-slick-slider-container {
+    position: relative;
+    display: flex;
+    padding: 0px 36px;
+    border: 1px solid #d2d6db;
+    border-radius: 24px;
+    flex-direction: column;
+    padding-bottom: 16px;
+  }
+
+  .collections-lists-slick-slider {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .collections-lists-slick-slider:not(.slick-initialized) {
+    display: flex;
+  }
+
+  .collections-lists-slick-slider.slick-slider {
+    display: block;
+  }
+
+  .collections-lists-slick-slider .collections-list-item {
+    padding: 16px 8px;
+
+  }
+
+  .collections-lists-slick-slider:not(.slick-initialized) .collections-list-item {
+    padding: 16px;
+    min-width: {{ 100 | divided_by: section.settings.columns_desktop }}%;
+    flex: 1 1 {{ 100 | divided_by: section.settings.columns_desktop }}%;
+  }
+
+  @media screen and (max-width: 749px) {
+    .collections-lists-slick-slider-container {
       position: relative;
       display: flex;
-      padding: 0px 36px;
-      border: 1px solid #d2d6db;
-      border-radius: 24px;
-      flex-direction: column;
-      padding-bottom: 16px;
+      padding: 16px 16px;
+      border: unset;
     }
-
-    .collections-lists-slick-slider {
-      position: relative;
-      max-width: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 100%;
-    }
-
-    .collections-lists-slick-slider:not(.slick-initialized) {
-      display: flex;
-    }
-
-    .collections-lists-slick-slider.slick-slider {
-      display: block;
-    }
-
-    .collections-lists-slick-slider .collections-list-item {
-      padding: 16px 8px;
-    }
-
     .collections-lists-slick-slider:not(.slick-initialized) .collections-list-item {
-      padding: 16px;
-      flex: 1 1 {{ 100 | divided_by: section.settings.columns_desktop }}%;
-      min-width: {{ 100 | divided_by: section.settings.columns_desktop }}%;
+      padding: 8px;
+      min-width: {{ 100 | divided_by: section.settings.columns_mobile }}%;
+      flex: 1 1 {{ 100 | divided_by: section.settings.columns_mobile }}%;
     }
-
-
-    @media screen and (max-width: 749px) {
-      .collections-lists-slick-slider-container {
-        position: relative;
-        display: flex;
-        padding: 16px 16px;
-        border: unset;
-      }
-      .collections-lists-slick-slider:not(.slick-initialized) .collections-list-item {
-        padding: 8px;
-        flex: 1 1 {{ 100 | divided_by: section.settings.columns_mobile }}%;
-        min-width: {{ 100 | divided_by: section.settings.columns_mobile }}%;
-      }
-      .collections-lists-slick-slider .collections-list-item {
-        padding: 8px;
-      }
+    .collections-lists-slick-slider .collections-list-item {
+      padding: 8px;
     }
+  }
 </style>
 <div class="page-width">
   <h1 class="title title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
