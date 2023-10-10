@@ -89,6 +89,7 @@
         class="featured-slick-slider {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
       >
         {% assign new_arrivals = collections | where: 'handle', 'new-arrivals' | first | size %}
+        {{ new_arrivals | size }}
 
         {%- for product in new_arrivals limit: section.settings.products_to_show -%}
           <div
