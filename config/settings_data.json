@@ -185,6 +185,12 @@
           "popup_backdrop": "#fdf2f4"
         }
       },
+      "15659862187755629035": {
+        "type": "shopify:\/\/apps\/bookeasy\/blocks\/app-embed\/865cd10f-9515-4d8b-8e41-efece9c83f71",
+        "disabled": false,
+        "settings": {
+        }
+      },
       "5294968793578418440": {
         "type": "shopify:\/\/apps\/king-product-options-variant\/blocks\/app-embed\/ce104259-52b1-4720-9ecf-76b34cae0401",
         "disabled": false,
@@ -193,7 +199,7 @@
       },
       "16250556887416161327": {
         "type": "shopify:\/\/apps\/easy-appointment-booking\/blocks\/select_time\/cc7b690c-65b5-4bb4-a46c-1e4bd73e1c12",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "buttonTextAlign": "center",
           "classNames": "button",
