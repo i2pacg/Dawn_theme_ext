@@ -71,7 +71,11 @@
   {%- if product.quantity_price_breaks_configured? -%}
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
   {%- endif -%}
-
+  <script
+    src="https://cdn.shopify.com/extensions/6e903e48-512e-4817-aa33-eb0ed1d2db53/1.0.0/assets/buttons.js"
+    type="text/javascript"
+    defer="defer"
+  ></script>
   <link
     href="https://cdn.shopify.com/extensions/6e903e48-512e-4817-aa33-eb0ed1d2db53/1.0.0/assets/buttons.css"
     rel="stylesheet"
