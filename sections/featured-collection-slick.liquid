@@ -87,10 +87,6 @@
     <div class="featured-slick-slider-container">
       <div
         class="featured-slick-slider {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-        {% if settings.animations_reveal_on_scroll %}
-          data-cascade
-          style="--animation-order: {{ forloop.index }};"
-        {% endif %}
       >
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <div
