@@ -170,6 +170,7 @@
     "52df2d97-bacc-4f96-8c42-35f7999e2917": {
       "type": "collections-slickshow",
       "settings": {
+        "show_browse_all": true,
         "title": "Collections",
         "sort": "alphabetical",
         "image_ratio": "adapt",
@@ -202,7 +203,6 @@
       "block_order": [
         "template--20816435773737__16909af5-af37-4113-8be5-27bfc3d6d950-slide-1"
       ],
-      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "small",
@@ -236,7 +236,6 @@
         "template--20816435773737__390e1d99-e0a4-49bd-b94f-2bfbf180e336-heading-1",
         "template--20816435773737__390e1d99-e0a4-49bd-b94f-2bfbf180e336-text-1"
       ],
-      "disabled": true,
       "custom_css": [
         "html > div {overflow-x: hidden;}"
       ],
