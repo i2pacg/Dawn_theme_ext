@@ -999,7 +999,6 @@ class VariantSelects extends HTMLElement {
   onVariantChange() {
     console.log("onVariantChange", this);
     this.updateOptions();
-    console.log("updateOptions", this.options);
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
@@ -1014,7 +1013,7 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
-      document.querySelector('.upload-size').toggleAttribute('display', this.currentVariant.option1 == "Custom");
+      document.querySelector('.upload-size').toggleAttribute('display', this.options.contains("Custom"));
     }
   }
 
