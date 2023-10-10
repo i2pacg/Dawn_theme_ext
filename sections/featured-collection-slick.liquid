@@ -88,7 +88,7 @@
       <div
         class="featured-slick-slider {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
       >
-        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+        {%- for product in all_products limit: section.settings.products_to_show -%}
           <div
             class="slick-item"
           >
