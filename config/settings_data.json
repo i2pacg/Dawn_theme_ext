@@ -1,7 +1,7 @@
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/Waad.svg",
-    "logo_width": 80,
+    "logo_width": 100,
     "favicon": "shopify:\/\/shop_images\/Waad.svg",
     "type_header_font": "open_sans_n3",
     "heading_scale": 100,
@@ -113,7 +113,7 @@
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
-    "predictive_search_show_price": false,
+    "predictive_search_show_price": true,
     "currency_code_enabled": false,
     "cart_type": "notification",
     "show_vendor": false,
