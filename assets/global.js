@@ -1049,7 +1049,7 @@ class VariantSelects extends HTMLElement {
 
   updateURL() {
     if ($('.product').parents().toArray().flatMap((p) => p.tagName).includes('QUICK-ADD-MODAL')) {
-      window.history.replaceState({}, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+      window.history.pushState({}, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
     }
     if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
     window.history.replaceState({}, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
