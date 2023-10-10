@@ -56,6 +56,10 @@
   font-weight: 700;
 }
 
+.button-flat-empty.with-arrow {
+  display: inline-flex;
+}
+
 .button-flat-empty.with-arrow:after {
   content: "";
   /* display: block; */
