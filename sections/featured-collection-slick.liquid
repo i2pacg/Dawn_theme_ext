@@ -166,6 +166,9 @@
     opacity: 0.5;
     transform: scale(.9);
   }
+  .featured-slick-slider .slick-item:not(.slick-center) .product-card-adv-image {
+    pointer-events: none;
+  }
   .featured-slick-slider:not(.slick-initialized) .slick-item {
     padding: 16px;
     flex: 1 1 {{ 100 | divided_by: section.settings.columns_desktop }}%;
