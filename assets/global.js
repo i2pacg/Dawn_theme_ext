@@ -1045,6 +1045,7 @@ class VariantSelects extends HTMLElement {
   }
 
   updateURL() {
+    console.log('updateURL')
     if ($('.product').parents().toArray().flatMap((p) => p.tagName).includes('QUICK-ADD-MODAL')) {
       location.href = `${this.dataset.url}?variant=${this.currentVariant.id}`;
       window.history.pushState({}, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
