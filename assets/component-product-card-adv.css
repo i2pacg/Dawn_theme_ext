@@ -39,18 +39,6 @@
     padding: 0px 8px;
 }
 
-.product-card-adv .product-card-adv-info .product-card-adv-vendor {
-    margin-bottom: 2px;
-    display: inline-flex;
-}
-
-.product-card-adv .product-card-adv-info .product-card-adv-vendor a::after {
-    content: " , ";
-}
-
-.product-card-adv .product-card-adv-info .product-card-adv-vendor a:last-of-type::after {
-    content: unset;
-}
 
 
 .product-card-adv .product-card-adv-info .product-card-adv-title {
