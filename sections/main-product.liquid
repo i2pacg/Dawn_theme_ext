@@ -162,11 +162,7 @@
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
                 <h1 class="font-body-bold">
-                  {% if product.metafields.svg.title != blank %}
-                    {{ product.metafields.svg.title }}
-                  {% else %}
-                    {{ product.title | escape }}
-                  {% endif %}
+                  {{ product.title | escape }}
                 </h1>
                 <a href="{{ product.url }}" class="product__title">
                   <h2 class="h1">
