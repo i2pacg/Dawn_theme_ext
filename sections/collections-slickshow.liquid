@@ -99,28 +99,33 @@
       assign paginate_by = 28
     endif
   -%}
-
-  <div
-    class="collection-lists"
-    id="collection-slick-{{ section.id }}"
-  >
-    {%- for collection in collections -%}
-      {%- unless collection.handle == 'new-arrivals' %}
-        <div
-          class="collections-list-item {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-            style="--animation-order: {{ forloop.index }};"
-          {% endif %}
-        >
-          {% render 'card-collection',
-            card_collection: collection,
-            media_aspect_ratio: section.settings.image_ratio,
-            columns: 3
-          %}
-        </div>
-      {%- endunless -%}
-    {%- endfor -%}
+  <div class="collections-lists-slick-slider-container">
+    <div
+      class="collections-lists-slick-slider {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+      {% if settings.animations_reveal_on_scroll %}
+        data-cascade
+        style="--animation-order: {{ forloop.index }};"
+      {% endif %}
+      id="collections-lists-slick-{{ section.id }}"
+    >
+      {%- for collection in collections -%}
+        {%- unless collection.handle == 'new-arrivals' %}
+          <div
+            class="collections-list-item {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            {% render 'card-collection',
+              card_collection: collection,
+              media_aspect_ratio: section.settings.image_ratio,
+              columns: 3
+            %}
+          </div>
+        {%- endunless -%}
+      {%- endfor -%}
+    </div>
   </div>
 </div>
 
