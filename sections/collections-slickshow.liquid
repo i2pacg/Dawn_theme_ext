@@ -122,35 +122,33 @@
 </div>
 
 <script>
-  console.log( "ready!" );
-  $('#collections-lists-slick-{{ section.id }}').on('init', function (event, slick, currentSlide, nextSlide) {
-    $('#collections-lists-slick-{{ section.id }}').slick('refresh');
-  });
-  $('#collections-lists-slick-{{ section.id }}').slick({
-    infinite: false,
-    centerMode: false,
-    slidesToShow:  {{ section.settings.columns_desktop }},
-    slidesToScroll: 1,
-    variableWidth: false,
-    arrows: true,
-    focusOnSelect: true,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 749,
-        settings: {
-          infinite: false,
-          centerMode: false,
-          slidesToShow:  {{ section.settings.columns_mobile }},
-          slidesToScroll: 1,
-          variableWidth: false,
-          arrows: true,
-          focusOnSelect: true,
-          dots: true,
-        }
-      },
-    ]
-  });
+  $(document).read(function(){
+    console.log( "ready!" );
+    $('#collections-lists-slick-{{ section.id }}').slick({
+      infinite: false,
+      centerMode: false,
+      slidesToShow:  {{ section.settings.columns_desktop }},
+      slidesToScroll: 1,
+      variableWidth: false,
+      arrows: true,
+      focusOnSelect: true,
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 749,
+          settings: {
+            infinite: false,
+            centerMode: false,
+            slidesToShow:  {{ section.settings.columns_mobile }},
+            slidesToScroll: 1,
+            variableWidth: false,
+            arrows: true,
+            focusOnSelect: true,
+            dots: true,
+          }
+        },
+      ]
+    });  });
 </script>
 {% schema %}
 {
