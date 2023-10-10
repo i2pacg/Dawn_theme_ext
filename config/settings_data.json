@@ -154,9 +154,17 @@
         "settings": {
         }
       },
+      "1166917345295625399": {
+        "type": "shopify:\/\/apps\/wishlist-myappgurus\/blocks\/wishlist\/c6177d6e-9cc4-45ab-abe5-45a6a5289882",
+        "disabled": false,
+        "settings": {
+          "visible_page_button": true,
+          "target_class": ""
+        }
+      },
       "10583289249535060075": {
         "type": "shopify:\/\/apps\/wishlist\/blocks\/popup\/1611f065-e251-4250-8609-2fa2f1877c57",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "icon_width": 24,
           "icon": "regular",
