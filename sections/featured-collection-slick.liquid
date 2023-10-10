@@ -88,8 +88,9 @@
       <div
         class="featured-slick-slider {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
       >
+        {% assign collection = collections | where: 'handle', 'new-arrivals' | first | size %}
         {{ collections | where: 'handle', 'new-arrivals' | first | size }}
-        {{ collections.new_arrivals | size }}
+        {{ collection | size }}
         {% assign new_products = collections['new-arrivals'] %}
 
         {%- for product in new_products limit: section.settings.products_to_show -%}
