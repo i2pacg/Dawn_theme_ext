@@ -85,13 +85,14 @@
       {
         breakpoint: 749,
         settings: {
-          slidesToShow:  {{ section.settings.columns_mobile }},
+          infinite: false,
+          centerMode: false,
+           slidesToShow:  {{ section.settings.columns_mobile }},
           slidesToScroll: 1,
           variableWidth: false,
-          infinite: false,
-          centerMode: true,
-          dots: true,
           arrows: true,
+          focusOnSelect: true,
+          dots: true,
         }
       },
     ]
