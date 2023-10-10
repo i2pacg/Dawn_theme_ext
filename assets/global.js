@@ -221,7 +221,7 @@ class QuantityInput extends HTMLElement {
       const product = JSON.parse(productInfo.getAttribute('data-product'));
       console.log(product);
       const urlParams = new URLSearchParams(window.location.search);
-      var variantId = urlParams.get('variant')
+      const variantId = urlParams.get('variant')
       if (!variantId) {
         console.log("no variant", product)
         variantId = product.variants[0].id;
