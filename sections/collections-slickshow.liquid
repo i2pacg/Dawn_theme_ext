@@ -26,10 +26,6 @@
 
   .collections-lists-slick-slider .collections-list-item {
     padding: 16px 8px;
-  }
-
-  .collections-lists-slick-slider:not(.slick-initialized) .collections-list-item {
-    padding: 16px;
     flex: 1 1 {{ 100 | divided_by: section.settings.columns_desktop }}%;
     min-width: {{ 100 | divided_by: section.settings.columns_desktop }}%;
   }
