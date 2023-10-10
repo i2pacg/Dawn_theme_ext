@@ -1014,6 +1014,7 @@ class VariantSelects extends HTMLElement {
       this.renderProductInfo();
       this.updateShareUrl();
       console.log(this.options);
+      console.log($('.product'));
       document.querySelector('.upload-size').toggleAttribute('display', this.options.includes("Custom"));
     }
   }
