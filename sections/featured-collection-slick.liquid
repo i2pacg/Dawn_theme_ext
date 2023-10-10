@@ -88,7 +88,7 @@
       <div
         class="featured-slick-slider {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
       >
-        {% assign new_products = collections.all.products | where: 'new-arrival' %}
+        {% assign new_products = collections.all.products | where: 'color.swatches', '#FFFFFF' %}
 
         {%- for product in new_products limit: section.settings.products_to_show -%}
           <div
