@@ -167,9 +167,10 @@
     transform: scale(.9);
   }
   .featured-slick-slider .slick-item:not(.slick-center) .product-card-adv-image ,
-  .featured-slick-slider .slick-item:not(.slick-center) .product-card-adv-title{
+  .featured-slick-slider .slick-item:not(.slick-center) .product-card-adv-title a{
     pointer-events: none;
   }
+
   .featured-slick-slider:not(.slick-initialized) .slick-item {
     padding: 16px;
     flex: 1 1 {{ 100 | divided_by: section.settings.columns_desktop }}%;
