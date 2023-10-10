@@ -88,7 +88,7 @@
       <div
         class="featured-slick-slider {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
       >
-        {{ collections | json }}
+        {{ collections['new-arrivals'] }}
         {{ collections.new_arrivals | size }}
         {% assign new_products = collections['new-arrivals'] %}
 
