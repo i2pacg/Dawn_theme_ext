@@ -93,9 +93,10 @@
     flex: 2;
 }
 
+/* 
 .product-card-adv .product-card-adv-info .product-card-adv-footer .product-card-adv-quick-add {
     flex: 1;
-}
+} */
 
 .product-card-adv .product-card-adv-info .product-card-adv-footer .product-card-adv-quick-add:before {
     content: "";
