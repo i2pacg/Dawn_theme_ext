@@ -56,7 +56,7 @@
   font-weight: 700;
 }
 
-@media screen and (min-width: 749px) {
+@media screen and (max-width: 749px) {
   .button-flat-empty {
     font-size: 14px;
   }
