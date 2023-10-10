@@ -69,11 +69,6 @@
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
-        },
-        "fd95a49c-2581-4cbf-aa9b-2a7d3d4289b8": {
-          "type": "rating",
-          "settings": {
-          }
         }
       },
       "block_order": [
@@ -86,8 +81,7 @@
         "ec7c181a-1824-4be3-83cb-8765fb039e31",
         "6085a01c-774b-40be-9b3d-c21a00c598bd",
         "quantity_selector",
-        "buy_buttons",
-        "fd95a49c-2581-4cbf-aa9b-2a7d3d4289b8"
+        "buy_buttons"
       ],
       "custom_css": [
         ".product {box-shadow: 0px 0px 4px #00000050;}",
