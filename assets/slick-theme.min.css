@@ -40,6 +40,11 @@
     opacity: .25
 }
 
+.slick-next.slick-disabled,
+.slick-prev.slick-disabled {
+    display: none;
+}
+
 .slick-next:before,
 .slick-prev:before {
     font-family: slick;
