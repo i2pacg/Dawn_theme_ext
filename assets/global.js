@@ -1013,7 +1013,8 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
-      document.querySelector('.upload-size').toggleAttribute('display', this.options.contains("Custom"));
+      console.log(this.options);
+      document.querySelector('.upload-size').toggleAttribute('display', this.options.includes("Custom"));
     }
   }
 
