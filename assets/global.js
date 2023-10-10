@@ -187,6 +187,7 @@ class QuantityInput extends HTMLElement {
   }
 
   onInputChange(event) {
+    console.log("onInputChange");
     this.validateQtyRules();
   }
 
