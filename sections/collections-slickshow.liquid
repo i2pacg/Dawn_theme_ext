@@ -66,32 +66,30 @@
   </div>
 </div>
 <script>
-    $(function() {
-      console.log( "ready!" );
-      $('#collection-slick-{{ section.id }}').slick({
-        infinite: false,
-        centerMode: false,
-        slidesToShow:  {{ section.settings.columns_desktop }},
-        slidesToScroll: 1,
-        variableWidth: false,
-        arrows: true,
-        focusOnSelect: true,
-        dots: true,
-        responsive: [
-          {
-            breakpoint: 749,
-            settings: {
-              slidesToShow:  {{ section.settings.columns_mobile }},
-              slidesToScroll: 1,
-              variableWidth: false,
-              infinite: false,
-              centerMode: true,
-              dots: true,
-              arrows: true,
-            }
-          },
-        ]
-      });
+  console.log( "ready!" );
+  $('#collection-slick-{{ section.id }}').slick({
+    infinite: false,
+    centerMode: false,
+    slidesToShow:  {{ section.settings.columns_desktop }},
+    slidesToScroll: 1,
+    variableWidth: false,
+    arrows: true,
+    focusOnSelect: true,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 749,
+        settings: {
+          slidesToShow:  {{ section.settings.columns_mobile }},
+          slidesToScroll: 1,
+          variableWidth: false,
+          infinite: false,
+          centerMode: true,
+          dots: true,
+          arrows: true,
+        }
+      },
+    ]
   });
 </script>
 {% schema %}
