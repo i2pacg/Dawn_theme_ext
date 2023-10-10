@@ -170,6 +170,7 @@
     "52df2d97-bacc-4f96-8c42-35f7999e2917": {
       "type": "collections-slickshow",
       "settings": {
+        "color_scheme": "scheme-eecc9f83-e793-41cd-8929-f4fa6fae1164",
         "show_browse_all": true,
         "title": "Collections",
         "sort": "alphabetical",
