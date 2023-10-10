@@ -93,6 +93,9 @@
     },
     "a1ab313a-69cd-4f11-91b1-f235322e33b3": {
       "type": "featured-collection-slick",
+      "custom_css": [
+        ".collection__title{padding:0;}"
+      ],
       "settings": {
         "full_width": false,
         "header_top": "",
