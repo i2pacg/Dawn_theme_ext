@@ -1,6 +1,10 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
-
+<style>
+  .collection-list.grid {
+    flex-wrap: nowrap;
+  }
+</style>
 <div class="page-width">
   <h1 class="title title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     {{ section.settings.title }}
@@ -65,11 +69,7 @@
     {%- endfor -%}
   </div>
 </div>
-<style>
-  .collection-list.grid {
-    flex-wrap: nowrap;
-  }
-</style>
+
 <script>
   console.log( "ready!" );
   $('#collection-slick-{{ section.id }}').slick({
@@ -87,7 +87,7 @@
         settings: {
           infinite: false,
           centerMode: false,
-           slidesToShow:  {{ section.settings.columns_mobile }},
+          slidesToShow:  {{ section.settings.columns_mobile }},
           slidesToScroll: 1,
           variableWidth: false,
           arrows: true,
