@@ -72,7 +72,7 @@
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
   {%- endif -%}
   {% assign full_url = request.host | append: request.path %}
-  {%- unless template == 'product' -%}
+  {%- if template != 'product' -%}
     <script
       src="https://cdn.shopify.com/extensions/6e903e48-512e-4817-aa33-eb0ed1d2db53/1.0.0/assets/buttons.js"
       type="text/javascript"
@@ -95,7 +95,7 @@
       type="text/css"
       media="all"
     >
-  {%- endunless -%}
+  {%- endif -%}
 
   {%- style -%}
     .product__info-container > span{
@@ -162,9 +162,6 @@
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       {% comment %} {% render 'product-media-gallery-ext', variant_images: variant_images %} {% endcomment %}
       {% render 'product-media-gallery-ext', variant_images: variant_images %}
-      {%- unless template == 'product' -%}
-        tempppppp
-      {%- endunless -%}
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <product-info
