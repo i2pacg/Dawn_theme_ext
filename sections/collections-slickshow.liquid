@@ -123,6 +123,7 @@
 
 <script>
   console.log( "ready!" );
+  $('#collections-lists-slick-{{ section.id }}').slick('refresh');
   $('#collections-lists-slick-{{ section.id }}').slick({
     infinite: false,
     centerMode: false,
