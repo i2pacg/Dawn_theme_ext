@@ -327,7 +327,16 @@
         {%- endcase -%}
       {%- endfor -%}
 
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      <a href="{{ routes.cart_url }}" 
+       
+        class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble"
+      
+        {% if secart == empty %}
+          data-cascade
+          style="--animation-order: {{ forloop.index }};"
+        {% endif %}
+        
+      >
         {%- liquid
           if cart == empty
             render 'icon-cart-empty'
