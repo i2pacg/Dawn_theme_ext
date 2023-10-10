@@ -2329,8 +2329,11 @@
       }
     },
     "collections-slickshow": {
-      "name": "Collections Slick Show",
+      "name": "Collections Slick",
       "settings": {
+        "show_browse_all": {
+          "label": "Enable \"Browse Products\" Button"
+        },
         "title": {
           "label": "Heading"
         },
