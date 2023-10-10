@@ -175,7 +175,7 @@
           "sidebar_bg_color": "#ffffff",
           "sidebar_border_color": "#ea3c53",
           "popup_border_radius": 0,
-          "popup_border_width": 1,
+          "popup_border_width": 3,
           "popup_bg_color": "#ffffff",
           "popup_border_color": "#e7e7e7",
           "popup_heading": "#121212",
