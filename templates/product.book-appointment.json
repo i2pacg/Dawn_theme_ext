@@ -42,6 +42,11 @@
             "with_divider": false
           }
         },
+        "d8ade80a-ebc4-4c51-9ffb-f4c521bc727c": {
+          "type": "product",
+          "settings": {
+          }
+        },
         "ec7c181a-1824-4be3-83cb-8765fb039e31": {
           "type": "shopify:\/\/apps\/upload-lift-image-upload\/blocks\/app-block\/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca",
           "disabled": true,
@@ -96,6 +101,7 @@
         "price",
         "description",
         "58d146aa-b8ea-4cad-ba11-20e849c9afed",
+        "d8ade80a-ebc4-4c51-9ffb-f4c521bc727c",
         "ec7c181a-1824-4be3-83cb-8765fb039e31",
         "6085a01c-774b-40be-9b3d-c21a00c598bd",
         "quantity_selector",
