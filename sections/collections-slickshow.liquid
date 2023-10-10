@@ -42,35 +42,32 @@
     endif
   -%}
 
-  {%- paginate collections by paginate_by -%}
-    <ul
-      class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
-      id="collection-slick-{{ section.id }}"
-      role="list"
-    >
-      {%- for collection in collections -%}
-        {%- unless collection.handle == 'new-arrivals' %}
-          <li
-            class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-            {% if settings.animations_reveal_on_scroll %}
-              data-cascade
-              style="--animation-order: {{ forloop.index }};"
-            {% endif %}
-          >
-            {% render 'card-collection',
-              card_collection: collection,
-              media_aspect_ratio: section.settings.image_ratio,
-              columns: 3
-            %}
-          </li>
-        {%- endunless -%}
-      {%- endfor -%}
-    </ul>
-    {% render 'pagination', paginate: paginate %}
-  {%- endpaginate -%}
+  <ul
+    class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
+    id="collection-slick-{{ section.id }}"
+    role="list"
+  >
+    {%- for collection in collections -%}
+      {%- unless collection.handle == 'new-arrivals' %}
+        <li
+          class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+            style="--animation-order: {{ forloop.index }};"
+          {% endif %}
+        >
+          {% render 'card-collection',
+            card_collection: collection,
+            media_aspect_ratio: section.settings.image_ratio,
+            columns: 3
+          %}
+        </li>
+      {%- endunless -%}
+    {%- endfor -%}
+  </ul>
 </div>
 <script>
-  $('#collection').slick({
+  $('#collection-slick-{{ section.id }}').slick({
     infinite: false,
     centerMode: false,
     slidesToShow:  {{ section.settings.columns_desktop }},
