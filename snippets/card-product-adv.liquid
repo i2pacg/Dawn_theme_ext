@@ -22,7 +22,6 @@
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
-<style></style>
 {%- if product and product != empty -%}
   {%- liquid
     assign ratio = 1
@@ -58,7 +57,9 @@
       <div class="product-card-adv-footer">
         <div class="product-card-adv-price">
           <h1 class="product-card-adv-title">
-            {{ product.title | escape }}
+            <a href="{{ product.url }}">
+              {{ product.title | escape }}
+            </a>
           </h1>
           {%- if show_vendor -%}
             <div class="product-card-adv-vendor">
