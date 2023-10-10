@@ -154,12 +154,6 @@
         "settings": {
         }
       },
-      "4888555145602938106": {
-        "type": "shopify:\/\/apps\/nml-catalog-add-to-cart-button\/blocks\/app-block\/fe60324c-974a-4c0f-8175-33938d4b9009",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "10583289249535060075": {
         "type": "shopify:\/\/apps\/wishlist\/blocks\/popup\/1611f065-e251-4250-8609-2fa2f1877c57",
         "disabled": false,
