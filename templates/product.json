@@ -8,13 +8,6 @@
           "settings": {
           }
         },
-        "5c92e3e2-dc47-4ea0-b6bd-d51fd36685d0": {
-          "type": "text",
-          "settings": {
-            "text": "<strong>{{ product.metafields.custom.shape.value }}<\/strong><strong> - <\/strong><strong>{{ product.metafields.custom.length.value }}<\/strong>",
-            "text_style": "body"
-          }
-        },
         "f5c2a293-851c-49ca-99ce-feb6a1e5cebf": {
           "type": "shopify:\/\/apps\/wishlist\/blocks\/buttons\/1611f065-e251-4250-8609-2fa2f1877c57",
           "settings": {
@@ -94,7 +87,6 @@
       },
       "block_order": [
         "title",
-        "5c92e3e2-dc47-4ea0-b6bd-d51fd36685d0",
         "f5c2a293-851c-49ca-99ce-feb6a1e5cebf",
         "d5d81970-c4b8-4dfc-93e5-77208b8bcd9b",
         "price",
