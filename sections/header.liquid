@@ -328,7 +328,11 @@
       {%- endfor -%}
 
       <a href="{{ routes.cart_url }}" 
-        class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+        class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble"
+        {% if cart == empty %}
+          style="height:4rem;"
+        {% endif %}
+      >
         {%- liquid
           if cart == empty
             render 'icon-cart-empty'
