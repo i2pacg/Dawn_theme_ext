@@ -187,7 +187,6 @@ class QuantityInput extends HTMLElement {
   }
 
   onInputChange(event) {
-    console.log("onInputChange");
     this.validateQtyRules();
   }
 
@@ -232,7 +231,6 @@ class QuantityInput extends HTMLElement {
       productInfo.querySelector('.price .price__regular .price-item--regular').innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active}`;
       productInfo.querySelector('.price .price__sale .price-item--regular').innerHTML = `${(variant.compare_at_price / 100).toFixed(2)} ${Shopify.currency.active}`;
       productInfo.querySelector('.price .price__sale .price-item--last').innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active}`;
-
     } catch (error) {
       console.log(error);
     }
