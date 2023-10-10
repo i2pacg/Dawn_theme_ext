@@ -42,6 +42,7 @@
     assign id_append = '-duplicate'
   endif
 -%}
+{{ 'sweetalert2.all.min.js' | asset_url | script_tag }}
 <style>
   .swal2-container {
     overflow-y: hidden !important;
