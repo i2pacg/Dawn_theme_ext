@@ -32,6 +32,7 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+    <script src="lazysizes.min.js" async=""></script>
 
     {{ 'slick.min.css' | asset_url | stylesheet_tag }}
     {{ 'slick-theme.min.css' | asset_url | stylesheet_tag }}
@@ -306,9 +307,9 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-  
-   {% render 'nml-assets' %}
-    </head>
+
+    {% render 'nml-assets' %}
+  </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
