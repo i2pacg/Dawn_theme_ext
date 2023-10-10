@@ -12,18 +12,6 @@
     {% endfor %}
   {% endcomment %}
   {%- liquid
-    assign position = -1
-    assign tmpCollections = '' | split: ''
-
-    for collection in collections
-      if collection.handle == 'new-arrivals'
-        assign position = forloop.index0
-      else
-        assign newItem = collection | split: ''
-        assign tmpCollections = tmpCollections | concat: newItem
-      endif
-    endfor
-
     case section.settings.sort
       when 'products_high', 'products_low'
         assign collections = collections | sort: 'all_products_count'
