@@ -1013,7 +1013,7 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
-      console.log($('.product'));
+      console.log($('.product').parents().toArray().flatMap((p) => p.tagName).includes('QUICK-ADD-MODAL'));
       document.querySelector('.upload-size').toggleAttribute('display', this.options.includes("Custom"));
     }
   }
