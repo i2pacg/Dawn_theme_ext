@@ -2328,6 +2328,63 @@
         }
       }
     },
+    "collections-slickshow": {
+      "name": "Collections Slick Show",
+      "settings": {
+        "title": {
+          "label": "Heading"
+        },
+        "sort": {
+          "label": "Sort collections by:",
+          "options__1": {
+            "label": "Alphabetically, A-Z"
+          },
+          "options__2": {
+            "label": "Alphabetically, Z-A"
+          },
+          "options__3": {
+            "label": "Date, new to old"
+          },
+          "options__4": {
+            "label": "Date, old to new"
+          },
+          "options__5": {
+            "label": "Product count, high to low"
+          },
+          "options__6": {
+            "label": "Product count, low to high"
+          }
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Portrait"
+          },
+          "options__3": {
+            "label": "Square"
+          },
+          "info": "Add images by editing your collections. [Learn more](https:\/\/help.shopify.com\/manual\/products\/collections)"
+        },
+        "columns_desktop": {
+          "label": "Number of columns on desktop"
+        },
+        "header_mobile": {
+          "content": "Mobile Layout"
+        },
+        "columns_mobile": {
+          "label": "Number of columns on mobile",
+          "options__1": {
+            "label": "1 column"
+          },
+          "options__2": {
+            "label": "2 columns"
+          }
+        }
+      }
+    },
     "main-list-collections": {
       "name": "Collections list page",
       "settings": {
