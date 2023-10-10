@@ -48,6 +48,10 @@
     content: " , ";
 }
 
+.product-card-adv .product-card-adv-info .product-card-adv-vendor:last-of-type(a)::after {
+    content: unset;
+}
+
 
 .product-card-adv .product-card-adv-info .product-card-adv-title {
     margin: 0;
