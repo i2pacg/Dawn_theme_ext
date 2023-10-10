@@ -32,8 +32,8 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-    <script src="lazysizes.min.js" async=""></script>
 
+    {{ 'lazysizes.js' | asset_url | script_tag }}
     {{ 'slick.min.css' | asset_url | stylesheet_tag }}
     {{ 'slick-theme.min.css' | asset_url | stylesheet_tag }}
 
