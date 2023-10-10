@@ -56,6 +56,12 @@
   font-weight: 700;
 }
 
+@media screen and (min-width: 749px) {
+  .button-flat-empty {
+    font-size: 14px;
+  }
+}
+
 .button-flat-empty.with-arrow {
   display: inline-flex;
 }
