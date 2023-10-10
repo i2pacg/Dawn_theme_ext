@@ -180,7 +180,7 @@
           "popup_border_color": "#e7e7e7",
           "popup_heading": "#121212",
           "close_icon": "solid",
-          "popup_image_radius": 0,
+          "popup_image_radius": 24,
           "popup_link": "#121212",
           "popup_backdrop": "#fdf2f4"
         }
