@@ -90,7 +90,7 @@
       >
         {% assign new_arrivals = collections | where: 'handle', 'new-arrivals' | first %}
 
-        {%- for product in new_arrivals limit: section.settings.products_to_show -%}
+        {%- for product in new_arrivals.products limit: section.settings.products_to_show -%}
           <div
             class="slick-item"
           >
