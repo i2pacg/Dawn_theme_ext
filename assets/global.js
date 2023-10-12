@@ -266,7 +266,7 @@ class QuantityInput extends HTMLElement {
         Shopify.currency.active
       }`;
 
-      console.log(bucksCC.conveterInstance);
+    
     } catch (error) {
       console.log(error);
     }
