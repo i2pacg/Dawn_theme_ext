@@ -262,15 +262,15 @@ class QuantityInput extends HTMLElement {
 
       productInfo.querySelector(
         ".price .price__regular .price-item--regular"
-      ).innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active
+      ).innerHTML = `${price} ${Shopify.currency.active
       }`;
       productInfo.querySelector(
         ".price .price__sale .price-item--regular"
-      ).innerHTML = `${(variant.compare_at_price / 100).toFixed(2)} ${Shopify.currency.active
+      ).innerHTML = `${compareAtPrice} ${Shopify.currency.active
       }`;
       productInfo.querySelector(
         ".price .price__sale .price-item--last"
-      ).innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active
+      ).innerHTML = `${price} ${Shopify.currency.active
       }`;
       console.log("bucksCC.Currency", bucksCC.Currency);
       console.log("bucksCC", bucksCC);
