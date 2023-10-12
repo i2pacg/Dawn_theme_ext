@@ -64,7 +64,6 @@ if (!customElements.get('product-info')) {
       }
 
       fetchQuantityRules() {
-        console.log("fetchQuantityRules", this.currentVariant)
         if (!this.currentVariant || !this.currentVariant.value) return;
         this.querySelector('.quantity__rules-cart .loading-overlay').classList.remove('hidden');
         fetch(`${this.dataset.url}?variant=${this.currentVariant.value}&section_id=${this.dataset.section}`)
