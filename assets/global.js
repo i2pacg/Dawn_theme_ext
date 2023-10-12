@@ -234,8 +234,6 @@ class QuantityInput extends HTMLElement {
   }
   updatePrice() {
     try {
-      console.log("this.currentVariant", this.currentVariant);
-      console.log("geoCurrency", document.querySelector(".geoCurrency.converterTriggers"));
       if (!document.querySelector(".geoCurrency.converterTriggers")) return;
       const currency = document.querySelector(".geoCurrency.converterTriggers").id;
       console.log("currency", currency);
