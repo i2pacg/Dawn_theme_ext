@@ -237,7 +237,7 @@ class QuantityInput extends HTMLElement {
       if (!document.querySelector(".geoCurrency.converterTriggers")) return;
       const currency = document.querySelector(".geoCurrency.converterTriggers").id;
       console.log("currency", currency);
-      console.log("bucksCC", bucksCC);
+      console.log("bucksCC", bucksCC.currencyFormats[currency]);
       const productInfo = document.querySelector("product-info");
       const product = JSON.parse(productInfo.getAttribute("data-product"));
       console.log(product);
@@ -274,7 +274,9 @@ class QuantityInput extends HTMLElement {
 
       if (price__regular.querySelector("money.buckscc-converted.buckscc-money")) {
         const price__regular__converted = price__regular.querySelector("money.buckscc-converted.buckscc-money");
-        price__regular__converted.setAttribute('bucks-original', `${price} ${currency}`);
+        price__regular__converted.setAttribute('bucks-original', `${price} ${Shopify.currency.active}`);
+        price__regular__converted.setAttribute('bucks-init', `${price}`);
+        price__regular__converted.setAttribute('bucks-current', ` ${price}`);
       } else {
         price__regular.innerHTML = `${price} ${Shopify.currency.active}`;
       }
