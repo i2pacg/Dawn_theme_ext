@@ -235,13 +235,11 @@ class QuantityInput extends HTMLElement {
   updatePrice() {
     try {
       if (!document.querySelector(".geoCurrency.converterTriggers")) return;
-      const currencyFormats = bucksCC.currencyFormats[document.querySelector(".geoCurrency.converterTriggers").id];
-      console.log("currency", currency);
-      console.log("bucksCC", bucksCC.currencyFormats[currency]);
+      const currency = document.querySelector(".geoCurrency.converterTriggers").id;
+      const currencyFormats = bucksCC.currencyFormats[currency];
 
       const productInfo = document.querySelector("product-info");
       const product = JSON.parse(productInfo.getAttribute("data-product"));
-      console.log(product);
       const urlParams = new URLSearchParams(window.location.search);
       var variantId = urlParams.get("variant");
       if (!variantId) {
@@ -274,15 +272,12 @@ class QuantityInput extends HTMLElement {
       const price__last = productInfo.querySelector(".price .price__sale .price-item--last");
 
       if (price__regular.querySelector(".money.buckscc-converted.buckscc-money")) {
-        console.log(currency);
         let moneyFormat = bucksCC.getConfig().moneyWithCurrencyFormat ? 'money_with_currency_format' : 'money_format';
-        console.log(moneyFormat);
-        console.log(currency);
         const price__regular__converted = price__regular.querySelector(".money.buckscc-converted.buckscc-money");
         price__regular__converted.setAttribute('bucks-original', `${price} ${Shopify.currency.active}`);
         price__regular__converted.setAttribute('bucks-init', price);
-        price__regular__converted.setAttribute('bucks-current', `${currency.currencyFormats[moneyFormat].replace('{{amount}}', price)}`);
-        price__regular__converted.textContent = `${currency.currencyFormats[moneyFormat].replace('{{amount}}', price)}`;
+        price__regular__converted.setAttribute('bucks-current', `${currencyFormats[moneyFormat].replace('{{amount}}', price)}`);
+        price__regular__converted.textContent = `${currencyFormats[moneyFormat].replace('{{amount}}', price)}`;
 
       } else {
         price__regular.innerHTML = `${price} ${Shopify.currency.active}`;
