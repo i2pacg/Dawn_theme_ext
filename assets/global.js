@@ -219,7 +219,6 @@ class QuantityInput extends HTMLElement {
   }
 
   validateQtyRules() {
-    console.log("validateQtyRules");
     const value = parseInt(this.input.value);
     if (this.input.min) {
       const min = parseInt(this.input.min);
@@ -231,7 +230,7 @@ class QuantityInput extends HTMLElement {
       const buttonPlus = this.querySelector(".quantity__button[name='plus']");
       buttonPlus.classList.toggle("disabled", value >= max);
     }
-    //   this.updatePrice();
+    this.updatePrice();
   }
   updatePrice() {
     try {
