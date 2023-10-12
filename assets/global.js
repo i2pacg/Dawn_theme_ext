@@ -211,7 +211,7 @@ class QuantityInput extends HTMLElement {
       const buttonPlus = this.querySelector(".quantity__button[name='plus']");
       buttonPlus.classList.toggle('disabled', value >= max);
     }
-    this.updatePrice();
+    //this.updatePrice();
 
   }
   updatePrice() {
