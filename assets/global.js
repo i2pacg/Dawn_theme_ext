@@ -255,7 +255,8 @@ class QuantityInput extends HTMLElement {
       let price = (variant.price / 100).toFixed(2);
       let compareAtPrice = (variant.compare_at_price / 100).toFixed(2);
       if (bucksCC.Currency) {
-        price = bucksCC.Currency.convert(variant.price / 100, "AED", "USD");
+        price = bucksCC.Currency.convert(price, "AED", "USD");
+        compareAtPrice = bucksCC.Currency.convert(compareAtPrice, "AED", "USD");
         /*   console.log(bucksCC.Currency.convert(100, "AED", "USD")) */
       }
 
