@@ -263,7 +263,7 @@ class QuantityInput extends HTMLElement {
       }`;
       console.log("bucksCC.Currency", bucksCC.Currency);
       console.log("bucksCC", bucksCC);
-      if (bucksCC.Currrency) {
+      if (bucksCC.Currency) {
         console.log(bucksCC.Currency.convert(100, "AED", "USD"))
       }
     } catch (error) {
