@@ -261,7 +261,7 @@ class QuantityInput extends HTMLElement {
         ".price .price__sale .price-item--last"
       ).innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active
       }`;
-      console.log(bucksCC);
+      console.log("bucksCC.Currrency", bucksCC.Currrency);
       if (bucksCC.Currrency) {
         console.log(bucksCC.Currency.convert(100, "AED", "USD"))
       }
