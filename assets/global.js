@@ -278,6 +278,7 @@ class QuantityInput extends HTMLElement {
         price__regular__converted.setAttribute('bucks-original', `${price} ${Shopify.currency.active}`);
         price__regular__converted.setAttribute('bucks-init', price);
         price__regular__converted.setAttribute('bucks-current', `${currency.currencyFormats.replace('{{amount}}', price)}`);
+        price__regular__converted.textContent = `${currency.currencyFormats.replace('{{amount}}', price)}`;
 
       } else {
         price__regular.innerHTML = `${price} ${Shopify.currency.active}`;
