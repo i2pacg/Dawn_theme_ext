@@ -266,7 +266,8 @@ class QuantityInput extends HTMLElement {
         Shopify.currency.active
       }`;
 
-    
+  console.log(  bucksCC.Currency.convert(100,"AED" ,"USD" ))
+
     } catch (error) {
       console.log(error);
     }
