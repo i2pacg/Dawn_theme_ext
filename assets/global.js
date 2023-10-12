@@ -249,6 +249,15 @@ class QuantityInput extends HTMLElement {
       const variant = product.variants.find(
         (variant) => variant.id === parseInt(variantId)
       );
+
+
+      console.log("variant", variant);
+      let price = (variant.price / 100).toFixed(2);
+      if (bucksCC.Currency) {
+        price = bucksCC.Currency.convert(variant.price / 100, "AED", "USD");
+        /*   console.log(bucksCC.Currency.convert(100, "AED", "USD")) */
+      }
+
       productInfo.querySelector(
         ".price .price__regular .price-item--regular"
       ).innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active
@@ -260,7 +269,8 @@ class QuantityInput extends HTMLElement {
       productInfo.querySelector(
         ".price .price__sale .price-item--last"
       ).innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active
-      }`; console.log("bucksCC.Currency", bucksCC.Currency);
+      }`;
+      console.log("bucksCC.Currency", bucksCC.Currency);
       console.log("bucksCC", bucksCC);
 
     } catch (error) {
