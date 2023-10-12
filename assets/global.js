@@ -231,7 +231,7 @@ class QuantityInput extends HTMLElement {
       const buttonPlus = this.querySelector(".quantity__button[name='plus']");
       buttonPlus.classList.toggle("disabled", value >= max);
     }
- //   this.updatePrice();
+    //   this.updatePrice();
   }
   updatePrice() {
     try {
@@ -252,22 +252,20 @@ class QuantityInput extends HTMLElement {
       );
       productInfo.querySelector(
         ".price .price__regular .price-item--regular"
-      ).innerHTML = `${(variant.price / 100).toFixed(2)} ${
-        Shopify.currency.active
+      ).innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active
       }`;
       productInfo.querySelector(
         ".price .price__sale .price-item--regular"
-      ).innerHTML = `${(variant.compare_at_price / 100).toFixed(2)} ${
-        Shopify.currency.active
+      ).innerHTML = `${(variant.compare_at_price / 100).toFixed(2)} ${Shopify.currency.active
       }`;
       productInfo.querySelector(
         ".price .price__sale .price-item--last"
-      ).innerHTML = `${(variant.price / 100).toFixed(2)} ${
-        Shopify.currency.active
+      ).innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active
       }`;
-if(bucksCC.Currrency){
-  console.log(  bucksCC.Currency.convert(100,"AED" ,"USD" ))
-}
+      console.log(bucksCC);
+      if (bucksCC.Currrency) {
+        console.log(bucksCC.Currency.convert(100, "AED", "USD"))
+      }
     } catch (error) {
       console.log(error);
     }
@@ -457,9 +455,9 @@ class MenuDrawer extends HTMLElement {
 
     openDetailsElement === this.mainDetailsToggle
       ? this.closeMenuDrawer(
-          event,
-          this.mainDetailsToggle.querySelector("summary")
-        )
+        event,
+        this.mainDetailsToggle.querySelector("summary")
+      )
       : this.closeSubmenu(openDetailsElement);
   }
 
@@ -501,9 +499,9 @@ class MenuDrawer extends HTMLElement {
         !reducedMotion || reducedMotion.matches
           ? addTrapFocus()
           : summaryElement.nextElementSibling.addEventListener(
-              "transitionend",
-              addTrapFocus
-            );
+            "transitionend",
+            addTrapFocus
+          );
       }, 100);
     }
   }
@@ -604,9 +602,9 @@ class HeaderDrawer extends MenuDrawer {
     this.header = this.header || document.querySelector(".section-header");
     this.borderOffset =
       this.borderOffset ||
-      this.closest(".header-wrapper").classList.contains(
-        "header-wrapper--border-bottom"
-      )
+        this.closest(".header-wrapper").classList.contains(
+          "header-wrapper--border-bottom"
+        )
         ? 1
         : 0;
     document.documentElement.style.setProperty(
@@ -783,7 +781,7 @@ class SliderComponent extends HTMLElement {
       this.sliderItemsToShow[0].offsetLeft;
     this.slidesPerPage = Math.floor(
       (this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) /
-        this.sliderItemOffset
+      this.sliderItemOffset
     );
     this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
     this.update();
@@ -1131,9 +1129,9 @@ class SlideshowComponent extends SliderComponent {
     const slideScrollPosition =
       this.slider.scrollLeft +
       this.sliderFirstItemNode.clientWidth *
-        (this.sliderControlLinksArray.indexOf(event.currentTarget) +
-          1 -
-          this.currentPage);
+      (this.sliderControlLinksArray.indexOf(event.currentTarget) +
+        1 -
+        this.currentPage);
     this.slider.scrollTo({
       left: slideScrollPosition,
     });
@@ -1317,10 +1315,9 @@ class VariantSelects extends HTMLElement {
       : this.dataset.section;
 
     fetch(
-      `${this.dataset.url}?variant = ${requestedVariantId}& section_id=${
-        this.dataset.originalSection
-          ? this.dataset.originalSection
-          : this.dataset.section
+      `${this.dataset.url}?variant = ${requestedVariantId}& section_id=${this.dataset.originalSection
+        ? this.dataset.originalSection
+        : this.dataset.section
       } `
     )
       .then((response) => response.text())
@@ -1333,27 +1330,24 @@ class VariantSelects extends HTMLElement {
           `price - ${this.dataset.section} `
         );
         const source = html.getElementById(
-          `price - ${
-            this.dataset.originalSection
-              ? this.dataset.originalSection
-              : this.dataset.section
+          `price - ${this.dataset.originalSection
+            ? this.dataset.originalSection
+            : this.dataset.section
           } `
         );
         const skuSource = html.getElementById(
-          `Sku - ${
-            this.dataset.originalSection
-              ? this.dataset.originalSection
-              : this.dataset.section
+          `Sku - ${this.dataset.originalSection
+            ? this.dataset.originalSection
+            : this.dataset.section
           } `
         );
         const skuDestination = document.getElementById(
           `Sku - ${this.dataset.section} `
         );
         const inventorySource = html.getElementById(
-          `Inventory - ${
-            this.dataset.originalSection
-              ? this.dataset.originalSection
-              : this.dataset.section
+          `Inventory - ${this.dataset.originalSection
+            ? this.dataset.originalSection
+            : this.dataset.section
           } `
         );
         const inventoryDestination = document.getElementById(
@@ -1361,10 +1355,9 @@ class VariantSelects extends HTMLElement {
         );
 
         const volumePricingSource = html.getElementById(
-          `Volume - ${
-            this.dataset.originalSection
-              ? this.dataset.originalSection
-              : this.dataset.section
+          `Volume - ${this.dataset.originalSection
+            ? this.dataset.originalSection
+            : this.dataset.section
           } `
         );
 
@@ -1372,10 +1365,9 @@ class VariantSelects extends HTMLElement {
           `Price - Per - Item - ${this.dataset.section} `
         );
         const pricePerItemSource = html.getElementById(
-          `Price - Per - Item - ${
-            this.dataset.originalSection
-              ? this.dataset.originalSection
-              : this.dataset.section
+          `Price - Per - Item - ${this.dataset.originalSection
+            ? this.dataset.originalSection
+            : this.dataset.section
           } `
         );
 
