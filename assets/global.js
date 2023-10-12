@@ -274,6 +274,7 @@ class QuantityInput extends HTMLElement {
       const price__last = productInfo.querySelector(".price .price__sale .price-item--last");
 
       if (price__regular.querySelector(".money.buckscc-converted.buckscc-money")) {
+        console.log(currency);
         const price__regular__converted = price__regular.querySelector(".money.buckscc-converted.buckscc-money");
         price__regular__converted.setAttribute('bucks-original', `${price} ${Shopify.currency.active}`);
         price__regular__converted.setAttribute('bucks-init', price);
