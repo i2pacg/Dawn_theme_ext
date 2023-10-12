@@ -293,10 +293,18 @@ class QuantityInput extends HTMLElement {
       } else {
         price__sale.innerHTML = `${compareAtPrice} ${Shopify.currency.active}`;
       }
-      productInfo.querySelector(
-        ".price .price__sale .price-item--regular"
-      ).innerHTML = `${compareAtPrice} ${Shopify.currency.active
-      }`;
+
+      if (price__last.querySelector(".money.buckscc-converted.buckscc-money")) {
+        const converted = bucksCC.Currency.convert(price, Shopify.currency.active, currency);
+        const price__last__converted = price__last.querySelector(".money.buckscc-converted.buckscc-money");
+        price__last__converted.setAttribute('bucks-original', `${price} ${Shopify.currency.active}`);
+        price__last__converted.setAttribute('bucks-init', price);
+        price__last__converted.setAttribute('bucks-current', `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted).toFixed(2) - .01)}`);
+        price__last__converted.textContent = `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted).toFixed(2) - .01)}`;
+      } else {
+        price__regular.innerHTML = `${price} ${Shopify.currency.active}`;
+      }
+
       productInfo.querySelector(
         ".price .price__sale .price-item--last"
       ).innerHTML = `${price} ${Shopify.currency.active
