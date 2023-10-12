@@ -261,24 +261,27 @@ class QuantityInput extends HTMLElement {
            } */
 
       if (document.querySelector("money.buckscc-converted.buckscc-money")) {
-        productInfo.querySelector(
-          ".price .price__regular .price-item--regular"
-        ).innerHTML = `${price} ${Shopify.currency.active
-        }`;
-        productInfo.querySelector(
-          ".price .price__sale .price-item--regular"
-        ).innerHTML = `${compareAtPrice} ${Shopify.currency.active
-        }`;
-        productInfo.querySelector(
-          ".price .price__sale .price-item--last"
-        ).innerHTML = `${price} ${Shopify.currency.active
-        }`;
 
-
-      } catch (error) {
-        console.log(error);
       }
+
+      productInfo.querySelector(
+        ".price .price__regular .price-item--regular"
+      ).innerHTML = `${price} ${Shopify.currency.active
+      }`;
+      productInfo.querySelector(
+        ".price .price__sale .price-item--regular"
+      ).innerHTML = `${compareAtPrice} ${Shopify.currency.active
+      }`;
+      productInfo.querySelector(
+        ".price .price__sale .price-item--last"
+      ).innerHTML = `${price} ${Shopify.currency.active
+      }`;
+
+
+    } catch (error) {
+      console.log(error);
     }
+  }
 }
 
 customElements.define("quantity-input", QuantityInput);
