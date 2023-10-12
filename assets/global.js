@@ -251,20 +251,16 @@ class QuantityInput extends HTMLElement {
       );
       productInfo.querySelector(
         ".price .price__regular .price-item--regular"
-      ).innerHTML = `${bucksCC.Currency.convert(((variant.price / 100).toFixed(2) / 100).toFixed(2), "AED", "USD")} ${Shopify.currency.active
+      ).innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active
       }`;
       productInfo.querySelector(
         ".price .price__sale .price-item--regular"
-      ).innerHTML = `${bucksCC.Currency.convert((variant.compare_at_price / 100).toFixed(2), "AED", "USD")} ${Shopify.currency.active
+      ).innerHTML = `${(variant.compare_at_price / 100).toFixed(2)} ${Shopify.currency.active
       }`;
       productInfo.querySelector(
         ".price .price__sale .price-item--last"
-      ).innerHTML = `${bucksCC.Currency.convert((variant.price / 100).toFixed(2), "AED", "USD")} ${Shopify.currency.active
-      }`;
-      if (bucksCC.Currency) {
-        console.log(bucksCC.Currency.convert(100, "AED", "USD"))
-      }
-      console.log("bucksCC.Currency", bucksCC.Currency);
+      ).innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active
+      }`; console.log("bucksCC.Currency", bucksCC.Currency);
       console.log("bucksCC", bucksCC);
 
     } catch (error) {
