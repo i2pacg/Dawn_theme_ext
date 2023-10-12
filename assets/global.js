@@ -239,6 +239,7 @@ class QuantityInput extends HTMLElement {
       if (!document.querySelector(".geoCurrency.converterTriggers")) return;
       const currency = document.querySelector(".geoCurrency.converterTriggers").id;
       console.log("currency", currency);
+      console.log("bucksCC", bucksCC);
       const productInfo = document.querySelector("product-info");
       const product = JSON.parse(productInfo.getAttribute("data-product"));
       console.log(product);
@@ -275,8 +276,7 @@ class QuantityInput extends HTMLElement {
         ".price .price__sale .price-item--last"
       ).innerHTML = `${price} ${Shopify.currency.active
       }`;
-      console.log("bucksCC.Currency", bucksCC.Currency);
-      console.log("bucksCC", bucksCC);
+
 
     } catch (error) {
       console.log(error);
