@@ -273,7 +273,7 @@ class QuantityInput extends HTMLElement {
       let moneyFormat = bucksCC.getConfig().moneyWithCurrencyFormat ? 'money_with_currency_format' : 'money_format';
 
       if (price__regular.querySelector(".money.buckscc-converted.buckscc-money")) {
-        const converted = bucksCC.Currency.convert(price, Shopify.currency.active, currency);
+        const converted = bucksCC.Currency.convert(price, Shopify.currency.active, currency) + .01;
         const price__regular__converted = price__regular.querySelector(".money.buckscc-converted.buckscc-money");
         price__regular__converted.setAttribute('bucks-original', `${price} ${Shopify.currency.active}`);
         price__regular__converted.setAttribute('bucks-init', price);
