@@ -277,8 +277,8 @@ class QuantityInput extends HTMLElement {
         const price__regular__converted = price__regular.querySelector(".money.buckscc-converted.buckscc-money");
         price__regular__converted.setAttribute('bucks-original', `${price} ${Shopify.currency.active}`);
         price__regular__converted.setAttribute('bucks-init', price);
-        price__regular__converted.setAttribute('bucks-current', `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted).toFixed(2) - .01)}`);
-        price__regular__converted.textContent = `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted).toFixed(2) - .01)}`;
+        price__regular__converted.setAttribute('bucks-current', `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted) - .01)}`);
+        price__regular__converted.textContent = `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted) - .01)}`;
       } else {
         price__regular.innerHTML = `${price} ${Shopify.currency.active}`;
       }
@@ -288,8 +288,8 @@ class QuantityInput extends HTMLElement {
         const price__sale__converted = price__sale.querySelector(".money.buckscc-converted.buckscc-money");
         price__sale__converted.setAttribute('bucks-original', `${compareAtPrice} ${Shopify.currency.active}`);
         price__sale__converted.setAttribute('bucks-init', compareAtPrice);
-        price__sale__converted.setAttribute('bucks-current', `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted).toFixed(2) - .01)}`);
-        price__sale__converted.textContent = `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted).toFixed(2) - .01)}`;
+        price__sale__converted.setAttribute('bucks-current', `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted) - .01)}`);
+        price__sale__converted.textContent = `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted) - .01)}`;
       } else {
         price__sale.innerHTML = `${compareAtPrice} ${Shopify.currency.active}`;
       }
@@ -299,8 +299,8 @@ class QuantityInput extends HTMLElement {
         const price__last__converted = price__last.querySelector(".money.buckscc-converted.buckscc-money");
         price__last__converted.setAttribute('bucks-original', `${price} ${Shopify.currency.active}`);
         price__last__converted.setAttribute('bucks-init', price);
-        price__last__converted.setAttribute('bucks-current', `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted).toFixed(2) - .01)}`);
-        price__last__converted.textContent = `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted).toFixed(2) - .01)}`;
+        price__last__converted.setAttribute('bucks-current', `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted) - .01)}`);
+        price__last__converted.textContent = `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted) - .01)}`;
       } else {
         price__last.innerHTML = `${price} ${Shopify.currency.active}`;
       }
