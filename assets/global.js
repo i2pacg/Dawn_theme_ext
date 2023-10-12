@@ -277,8 +277,8 @@ class QuantityInput extends HTMLElement {
         const price__regular__converted = price__regular.querySelector(".money.buckscc-converted.buckscc-money");
         price__regular__converted.setAttribute('bucks-original', `${price} ${Shopify.currency.active}`);
         price__regular__converted.setAttribute('bucks-init', price);
-        price__regular__converted.setAttribute('bucks-current', `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted).toFixed(2))}`);
-        price__regular__converted.textContent = `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted).toFixed(2))}`;
+        price__regular__converted.setAttribute('bucks-current', `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted).toFixed(2) - .01)}`);
+        price__regular__converted.textContent = `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted).toFixed(2) - .01)}`;
 
       } else {
         price__regular.innerHTML = `${price} ${Shopify.currency.active}`;
