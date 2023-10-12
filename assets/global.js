@@ -251,21 +251,22 @@ class QuantityInput extends HTMLElement {
       );
       productInfo.querySelector(
         ".price .price__regular .price-item--regular"
-      ).innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active
+      ).innerHTML = `${bucksCC.Currency.convert(((variant.price / 100).toFixed(2) / 100).toFixed(2), "AED", "USD")} ${Shopify.currency.active
       }`;
       productInfo.querySelector(
         ".price .price__sale .price-item--regular"
-      ).innerHTML = `${(variant.compare_at_price / 100).toFixed(2)} ${Shopify.currency.active
+      ).innerHTML = `${bucksCC.Currency.convert((variant.compare_at_price / 100).toFixed(2), "AED", "USD")} ${Shopify.currency.active
       }`;
       productInfo.querySelector(
         ".price .price__sale .price-item--last"
-      ).innerHTML = `${(variant.price / 100).toFixed(2)} ${Shopify.currency.active
+      ).innerHTML = `${bucksCC.Currency.convert((variant.price / 100).toFixed(2), "AED", "USD")} ${Shopify.currency.active
       }`;
-      console.log("bucksCC.Currency", bucksCC.Currency);
-      console.log("bucksCC", bucksCC);
       if (bucksCC.Currency) {
         console.log(bucksCC.Currency.convert(100, "AED", "USD"))
       }
+      console.log("bucksCC.Currency", bucksCC.Currency);
+      console.log("bucksCC", bucksCC);
+
     } catch (error) {
       console.log(error);
     }
