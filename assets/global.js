@@ -291,7 +291,7 @@ class QuantityInput extends HTMLElement {
         price__sale__converted.setAttribute('bucks-current', `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted).toFixed(2) - .01)}`);
         price__sale__converted.textContent = `${currencyFormats[moneyFormat].replace('{{amount}}', Math.ceil(converted).toFixed(2) - .01)}`;
       } else {
-        price__regular.innerHTML = `${price} ${Shopify.currency.active}`;
+        price__sale.innerHTML = `${compareAtPrice} ${Shopify.currency.active}`;
       }
       productInfo.querySelector(
         ".price .price__sale .price-item--regular"
