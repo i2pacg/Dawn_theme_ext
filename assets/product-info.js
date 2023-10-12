@@ -4,7 +4,6 @@ if (!customElements.get('product-info')) {
     class ProductInfo extends HTMLElement {
       constructor() {
         super();
-        console.log("product-info Started")
         this.input = this.querySelector('.quantity__input');
         this.currentVariant = this.querySelector('.product-variant-id');
         this.variantSelects = this.querySelector('variant-radios');
