@@ -235,7 +235,7 @@ class QuantityInput extends HTMLElement {
   updatePrice() {
     try {
       if (!document.querySelector(".geoCurrency.converterTriggers")) return;
-      const currency = bucksCC.currencyFormats[document.querySelector(".geoCurrency.converterTriggers").id];
+      const currencyFormats = bucksCC.currencyFormats[document.querySelector(".geoCurrency.converterTriggers").id];
       console.log("currency", currency);
       console.log("bucksCC", bucksCC.currencyFormats[currency]);
 
