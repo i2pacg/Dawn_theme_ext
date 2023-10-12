@@ -253,7 +253,6 @@ class QuantityInput extends HTMLElement {
       );
 
 
-      console.log("variant", variant);
       let price = (variant.price / 100).toFixed(2);
       let compareAtPrice = (variant.compare_at_price / 100).toFixed(2);
       /*      if (bucksCC.Currency) {
@@ -261,24 +260,25 @@ class QuantityInput extends HTMLElement {
              compareAtPrice = bucksCC.Currency.convert(compareAtPrice, "AED", "USD");
            } */
 
-      productInfo.querySelector(
-        ".price .price__regular .price-item--regular"
-      ).innerHTML = `${price} ${Shopify.currency.active
-      }`;
-      productInfo.querySelector(
-        ".price .price__sale .price-item--regular"
-      ).innerHTML = `${compareAtPrice} ${Shopify.currency.active
-      }`;
-      productInfo.querySelector(
-        ".price .price__sale .price-item--last"
-      ).innerHTML = `${price} ${Shopify.currency.active
-      }`;
+      if (document.querySelector("money.buckscc-converted.buckscc-money")) {
+        productInfo.querySelector(
+          ".price .price__regular .price-item--regular"
+        ).innerHTML = `${price} ${Shopify.currency.active
+        }`;
+        productInfo.querySelector(
+          ".price .price__sale .price-item--regular"
+        ).innerHTML = `${compareAtPrice} ${Shopify.currency.active
+        }`;
+        productInfo.querySelector(
+          ".price .price__sale .price-item--last"
+        ).innerHTML = `${price} ${Shopify.currency.active
+        }`;
 
 
-    } catch (error) {
-      console.log(error);
+      } catch (error) {
+        console.log(error);
+      }
     }
-  }
 }
 
 customElements.define("quantity-input", QuantityInput);
