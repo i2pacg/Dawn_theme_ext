@@ -273,11 +273,12 @@ class QuantityInput extends HTMLElement {
       const price__sale = productInfo.querySelector(".price .price__sale .price-item--regular");
       const price__last = productInfo.querySelector(".price .price__sale .price-item--last");
 
-      if (price__regular.querySelector("money.buckscc-converted.buckscc-money")) {
-        const price__regular__converted = price__regular.querySelector("money.buckscc-converted.buckscc-money");
+      if (price__regular.querySelector(".money.buckscc-converted.buckscc-money")) {
+        const price__regular__converted = price__regular.querySelector(".money.buckscc-converted.buckscc-money");
         price__regular__converted.setAttribute('bucks-original', `${price} ${Shopify.currency.active}`);
         price__regular__converted.setAttribute('bucks-init', price);
         price__regular__converted.setAttribute('bucks-current', `${currency.currencyFormats.replace('{{amount}}', price)}`);
+
       } else {
         price__regular.innerHTML = `${price} ${Shopify.currency.active}`;
       }
