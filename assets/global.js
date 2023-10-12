@@ -260,10 +260,22 @@ class QuantityInput extends HTMLElement {
              compareAtPrice = bucksCC.Currency.convert(compareAtPrice, "AED", "USD");
            } */
 
-      if (document.querySelector("money.buckscc-converted.buckscc-money")) {
+      /*     <span class="money buckscc-converted buckscc-money" 
+      bucks-original="90.00 AED"
+       bucks-init="90.00" 
+       bucks-currency="EGP"
+        bucks-current="LE 756.99 EGP">
+        LE 756.99 EGP
+        </span>}
+   */
+      const price__regular = productInfo.querySelector(".price .price__regular .price-item--regular");
+      const price__sale = productInfo.querySelector(".price .price__sale .price-item--regular");
+      const price__last = productInfo.querySelector(".price .price__sale .price-item--last");
 
+      if (price__regular.querySelector("money.buckscc-converted.buckscc-money")) {
+        const price__regular__converted = price__regular.querySelector("money.buckscc-converted.buckscc-money");
+        price__regular__converted.setAttribute('bucks-original', `${price} ${currency}`);
       }
-
       productInfo.querySelector(
         ".price .price__regular .price-item--regular"
       ).innerHTML = `${price} ${Shopify.currency.active
