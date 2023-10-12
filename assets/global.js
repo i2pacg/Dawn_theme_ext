@@ -247,7 +247,6 @@ class QuantityInput extends HTMLElement {
         console.log("no variant", product);
         variantId = product.variants[0].id;
       }
-      console.log("variantId", variantId);
 
       const variant = product.variants.find(
         (variant) => variant.id === parseInt(variantId)
